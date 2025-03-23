@@ -1,12 +1,16 @@
 cmake_minimum_required (VERSION 3.20)
 
-project("CMakeApp")
+project("oniWorldApp")
 
 set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>")
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_program(PYTHON_CMD "python" REQUIRED)
+if("$ENV{EMSDK_PYTHON}" STREQUAL "")
+    find_program(PYTHON_CMD "python" REQUIRED)
+else()
+    set(PYTHON_CMD "$ENV{EMSDK_PYTHON}")
+endif()
 
 add_library(clipper STATIC
     "3rdparty/clipper/clipper.cpp"
