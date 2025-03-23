@@ -1,0 +1,26 @@
+{
+  "biomeNoise": "noise/Generic",
+  "temperatureRange": "VeryHot",
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "NONE",
+  "biomes": [
+    {
+      "name": "biomes/Misc/Space",
+      "weight": 1
+    }
+  ],
+  "centralFeature": {
+    "type": "dlc2::features/space/FloatingRock"
+  },
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning",
+    "RemoveWorldBorderOverVacuum"
+  ],
+  "zoneType": "Space"
+}

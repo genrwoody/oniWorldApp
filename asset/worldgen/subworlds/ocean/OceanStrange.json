@@ -1,0 +1,55 @@
+{
+  "biomeNoise": "noise/subworldOceanStrange",
+  "temperatureRange": "HumanWarm",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 4,
+  "extraBiomeChildren": 1,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Ocean/Basic",
+      "weight": 2,
+      "tags": [
+        "Pacu",
+        "Crab",
+        "SeaLettuce",
+        "SpiceVine",
+        "SeaLettuceSeed",
+        "SpiceVineSeed"
+      ]
+    },
+    {
+      "name": "biomes/Ocean/Dry",
+      "weight": 0.2,
+      "tags": [
+        "Pacu",
+        "Crab",
+        "SeaLettuceSeed",
+        "SpiceVineSeed"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "features/ocean/SaltCave"
+    },
+    {
+      "type": "features/ocean/DeepPool"
+    },
+    {
+      "type": "features/ocean/BleachLump"
+    },
+    {
+      "type": "features/ocean/CrabPool"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "River"
+  ],
+  "zoneType": "Ocean"
+}

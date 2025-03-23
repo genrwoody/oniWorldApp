@@ -1,0 +1,17 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.MISALIGNED_START.NAME",
+  "description": "STRINGS.WORLD_TRAITS.MISALIGNED_START.DESCRIPTION",
+  "colorHex": "E9DC96",
+  "traitTags": [
+    "StartChange",
+    "StartWorldOnly"
+  ],
+  "startingBasePositionHorizontalMod": {
+    "min": -0.2,
+    "max": 0.2
+  },
+  "startingBasePositionVerticalMod": {
+    "min": -0.1,
+    "max": 0.1
+  }
+}

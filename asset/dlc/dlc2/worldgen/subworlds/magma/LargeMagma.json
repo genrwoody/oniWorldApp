@@ -1,0 +1,31 @@
+{
+  "biomeNoise": "noise/MagmaVent",
+  "temperatureRange": "VeryHot",
+  "minChildCount": 8,
+  "pdWeight": 1.5,
+  "density": {
+    "min": 15,
+    "max": 20
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "hardToDig",
+  "borderOverridePriority": 10,
+  "biomes": [
+    {
+      "name": "dlc2::biomes/Magma/MagmaThinVacuum",
+      "weight": 1
+    },
+    {
+      "name": "dlc2::biomes/Magma/MagmaThinSolid",
+      "weight": 4
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "ErodePointToBorderWeak",
+    "NoGlobalFeatureSpawning",
+    "NoGravitasFeatures"
+  ],
+  "zoneType": "MagmaCore"
+}

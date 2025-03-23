@@ -1,0 +1,67 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "internalMobs": [
+    {
+      "type": "BeeHive",
+      "count": {
+        "min": 1,
+        "max": 1
+      }
+    }
+  ],
+  "blobSize": {
+    "min": 10,
+    "max": 12
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "ChlorineGas",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 0.5
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "UraniumOre",
+          "weight": 0.55
+        },
+        {
+          "element": "ChlorineGas",
+          "weight": 0.45
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "UraniumOre",
+          "weight": 0.7
+        },
+        {
+          "element": "Wolframite",
+          "weight": 0.2
+        },
+        {
+          "element": "Sulfur",
+          "weight": 0.1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Splat",
+  "blobSize": {
+    "min": 3.5,
+    "max": 5.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Cuprite",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

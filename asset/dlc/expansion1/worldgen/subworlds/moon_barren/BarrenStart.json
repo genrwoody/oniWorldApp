@@ -1,0 +1,27 @@
+{
+  "biomeNoise": "noise/Default",
+  "temperatureRange": "HumanWarm",
+  "minChildCount": 2,
+  "pdWeight": 2,
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Barren/Granite",
+      "weight": 1,
+      "tags": null
+    }
+  ],
+  "centralFeature": {
+    "type": "features/generic/StartLocation"
+  },
+  "features": [],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Barren"
+}

@@ -1,0 +1,22 @@
+{
+  "biomeNoise": "noise/Generic",
+  "temperatureRange": "ExtremelyHot",
+  "minChildCount": 4,
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Magma/MagmaBed",
+      "weight": 1
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "zoneType": "MagmaCore"
+}

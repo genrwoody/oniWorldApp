@@ -1,0 +1,217 @@
+{
+  "name": "STRINGS.WORLDS.REGOLITHMOONLET.NAME",
+  "description": "STRINGS.WORLDS.REGOLITHMOONLET.DESCRIPTION",
+  "nameTables": [
+    "REGOLITH"
+  ],
+  "asteroidIcon": "asteroid_regolith_moonlet_kanim",
+  "worldTraitScale": 0.15,
+  "worldsize": {
+    "X": 160,
+    "Y": 96
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 2,
+      "WorldBorderRange": 1,
+      "OverworldDensityMin": 15,
+      "OverworldDensityMax": 15,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "worldTraitRules": [
+    {
+      "min": 0,
+      "max": 1,
+      "forbiddenTags": [
+        "StartWorldOnly",
+        "Oil",
+        "StartChange",
+        "GenericGeysers",
+        "Surface",
+        "Crust",
+        "Geodes",
+        "LargeWorld"
+      ],
+      "forbiddenTraits": [
+        "traits/SlimeSplats",
+        "traits/MagmaVents",
+        "expansion1::traits/Volcanoes"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(CoreMixing)",
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ],
+  "subworldFiles": [
+    {
+      "name": "subworlds/space/Space",
+      "overridePower": 1
+    },
+    {
+      "name": "expansion1::subworlds/regolith/BarrenDust",
+      "overridePower": 1
+    },
+    {
+      "name": "expansion1::subworlds/regolith/DeadOasis",
+      "overridePower": 1
+    },
+    {
+      "name": "expansion1::subworlds/barren/EmptyCaves",
+      "overridePower": 1
+    }
+  ],
+  "fixedTraits": [
+    "sunlightVeryVeryVeryHigh",
+    "cosmicRadiationMed"
+  ],
+  "seasons": [
+    "RegolithMoonMeteorShowers"
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/regolith/BarrenDust"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/regolith/BarrenDust"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtEdge",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/barren/EmptyCaves"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtEdge",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/barren/EmptyCaves"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/regolith/DeadOasis"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "UnionWith",
+      "sortOrder": 100,
+      "subworldNames": [
+        "(CoreMixing)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "geysers/steam",
+        "geysers/hot_steam"
+      ],
+      "listRule": "TryOne",
+      "times": 2,
+      "allowDuplicates": true,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 0
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "FrozenWastes"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/regolith/bunker_lab"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowExtremeTemperatureOverlap": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "expansion1::subworlds/regolith/BarrenDust"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/regolith/landing_pad"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowExtremeTemperatureOverlap": true,
+      "overrideOffset": {
+        "X": 0,
+        "Y": 16
+      },
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "expansion1::subworlds/regolith/BarrenDust"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 3,
+          "maxDistance": 3
+        }
+      ]
+    }
+  ]
+}

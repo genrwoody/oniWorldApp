@@ -1,0 +1,388 @@
+{
+  "info": {
+    "size": {
+      "X": 8,
+      "Y": 8
+    },
+    "min": {
+      "X": -3,
+      "Y": -4
+    },
+    "area": 47
+  },
+  "cells": [
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.007416,
+      "location_x": -1,
+      "location_y": -2
+    },
+    {
+      "element": "SlimeMold",
+      "mass": 200,
+      "temperature": 320,
+      "location_y": -2
+    },
+    {
+      "element": "Water",
+      "mass": 1000,
+      "temperature": 320,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 9398,
+      "location_x": 1,
+      "location_y": -2
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 320,
+      "location_x": 3,
+      "location_y": -2
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 318.757141,
+      "location_x": -1,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 319.755707,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": 1,
+      "location_y": -1
+    },
+    {
+      "element": "Water",
+      "mass": 1000,
+      "temperature": 320,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 9398,
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 320,
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.764999986,
+      "temperature": 318.929413,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 14227,
+      "location_x": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.238000005,
+      "temperature": 319.188599,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 3707
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.0340000018,
+      "temperature": 319.524323,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 389,
+      "location_x": 1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": 2
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 320,
+      "location_x": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.949999988,
+      "temperature": 319.708221,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 8835,
+      "location_x": -1,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.725000024,
+      "temperature": 319.723846,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 6653,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.213,
+      "temperature": 319.71582,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 1955,
+      "location_x": 1,
+      "location_y": 1
+    },
+    {
+      "element": "Dirt",
+      "mass": 1840,
+      "temperature": 320,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 9756,
+      "location_x": 2,
+      "location_y": 1
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 320,
+      "location_x": 3,
+      "location_y": 1
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 320,
+      "location_x": -1,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.975000024,
+      "temperature": 320,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 9749,
+      "location_y": 2
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 320,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 9756,
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1,
+      "temperature": 320,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 10000,
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 320,
+      "location_x": 3,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": -1,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": 2,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": 3,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.010406,
+      "location_x": -3
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 319.655151,
+      "location_x": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.157837,
+      "location_x": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 319.999725,
+      "location_x": -3,
+      "location_y": 1
+    },
+    {
+      "element": "Algae",
+      "mass": 200,
+      "temperature": 320,
+      "location_x": -2,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.152069,
+      "location_x": 4,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.009613,
+      "location_x": -2,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": -2,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.312683,
+      "location_x": 4,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.151306,
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.042847,
+      "location_y": -3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": 1,
+      "location_y": -3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 320,
+      "location_x": 2,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.2854,
+      "location_x": 3,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.101563,
+      "location_x": 1,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.198975,
+      "location_x": 2,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 320.126129,
+      "location_x": 4,
+      "location_y": 2
+    }
+  ],
+  "otherEntities": [
+    {
+      "id": "FossilBitsSmall",
+      "location_x": 2,
+      "location_y": 1,
+      "element": "Fossil",
+      "temperature": 315,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "FossilResin",
+      "element": "Fossil",
+      "temperature": 315,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "EvilFlower",
+      "location_x": -1,
+      "element": "Creature",
+      "temperature": 293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure"
+        },
+        {
+          "id": "Temperature",
+          "value": 293
+        }
+      ]
+    }
+  ]
+}

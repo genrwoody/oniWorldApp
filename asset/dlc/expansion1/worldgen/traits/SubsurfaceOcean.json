@@ -1,0 +1,30 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.SUBSURFACE_OCEAN.NAME",
+  "description": "STRINGS.WORLD_TRAITS.SUBSURFACE_OCEAN.DESCRIPTION",
+  "colorHex": "12D1F4",
+  "exclusiveWithTags": [
+    "SurfaceTrait"
+  ],
+  "traitTags": [
+    "Surface",
+    "Wet"
+  ],
+  "additionalSubworldFiles": [
+    {
+      "name": "expansion1::subworlds/ocean/med_OceanDeep",
+      "minCount": 2
+    }
+  ],
+  "additionalUnknownCellFilters": [
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/ocean/med_OceanDeep"
+      ]
+    }
+  ]
+}

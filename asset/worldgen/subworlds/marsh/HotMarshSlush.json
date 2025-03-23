@@ -1,0 +1,55 @@
+{
+  "biomeNoise": "noise/subworldHotMarsh",
+  "temperatureRange": "Cold",
+  "density": {
+    "min": 20,
+    "max": 25
+  },
+  "avoidRadius": 40.0,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "features": [
+    {
+      "type": "features/hotmarsh/TallSlushRoom"
+    },
+    {
+      "type": "features/hotmarsh/BlobSlushRoom"
+    },
+    {
+      "type": "features/hotmarsh/SandGeode"
+    }
+  ],
+  "biomes": [
+    {
+      "name": "biomes/HotMarsh/Dry",
+      "weight": 2
+    },
+    {
+      "name": "biomes/HotMarsh/Basic",
+      "weight": 5,
+      "tags": [
+        "MushroomSeed",
+        "Puft",
+        "BasicFabricMaterialPlantSeed",
+        "Pacu",
+        "BulbPlantSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "poi/hotmarsh/lab_burrow",
+        "poi/hotmarsh/lab_splitroom",
+        "poi/hotmarsh/frag_doorway_frozen",
+        "poi/hotmarsh/frag_table"
+      ],
+      "listRule": "TrySome",
+      "someCount": 3
+    }
+  ],
+  "zoneType": "BoggyMarsh"
+}

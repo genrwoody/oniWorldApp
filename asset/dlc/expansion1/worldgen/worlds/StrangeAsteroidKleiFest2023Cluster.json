@@ -1,0 +1,621 @@
+{
+  "name": "STRINGS.WORLDS.STRANGE_ASTEROID_KF23.NAME",
+  "description": "STRINGS.WORLDS.STRANGE_ASTEROID_KF23.DESCRIPTION",
+  "asteroidIcon": "asteroid_strange_kanim",
+  "worldTraitScale": 0.9,
+  "worldsize": {
+    "X": 380,
+    "Y": 240
+  },
+  "layoutMethod": "PowerTree",
+  "worldTraitRules": [
+    {
+      "specificTraits": [
+        "traits/Geodes"
+      ]
+    }
+  ],
+  "defaultsOverrides": {
+    "data": {
+      "OverworldDensityMin": 22,
+      "OverworldDensityMax": 22,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/sandstone/SandstoneStartStrange"
+    },
+    {
+      "name": "subworlds/sandstone/SandstoneStrange"
+    },
+    {
+      "name": "subworlds/sandstone/SandstoneMiniMetalStrange",
+      "minCount": 1
+    },
+    {
+      "name": "subworlds/sandstone/SandstoneMiniWaterStrange",
+      "minCount": 2
+    },
+    {
+      "name": "subworlds/sandstone/SandstoneMiniAlgaeStrange",
+      "minCount": 2
+    },
+    {
+      "name": "subworlds/marsh/HotMarshStrange",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/jungle/JungleStrange",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/frozen/FrozenStrange",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/ocean/OceanStrange",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/magma/Bottom"
+    },
+    {
+      "name": "subworlds/oil/OilPocketsStrange"
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "subworlds/space/SpaceWithBorder"
+    },
+    {
+      "name": "subworlds/space/Surface"
+    }
+  ],
+  "startSubworldName": "subworlds/sandstone/SandstoneStartStrange",
+  "startingBaseTemplate": "bases/sandstoneBase",
+  "seasons": [
+    "ClassicStyleStartMeteorShowers"
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/sandstone/SandstoneStrange"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/sandstone/SandstoneMiniMetalStrange",
+        "subworlds/sandstone/SandstoneMiniWaterStrange",
+        "subworlds/sandstone/SandstoneMiniAlgaeStrange"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarshStrange",
+        "subworlds/jungle/JungleStrange"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarshStrange",
+        "subworlds/jungle/JungleStrange",
+        "subworlds/ocean/OceanStrange",
+        "subworlds/frozen/FrozenStrange"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 4,
+      "maxDistance": 4,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarshStrange",
+        "subworlds/jungle/JungleStrange",
+        "subworlds/ocean/OceanStrange",
+        "subworlds/frozen/FrozenStrange"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 5,
+      "maxDistance": 999,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarshStrange",
+        "subworlds/jungle/JungleStrange",
+        "subworlds/ocean/OceanStrange",
+        "subworlds/frozen/FrozenStrange"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtLeft",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/Bottom"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtLeft",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/oil/OilPocketsStrange"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtRight",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/SpaceWithBorder"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtRight",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Surface"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/jungle/geyser_steam"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 85,
+        "Y": 134
+      }
+    },
+    {
+      "names": [
+        "poi/jungle/geyser_methane"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 81,
+        "Y": 174
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/jungle_lab_poolbottom_rotated"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 251,
+        "Y": 96
+      }
+    },
+    {
+      "names": [
+        "poi/jungle/oxylite_spiral"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 76,
+        "Y": 40
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/jungle_frag_lockers_rotated"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 161,
+        "Y": 38
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/jungle_frag_lightbugs_rotated"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 140,
+        "Y": 182
+      }
+    },
+    {
+      "names": [
+        "poi/hotmarsh/geyser_steam"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 164,
+        "Y": 147
+      }
+    },
+    {
+      "names": [
+        "poi/hotmarsh/geyser_methane"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 76,
+        "Y": 72
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/marsh_vacillator"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 134,
+        "Y": 120
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/marsh_frag_doorway_rotated"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 146,
+        "Y": 65
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/marsh_frag_table_rotated"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 228,
+        "Y": 175
+      }
+    },
+    {
+      "names": [
+        "poi/frozen/heatsink_d"
+      ],
+      "listRule": "GuaranteeOne",
+      "allowDuplicates": true,
+      "priority": 150,
+      "overridePlacement": {
+        "X": 129,
+        "Y": 185
+      }
+    },
+    {
+      "names": [
+        "poi/frozen/heatsink_d"
+      ],
+      "listRule": "GuaranteeOne",
+      "allowDuplicates": true,
+      "priority": 150,
+      "overridePlacement": {
+        "X": 209,
+        "Y": 192
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/frozen_frag_lockers_rotated"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 500,
+      "overridePlacement": {
+        "X": 224,
+        "Y": 195
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/frozen_vacillator"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 500,
+      "overridePlacement": {
+        "X": 106,
+        "Y": 100
+      }
+    },
+    {
+      "names": [
+        "poi/poi_ocean_geyser_saltwater"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 272,
+        "Y": 124
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/ocean_poi_ladder_tunnel_rotated"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 252,
+        "Y": 44
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/ocean_poi_dining_room_rotated"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 292,
+        "Y": 181
+      }
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_e"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 77,
+        "Y": 96
+      }
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_b"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 59,
+        "Y": 106
+      }
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_f"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 48,
+        "Y": 92
+      }
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_a"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 41,
+        "Y": 32
+      }
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_d"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 52,
+        "Y": 184
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/poi_gravitas_rotated"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 500,
+      "overridePlacement": {
+        "X": 331,
+        "Y": 170
+      }
+    },
+    {
+      "names": [
+        "geysers/hot_hydrogen"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 171,
+        "Y": 183
+      }
+    },
+    {
+      "names": [
+        "geysers/volcanohole"
+      ],
+      "listRule": "GuaranteeOne",
+      "allowDuplicates": true,
+      "priority": 150,
+      "overridePlacement": {
+        "X": 20,
+        "Y": 161
+      }
+    },
+    {
+      "names": [
+        "geysers/volcanohole"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "allowDuplicates": true,
+      "overridePlacement": {
+        "X": 22,
+        "Y": 111
+      }
+    },
+    {
+      "names": [
+        "geysers/volcanohole"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "allowDuplicates": true,
+      "overridePlacement": {
+        "X": 15,
+        "Y": 52
+      }
+    },
+    {
+      "names": [
+        "geysers/slush_water"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 228,
+        "Y": 78
+      }
+    },
+    {
+      "names": [
+        "geysers/molten_iron"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 129,
+        "Y": 37
+      }
+    },
+    {
+      "names": [
+        "geysers/filthy_water"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 272,
+        "Y": 169
+      }
+    },
+    {
+      "names": [
+        "geysers/molten_copper"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 270,
+        "Y": 43
+      }
+    },
+    {
+      "names": [
+        "events/strangeasteroid/gold_volcanoes"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 200,
+        "Y": 42
+      }
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender_mini"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 280,
+        "Y": 82
+      }
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/receiver_mini"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 102,
+        "Y": 58
+      }
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/teleporter_no_oil"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "overridePlacement": {
+        "X": 233,
+        "Y": 120
+      }
+    },
+    {
+      "names": [
+        "expansion1::events/strangeasteroid/poi_office_rotated"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "ignoreIfMissingTag": true,
+          "minDistance": 0,
+          "maxDistance": 1
+        }
+      ]
+    }
+  ]
+}

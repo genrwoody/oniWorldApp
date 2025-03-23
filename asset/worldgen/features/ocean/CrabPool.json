@@ -1,0 +1,53 @@
+{
+  "shape": "Blob",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 3,
+    "max": 4
+  },
+  "internalMobs": [
+    {
+      "type": "Crab",
+      "count": {
+        "min": 1,
+        "max": 1
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "CarbonDioxide",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 1
+          }
+        },
+        {
+          "element": "SaltWater",
+          "weight": 0.33,
+          "overrides": {
+            "massOverride": 500
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Salt",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

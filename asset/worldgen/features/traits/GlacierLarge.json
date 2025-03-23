@@ -1,0 +1,70 @@
+{
+  "shape": "Blob",
+  "tags": [
+    "HighPriorityFeature",
+    "AllowExceedNodeBorders"
+  ],
+  "borders": [
+    3
+  ],
+  "blobSize": {
+    "min": 8.0,
+    "max": 10.0
+  },
+  "internalMobs": [
+    {
+      "type": "ColdBreatherSeed",
+      "count": {
+        "min": 5,
+        "max": 8
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Ice",
+          "weight": 2,
+          "overrides": {
+            "temperatureOverride": 213
+          }
+        },
+        {
+          "element": "DirtyIce",
+          "weight": 1,
+          "overrides": {
+            "temperatureOverride": 213
+          }
+        },
+        {
+          "element": "Wolframite",
+          "weight": 0.1,
+          "overrides": {
+            "temperatureOverride": 213
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Ice",
+          "weight": 2,
+          "overrides": {
+            "temperatureOverride": 213
+          }
+        },
+        {
+          "element": "DirtyIce",
+          "weight": 1,
+          "overrides": {
+            "temperatureOverride": 213
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "tags": [
+    "Wet",
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 6,
+    "max": 8
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 1.0
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Cobaltite",
+          "weight": 0.55
+        },
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 0.45
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Cobaltite",
+          "weight": 0.3
+        },
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 0.4
+        },
+        {
+          "element": "DirtyWater",
+          "weight": 0.15
+        },
+        {
+          "element": "ToxicMud",
+          "weight": 0.15
+        }
+      ]
+    }
+  }
+}

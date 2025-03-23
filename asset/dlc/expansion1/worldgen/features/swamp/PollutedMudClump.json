@@ -1,0 +1,37 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "Wet"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 1.5,
+    "max": 3.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "ToxicMud",
+          "weight": 1.0,
+          "overrides": {
+            "massOverride": 750
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "ToxicSand",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

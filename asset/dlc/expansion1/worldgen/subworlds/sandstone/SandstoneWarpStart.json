@@ -1,0 +1,72 @@
+{
+  "biomeNoise": "noise/SandstoneStart",
+  "temperatureRange": "Room",
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 1,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Sedimentary/Basic",
+      "weight": 4,
+      "tags": [
+        "LightBug",
+        "PrickleFlower",
+        "PrickleFlowerSeed",
+        "PrickleGrass",
+        "PrickleGrassSeed",
+        "HatchDense",
+        "HatchBuriedDense",
+        "BasicSingleHarvestPlantSeed",
+        "BasicSingleHarvestPlant",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    },
+    {
+      "name": "biomes/Sedimentary/Metal_CO2",
+      "weight": 2,
+      "tags": [
+        "HatchDense",
+        "HatchBuriedDense",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    },
+    {
+      "name": "biomes/Sedimentary/Basic_CO2",
+      "weight": 1,
+      "tags": [
+        "HatchDense",
+        "HatchBuriedDense",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    }
+  ],
+  "centralFeature": {
+    "type": "features/generic/StartLocation"
+  },
+  "features": [
+    {
+      "type": "expansion1::features/sedimentary/CoalDeposit"
+    },
+    {
+      "type": "expansion1::features/sedimentary/CopperBall"
+    },
+    {
+      "type": "expansion1::features/sedimentary/TinyLake"
+    },
+    {
+      "type": "features/forest/PhosphoriteLump"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Sandstone"
+}

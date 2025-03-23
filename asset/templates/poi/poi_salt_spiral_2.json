@@ -1,0 +1,159 @@
+{
+  "name": "poi_salt_spiral_2",
+  "info": {
+    "size": {
+      "X": 6,
+      "Y": 6
+    },
+    "min": {
+      "X": -2,
+      "Y": -2
+    },
+    "area": 21
+  },
+  "cells": [
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": -2,
+      "location_y": -2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": -2,
+      "location_y": -1
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": -2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": -2,
+      "location_y": 1
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": -2,
+      "location_y": 2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": -2,
+      "location_y": 3
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": -1,
+      "location_y": -2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_y": -2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 1,
+      "location_y": -2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 3,
+      "location_y": -2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 3
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 3,
+      "location_y": 1
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 3,
+      "location_y": 2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_y": 2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_y": 1
+    },
+    {
+      "element": "Salt",
+      "mass": 500,
+      "temperature": 305.299988,
+      "location_x": 1
+    }
+  ],
+  "buildings": [],
+  "pickupables": [],
+  "elementalOres": [],
+  "otherEntities": []
+}

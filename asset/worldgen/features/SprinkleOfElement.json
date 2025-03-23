@@ -1,0 +1,25 @@
+{
+  "ElementChoiceGroups": {
+    "SprinkleOfElementChoices": {
+      "selectionMethod": "Weighted",
+      "choices": [
+        {
+          "element": "IronOre",
+          "weight": 10
+        },
+        {
+          "element": "Cuprite",
+          "weight": 10
+        },
+        {
+          "element": "Electrum",
+          "weight": 2
+        },
+        {
+          "element": "FoolsGold",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

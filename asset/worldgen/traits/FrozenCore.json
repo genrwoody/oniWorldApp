@@ -1,0 +1,30 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.FROZEN_CORE.NAME",
+  "description": "STRINGS.WORLD_TRAITS.FROZEN_CORE.DESCRIPTION",
+  "colorHex": "91D8F0",
+  "exclusiveWithTags": [
+    "CoreTrait"
+  ],
+  "traitTags": [
+    "Core",
+    "VeryCold"
+  ],
+  "additionalSubworldFiles": [
+    {
+      "name": "subworlds/frozen/FrozenSolid",
+      "minCount": 2
+    }
+  ],
+  "additionalUnknownCellFilters": [
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/frozen/FrozenSolid"
+      ]
+    }
+  ]
+}

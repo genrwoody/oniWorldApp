@@ -1,0 +1,30 @@
+{
+  "biomeNoise": "noise/subworldForest",
+  "temperatureRange": "VeryCold",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc2::biomes/SugarWoods/Basic",
+      "weight": 2,
+      "tags": [
+        "Seal",
+        "SpaceTree",
+        "LightBug",
+        "IceFlower"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "Mixing"
+  ],
+  "centralFeature": null,
+  "features": [],
+  "zoneType": "SugarWoods"
+}

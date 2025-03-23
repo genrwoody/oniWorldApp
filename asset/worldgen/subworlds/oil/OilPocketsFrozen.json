@@ -1,0 +1,42 @@
+{
+  "biomeNoise": "noise/OilPockets",
+  "temperatureRange": "VeryCold",
+  "minChildCount": 5,
+  "density": {
+    "min": 25,
+    "max": 35
+  },
+  "avoidRadius": 25.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Oil/OilPocketsFrozen",
+      "weight": 1,
+      "tags": [
+        "CactusPlantSeed",
+        "EvilFlowerSeed"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "features/oilpockets/CavityPondFrozen"
+    },
+    {
+      "type": "features/oilpockets/DiamondClump"
+    }
+  ],
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "poi/poi_oil_switchdoor",
+        "poi/poi_oil_six_switch_door"
+      ],
+      "listRule": "TryAll"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "OilField"
+}

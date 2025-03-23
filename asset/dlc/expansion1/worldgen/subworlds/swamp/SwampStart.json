@@ -1,0 +1,95 @@
+{
+  "biomeNoise": "expansion1::noise/Swamp",
+  "temperatureRange": "Room",
+  "pdWeight": 8,
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "extraBiomeChildren": 3,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Swamp/Basic",
+      "weight": 2,
+      "tags": [
+        "WineCups",
+        "WineCupsSeed",
+        "SwampHarvestPlantSeed",
+        "SwampHarvestPlant",
+        "SwampForagePlant",
+        "SwampForagePlantPlanted"
+      ]
+    },
+    {
+      "name": "expansion1::biomes/Swamp/Water_CO2",
+      "weight": 3,
+      "tags": [
+        "Pacu",
+        "SwampForagePlant",
+        "SwampForagePlantPlanted",
+        "WineCups",
+        "WineCupsSeed",
+        "SwampHarvestPlantSeed",
+        "SwampHarvestPlant"
+      ]
+    }
+  ],
+  "centralFeature": {
+    "type": "features/generic/StartLocation"
+  },
+  "features": [
+    {
+      "type": "expansion1::features/swamp/DirtBall"
+    },
+    {
+      "type": "expansion1::features/swamp/SandClump"
+    },
+    {
+      "type": "expansion1::features/swamp/AirPocket"
+    },
+    {
+      "type": "expansion1::features/swamp/AirPocket"
+    },
+    {
+      "type": "expansion1::features/swamp/BigAirPocket"
+    },
+    {
+      "type": "expansion1::features/swamp/StaterpillarHome"
+    },
+    {
+      "type": "expansion1::features/swamp/StaterpillarHome"
+    },
+    {
+      "type": "expansion1::features/swamp/MetalCavern"
+    },
+    {
+      "type": "expansion1::features/swamp/MetalCavern"
+    },
+    {
+      "type": "expansion1::features/swamp/PacuPool"
+    },
+    {
+      "type": "expansion1::features/swamp/FreshwaterWell"
+    },
+    {
+      "type": "expansion1::features/swamp/ShallowPool"
+    },
+    {
+      "type": "expansion1::features/swamp/DirtyPool"
+    },
+    {
+      "type": "expansion1::features/swamp/DirtyPool"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning",
+    "StartWorld"
+  ],
+  "zoneType": "Swamp"
+}

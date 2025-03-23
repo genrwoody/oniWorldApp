@@ -1,0 +1,66 @@
+{
+  "settings": {
+    "zoom": 0.0015,
+    "normalise": true,
+    "lowerBound": {
+      "X": 2,
+      "Y": 2
+    },
+    "upperBound": {
+      "X": 4,
+      "Y": 4
+    },
+    "name": "DefaultDensity"
+  },
+  "links": [
+    {
+      "target": {
+        "type": "Filter",
+        "name": "DefaultDensityFilter"
+      },
+      "source0": {
+        "type": "Primitive",
+        "name": "DefaultDensityPrimative"
+      }
+    },
+    {
+      "target": {
+        "type": "Terminator",
+        "name": "TERMINATOR"
+      },
+      "source0": {
+        "type": "Filter",
+        "name": "DefaultDensityFilter"
+      }
+    }
+  ],
+  "primitives": {
+    "DefaultDensityPrimative": {
+      "primative": "SimplexPerlin",
+      "quality": "Standard",
+      "seed": 3,
+      "offset": 1,
+      "name": "DefaultDensityPrimative",
+      "pos": {
+        "X": -839,
+        "Y": 5
+      }
+    }
+  },
+  "filters": {
+    "DefaultDensityFilter": {
+      "filter": "RidgedMultiFractal",
+      "frequency": 9,
+      "lacunarity": 1.5,
+      "octaves": 6,
+      "offset": 1,
+      "gain": 2,
+      "exponent": 0.9,
+      "name": "DefaultDensityFilter",
+      "pos": {
+        "X": -455,
+        "Y": -10
+      }
+    }
+  }
+}

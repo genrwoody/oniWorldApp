@@ -1,0 +1,28 @@
+{
+  "biomeNoise": "noise/subworldFrozen",
+  "temperatureRange": "VeryCold",
+  "minChildCount": 1,
+  "pdWeight": 0.5,
+  "density": {
+    "min": 70,
+    "max": 70
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Misc/Surface",
+      "weight": 1,
+      "tags": [
+        "Mole"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "ErodePointToBorderInv",
+    "NoGlobalFeatureSpawning",
+    "RemoveWorldBorderOverVacuum"
+  ],
+  "zoneType": "Space"
+}

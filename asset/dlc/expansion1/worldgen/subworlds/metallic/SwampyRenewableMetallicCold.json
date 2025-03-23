@@ -1,0 +1,27 @@
+{
+  "biomeNoise": "expansion1::noise/Metallic",
+  "temperatureRange": "Chilly",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "extraBiomeChildren": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Metallic/Golden",
+      "weight": 2,
+      "tags": null
+    },
+    {
+      "name": "expansion1::biomes/Metallic/Cobaltite",
+      "weight": 1,
+      "tags": null
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Metallic"
+}

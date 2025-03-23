@@ -1,0 +1,46 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "Wet"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 2.5,
+    "max": 4.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Cobaltite",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 0.33
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Cobaltite",
+          "weight": 0.66
+        },
+        {
+          "element": "ToxicSand",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

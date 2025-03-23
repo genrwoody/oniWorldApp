@@ -1,0 +1,69 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "PreventAmbientMobsInFeature"
+  ],
+  "shape": "Square",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 4.5,
+    "max": 9.5
+  },
+  "internalMobs": [
+    {
+      "type": "WormPlant",
+      "count": {
+        "min": 2,
+        "max": 4
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.5
+        },
+        {
+          "element": "Sand",
+          "weight": 0.3
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 0.1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Sand",
+          "weight": 1
+        },
+        {
+          "element": "SandStone",
+          "weight": 3
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "SandStone",
+          "weight": 1
+        },
+        {
+          "element": "MaficRock",
+          "weight": 3
+        }
+      ]
+    }
+  }
+}

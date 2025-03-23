@@ -1,0 +1,66 @@
+{
+  "settings": {
+    "zoom": 0.00125,
+    "normalise": true,
+    "lowerBound": {
+      "X": 2,
+      "Y": 2
+    },
+    "upperBound": {
+      "X": 4,
+      "Y": 4
+    },
+    "name": "DefaultCave"
+  },
+  "links": [
+    {
+      "target": {
+        "type": "Terminator",
+        "name": "TERMINATOR"
+      },
+      "source0": {
+        "type": "Filter",
+        "name": "DefaultCaveFilter"
+      }
+    },
+    {
+      "target": {
+        "type": "Filter",
+        "name": "DefaultCaveFilter"
+      },
+      "source0": {
+        "type": "Primitive",
+        "name": "DefaultCavePrimative"
+      }
+    }
+  ],
+  "primitives": {
+    "DefaultCavePrimative": {
+      "primative": "BevinsValue",
+      "quality": "Standard",
+      "seed": 2,
+      "offset": 0.8,
+      "name": "DefaultCavePrimative",
+      "pos": {
+        "X": -785,
+        "Y": -12
+      }
+    }
+  },
+  "filters": {
+    "DefaultCaveFilter": {
+      "filter": "RidgedMultiFractal",
+      "frequency": 16,
+      "lacunarity": 6,
+      "octaves": 3,
+      "offset": 0.8,
+      "gain": 1,
+      "exponent": 0.9,
+      "name": "DefaultCaveFilter",
+      "pos": {
+        "X": -454,
+        "Y": -74
+      }
+    }
+  }
+}

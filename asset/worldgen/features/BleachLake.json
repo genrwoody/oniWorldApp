@@ -1,0 +1,41 @@
+{
+  "shape": "ShortWide",
+  "borders": [
+    3
+  ],
+  "blobSize": {
+    "min": 14.1,
+    "max": 20.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Vacuum",
+          "weight": 0.5
+        },
+        {
+          "element": "Water",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 1000
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "BleachStone",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

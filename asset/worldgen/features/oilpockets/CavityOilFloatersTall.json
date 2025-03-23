@@ -1,0 +1,67 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "TallThin",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 4,
+    "max": 8
+  },
+  "internalMobs": [
+    {
+      "type": "OilFloater",
+      "count": {
+        "min": 1,
+        "max": 2
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "CarbonDioxide",
+          "weight": 1.5,
+          "overrides": {
+            "massOverride": 1
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Granite",
+          "weight": 1
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 2
+        },
+        {
+          "element": "Lead",
+          "weight": 2
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Granite",
+          "weight": 1
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "ElementChoiceGroups": {
+    "SprinkleOfElementChoices": {
+      "selectionMethod": "Weighted",
+      "choices": [
+        {
+          "element": "OxyRock",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

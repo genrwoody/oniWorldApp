@@ -1,0 +1,30 @@
+{
+  "biomeNoise": "noise/Sandstone",
+  "temperatureRange": "Hot",
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Sedimentary/Desert",
+      "weight": 4,
+      "tags": [
+        "LightBug",
+        "PrickleGrass",
+        "PrickleGrassSeed",
+        "Hatch",
+        "HatchBuried"
+      ]
+    }
+  ],
+  "features": [],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Sandstone"
+}

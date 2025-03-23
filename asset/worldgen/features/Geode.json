@@ -1,0 +1,241 @@
+{
+  "shape": "Circle",
+  "borders": [
+    1,
+    2
+  ],
+  "blobSize": {
+    "min": 4.4,
+    "max": 8.1
+  },
+  "excludeTags": [
+    "SprinkleOfMetal",
+    "SprinkleOfOxyRock"
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "Weighted",
+      "choices": [
+        {
+          "element": "Ice",
+          "weight": 170,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "DirtyIce",
+          "weight": 170,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "IronOre",
+          "weight": 136,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "Cuprite",
+          "weight": 136,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "Electrum",
+          "weight": 136,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "FoolsGold",
+          "weight": 136,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "Diamond",
+          "weight": 17,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "PhosphateNodules",
+          "weight": 102,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "Phosphorite",
+          "weight": 102,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "SolidPropane",
+          "weight": 68,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "SolidOxygen",
+          "weight": 17,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "SolidMercury",
+          "weight": 68,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "SolidChlorine",
+          "weight": 85,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "SolidCarbonDioxide",
+          "weight": 170,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "SolidHydrogen",
+          "weight": 3,
+          "overrides": {
+            "temperatureOverride": 250
+          }
+        },
+        {
+          "element": "Radium",
+          "weight": 50,
+          "overrides": {
+            "temperatureOverride": 1200
+          }
+        },
+        {
+          "element": "Obsidian",
+          "weight": 30,
+          "overrides": {
+            "temperatureOverride": 2900
+          }
+        },
+        {
+          "element": "Diamond",
+          "weight": 6,
+          "overrides": {
+            "temperatureOverride": 4100
+          }
+        },
+        {
+          "element": "Carbon",
+          "weight": 3,
+          "overrides": {
+            "temperatureOverride": 4500
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "Weighted",
+      "choices": [
+        {
+          "element": "Vacuum",
+          "weight": 200
+        },
+        {
+          "element": "Void",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "Weighted",
+      "choices": [
+        {
+          "element": "SandStone",
+          "weight": 1.7
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 2.55
+        },
+        {
+          "element": "Granite",
+          "weight": 8.5
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 4.25
+        },
+        {
+          "element": "PhosphateNodules",
+          "weight": 4.25
+        },
+        {
+          "element": "Phosphorite",
+          "weight": 4.25
+        },
+        {
+          "element": "Radium",
+          "weight": 0.85
+        },
+        {
+          "element": "IronOre",
+          "weight": 0.1275
+        },
+        {
+          "element": "Cuprite",
+          "weight": 0.1275
+        },
+        {
+          "element": "Electrum",
+          "weight": 0.1275
+        },
+        {
+          "element": "FoolsGold",
+          "weight": 0.1275
+        },
+        {
+          "element": "Diamond",
+          "weight": 0.0675
+        },
+        {
+          "element": "Katairite",
+          "weight": 0.0675
+        },
+        {
+          "element": "Gold",
+          "weight": 0.0225
+        },
+        {
+          "element": "Iron",
+          "weight": 0.0225
+        },
+        {
+          "element": "Copper",
+          "weight": 0.0225
+        },
+        {
+          "element": "Obsidian",
+          "weight": 0.0675
+        }
+      ]
+    }
+  }
+}

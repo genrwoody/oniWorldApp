@@ -1,0 +1,38 @@
+{
+  "biomeNoise": "noise/subworldForest",
+  "temperatureRange": "Room",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "metalCrust",
+  "biomes": [
+    {
+      "name": "biomes/Forest/Basic",
+      "weight": 2,
+      "tags": [
+        "med_Oxyfern",
+        "med_ForestTree",
+        "med_BasicSingleHarvestPlant",
+        "med_BasicSingleHarvestPlantSeed",
+        "med_ForestForagePlantPlanted",
+        "med_LightBug",
+        "med_LeafyPlant",
+        "med_LeafyPlantSeed",
+        "med_Squirrel"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "features/forest/SmallLake"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Forest"
+}

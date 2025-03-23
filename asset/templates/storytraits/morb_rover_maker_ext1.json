@@ -1,0 +1,217 @@
+{
+  "info": {
+    "size": {
+      "X": 4,
+      "Y": 7
+    },
+    "min": {
+      "X": -1,
+      "Y": -2
+    },
+    "area": 23
+  },
+  "cells": [
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": -2
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 300.149994,
+      "location_x": 1
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -1,
+      "location_y": -1
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.149994,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -1
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 300.149994
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -1,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 300.149994,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -1,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 300.149994,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2,
+      "location_y": 3
+    }
+  ],
+  "otherEntities": [
+    {
+      "id": "EvilFlower",
+      "location_x": 1,
+      "element": "Creature",
+      "temperature": 293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure"
+        },
+        {
+          "id": "Temperature"
+        }
+      ]
+    },
+    {
+      "id": "EvilFlower",
+      "location_y": 1,
+      "element": "Creature",
+      "temperature": 293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure"
+        },
+        {
+          "id": "Temperature"
+        }
+      ]
+    },
+    {
+      "id": "EvilFlower",
+      "location_x": 1,
+      "location_y": 2,
+      "element": "Creature",
+      "temperature": 293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure"
+        },
+        {
+          "id": "Temperature"
+        }
+      ]
+    }
+  ]
+}

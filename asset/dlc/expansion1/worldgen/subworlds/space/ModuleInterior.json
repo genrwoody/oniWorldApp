@@ -1,0 +1,30 @@
+{
+  "biomeNoise": "noise/Generic",
+  "temperatureRange": "VeryCold",
+  "minChildCount": 1,
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Misc/Space",
+      "weight": 1
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "expansion1::poi/poi_module_interior"
+      ],
+      "listRule": "TryOne"
+    }
+  ],
+  "zoneType": "Space"
+}

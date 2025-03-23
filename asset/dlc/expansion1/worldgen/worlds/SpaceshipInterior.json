@@ -1,0 +1,37 @@
+{
+  "name": "STRINGS.WORLDS.SPACESHIPINTERIOR.NAME",
+  "description": "STRINGS.WORLDS.SPACESHIPINTERIOR.DESCRIPTION",
+  "disableWorldTraits": true,
+  "moduleInterior": true,
+  "worldsize": {
+    "X": 96,
+    "Y": 96
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorder": true,
+      "DrawWorldBorderForce": false,
+      "WorldBorderThickness": 1,
+      "WorldBorderRange": 0,
+      "OverworldDensityMin": 15,
+      "OverworldDensityMax": 15,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "subworldFiles": [
+    {
+      "name": "expansion1::subworlds/space/ModuleInterior"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/ModuleInterior"
+      ]
+    }
+  ]
+}

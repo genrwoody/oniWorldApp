@@ -1,0 +1,63 @@
+{
+  "name": "STRINGS.WORLDS.TINYICE.NAME",
+  "description": "STRINGS.WORLDS.TINYICE.DESCRIPTION",
+  "disableWorldTraits": true,
+  "worldTraitScale": 0.04,
+  "worldsize": {
+    "X": 64,
+    "Y": 64
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorder": true,
+      "DrawWorldBorderForce": false,
+      "WorldBorderThickness": 1,
+      "WorldBorderRange": 0,
+      "OverworldDensityMin": 30,
+      "OverworldDensityMax": 30,
+      "OverworldAvoidRadius": 30,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "startSubworldName": "subworlds/frozen/Frozen",
+  "startingBaseTemplate": "bases/sandstoneBase",
+  "subworldFiles": [
+    {
+      "name": "subworlds/frozen/Frozen"
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "subworlds/space/Surface"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/frozen/Frozen"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Surface"
+      ]
+    }
+  ]
+}

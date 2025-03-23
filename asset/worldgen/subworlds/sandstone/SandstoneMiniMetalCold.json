@@ -1,0 +1,36 @@
+{
+  "biomeNoise": "noise/Sandstone",
+  "temperatureRange": "Cool",
+  "pdWeight": 0.5,
+  "density": {
+    "min": 45,
+    "max": 45
+  },
+  "avoidRadius": 45.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "biomes/Sedimentary/Metal_CO2",
+      "weight": 2,
+      "tags": [
+        "Hatch",
+        "HatchBuried",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    }
+  ],
+  "centralFeature": {
+    "type": "features/sedimentary/MetalVacuumBlob"
+  },
+  "features": [],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning",
+    "StartWorld"
+  ],
+  "zoneType": "Sandstone"
+}

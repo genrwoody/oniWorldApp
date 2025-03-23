@@ -1,0 +1,35 @@
+{
+  "tags": [],
+  "shape": "ShortWide",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 3,
+    "max": 6
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Diamond",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "IronOre",
+          "weight": 1
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

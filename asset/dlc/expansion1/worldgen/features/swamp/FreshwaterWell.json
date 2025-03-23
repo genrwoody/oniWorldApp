@@ -1,0 +1,58 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "Wet"
+  ],
+  "shape": "TallThin",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 2.1,
+    "max": 2.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.5,
+          "overrides": {
+            "massOverride": 1
+          }
+        },
+        {
+          "element": "Water",
+          "weight": 2,
+          "overrides": {
+            "massOverride": 1000
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Mud",
+          "weight": 3
+        },
+        {
+          "element": "Dirt",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "SedimentaryRock",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

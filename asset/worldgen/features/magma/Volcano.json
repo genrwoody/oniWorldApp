@@ -1,0 +1,43 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 8,
+    "max": 12
+  },
+  "internalMobs": [
+    {
+      "type": "GeyserGeneric_big_volcano",
+      "count": {
+        "min": 1,
+        "max": 1
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Magma",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Obsidian",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

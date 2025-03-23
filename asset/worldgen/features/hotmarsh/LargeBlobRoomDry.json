@@ -1,0 +1,44 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Blob",
+  "borders": [
+    3
+  ],
+  "blobSize": {
+    "min": 8,
+    "max": 12
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "CarbonDioxide",
+          "weight": 3,
+          "overrides": {
+            "massOverride": 1
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "SlimeMold",
+          "weight": 2,
+          "overrides": {
+            "diseaseOverride": "SlimeLung",
+            "diseaseAmountOverride": 1000000
+          }
+        },
+        {
+          "element": "Algae",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "STRINGS.WORLDS.TINYEMPTY.NAME",
+  "description": "STRINGS.WORLDS.TINYEMPTY.DESCRIPTION",
+  "disableWorldTraits": true,
+  "worldTraitScale": 1,
+  "worldsize": {
+    "X": 32,
+    "Y": 32
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "OverworldDensityMin": 16,
+      "OverworldDensityMax": 16,
+      "DrawWorldBorder": true,
+      "DrawWorldBorderForce": true,
+      "WorldBorderThickness": 1,
+      "WorldBorderRange": 0,
+      "OverworldMinNodes": 1
+    },
+    "startingWorldElements": []
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/Empty"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/Empty"
+      ]
+    }
+  ]
+}

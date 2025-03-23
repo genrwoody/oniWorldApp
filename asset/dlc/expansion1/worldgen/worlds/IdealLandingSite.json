@@ -1,0 +1,374 @@
+{
+  "name": "STRINGS.WORLDS.IDEALLANDINGSITE.NAME",
+  "description": "STRINGS.WORLDS.IDEALLANDINGSITE.DESCRIPTION",
+  "nameTables": [
+    "FOREST",
+    "RADIOACTIVE"
+  ],
+  "asteroidIcon": "asteroid_swamp_rocket_kanim",
+  "worldTraitScale": 0.2,
+  "worldsize": {
+    "X": 128,
+    "Y": 153
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 5,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "worldTraitRules": [
+    {
+      "min": 1,
+      "max": 2,
+      "forbiddenTags": [
+        "Oil",
+        "LargeWorld",
+        "Surface",
+        "Crust",
+        "Challenge",
+        "Core",
+        "GenericGeysers",
+        "StartChange",
+        "StartWorldOnly"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightLow",
+    "cosmicRadiationVeryLow"
+  ],
+  "seasons": [
+    "SpacedOutStyleRocketMeteorShowers",
+    "IdealLandingSiteMeteorShowers"
+  ],
+  "startSubworldName": "expansion1::subworlds/barren/LargeChasmStart",
+  "startingBaseTemplate": "poi/poi_satellite_3_a",
+  "startingBasePositionHorizontal": {
+    "min": 0.35,
+    "max": 0.65
+  },
+  "startingBasePositionVertical": {
+    "min": 0.65,
+    "max": 0.65
+  },
+  "subworldFiles": [
+    {
+      "name": "expansion1::subworlds/barren/LargeChasmStart"
+    },
+    {
+      "name": "expansion1::subworlds/barren/LargeChasm",
+      "overridePower": 0.6
+    },
+    {
+      "name": "subworlds/forest/Forest"
+    },
+    {
+      "name": "subworlds/forest/ForestMiniWater"
+    },
+    {
+      "name": "expansion1::subworlds/forest/med_ForestSurface"
+    },
+    {
+      "name": "expansion1::subworlds/ocean/med_Ocean",
+      "overridePower": 1.5,
+      "minCount": 1
+    },
+    {
+      "name": "subworlds/ocean/OceanDeep",
+      "overridePower": 1.5,
+      "minCount": 1
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_Radioactive",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_UraniumFields"
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_FrozenUraniumFields",
+      "minCount": 2
+    },
+    {
+      "name": "expansion1::subworlds/metallic/RenewableMetallic",
+      "minCount": 4
+    },
+    {
+      "name": "expansion1::subworlds/frozen/FrozenCore",
+      "weight": 0.4,
+      "maxCount": 2
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithBorder",
+      "overridePower": 1.25
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/forest/Forest",
+        "expansion1::subworlds/ocean/med_Ocean",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtEdge",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/barren/LargeChasm"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/forest/med_ForestSurface",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/metallic/RenewableMetallic",
+        "subworlds/forest/ForestMiniWater",
+        "subworlds/ocean/OceanDeep"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/radioactive/med_Radioactive",
+        "expansion1::subworlds/radioactive/med_UraniumFields",
+        "expansion1::subworlds/radioactive/med_FrozenUraniumFields",
+        "expansion1::subworlds/metallic/RenewableMetallic"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/frozen/FrozenCore",
+        "expansion1::subworlds/radioactive/med_FrozenUraniumFields"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/poi_ocean_geyser_saltwater"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Ocean"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser",
+        "expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser_b",
+        "expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser_c"
+      ],
+      "listRule": "GuaranteeSomeTryMore",
+      "someCount": 1,
+      "moreCount": 1,
+      "priority": 100,
+      "allowExtremeTemperatureOverlap": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Radioactive"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "subworldNames": [
+            "expansion1::subworlds/radioactive/med_UraniumFields",
+            "expansion1::subworlds/radioactive/med_FrozenUraniumFields"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/poi_molten_gold_volcano",
+        "expansion1::poi/poi_molten_aluminum_volcano"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Metallic"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 1,
+          "maxDistance": 3
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/poi_molten_gold_volcano",
+        "expansion1::poi/poi_molten_aluminum_volcano"
+      ],
+      "listRule": "TryAll",
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Metallic"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 1,
+          "maxDistance": 3
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/boon/bedroom",
+        "expansion1::poi/boon/washroom",
+        "expansion1::poi/boon/power",
+        "expansion1::poi/boon/kitchen",
+        "expansion1::poi/boon/well",
+        "expansion1::poi/boon/farm"
+      ],
+      "listRule": "TrySome",
+      "someCount": 2,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 5
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Forest",
+            "Ocean"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "subworldNames": [
+            "expansion1::subworlds/barren/LargeChasmStart",
+            "expansion1::subworlds/barren/LargeChasm"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/chlorine_gas",
+        "geysers/methane",
+        "geysers/hot_po2",
+        "geysers/small_volcano",
+        "geysers/hot_hydrogen",
+        "geysers/filthy_water",
+        "geysers/molten_copper"
+      ],
+      "listRule": "TryOne",
+      "allowDuplicates": true,
+      "times": 3,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 2,
+          "maxDistance": 10
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Space"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "subworldNames": [
+            "expansion1::subworlds/barren/LargeChasmStart",
+            "expansion1::subworlds/barren/LargeChasm"
+          ]
+        }
+      ]
+    }
+  ]
+}

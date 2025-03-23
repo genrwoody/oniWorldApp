@@ -1,0 +1,9 @@
+{
+  "name": "STRINGS.WORLDS.CERESMIXING.NAME",
+  "description": "STRINGS.WORLDS.CERESMIXING.DESCRIPTION",
+  "forbiddenClusterTags": [
+    "CeresCluster"
+  ],
+  "icon": "asteroid_classic_mini_ceres_so_kanim",
+  "world": "dlc2::worlds/MixingCeresAsteroid"
+}

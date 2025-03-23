@@ -1,0 +1,28 @@
+{
+  "biomeNoise": "noise/Default",
+  "temperatureRange": "Cold",
+  "minChildCount": 2,
+  "pdWeight": 1.5,
+  "density": {
+    "min": 30,
+    "max": 40
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Barren/GraniteOre",
+      "weight": 1,
+      "tags": null
+    }
+  ],
+  "features": [
+    {
+      "type": "expansion1::features/barren/GraniteCoalDeposit"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Barren"
+}

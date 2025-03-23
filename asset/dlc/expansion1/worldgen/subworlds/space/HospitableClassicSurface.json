@@ -1,0 +1,26 @@
+{
+  "biomeNoise": "expansion1::noise/HospitableSurface",
+  "temperatureRange": "VeryCold",
+  "minChildCount": 1,
+  "density": {
+    "min": 70,
+    "max": 70
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Misc/HospitableClassicSurface",
+      "weight": 1,
+      "tags": [
+        "Mole"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "ErodePointToBorderInv",
+    "NoGlobalFeatureSpawning"
+  ],
+  "zoneType": "Barren"
+}

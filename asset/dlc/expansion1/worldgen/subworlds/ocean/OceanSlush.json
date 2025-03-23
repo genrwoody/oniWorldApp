@@ -1,0 +1,44 @@
+{
+  "biomeNoise": "noise/subworldOcean",
+  "temperatureRange": "Cool",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Ocean/Briny",
+      "weight": 2,
+      "tags": [
+        "Pacu",
+        "Crab",
+        "SeaLettuceSeed",
+        "SpiceVineSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "River"
+  ],
+  "features": [
+    {
+      "type": "features/ocean/SlushPool"
+    },
+    {
+      "type": "features/ocean/SlushPool"
+    }
+  ],
+  "zoneType": "Ocean",
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "poi/poi_ocean_geyser_saltwater"
+      ],
+      "listRule": "GuaranteeOne"
+    }
+  ]
+}

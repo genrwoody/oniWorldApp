@@ -1,0 +1,45 @@
+{
+  "biomeNoise": "noise/subworldOceanDeep",
+  "temperatureRange": "HumanWarm",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 2,
+  "sampleBehaviour": "PoissonDisk",
+  "pdWeight": 1.5,
+  "biomes": [
+    {
+      "name": "biomes/Ocean/Deep",
+      "weight": 2,
+      "tags": [
+        "Pacu",
+        "Crab",
+        "SeaLettuce",
+        "SpiceVine",
+        "SeaLettuceSeed",
+        "SpiceVineSeed"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "features/ocean/SaltCave"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "River"
+  ],
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "poi/poi_ladder_tunnel",
+        "poi/poi_dining_room"
+      ],
+      "listRule": "TryOne"
+    }
+  ],
+  "zoneType": "Ocean"
+}

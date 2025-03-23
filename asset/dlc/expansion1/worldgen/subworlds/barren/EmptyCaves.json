@@ -1,0 +1,24 @@
+{
+  "biomeNoise": "expansion1::noise/SmallCaves",
+  "temperatureRange": "HumanWarm",
+  "borderOverride": "regolith",
+  "minChildCount": 2,
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Misc/Empty",
+      "weight": 2
+    }
+  ],
+  "features": [],
+  "tags": [
+    "IgnoreCaveOverride",
+    "ErodePointToBorderInv"
+  ],
+  "zoneType": "Sandstone"
+}

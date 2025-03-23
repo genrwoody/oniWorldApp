@@ -1,0 +1,120 @@
+{
+  "name": "STRINGS.WORLDS.SULFURMOONLET.NAME",
+  "description": "STRINGS.WORLDS.SULFURMOONLET.DESCRIPTION",
+  "nameTables": [
+    "SULFUR"
+  ],
+  "asteroidIcon": "asteroid_sandstone_start_kanim",
+  "disableWorldTraits": true,
+  "worldTraitScale": 0.06,
+  "worldsize": {
+    "X": 64,
+    "Y": 96
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorder": true,
+      "DrawWorldBorderForce": false,
+      "WorldBorderThickness": 1,
+      "WorldBorderRange": 0,
+      "OverworldDensityMin": 15,
+      "OverworldDensityMax": 15,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/marsh/HotMarshSurface"
+    },
+    {
+      "name": "subworlds/magma/Bottom"
+    },
+    {
+      "name": "subworlds/marsh/HotMarsh"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarsh"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/marsh/HotMarshSurface"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarsh"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/Bottom"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/hotmarsh/geyser_steam"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/hotmarsh/geyser_methane"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh"
+          ]
+        }
+      ]
+    }
+  ]
+}

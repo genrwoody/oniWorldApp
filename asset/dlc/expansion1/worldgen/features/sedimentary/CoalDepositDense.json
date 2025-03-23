@@ -1,0 +1,50 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 2,
+    "max": 3
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Carbon",
+          "weight": 0.5,
+          "overrides": {
+            "massOverride": 600
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Carbon",
+          "weight": 0.75,
+          "overrides": {
+            "massOverride": 600
+          }
+        },
+        {
+          "element": "SandStone",
+          "weight": 2
+        },
+        {
+          "element": "Cuprite",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 1050
+          }
+        }
+      ]
+    }
+  }
+}

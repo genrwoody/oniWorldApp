@@ -1,0 +1,923 @@
+{
+  "info": {
+    "size": {
+      "X": 16,
+      "Y": 10
+    },
+    "min": {
+      "X": -7,
+      "Y": -4
+    },
+    "area": 128
+  },
+  "cells": [
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -7,
+      "location_y": -2
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": -6,
+      "location_y": -2
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308.149994,
+      "location_x": -5,
+      "location_y": -2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": -4,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -3,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -2,
+      "location_y": -2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": -1,
+      "location_y": -2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 1,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 3,
+      "location_y": -2
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 4,
+      "location_y": -2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": 5,
+      "location_y": -2
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 6,
+      "location_y": -2
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308.149994,
+      "location_x": 7,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 8,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -7,
+      "location_y": -1
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -6,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": -5,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": -4,
+      "location_y": -1
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -3,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": -2,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": -1,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308.003265,
+      "location_x": 1,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": 5,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": 6,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": 7,
+      "location_y": -1
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 8,
+      "location_y": -1
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -6,
+      "location_y": -3
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -5,
+      "location_y": -3
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -4,
+      "location_y": -3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -3,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": -2,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": -1,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_y": -3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": 1,
+      "location_y": -3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": 2,
+      "location_y": -3
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 3,
+      "location_y": -3
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 4,
+      "location_y": -3
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 5,
+      "location_y": -3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": 6,
+      "location_y": -3
+    },
+    {
+      "element": "Dirt",
+      "mass": 1840,
+      "temperature": 308,
+      "location_x": 7,
+      "location_y": -3
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": -5,
+      "location_y": -4
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": -4,
+      "location_y": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -2,
+      "location_y": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -1,
+      "location_y": -4
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_y": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 1,
+      "location_y": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 2,
+      "location_y": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 3,
+      "location_y": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 4,
+      "location_y": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 5,
+      "location_y": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 307.999847,
+      "location_x": -6
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -5
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": -4
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.520239949,
+      "temperature": 308.150024,
+      "location_x": -2
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308.149994,
+      "location_x": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.526383936,
+      "temperature": 308.157562
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308.150146,
+      "location_x": 1
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308.152161,
+      "location_x": 2
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": 4
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": 5
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 6
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 7
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": -5,
+      "location_y": 1
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -4,
+      "location_y": 1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": -3,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.522735953,
+      "temperature": 308.150116,
+      "location_x": -2,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.530224025,
+      "temperature": 308.161926,
+      "location_x": -1,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.553024054,
+      "temperature": 308.772522,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.596607983,
+      "temperature": 308.958496,
+      "location_x": 1,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.645856023,
+      "temperature": 308.898407,
+      "location_x": 2,
+      "location_y": 1
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308.00235,
+      "location_x": 3,
+      "location_y": 1
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 4,
+      "location_y": 1
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 5,
+      "location_y": 1
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 6,
+      "location_y": 1
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 7,
+      "location_y": 1
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": -5,
+      "location_y": 2
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -4,
+      "location_y": 2
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": -3,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.523695946,
+      "temperature": 308.150238,
+      "location_x": -2,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.537279963,
+      "temperature": 308.187897,
+      "location_x": -1,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.566799939,
+      "temperature": 308.855988,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.56329596,
+      "temperature": 308.200806,
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.57308799,
+      "temperature": 308.277222,
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.565311968,
+      "temperature": 308.84845,
+      "location_x": 3,
+      "location_y": 2
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 4,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": 5,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": 6,
+      "location_y": 2
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 7,
+      "location_y": 2
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 307.999298,
+      "location_x": -5,
+      "location_y": 3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": -4,
+      "location_y": 3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": -3,
+      "location_y": 3
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": -2,
+      "location_y": 3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": -1,
+      "location_y": 3
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 2,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.530031979,
+      "temperature": 308.164032,
+      "location_x": 3,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.520623982,
+      "temperature": 308.149994,
+      "location_x": 4,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": 5,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.519999981,
+      "temperature": 308.149994,
+      "location_x": 6,
+      "location_y": 3
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 7,
+      "location_y": 3
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": -4,
+      "location_y": 4
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": -3,
+      "location_y": 4
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": -2,
+      "location_y": 4
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": -1,
+      "location_y": 4
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 308,
+      "location_y": 4
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 308,
+      "location_x": 1,
+      "location_y": 4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 2,
+      "location_y": 4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1000,
+      "temperature": 308,
+      "location_x": 3,
+      "location_y": 4
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 4,
+      "location_y": 4
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 5,
+      "location_y": 4
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 6,
+      "location_y": 4
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 7,
+      "location_y": 4
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": -2,
+      "location_y": 5
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 307.995209,
+      "location_x": -1,
+      "location_y": 5
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_y": 5
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 1,
+      "location_y": 5
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 2,
+      "location_y": 5
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 3,
+      "location_y": 5
+    },
+    {
+      "element": "Fertilizer",
+      "mass": 200,
+      "temperature": 308,
+      "location_x": 4,
+      "location_y": 5
+    }
+  ],
+  "otherEntities": [
+    {
+      "id": "FossilBitsSmall",
+      "location_x": 7,
+      "location_y": -2,
+      "element": "Fossil",
+      "temperature": 315,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "FossilBitsLarge",
+      "location_x": 4,
+      "location_y": 1,
+      "element": "Fossil",
+      "temperature": 315,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "FossilBitsLarge",
+      "location_x": -5,
+      "location_y": -2,
+      "element": "Fossil",
+      "temperature": 315,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "FossilDig",
+      "element": "Fossil",
+      "temperature": 315,
+      "units": 1,
+      "type": "Other"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "biomeNoise": "noise/Sandstone",
+  "temperatureRange": "Cold",
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Sedimentary/Snowy",
+      "weight": 4,
+      "tags": [
+        "PrickleFlowerSeed",
+        "PrickleGrassSeed",
+        "HatchBuried",
+        "BasicSingleHarvestPlantSeed",
+        "BasicForagePlant"
+      ]
+    },
+    {
+      "name": "biomes/Sedimentary/Metal_CO2",
+      "weight": 2,
+      "tags": [
+        "HatchBuried",
+        "BasicForagePlantPlanted"
+      ]
+    },
+    {
+      "name": "biomes/Sedimentary/Basic_CO2",
+      "weight": 1,
+      "tags": [
+        "HatchBuried",
+        "BasicForagePlantPlanted"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "features/sedimentary/SmallFrozenLake"
+    },
+    {
+      "type": "features/sedimentary/MetalVacuumBlob"
+    },
+    {
+      "type": "features/sedimentary/FlatFrozenLake"
+    },
+    {
+      "type": "features/sedimentary/MediumFrozenLake"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Sandstone"
+}

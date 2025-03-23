@@ -1,0 +1,59 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 6,
+    "max": 10
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.3
+        },
+        {
+          "element": "Ice",
+          "weight": 0.4
+        },
+        {
+          "element": "Snow",
+          "weight": 0.3
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "DirtyIce",
+          "weight": 0.7
+        },
+        {
+          "element": "Salt",
+          "weight": 0.3
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "DirtyIce",
+          "weight": 0.6
+        },
+        {
+          "element": "Salt",
+          "weight": 0.4
+        }
+      ]
+    }
+  }
+}

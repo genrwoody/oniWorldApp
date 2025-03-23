@@ -1,0 +1,41 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Blob",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 1,
+    "max": 1.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Sand",
+          "weight": 0.33
+        },
+        {
+          "element": "Fossil",
+          "weight": 0.66
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "ToxicSand",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

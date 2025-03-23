@@ -1,0 +1,27 @@
+{
+  "biomeNoise": "expansion1::noise/Radioactive",
+  "temperatureRange": "Cold",
+  "pdWeight": 0.5,
+  "minChildCount": 2,
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Radioactive/Nuclear",
+      "weight": 1,
+      "tags": [
+        "LightBug",
+        "ColdBreather",
+        "ColdBreatherSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Radioactive"
+}

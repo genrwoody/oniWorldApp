@@ -1,0 +1,52 @@
+{
+  "shape": "ShortWide",
+  "borders": [
+    3
+  ],
+  "blobSize": {
+    "min": 25.1,
+    "max": 35.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.5,
+          "overrides": {
+            "massOverride": 0.5
+          }
+        },
+        {
+          "element": "Water",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 800
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "PhosphateNodules",
+          "weight": 2
+        },
+        {
+          "element": "Phosphorite",
+          "weight": 2
+        },
+        {
+          "element": "IronOre",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

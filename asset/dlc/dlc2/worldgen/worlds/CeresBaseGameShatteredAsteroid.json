@@ -1,0 +1,495 @@
+{
+  "name": "STRINGS.WORLDS.CERESBASEGAMESHATTERED.NAME",
+  "description": "STRINGS.WORLDS.CERESBASEGAMESHATTERED.DESCRIPTION",
+  "nameTables": [
+    "CERES"
+  ],
+  "asteroidIcon": "asteroid_base_ceres_shattered_kanim",
+  "worldTags": [
+    "Ceres"
+  ],
+  "dlcIdFrom": "DLC2_ID",
+  "worldsize": {
+    "X": 256,
+    "Y": 384
+  },
+  "layoutMethod": "PowerTree",
+  "worldTraitRules": [
+    {
+      "min": 2,
+      "max": 4,
+      "forbiddenTags": [
+        "Surface",
+        "Oil",
+        "NonStartWorld",
+        "Core"
+      ],
+      "forbiddenTraits": [
+        "traits/MagmaVents",
+        "traits/MisalignedStart"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing3)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing4)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing5)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing6)",
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ],
+  "fixedTraits": [
+    "sunlightVeryVeryLow",
+    "northernLightsOn"
+  ],
+  "seasons": [
+    "CeresMeteorShowers"
+  ],
+  "defaultsOverrides": {
+    "data": {
+      "OverworldDensityMin": 20,
+      "OverworldDensityMax": 20,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "POIPadding": 1
+    },
+    "startingWorldElements": [
+      {
+        "element": "OxyRock",
+        "amount": 10000
+      }
+    ]
+  },
+  "subworldFiles": [
+    {
+      "name": "dlc2::subworlds/icecaves/IceCavesStart"
+    },
+    {
+      "name": "dlc2::subworlds/icecaves/IceCavesMiniWater",
+      "weight": 0.5,
+      "minCount": 1
+    },
+    {
+      "name": "dlc2::subworlds/icecaves/IceCavesMiniOxy",
+      "minCount": 2
+    },
+    {
+      "name": "dlc2::subworlds/icecaves/IceCavesMiniMetal",
+      "minCount": 1
+    },
+    {
+      "name": "dlc2::subworlds/icecaves/SnowBanks"
+    },
+    {
+      "name": "dlc2::subworlds/carrotquarry/CarrotQuarryBasicScarce",
+      "weight": 0.5,
+      "minCount": 1
+    },
+    {
+      "name": "dlc2::subworlds/carrotquarry/CarrotQuarryEthanolPools",
+      "weight": 0.5,
+      "minCount": 1
+    },
+    {
+      "name": "dlc2::subworlds/sugarwoods/SugarWoodsBasic"
+    },
+    {
+      "name": "subworlds/ocean/OceanFrozen",
+      "minCount": 4
+    },
+    {
+      "name": "subworlds/rust/RustFrozen",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/frozen/Frozen",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/forest/ForestHot",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "subworlds/space/SpaceNoBorder"
+    },
+    {
+      "name": "dlc2::subworlds/space/SpaceWithDebris",
+      "minCount": 3,
+      "maxCount": 5,
+      "overridePower": 1.2
+    },
+    {
+      "name": "subworlds/magma/MagmaNoUnobtanium"
+    },
+    {
+      "name": "dlc2::subworlds/oil/OilPocketsFossil",
+      "minCount": 8
+    },
+    {
+      "name": "subworlds/barren/BarrenGranite",
+      "minCount": 2,
+      "maxCount": 5,
+      "overridePower": 1
+    }
+  ],
+  "startSubworldName": "dlc2::subworlds/icecaves/IceCavesStart",
+  "startingBaseTemplate": "dlc2::bases/ceresBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "startingBasePositionVertical": {
+    "min": 0.6,
+    "max": 0.6
+  },
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/rust/RustFrozen",
+        "subworlds/ocean/OceanFrozen",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryBasicScarce",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryEthanolPools",
+        "subworlds/frozen/Frozen",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/sugarwoods/SugarWoodsBasic",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryBasicScarce"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/icecaves/IceCavesMiniOxy",
+        "dlc2::subworlds/icecaves/IceCavesMiniWater",
+        "dlc2::subworlds/icecaves/IceCavesMiniMetal",
+        "dlc2::subworlds/icecaves/SnowBanks"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/carrotquarry/CarrotQuarryBasicScarce",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryEthanolPools",
+        "subworlds/frozen/Frozen"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/sugarwoods/SugarWoodsBasic"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/icecaves/SnowBanks"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/SpaceNoBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 4,
+      "maxDistance": 4,
+      "sortOrder": 1000,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/space/SpaceWithDebris",
+        "subworlds/space/SpaceNoBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "sortOrder": 1000,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/MagmaNoUnobtanium"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/oil/OilPocketsFossil",
+        "subworlds/forest/ForestHot",
+        "subworlds/barren/BarrenGranite",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "dlc2::poi/icecaves/ceres_research_unlock",
+        "dlc2::poi/icecaves/ceres_cozy_cabin"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowNearStart": true,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "dlc2::subworlds/icecaves/IceCavesStart"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc2::poi/poi_ocean_geyser_brine"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Ocean"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/frozen/heatsink_a",
+        "poi/frozen/heatsink_b",
+        "poi/frozen/heatsink_c",
+        "poi/frozen/heatsink_d"
+      ],
+      "listRule": "GuaranteeSomeTryMore",
+      "someCount": 1,
+      "moreCount": 2,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "FrozenWastes"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_a",
+        "poi/oil/small_oilpockets_geyser_b",
+        "poi/oil/small_oilpockets_geyser_c",
+        "poi/oil/small_oilpockets_geyser_d",
+        "poi/oil/small_oilpockets_geyser_e",
+        "poi/oil/small_oilpockets_geyser_f",
+        "poi/oil/small_oilpockets_geyser_g",
+        "poi/oil/small_oilpockets_geyser_h"
+      ],
+      "listRule": "GuaranteeOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/generic"
+      ],
+      "listRule": "TryOne",
+      "times": 12,
+      "ruleId": "GenericGeysers",
+      "allowDuplicates": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc2::poi/geothermal/shattered_geothermal_controller"
+      ],
+      "listRule": "GuaranteeAll",
+      "useRelaxedFiltering": true,
+      "allowExtremeTemperatureOverlap": true,
+      "priority": 500,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 1,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtEdge",
+          "minDistance": 0,
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc2::poi/geothermal/shattered_geothermal_vent_1",
+        "dlc2::poi/geothermal/shattered_geothermal_vent_2",
+        "dlc2::poi/geothermal/shattered_geothermal_vent_3"
+      ],
+      "listRule": "GuaranteeAll",
+      "useRelaxedFiltering": true,
+      "allowExtremeTemperatureOverlap": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 2,
+          "maxDistance": 3
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtEdge",
+          "minDistance": 0,
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc2::poi/ceres/showroom"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "overrideOffset": {
+        "X": 0,
+        "Y": -10
+      },
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "subworlds/space/SpaceNoBorder"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc2::poi/ceres/jorge_campsite"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "CarrotQuarry"
+          ]
+        }
+      ]
+    }
+  ]
+}

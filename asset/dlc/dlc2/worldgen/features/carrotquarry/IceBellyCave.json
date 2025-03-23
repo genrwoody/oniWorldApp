@@ -1,0 +1,71 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 8,
+    "max": 12
+  },
+  "internalMobs": [
+    {
+      "type": "IceBelly",
+      "count": {
+        "min": 1,
+        "max": 1
+      }
+    },
+    {
+      "type": "CarrotPlant",
+      "count": {
+        "min": 1,
+        "max": 2
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 1.0
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Ice",
+          "weight": 0.55
+        },
+        {
+          "element": "IronOre",
+          "weight": 0.45
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "IronOre",
+          "weight": 0.3
+        },
+        {
+          "element": "Ice",
+          "weight": 0.4
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 0.3
+        }
+      ]
+    }
+  }
+}

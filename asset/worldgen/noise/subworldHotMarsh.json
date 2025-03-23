@@ -1,0 +1,145 @@
+{
+  "settings": {
+    "zoom": 0.004,
+    "normalise": true,
+    "lowerBound": {
+      "X": 2,
+      "Y": 2
+    },
+    "upperBound": {
+      "X": 4,
+      "Y": 4
+    },
+    "name": "subworldHotMarsh"
+  },
+  "links": [
+    {
+      "target": {
+        "type": "Modifier",
+        "name": "LayerSqueue"
+      },
+      "source0": {
+        "type": "Transformer",
+        "name": "Transformer0"
+      }
+    },
+    {
+      "target": {
+        "type": "Modifier",
+        "name": "Modifier0"
+      },
+      "source0": {
+        "type": "Modifier",
+        "name": "LayerSqueue"
+      }
+    },
+    {
+      "target": {
+        "type": "Transformer",
+        "name": "Transformer0"
+      },
+      "source0": {
+        "type": "Filter",
+        "name": "DefaultBaseFilter"
+      }
+    },
+    {
+      "target": {
+        "type": "Terminator",
+        "name": "TERMINATOR"
+      },
+      "source0": {
+        "type": "Modifier",
+        "name": "Modifier0"
+      }
+    },
+    {
+      "target": {
+        "type": "Filter",
+        "name": "DefaultBaseFilter"
+      },
+      "source0": {
+        "type": "Primitive",
+        "name": "DefaultDensityPrimative"
+      }
+    }
+  ],
+  "primitives": {
+    "DefaultDensityPrimative": {
+      "primative": "ImprovedPerlin",
+      "quality": "Standard",
+      "seed": 5,
+      "offset": 2,
+      "name": "DefaultDensityPrimative",
+      "pos": {
+        "X": -1094.2,
+        "Y": -270.8
+      }
+    }
+  },
+  "filters": {
+    "DefaultBaseFilter": {
+      "filter": "RidgedMultiFractal",
+      "frequency": 4,
+      "lacunarity": 1,
+      "octaves": 3,
+      "offset": 1,
+      "gain": 1,
+      "exponent": 0.9,
+      "name": "DefaultBaseFilter",
+      "pos": {
+        "X": -921,
+        "Y": -89
+      }
+    }
+  },
+  "transformers": {
+    "Transformer0": {
+      "transformerType": "RotatePoint",
+      "power": 1,
+      "vector": {
+        "X": 6.2,
+        "Y": 15.63
+      },
+      "name": "Transformer0",
+      "pos": {
+        "X": -546.0798,
+        "Y": -23.75983
+      }
+    }
+  },
+  "modifiers": {
+    "LayerSqueue": {
+      "modifyType": "Scale2d",
+      "lower": -1,
+      "upper": 1,
+      "exponent": 0.02,
+      "scale": 1,
+      "scale2d": {
+        "X": 6,
+        "Y": 6
+      },
+      "name": "LayerSqueue",
+      "pos": {
+        "X": -329.4,
+        "Y": -356.2
+      }
+    },
+    "Modifier0": {
+      "modifyType": "Invert",
+      "lower": -1,
+      "upper": 1,
+      "exponent": 0.02,
+      "scale": 1,
+      "scale2d": {
+        "X": 1,
+        "Y": 1
+      },
+      "name": "Modifier0",
+      "pos": {
+        "X": 47.72009,
+        "Y": -161.1598
+      }
+    }
+  }
+}

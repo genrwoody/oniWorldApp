@@ -1,0 +1,34 @@
+{
+  "biomeNoise": "noise/Generic",
+  "temperatureRange": "Room",
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "samplers": [
+    {
+      "density": {
+        "min": 33,
+        "max": 55
+      },
+      "avoidRadius": 65.0,
+      "doAvoidPoints": false,
+      "sampleBehaviour": "PoissonDisk"
+    }
+  ],
+  "biomes": [
+    {
+      "name": "biomes/Misc/Empty",
+      "weight": 1,
+      "tags": null
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Sandstone"
+}

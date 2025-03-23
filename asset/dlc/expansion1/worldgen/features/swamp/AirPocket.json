@@ -1,0 +1,51 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 1.5,
+    "max": 2.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 1.0
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Cobaltite",
+          "weight": 0.5
+        },
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 0.5
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Cobaltite",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

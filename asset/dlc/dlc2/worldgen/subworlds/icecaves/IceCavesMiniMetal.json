@@ -1,0 +1,43 @@
+{
+  "biomeNoise": "dlc2::noise/IceCavesNoise",
+  "temperatureRange": "Chilly",
+  "pdWeight": 0.5,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 5,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "dlc2::biomes/IceCaves/Metal",
+      "weight": 2,
+      "tags": [
+        "IceCavesForagePlantPlanted",
+        "IceCavesForagePlantBuried",
+        "HardSkinBerryPlant",
+        "HardSkinBerryPlantSeed",
+        "IceFlower",
+        "IceFlowerSeed",
+        "WoodDeer"
+      ]
+    }
+  ],
+  "tags": [
+    "StartWorld",
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "centralFeature": null,
+  "features": [
+    {
+      "type": "dlc2::features/icecaves/MetalBlob"
+    },
+    {
+      "type": "dlc2::features/icecaves/SnowCave"
+    }
+  ],
+  "zoneType": "IceCaves"
+}

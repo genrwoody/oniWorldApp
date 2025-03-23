@@ -1,0 +1,26 @@
+{
+  "biomeNoise": "noise/OilPockets",
+  "temperatureRange": "VeryCold",
+  "minChildCount": 6,
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Radioactive/Nuclear",
+      "weight": 1
+    }
+  ],
+  "features": [
+    {
+      "type": "expansion1::features/radioactive/BeeBubble"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Radioactive"
+}

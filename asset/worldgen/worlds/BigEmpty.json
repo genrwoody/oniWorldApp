@@ -1,0 +1,52 @@
+{
+  "name": "STRINGS.WORLDS.BIGEMPTY.NAME",
+  "description": "STRINGS.WORLDS.BIGEMPTY.DESCRIPTION",
+  "disableWorldTraits": true,
+  "worldTraitScale": 1,
+  "worldsize": {
+    "X": 256,
+    "Y": 384
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "OverworldDensityMin": 16,
+      "OverworldDensityMax": 16,
+      "DrawWorldBorder": true,
+      "DrawWorldBorderForce": true,
+      "WorldBorderThickness": 1,
+      "WorldBorderRange": 0,
+      "OverworldMinNodes": 1
+    },
+    "startingWorldElements": []
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/Empty"
+    },
+    {
+      "name": "subworlds/space/SpaceNoBorder"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/Empty"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/SpaceNoBorder"
+      ]
+    }
+  ]
+}

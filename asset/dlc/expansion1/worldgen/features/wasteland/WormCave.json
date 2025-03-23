@@ -1,0 +1,64 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 10.5,
+    "max": 16.5
+  },
+  "internalMobs": [
+    {
+      "type": "DivergentWorm",
+      "count": {
+        "min": 1,
+        "max": 2
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.6
+        },
+        {
+          "element": "Sand",
+          "weight": 0.3
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 0.1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 1
+        },
+        {
+          "element": "SandStone",
+          "weight": 3
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "MaficRock",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

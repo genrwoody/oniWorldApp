@@ -1,0 +1,105 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Circle",
+  "borders": [
+    3,
+    1,
+    2
+  ],
+  "internalMobs": [
+    {
+      "type": "Moo",
+      "count": {
+        "min": 2,
+        "max": 3
+      }
+    },
+    {
+      "type": "GasGrass",
+      "count": {
+        "min": 4,
+        "max": 8
+      }
+    }
+  ],
+  "blobSize": {
+    "min": 3,
+    "max": 5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Methane",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Methane",
+          "weight": 0.3
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 0.1
+        },
+        {
+          "element": "Methane",
+          "weight": 0.3
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 0.1
+        },
+        {
+          "element": "Chlorine",
+          "weight": 0.2
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "IgneousRock",
+          "weight": 3
+        },
+        {
+          "element": "BleachStone",
+          "weight": 1
+        },
+        {
+          "element": "Methane",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices2": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Methane",
+          "weight": 2
+        },
+        {
+          "element": "Granite",
+          "weight": 2
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 8
+        },
+        {
+          "element": "Vacuum",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

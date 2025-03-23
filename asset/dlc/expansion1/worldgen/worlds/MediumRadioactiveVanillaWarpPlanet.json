@@ -1,0 +1,496 @@
+{
+  "name": "STRINGS.WORLDS.MEDIUMRADIOACTIVEVANILLAWARPPLANET.NAME",
+  "description": "STRINGS.WORLDS.MEDIUMRADIOACTIVEVANILLAWARPPLANET.DESCRIPTION",
+  "nameTables": [
+    "SWAMP",
+    "RADIOACTIVE"
+  ],
+  "asteroidIcon": "asteroid_vanilla_sandstone_warp_kanim",
+  "worldTraitScale": 0.3,
+  "worldsize": {
+    "X": 160,
+    "Y": 176
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 3,
+      "WorldBorderRange": 1,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "POIPadding": 1
+    }
+  },
+  "worldTraitRules": [
+    {
+      "min": 2,
+      "max": 2,
+      "forbiddenTags": [
+        "StartWorldOnly",
+        "Oil",
+        "LargeWorld",
+        "Surface",
+        "Core",
+        "GenericGeysers"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightMedLow",
+    "cosmicRadiationVeryLow"
+  ],
+  "seasons": [
+    "ClassicStyleWarpMeteorShowers",
+    "MediumRadioactiveVanillaWarpPlanetMeteorShowers"
+  ],
+  "startSubworldName": "expansion1::subworlds/swamp/SwampWarpStart",
+  "startingBaseTemplate": "expansion1::bases/warpworldSwampBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.475,
+    "max": 0.525
+  },
+  "startingBasePositionVertical": {
+    "min": 0.4,
+    "max": 0.45
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithFrozenBorder"
+    },
+    {
+      "name": "expansion1::subworlds/swamp/Swamp"
+    },
+    {
+      "name": "expansion1::subworlds/swamp/SwampWarpStart"
+    },
+    {
+      "name": "expansion1::subworlds/rust/med_Rust",
+      "minCount": 4
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_Radioactive",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_UraniumFields",
+      "minCount": 1
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_FrozenUraniumFields",
+      "minCount": 2
+    },
+    {
+      "name": "expansion1::subworlds/frozen/FrozenSlush",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/frozen/FrozenCore"
+    },
+    {
+      "name": "expansion1::subworlds/forest/med_ForestHot",
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "name": "expansion1::subworlds/forest/med_Forest",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/marsh/HotMarshSteamy",
+      "minCount": 3
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/swamp/Swamp"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/swamp/Swamp"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/forest/med_ForestHot",
+        "expansion1::subworlds/swamp/Swamp",
+        "expansion1::subworlds/rust/med_Rust",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/forest/med_Forest",
+        "expansion1::subworlds/rust/med_Rust",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 4,
+      "maxDistance": 99,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/marsh/HotMarshSteamy",
+        "expansion1::subworlds/rust/med_Rust"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithFrozenBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/marsh/HotMarshSteamy",
+        "expansion1::subworlds/frozen/FrozenSlush",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/radioactive/med_Radioactive",
+        "expansion1::subworlds/radioactive/med_UraniumFields"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/radioactive/med_FrozenUraniumFields",
+        "expansion1::subworlds/frozen/FrozenCore",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser",
+        "expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser_b",
+        "expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser_c"
+      ],
+      "listRule": "GuaranteeSomeTryMore",
+      "someCount": 1,
+      "moreCount": 1,
+      "priority": 100,
+      "allowExtremeTemperatureOverlap": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Radioactive"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "subworldNames": [
+            "expansion1::subworlds/radioactive/med_UraniumFields",
+            "expansion1::subworlds/radioactive/med_FrozenUraniumFields"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/poi_geyser_dirty_slush",
+        "expansion1::poi/poi_frozen_salt_water_geyser"
+      ],
+      "listRule": "TryAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "FrozenWastes"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "subworldNames": [
+            "expansion1::subworlds/frozen/FrozenSlush"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/frozen/heatsink_a",
+        "poi/frozen/heatsink_b"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "FrozenWastes"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/hotmarsh/geyser_steam"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender",
+        "expansion1::poi/warp/receiver"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 2
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Swamp",
+            "Rust",
+            "Forest"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGravitasFeatures"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/boon/bedroom",
+        "expansion1::poi/boon/washroom",
+        "expansion1::poi/boon/power",
+        "expansion1::poi/boon/kitchen"
+      ],
+      "listRule": "TrySome",
+      "someCount": 2,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 2,
+          "maxDistance": 2
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Swamp",
+            "Rust",
+            "Forest"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/boon/bedroom",
+        "expansion1::poi/boon/washroom",
+        "expansion1::poi/boon/power",
+        "expansion1::poi/boon/kitchen",
+        "expansion1::poi/boon/well",
+        "expansion1::poi/boon/farm"
+      ],
+      "listRule": "TrySome",
+      "someCount": 2,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 3
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Swamp",
+            "Rust",
+            "Forest"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::geysers/molten_aluminum",
+        "expansion1::geysers/molten_cobalt",
+        "geysers/molten_copper",
+        "geysers/molten_gold",
+        "geysers/molten_iron",
+        "geysers/hot_water"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 99
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/filthy_water",
+        "geysers/salt_water",
+        "geysers/slush_water",
+        "expansion1::geysers/slush_salt_water"
+      ],
+      "listRule": "TryOne",
+      "times": 1,
+      "allowDuplicates": true,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 99
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/slimy_po2",
+        "geysers/methane",
+        "geysers/chlorine_gas",
+        "geysers/hot_co2",
+        "geysers/hot_hydrogen",
+        "geysers/hot_po2",
+        "expansion1::geysers/liquid_sulfur",
+        "geysers/liquid_co2",
+        "geysers/small_volcano"
+      ],
+      "listRule": "TryOne",
+      "times": 2,
+      "allowDuplicates": true,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 99
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    }
+  ]
+}

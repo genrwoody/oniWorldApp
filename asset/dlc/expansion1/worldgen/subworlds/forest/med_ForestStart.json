@@ -1,0 +1,81 @@
+{
+  "biomeNoise": "noise/subworldForest",
+  "temperatureRange": "Room",
+  "pdWeight": 4,
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "extraBiomeChildren": 4,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "biomes/Forest/BasicOxy",
+      "weight": 2,
+      "tags": [
+        "med_Oxyfern",
+        "ForestTree",
+        "med_BasicSingleHarvestPlant",
+        "forestCluster_BasicSingleHarvestPlantSeed",
+        "med_ForestForagePlantPlanted",
+        "med_LightBug",
+        "LeafyPlant",
+        "LeafyPlantSeed",
+        "med_Squirrel"
+      ]
+    },
+    {
+      "name": "biomes/Forest/Basic",
+      "weight": 2,
+      "tags": [
+        "med_Oxyfern",
+        "med_ForestTree",
+        "med_BasicSingleHarvestPlant",
+        "forestCluster_BasicSingleHarvestPlantSeed",
+        "med_ForestForagePlantPlanted",
+        "med_LightBug",
+        "LeafyPlant",
+        "LeafyPlantSeed",
+        "med_Squirrel"
+      ]
+    },
+    {
+      "name": "biomes/Forest/Metal",
+      "weight": 2,
+      "tags": [
+        "med_Oxyfern",
+        "LeafyPlant",
+        "LeafyPlantSeed",
+        "forestCluster_BasicSingleHarvestPlantSeed",
+        "med_ForestForagePlantPlanted"
+      ]
+    }
+  ],
+  "tags": [
+    "StartWorld",
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "centralFeature": {
+    "type": "features/generic/StartLocation"
+  },
+  "features": [
+    {
+      "type": "features/forest/SmallLake"
+    },
+    {
+      "type": "expansion1::features/forest/SmallDirtyLake"
+    },
+    {
+      "type": "features/forest/PhosphoriteLump"
+    },
+    {
+      "type": "expansion1::features/forest/OxyrockCave"
+    }
+  ],
+  "zoneType": "Forest"
+}

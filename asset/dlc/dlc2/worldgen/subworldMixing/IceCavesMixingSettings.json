@@ -1,0 +1,16 @@
+{
+  "name": "STRINGS.SUBWORLDS.ICECAVES.NAME",
+  "description": "STRINGS.SUBWORLDS.ICECAVES.DESC",
+  "icon": "biomeIconIcecaves",
+  "mixingTags": [
+    "StartSubworld",
+    "Cold",
+    "Ceres"
+  ],
+  "forbiddenClusterTags": [
+    "CeresCluster"
+  ],
+  "subworld": {
+    "name": "dlc2::subworlds/icecaves/IceCavesMix"
+  }
+}

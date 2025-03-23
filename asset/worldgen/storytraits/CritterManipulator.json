@@ -1,0 +1,62 @@
+{
+  "name": "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.NAME",
+  "description": "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.DESCRIPTION",
+  "icon": "CritterManipulator_icon",
+  "colorHex": "FFFFFF",
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "storytraits/creature_manipulator"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 200,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 4,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "VeryHot",
+            "ExtremelyHot"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    }
+  ]
+}

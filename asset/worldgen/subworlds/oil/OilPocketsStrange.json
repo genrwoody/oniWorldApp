@@ -1,0 +1,39 @@
+{
+  "biomeNoise": "noise/OilPocketsStrange",
+  "temperatureRange": "Hot",
+  "minChildCount": 8,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 10.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Oil/OilPockets",
+      "weight": 1,
+      "tags": [
+        "OilFloater",
+        "CactusPlant",
+        "CactusPlantSeed",
+        "EvilFlowerDense",
+        "EvilFlowerSeed"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "features/oilpockets/CavityPond"
+    },
+    {
+      "type": "features/oilpockets/DiamondClump"
+    },
+    {
+      "type": "features/oilpockets/CavityOilFloatersTall"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "OilField"
+}

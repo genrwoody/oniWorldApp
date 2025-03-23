@@ -1,0 +1,15 @@
+{
+  "name": "STRINGS.SUBWORLDS.CARROTQUARRY.NAME",
+  "description": "STRINGS.SUBWORLDS.CARROTQUARRY.DESC",
+  "icon": "biomeIconCarrotquarry",
+  "mixingTags": [
+    "Cold",
+    "Ceres"
+  ],
+  "forbiddenClusterTags": [
+    "CeresCluster"
+  ],
+  "subworld": {
+    "name": "dlc2::subworlds/carrotquarry/CarrotQuarryMix"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "shape": "TallThin",
+  "borders": [
+    3
+  ],
+  "blobSize": {
+    "min": 2.1,
+    "max": 5.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Cuprite",
+          "weight": 1
+        },
+        {
+          "element": "IronOre",
+          "weight": 1
+        },
+        {
+          "element": "Dirt",
+          "weight": 4
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 2
+        },
+        {
+          "element": "IronOre",
+          "weight": 1
+        },
+        {
+          "element": "Cuprite",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "name": "STRINGS.WORLDS.MINIFORESTFROZEN.NAME",
+  "description": "STRINGS.WORLDS.MINIFORESTFROZEN.DESCRIPTION",
+  "nameTables": [
+    "FOREST",
+    "TUNDRA"
+  ],
+  "asteroidIcon": "asteroid_mini_forestfrozen_kanim",
+  "worldTraitScale": 0.2,
+  "worldsize": {
+    "X": 128,
+    "Y": 153
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 5,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "poiPadding": 1
+    },
+    "startingWorldElements": []
+  },
+  "worldTraitRules": [
+    {
+      "min": 1,
+      "max": 2,
+      "forbiddenTags": [
+        "StartWorldOnly",
+        "GenericGeysers",
+        "Oil",
+        "LargeWorld",
+        "Surface",
+        "StartChange"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightLow",
+    "cosmicRadiationLow"
+  ],
+  "seasons": [
+    "MiniForestFrozenMeteorShowers"
+  ],
+  "subworldFiles": [
+    {
+      "name": "expansion1::subworlds/forest/med_ForestStartCold",
+      "overridePower": 1
+    },
+    {
+      "name": "expansion1::subworlds/rust/med_RustFrozen",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/jungle/med_JungleFrozen",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithFrozenRustBorder"
+    },
+    {
+      "name": "subworlds/magma/SolidMagma"
+    },
+    {
+      "name": "expansion1::subworlds/magma/BottomSmall"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/jungle/med_JungleFrozen",
+        "expansion1::subworlds/rust/med_RustFrozen",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/forest/med_ForestStartCold"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithFrozenRustBorder"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/magma/BottomSmall",
+        "subworlds/magma/SolidMagma"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "UnionWith",
+      "sortOrder": 100,
+      "subworldNames": [
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/jungle/geyser_chlorine"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "ToxicJungle"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/rust/dirty_slush_geyser"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Rust"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/poi_satellite_3_a"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 200,
+      "allowExtremeTemperatureOverlap": true,
+      "useRelaxedFiltering": true,
+      "overrideOffset": {
+        "X": 0,
+        "Y": -15
+      },
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 1,
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/chlorine_gas",
+        "geysers/hot_co2",
+        "geysers/hot_hydrogen",
+        "geysers/hot_po2",
+        "geysers/liquid_co2",
+        "geysers/methane",
+        "geysers/salt_water",
+        "geysers/slimy_po2",
+        "geysers/small_volcano",
+        "expansion1::geysers/liquid_sulfur"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/genericGravitas/directors_room"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    }
+  ]
+}

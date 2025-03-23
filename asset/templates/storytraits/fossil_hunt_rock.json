@@ -1,0 +1,591 @@
+{
+  "info": {
+    "size": {
+      "X": 10,
+      "Y": 10
+    },
+    "min": {
+      "X": -4,
+      "Y": -4
+    },
+    "area": 78
+  },
+  "cells": [
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.005035,
+      "location_x": -1,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.005096,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.005096,
+      "location_x": 1,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.003448,
+      "location_x": 2,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157104,
+      "location_x": -2,
+      "location_y": -3
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": -1,
+      "location_y": -3
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_y": -3
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 1,
+      "location_y": -3
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 2,
+      "location_y": -3
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": -2,
+      "location_y": -2
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": -1,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_x": 1,
+      "location_y": -2
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": -2,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_x": -1,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 315,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 315,
+      "location_x": 1,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_x": -2
+    },
+    {
+      "element": "Hydrogen",
+      "mass": 1,
+      "temperature": 315,
+      "location_x": -1
+    },
+    {
+      "element": "Diamond",
+      "mass": 700,
+      "temperature": 315.149994
+    },
+    {
+      "element": "Hydrogen",
+      "mass": 1,
+      "temperature": 315,
+      "location_x": 1
+    },
+    {
+      "element": "Hydrogen",
+      "mass": 1,
+      "temperature": 315,
+      "location_x": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": -2,
+      "location_y": 1
+    },
+    {
+      "element": "Hydrogen",
+      "mass": 1,
+      "temperature": 315.149994,
+      "location_x": -1,
+      "location_y": 1
+    },
+    {
+      "element": "Hydrogen",
+      "mass": 1,
+      "temperature": 315.149994,
+      "location_y": 1
+    },
+    {
+      "element": "Diamond",
+      "mass": 700,
+      "temperature": 315.149994,
+      "location_x": 1,
+      "location_y": 1
+    },
+    {
+      "element": "Hydrogen",
+      "mass": 1,
+      "temperature": 315,
+      "location_x": 2,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_x": -2,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": -1,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "Hydrogen",
+      "mass": 1,
+      "temperature": 315,
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": -2,
+      "location_y": 3
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": -1,
+      "location_y": 3
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_y": 3
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.160889,
+      "location_x": 2,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.008667,
+      "location_x": 3,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157135,
+      "location_x": -3,
+      "location_y": -2
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 3,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.008759,
+      "location_x": 4,
+      "location_y": -2
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.08167,
+      "location_x": -3,
+      "location_y": -1
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_x": 3
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 4
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": -3,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 3,
+      "location_y": 1
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 4,
+      "location_y": 1
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": -3,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_x": 3,
+      "location_y": 2
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 4,
+      "location_y": 2
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 3,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 5,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 5,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 5,
+      "location_y": 2
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 4,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 5,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_x": 4,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.149994,
+      "location_x": 5,
+      "location_y": 4
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 1,
+      "location_y": 4
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 2,
+      "location_y": 4
+    },
+    {
+      "element": "Magma",
+      "mass": 1120,
+      "temperature": 1995.15002,
+      "location_x": 3,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 1,
+      "location_y": 5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 2,
+      "location_y": 5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": 3,
+      "location_y": 5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": -2,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": -1,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.157257,
+      "location_x": -3,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153564,
+      "location_x": -4,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153595,
+      "location_x": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": -4,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 315.153625,
+      "location_x": -4,
+      "location_y": 2
+    }
+  ],
+  "otherEntities": [
+    {
+      "id": "SpiceVine",
+      "location_x": 2,
+      "location_y": 2,
+      "element": "Creature",
+      "temperature": 320,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "Maturity",
+          "value": 0.0190832727
+        },
+        {
+          "id": "AirPressure",
+          "value": 0.665399671
+        },
+        {
+          "id": "Temperature",
+          "value": 286.461182
+        },
+        {
+          "id": "OldAge"
+        },
+        {
+          "id": "Irrigation"
+        },
+        {
+          "id": "Fertilization"
+        }
+      ]
+    },
+    {
+      "id": "FossilBitsSmall",
+      "location_x": -1,
+      "element": "Fossil",
+      "temperature": 315,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "FossilRock",
+      "element": "Fossil",
+      "temperature": 315,
+      "units": 1,
+      "type": "Other"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "biomeNoise": "noise/subworldForest",
+  "temperatureRange": "HumanWarm",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Forest/Basic",
+      "weight": 2,
+      "tags": [
+        "Oxyfern",
+        "ForestTree",
+        "med_BasicSingleHarvestPlant",
+        "forestCluster_BasicSingleHarvestPlantSeed",
+        "med_ForestForagePlantPlanted",
+        "med_LightBug",
+        "LeafyPlant",
+        "LeafyPlantSeed",
+        "med_Squirrel"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "features": [
+    {
+      "type": "features/forest/SmallLake"
+    },
+    {
+      "type": "expansion1::features/forest/OxyrockCave"
+    }
+  ],
+  "zoneType": "Forest"
+}

@@ -1,0 +1,25 @@
+{
+  "biomeNoise": "noise/Default",
+  "temperatureRange": "HumanHot",
+  "minChildCount": 1,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "NONE",
+  "biomes": [
+    {
+      "name": "biomes/Misc/Empty",
+      "weight": 1
+    }
+  ],
+  "centralFeature": {
+    "type": "features/generic/StartLocation"
+  },
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Barren"
+}

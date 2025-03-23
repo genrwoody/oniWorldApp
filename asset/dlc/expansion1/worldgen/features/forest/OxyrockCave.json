@@ -1,0 +1,72 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "PreventAmbientMobsInFeature"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 4.1,
+    "max": 7.5
+  },
+  "internalMobs": [
+    {
+      "type": "Oxyfern",
+      "count": {
+        "min": 1,
+        "max": 2
+      }
+    },
+    {
+      "type": "LeafyPlant",
+      "count": {
+        "min": 1,
+        "max": 2
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.5
+        },
+        {
+          "element": "CarbonDioxide",
+          "weight": 0.5
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "OxyRock",
+          "weight": 1
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 2
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 5
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

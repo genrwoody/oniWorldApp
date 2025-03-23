@@ -1,0 +1,25 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "Oxygen"
+  ],
+  "shape": "Blob",
+  "blobSize": {
+    "min": 1.1,
+    "max": 2.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "OxyRock",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 5
+          }
+        }
+      ]
+    }
+  }
+}

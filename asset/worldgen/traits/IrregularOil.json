@@ -1,0 +1,66 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.IRREGULAR_OIL.NAME",
+  "description": "STRINGS.WORLD_TRAITS.IRREGULAR_OIL.DESCRIPTION",
+  "colorHex": "6C6C6C",
+  "forbiddenDLCIds": [
+    "EXPANSION1_ID"
+  ],
+  "traitTags": [
+    "AboveCore",
+    "Oil"
+  ],
+  "additionalSubworldFiles": [
+    {
+      "name": "subworlds/oil/OilPockets"
+    },
+    {
+      "name": "subworlds/oil/OilPatch"
+    },
+    {
+      "name": "subworlds/oil/OilDry"
+    }
+  ],
+  "additionalUnknownCellFilters": [
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 4,
+      "maxDistance": 999,
+      "command": "UnionWith",
+      "subworldNames": [
+        "subworlds/oil/OilPatch"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "ExceptWith",
+      "subworldNames": [
+        "subworlds/oil/OilPatch"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "ExceptWith",
+      "subworldNames": [
+        "subworlds/oil/OilPatch"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/oil/OilPockets",
+        "subworlds/oil/OilDry"
+      ]
+    }
+  ]
+}

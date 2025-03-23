@@ -1,0 +1,13 @@
+{
+  "TerrainBiomeLookupTable": {
+    "remove": [],
+    "add": {
+      "Default": [
+        {
+          "content": "Vacuum",
+          "bandSize": 1
+        }
+      ]
+    }
+  }
+}

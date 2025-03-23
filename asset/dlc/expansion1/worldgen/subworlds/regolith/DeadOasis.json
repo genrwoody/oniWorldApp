@@ -1,0 +1,28 @@
+{
+  "biomeNoise": "noise/OilPockets",
+  "temperatureRange": "Chilly",
+  "minChildCount": 2,
+  "pdWeight": 2,
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "borderOverride": "regolith",
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Misc/DeadOasis",
+      "weight": 1,
+      "tags": [
+        "Mole",
+        "ColdBreather"
+      ]
+    }
+  ],
+  "features": [],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "FrozenWastes"
+}

@@ -1,0 +1,27 @@
+{
+  "biomeNoise": "noise/Default",
+  "temperatureRange": "HumanHot",
+  "minChildCount": 8,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "seaBed",
+  "borderSizeOverride": {
+    "min": 2.5,
+    "max": 3.5
+  },
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Aquatic/Water",
+      "weight": 1
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "zoneType": "Barren"
+}

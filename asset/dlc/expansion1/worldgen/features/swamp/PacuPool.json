@@ -1,0 +1,69 @@
+{
+  "tags": [
+    "Wet",
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "TallThin",
+  "borders": [
+    2,
+    1
+  ],
+  "internalMobs": [
+    {
+      "type": "Pacu",
+      "count": {
+        "min": 5,
+        "max": 7
+      }
+    }
+  ],
+  "blobSize": {
+    "min": 2.5,
+    "max": 3.0
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 0.3
+        },
+        {
+          "element": "DirtyWater",
+          "weight": 0.7
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "SedimentaryRock",
+          "weight": 0.3
+        },
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 0.3
+        },
+        {
+          "element": "DirtyWater",
+          "weight": 0.4
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "SedimentaryRock",
+          "weight": 0.3
+        },
+        {
+          "element": "ToxicMud",
+          "weight": 0.7
+        }
+      ]
+    }
+  }
+}

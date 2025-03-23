@@ -1,0 +1,22 @@
+{
+  "biomeNoise": "noise/OilPockets",
+  "temperatureRange": "ExtremelyCold",
+  "minChildCount": 6,
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "ice",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Radioactive/Frozen",
+      "weight": 1
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Radioactive"
+}

@@ -1,0 +1,79 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "Wet"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 5.1,
+    "max": 10.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.5,
+          "overrides": {
+            "massOverride": 1
+          }
+        },
+        {
+          "element": "Snow",
+          "weight": 0.5
+        },
+        {
+          "element": "Ice",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 1000
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Ice",
+          "weight": 2
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Fertilizer",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 50
+          }
+        },
+        {
+          "element": "Sand",
+          "weight": 1
+        },
+        {
+          "element": "SandStone",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices2": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "SandStone",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

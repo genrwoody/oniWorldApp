@@ -1,0 +1,36 @@
+{
+  "biomeNoise": "noise/subworldFrozen",
+  "temperatureRange": "Cold",
+  "minChildCount": 4,
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "ice",
+  "biomes": [
+    {
+      "name": "biomes/Frozen/Wet",
+      "weight": 1,
+      "tags": [
+        "ColdWheat",
+        "ColdWheatSeed",
+        "ColdBreather"
+      ]
+    },
+    {
+      "name": "biomes/Frozen/Dry",
+      "weight": 2,
+      "tags": [
+        "ColdWheat",
+        "ColdWheatSeed",
+        "ColdBreather"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "FrozenWastes"
+}

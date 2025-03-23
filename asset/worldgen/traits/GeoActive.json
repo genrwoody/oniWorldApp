@@ -1,0 +1,30 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.GEOACTIVE.NAME",
+  "description": "STRINGS.WORLD_TRAITS.GEOACTIVE.DESCRIPTION",
+  "colorHex": "F8A22E",
+  "exclusiveWith": [
+    "traits/Geodormant"
+  ],
+  "traitTags": [
+    "Geysers",
+    "GenericGeysers"
+  ],
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "geysers/generic"
+      ],
+      "listRule": "TryOne",
+      "times": 4,
+      "ruleId": "GenericGeysers",
+      "allowDuplicates": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    }
+  ]
+}

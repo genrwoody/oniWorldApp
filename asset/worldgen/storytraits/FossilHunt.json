@@ -1,0 +1,359 @@
+{
+  "name": "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.NAME",
+  "description": "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DESCRIPTION",
+  "icon": "FossilHunt_icon",
+  "colorHex": "FFFFFF",
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "storytraits/fossil_hunt_main"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 400,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 5,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "VeryHot",
+            "ExtremelyHot"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/fossil_hunt_ice"
+      ],
+      "listRule": "TryOne",
+      "priority": 200,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "FrozenWastes"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 5,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/fossil_hunt_ice"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 5,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "VeryHot",
+            "ExtremelyHot"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/fossil_hunt_rock"
+      ],
+      "listRule": "TryOne",
+      "priority": 300,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "MagmaCore"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 1,
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/fossil_hunt_rock"
+      ],
+      "listRule": "TryOne",
+      "priority": 175,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/fossil_hunt_rock"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/fossil_hunt_resin"
+      ],
+      "listRule": "TryOne",
+      "priority": 200,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh",
+            "Forest"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 5,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/fossil_hunt_resin"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 150,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 5,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "VeryHot",
+            "ExtremelyHot"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    }
+  ]
+}

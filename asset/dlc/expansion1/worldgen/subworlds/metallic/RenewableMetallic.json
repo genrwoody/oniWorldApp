@@ -1,0 +1,25 @@
+{
+  "biomeNoise": "expansion1::noise/Metallic",
+  "temperatureRange": "Room",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "extraBiomeChildren": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Metallic/Golden",
+      "weight": 2
+    },
+    {
+      "name": "expansion1::biomes/Metallic/Aluminum",
+      "weight": 1
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Metallic"
+}

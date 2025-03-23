@@ -1,0 +1,33 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.DISTRESS_SIGNAL.NAME",
+  "description": "STRINGS.WORLD_TRAITS.DISTRESS_SIGNAL.DESCRIPTION",
+  "colorHex": "8494A1",
+  "traitTags": [
+    "NonStartWorld"
+  ],
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "expansion1::poi/traits/cryopod1",
+        "expansion1::poi/traits/cryopod2",
+        "expansion1::poi/traits/cryopod3"
+      ],
+      "listRule": "GuaranteeOne",
+      "allowExtremeTemperatureOverlap": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "VeryHot",
+            "ExtremelyHot"
+          ]
+        }
+      ]
+    }
+  ]
+}

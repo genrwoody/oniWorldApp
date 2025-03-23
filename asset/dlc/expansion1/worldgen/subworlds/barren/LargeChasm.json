@@ -1,0 +1,34 @@
+{
+  "biomeNoise": "expansion1::noise/LargeCaves",
+  "borderOverride": "NONE",
+  "temperatureRange": "HumanWarm",
+  "minChildCount": 2,
+  "density": {
+    "min": 7,
+    "max": 7
+  },
+  "avoidRadius": 5.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Forest/Chasm",
+      "weight": 4,
+      "tags": [
+        "Oxyfern",
+        "ForestTree",
+        "BasicSingleHarvestPlant",
+        "BasicSingleHarvestPlantSeed",
+        "ForestForagePlantPlanted",
+        "LeafyPlant",
+        "LeafyPlantSeed",
+        "Squirrel"
+      ]
+    }
+  ],
+  "features": [],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "zoneType": "Forest"
+}

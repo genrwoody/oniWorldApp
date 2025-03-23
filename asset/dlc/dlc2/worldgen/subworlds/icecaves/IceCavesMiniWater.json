@@ -1,0 +1,39 @@
+{
+  "biomeNoise": "dlc2::noise/IceCavesNoise",
+  "temperatureRange": "Chilly",
+  "pdWeight": 0.5,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 5,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "dlc2::biomes/IceCaves/Basic",
+      "weight": 2,
+      "tags": [
+        "IceCavesForagePlantPlanted",
+        "IceCavesForagePlantBuried",
+        "HardSkinBerryPlant",
+        "HardSkinBerryPlantSeed",
+        "IceFlower",
+        "IceFlowerSeed",
+        "BlueGrass",
+        "BlueGrassSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "StartWorld",
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "centralFeature": {
+    "type": "dlc2::features/icecaves/DirtDeposit"
+  },
+  "features": [],
+  "zoneType": "IceCaves"
+}

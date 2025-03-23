@@ -1,0 +1,43 @@
+{
+  "biomeNoise": "noise/subworldForest",
+  "temperatureRange": "Room",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "hardToDig",
+  "borderOverridePriority": 10,
+  "borderSizeOverride": {
+    "min": 2,
+    "max": 3
+  },
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Forest/Core",
+      "weight": 2,
+      "tags": [
+        "Oxyfern",
+        "ForestTree",
+        "BasicSingleHarvestPlant",
+        "BasicSingleHarvestPlantSeed",
+        "ForestForagePlantPlanted",
+        "LightBug",
+        "LeafyPlant",
+        "LeafyPlantSeed",
+        "Squirrel"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "features/forest/SmallLake"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Forest"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.METAL_POOR.NAME",
+  "description": "STRINGS.WORLD_TRAITS.METAL_POOR.DESCRIPTION",
+  "colorHex": "8494A1",
+  "exclusiveWith": [
+    "traits/MetalRich"
+  ],
+  "traitTags": [
+    "Metal"
+  ],
+  "elementBandModifiers": [
+    {
+      "element": "Cuprite",
+      "massMultiplier": 0.8,
+      "bandMultiplier": 0.8
+    },
+    {
+      "element": "IronOre",
+      "massMultiplier": 0.8,
+      "bandMultiplier": 0.8
+    },
+    {
+      "element": "Wolframite",
+      "massMultiplier": 0.8,
+      "bandMultiplier": 0.8
+    },
+    {
+      "element": "AluminumOre",
+      "massMultiplier": 0.8,
+      "bandMultiplier": 0.8
+    },
+    {
+      "element": "GoldAmalgam",
+      "massMultiplier": 0.8,
+      "bandMultiplier": 0.8
+    },
+    {
+      "element": "Cobaltite",
+      "massMultiplier": 0.8,
+      "bandMultiplier": 0.8
+    },
+    {
+      "element": "Cinnabar",
+      "massMultiplier": 0.8,
+      "bandMultiplier": 0.8
+    }
+  ]
+}

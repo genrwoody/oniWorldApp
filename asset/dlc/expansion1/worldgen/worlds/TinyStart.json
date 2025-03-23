@@ -1,0 +1,109 @@
+{
+  "name": "STRINGS.WORLDS.TINYSTART.NAME",
+  "description": "STRINGS.WORLDS.TINYSTART.DESCRIPTION",
+  "disableWorldTraits": true,
+  "worldTraitScale": 0.12,
+  "worldsize": {
+    "X": 128,
+    "Y": 96
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorder": true,
+      "DrawWorldBorderForce": false,
+      "WorldBorderThickness": 1,
+      "WorldBorderRange": 0,
+      "OverworldDensityMin": 20,
+      "OverworldDensityMax": 20,
+      "OverworldAvoidRadius": 10,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "OverworldMinNodes": 1
+    }
+  },
+  "startSubworldName": "subworlds/sandstone/SandstoneStart",
+  "startingBaseTemplate": "bases/sandstoneBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "startingBasePositionVertical": {
+    "min": 0.6,
+    "max": 0.6
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/sandstone/SandstoneStart"
+    },
+    {
+      "name": "subworlds/sandstone/Sandstone"
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "subworlds/space/SurfaceCrags"
+    },
+    {
+      "name": "subworlds/magma/Bottom"
+    },
+    {
+      "name": "subworlds/frozen/Frozen"
+    },
+    {
+      "name": "subworlds/marsh/HotMarsh"
+    },
+    {
+      "name": "subworlds/jungle/Jungle"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/sandstone/Sandstone"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/SurfaceCrags"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/frozen/Frozen",
+        "subworlds/marsh/HotMarsh",
+        "subworlds/jungle/Jungle"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/Bottom"
+      ]
+    }
+  ]
+}

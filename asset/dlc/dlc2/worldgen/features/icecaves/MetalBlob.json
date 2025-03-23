@@ -1,0 +1,47 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    2
+  ],
+  "blobSize": {
+    "min": 4.1,
+    "max": 6.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Vacuum",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Cinnabar",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Cinnabar",
+          "weight": 1
+        },
+        {
+          "element": "Ice",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

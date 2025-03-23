@@ -1,0 +1,35 @@
+{
+  "biomeNoise": "noise/subworldForest",
+  "temperatureRange": "Room",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Forest/Basic",
+      "weight": 2,
+      "tags": [
+        "Oxyfern",
+        "ForestTree",
+        "ForestForagePlantPlanted",
+        "LightBug",
+        "LeafyPlant",
+        "LeafyPlantSeed",
+        "Squirrel"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "features": [
+    {
+      "type": "features/forest/SmallLake"
+    }
+  ],
+  "zoneType": "Forest"
+}

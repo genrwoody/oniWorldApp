@@ -1,0 +1,63 @@
+{
+  "tags": [
+    "Wet",
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 4,
+    "max": 6
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 1.0
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Ice",
+          "weight": 0.55
+        },
+        {
+          "element": "Oxygen",
+          "weight": 0.45
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Ice",
+          "weight": 0.3
+        },
+        {
+          "element": "Oxygen",
+          "weight": 0.4
+        },
+        {
+          "element": "CarbonDioxide",
+          "weight": 0.15
+        },
+        {
+          "element": "Snow",
+          "weight": 0.15,
+          "overrides": {
+            "massOverride": 500
+          }
+        }
+      ]
+    }
+  }
+}

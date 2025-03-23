@@ -1,0 +1,27 @@
+{
+  "biomeNoise": "noise/MagmaVent",
+  "temperatureRange": "VeryHot",
+  "minChildCount": 4,
+  "pdWeight": 0.75,
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "hardToDig",
+  "borderOverridePriority": 10,
+  "biomes": [
+    {
+      "name": "biomes/Magma/MagmaVent",
+      "weight": 1
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "ErodePointToBorderWeak",
+    "NoGlobalFeatureSpawning",
+    "NoGravitasFeatures"
+  ],
+  "zoneType": "MagmaCore"
+}

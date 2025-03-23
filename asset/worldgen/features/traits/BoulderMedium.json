@@ -1,0 +1,38 @@
+{
+  "shape": "Blob",
+  "tags": [
+    "HighPriorityFeature",
+    "AllowExceedNodeBorders"
+  ],
+  "borders": [
+    2
+  ],
+  "blobSize": {
+    "min": 4.0,
+    "max": 5.0
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Obsidian",
+          "weight": 1
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 0.3
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Obsidian",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

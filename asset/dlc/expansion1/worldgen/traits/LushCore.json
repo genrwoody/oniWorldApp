@@ -1,0 +1,31 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.LUSH_CORE.NAME",
+  "description": "STRINGS.WORLD_TRAITS.LUSH_CORE.DESCRIPTION",
+  "colorHex": "52A247",
+  "exclusiveWithTags": [
+    "CoreTrait"
+  ],
+  "traitTags": [
+    "Core",
+    "Easy",
+    "NonStartWorld"
+  ],
+  "additionalSubworldFiles": [
+    {
+      "name": "expansion1::subworlds/forest/ForestCore",
+      "minCount": 2
+    }
+  ],
+  "additionalUnknownCellFilters": [
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/forest/ForestCore"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "name": "STRINGS.CODEX.STORY_TRAITS.MORB_ROVER_MAKER.NAME",
+  "description": "STRINGS.CODEX.STORY_TRAITS.MORB_ROVER_MAKER.DESCRIPTION",
+  "icon": "MorbRover_icon",
+  "colorHex": "FFFFFF",
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "storytraits/morb_rover_maker"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 400,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 1,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 6,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "VeryHot",
+            "ExtremelyHot"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/morb_rover_maker_ext1"
+      ],
+      "listRule": "TryOne",
+      "priority": 200,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 8,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "ExtremelyHot"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/morb_rover_maker_ext1"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 180,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 8,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "ExtremelyHot"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/morb_rover_maker_ext2"
+      ],
+      "listRule": "TryOne",
+      "priority": 200,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 8,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "ExtremelyHot"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "storytraits/morb_rover_maker_ext2"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 180,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 0,
+          "maxDistance": 2,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 8,
+          "maxDistance": 99,
+          "ignoreIfMissingTag": true
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "temperatureRanges": [
+            "ExtremelyHot"
+          ]
+        }
+      ]
+    }
+  ]
+}

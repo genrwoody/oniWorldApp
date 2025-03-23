@@ -1,0 +1,327 @@
+{
+  "name": "STRINGS.WORLDS.MINIFLIPPED.NAME",
+  "description": "STRINGS.WORLDS.MINIFLIPPED.DESCRIPTION",
+  "nameTables": [
+    "FLIPPED"
+  ],
+  "asteroidIcon": "asteroid_mini_flipped_kanim",
+  "iconScale": 1.2,
+  "worldTraitScale": 0.2,
+  "worldsize": {
+    "X": 128,
+    "Y": 153
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 5,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "poiPadding": 1
+    },
+    "startingWorldElements": []
+  },
+  "startSubworldName": "expansion1::subworlds/sandstone/SandstoneStart",
+  "startingBaseTemplate": "bases/sandstoneBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "startingBasePositionVertical": {
+    "min": 0.2,
+    "max": 0.2
+  },
+  "worldTraitRules": [
+    {
+      "min": 1,
+      "max": 2,
+      "forbiddenTags": [
+        "GenericGeysers",
+        "Oil",
+        "LargeWorld",
+        "StartChange",
+        "Core",
+        "AboveCore",
+        "Surface",
+        "Crust"
+      ],
+      "forbiddenTraits": [
+        "expansion1::traits/CrashedSatellites",
+        "traits/MisalignedStart",
+        "expansion1::traits/Volcanoes"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightLow",
+    "cosmicRadiationMedLow"
+  ],
+  "seasons": [
+    "MiniFlippedMeteorShowers"
+  ],
+  "subworldFiles": [
+    {
+      "name": "expansion1::subworlds/sandstone/SandstoneStart",
+      "overridePower": 1
+    },
+    {
+      "name": "expansion1::subworlds/sandstone/SandstoneMiniWater",
+      "maxCount": 2,
+      "overridePower": 0.7
+    },
+    {
+      "name": "expansion1::subworlds/sandstone/med_SandstoneResourceful"
+    },
+    {
+      "name": "expansion1::subworlds/wasteland/WastelandBeetle",
+      "minCount": 4
+    },
+    {
+      "name": "expansion1::subworlds/wasteland/WastelandWorm"
+    },
+    {
+      "name": "expansion1::subworlds/frozen/FrozenMedium",
+      "minCount": 2
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithAbyssaliteBorder"
+    },
+    {
+      "name": "expansion1::subworlds/magma/BottomSmallNoUnobtanium",
+      "overridePower": 1.5
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/wasteland/WastelandBeetle",
+        "expansion1::subworlds/frozen/FrozenMedium",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithAbyssaliteBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/magma/BottomSmallNoUnobtanium"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/wasteland/WastelandBeetle",
+        "expansion1::subworlds/wasteland/WastelandWorm",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/frozen/FrozenMedium",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/sandstone/SandstoneMiniWater"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/sandstone/med_SandstoneResourceful"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/frozen/heatsink_a",
+        "poi/frozen/heatsink_b",
+        "poi/frozen/heatsink_c",
+        "poi/frozen/heatsink_d"
+      ],
+      "listRule": "GuaranteeSomeTryMore",
+      "someCount": 1,
+      "moreCount": 2,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "FrozenWastes"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender_mini",
+        "expansion1::poi/warp/receiver_mini",
+        "expansion1::poi/warp/teleporter_mini"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 0
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Space",
+            "MagmaCore"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGravitasFeatures"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::geysers/liquid_sulfur"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 200,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "MagmaCore"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/mini/magma_passage"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 200,
+      "allowExtremeTemperatureOverlap": true,
+      "useRelaxedFiltering": true,
+      "overrideOffset": {
+        "X": 0,
+        "Y": -20
+      },
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 1,
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/big_volcano",
+        "geysers/hot_co2",
+        "geysers/hot_hydrogen",
+        "geysers/hot_po2",
+        "geysers/hot_steam",
+        "geysers/liquid_co2",
+        "geysers/methane",
+        "geysers/slimy_po2",
+        "geysers/small_volcano",
+        "geysers/steam",
+        "expansion1::geysers/liquid_sulfur"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Sandstone"
+          ]
+        }
+      ]
+    }
+  ]
+}

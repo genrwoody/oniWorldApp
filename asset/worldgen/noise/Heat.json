@@ -1,0 +1,118 @@
+{
+  "settings": {
+    "zoom": 0.001,
+    "normalise": true,
+    "lowerBound": {
+      "X": 2,
+      "Y": 2
+    },
+    "upperBound": {
+      "X": 4,
+      "Y": 4
+    },
+    "name": "Heat"
+  },
+  "links": [
+    {
+      "target": {
+        "type": "Filter",
+        "name": "HeatFilter"
+      },
+      "source0": {
+        "type": "Primitive",
+        "name": "HeatPrimative"
+      }
+    },
+    {
+      "target": {
+        "type": "Modifier",
+        "name": "HeatScaleBias"
+      },
+      "source0": {
+        "type": "Transformer",
+        "name": "HeatRotateZ"
+      }
+    },
+    {
+      "target": {
+        "type": "Transformer",
+        "name": "HeatRotateZ"
+      },
+      "source0": {
+        "type": "Filter",
+        "name": "HeatFilter"
+      }
+    },
+    {
+      "target": {
+        "type": "Terminator",
+        "name": "TERMINATOR"
+      },
+      "source0": {
+        "type": "Modifier",
+        "name": "HeatScaleBias"
+      }
+    }
+  ],
+  "primitives": {
+    "HeatPrimative": {
+      "primative": "BevinsGradient",
+      "quality": "Standard",
+      "seed": 4,
+      "offset": 1,
+      "name": "HeatPrimative",
+      "pos": {
+        "X": -1426.4,
+        "Y": 8.199997
+      }
+    }
+  },
+  "filters": {
+    "HeatFilter": {
+      "filter": "SinFractal",
+      "frequency": 7.18,
+      "lacunarity": 3,
+      "octaves": 6,
+      "offset": 1,
+      "gain": 2,
+      "name": "HeatFilter",
+      "pos": {
+        "X": -1099.6,
+        "Y": 8.599991
+      }
+    }
+  },
+  "transformers": {
+    "HeatRotateZ": {
+      "transformerType": "RotatePoint",
+      "power": 1,
+      "vector": {
+        "Y": 270
+      },
+      "name": "HeatRotateZ",
+      "pos": {
+        "X": -730.6,
+        "Y": 17.39999
+      }
+    }
+  },
+  "modifiers": {
+    "HeatScaleBias": {
+      "modifyType": "ScaleBias",
+      "lower": -1,
+      "upper": 1,
+      "exponent": 0.02,
+      "scale": 1.2,
+      "bias": 0.71,
+      "scale2d": {
+        "X": 1,
+        "Y": 1
+      },
+      "name": "HeatScaleBias",
+      "pos": {
+        "X": -380.2,
+        "Y": 19.39999
+      }
+    }
+  }
+}

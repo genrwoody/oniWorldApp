@@ -1,0 +1,431 @@
+{
+  "name": "STRINGS.WORLDS.SANDSTONE_FROZEN.NAME",
+  "description": "STRINGS.WORLDS.SANDSTONE_FROZEN.DESCRIPTION",
+  "asteroidIcon": "Asteroid_icysandstone",
+  "worldTraitScale": 1,
+  "worldsize": {
+    "X": 256,
+    "Y": 384
+  },
+  "layoutMethod": "PowerTree",
+  "subworldFiles": [
+    {
+      "name": "subworlds/sandstone/SandstoneStartCold"
+    },
+    {
+      "name": "subworlds/sandstone/SandstoneMiniMetalCold",
+      "minCount": 1
+    },
+    {
+      "name": "subworlds/sandstone/SandstoneMiniWaterCold",
+      "minCount": 1
+    },
+    {
+      "name": "subworlds/sandstone/SandstoneMiniAlgaeCold",
+      "minCount": 1
+    },
+    {
+      "name": "subworlds/sandstone/SandstoneFrozen"
+    },
+    {
+      "name": "subworlds/marsh/HotMarshSlush",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/jungle/JungleFrozen",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/frozen/CO2Lakes"
+    },
+    {
+      "name": "subworlds/magma/Bottom"
+    },
+    {
+      "name": "subworlds/magma/VolcanoHole"
+    },
+    {
+      "name": "subworlds/magma/SolidMagma"
+    },
+    {
+      "name": "subworlds/oil/OilPocketsFrozen"
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "subworlds/space/Surface"
+    },
+    {
+      "name": "subworlds/ocean/OceanSlush",
+      "minCount": 2
+    },
+    {
+      "name": "subworlds/ocean/OceanFrozen",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/rust/RustFrozen",
+      "minCount": 2
+    },
+    {
+      "name": "subworlds/forest/ForestFrozen",
+      "minCount": 2
+    }
+  ],
+  "startSubworldName": "subworlds/sandstone/SandstoneStartCold",
+  "startingBaseTemplate": "bases/sandstoneBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.4,
+    "max": 0.5
+  },
+  "startingBasePositionVertical": {
+    "min": 0.45,
+    "max": 0.55
+  },
+  "seasons": [
+    "MeteorShowers"
+  ],
+  "worldTraitRules": [
+    {
+      "min": 2,
+      "max": 4
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing3)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing4)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing5)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing6)",
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/sandstone/SandstoneFrozen"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/sandstone/SandstoneMiniMetalCold",
+        "subworlds/sandstone/SandstoneMiniWaterCold",
+        "subworlds/sandstone/SandstoneMiniAlgaeCold"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/forest/ForestFrozen",
+        "subworlds/marsh/HotMarshSlush",
+        "subworlds/jungle/JungleFrozen",
+        "subworlds/sandstone/SandstoneFrozen",
+        "subworlds/rust/RustFrozen"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/forest/ForestFrozen",
+        "subworlds/marsh/HotMarshSlush",
+        "subworlds/jungle/JungleFrozen",
+        "subworlds/ocean/OceanSlush",
+        "subworlds/sandstone/SandstoneFrozen",
+        "subworlds/rust/RustFrozen",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 4,
+      "maxDistance": 4,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarshSlush",
+        "subworlds/jungle/JungleFrozen",
+        "subworlds/ocean/OceanFrozen",
+        "subworlds/rust/RustFrozen",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 5,
+      "maxDistance": 999,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/forest/ForestFrozen",
+        "subworlds/marsh/HotMarshSlush",
+        "subworlds/jungle/JungleFrozen",
+        "subworlds/ocean/OceanFrozen",
+        "subworlds/rust/RustFrozen",
+        "subworlds/frozen/CO2Lakes",
+        "subworlds/sandstone/SandstoneFrozen",
+        "subworlds/oil/OilPocketsFrozen",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/Bottom",
+        "subworlds/magma/SolidMagma",
+        "subworlds/magma/VolcanoHole"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/oil/OilPocketsFrozen"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Surface"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/jungle/geyser_steam"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "ToxicJungle"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/jungle/geyser_methane",
+        "poi/jungle/geyser_chlorine"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "ToxicJungle"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/hotmarsh/geyser_steam"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/hotmarsh/geyser_methane"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/frozen/heatsink_a",
+        "poi/frozen/heatsink_b",
+        "poi/frozen/heatsink_c",
+        "poi/frozen/heatsink_d"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "FrozenWastes"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/poi_ocean_geyser_saltwater"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Ocean"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_a",
+        "poi/oil/small_oilpockets_geyser_b",
+        "poi/oil/small_oilpockets_geyser_c",
+        "poi/oil/small_oilpockets_geyser_d",
+        "poi/oil/small_oilpockets_geyser_e",
+        "poi/oil/small_oilpockets_geyser_f",
+        "poi/oil/small_oilpockets_geyser_g",
+        "poi/oil/small_oilpockets_geyser_h"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/volcanohole"
+      ],
+      "listRule": "TryOne",
+      "times": 5,
+      "allowDuplicates": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "subworlds/magma/VolcanoHole"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/poi_gravitas"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 500,
+      "allowExtremeTemperatureOverlap": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "subworlds/space/Surface"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/generic"
+      ],
+      "listRule": "TryOne",
+      "times": 12,
+      "ruleId": "GenericGeysers",
+      "allowDuplicates": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    }
+  ]
+}

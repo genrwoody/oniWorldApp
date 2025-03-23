@@ -1,0 +1,37 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    3
+  ],
+  "blobSize": {
+    "min": 2.5,
+    "max": 3.0
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 0.5
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Cobaltite",
+          "weight": 0.4
+        },
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 0.6
+        }
+      ]
+    }
+  }
+}

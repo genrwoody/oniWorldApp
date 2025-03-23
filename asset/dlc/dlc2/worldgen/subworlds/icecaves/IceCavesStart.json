@@ -1,0 +1,86 @@
+{
+  "biomeNoise": "dlc2::noise/IceCavesNoise",
+  "temperatureRange": "Chilly",
+  "pdWeight": 2,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 15.0,
+  "minChildCount": 10,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "dlc2::biomes/IceCaves/Basic",
+      "weight": 2,
+      "tags": [
+        "IceCavesForagePlantPlanted",
+        "IceCavesForagePlantBuried",
+        "IceFlower",
+        "IceFlowerSeed",
+        "WoodDeer",
+        "BlueGrass",
+        "BlueGrassSeed"
+      ]
+    },
+    {
+      "name": "dlc2::biomes/IceCaves/Oxy",
+      "weight": 2,
+      "tags": [
+        "IceCavesForagePlantPlanted",
+        "IceCavesForagePlantBuried",
+        "IceFlower",
+        "IceFlowerSeed",
+        "WoodDeer",
+        "BlueGrass",
+        "BlueGrassSeed"
+      ]
+    },
+    {
+      "name": "dlc2::biomes/IceCaves/Snowy",
+      "weight": 2,
+      "tags": [
+        "IceCavesForagePlantPlanted",
+        "IceCavesForagePlantBuried",
+        "IceFlower",
+        "IceFlowerSeed",
+        "WoodDeer",
+        "BlueGrass",
+        "BlueGrassSeed"
+      ]
+    },
+    {
+      "name": "dlc2::biomes/IceCaves/Metal",
+      "weight": 2,
+      "tags": [
+        "IceCavesForagePlantPlanted",
+        "IceCavesForagePlantBuried",
+        "IceFlower",
+        "IceFlowerSeed",
+        "HardSkinBerryPlantSeed",
+        "WoodDeer",
+        "BlueGrass",
+        "BlueGrassSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "StartWorld",
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "centralFeature": {
+    "type": "features/generic/StartLocation"
+  },
+  "features": [
+    {
+      "type": "dlc2::features/icecaves/DirtDeposit"
+    },
+    {
+      "type": "dlc2::features/icecaves/SnowCave"
+    }
+  ],
+  "zoneType": "IceCaves"
+}

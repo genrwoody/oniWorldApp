@@ -1,0 +1,119 @@
+{
+  "name": "STRINGS.WORLDS.OILYMOONLET.NAME",
+  "description": "STRINGS.WORLDS.OILYMOONLET.DESCRIPTION",
+  "nameTables": [
+    "OILY"
+  ],
+  "asteroidIcon": "asteroid_oil_planet_kanim",
+  "disableWorldTraits": true,
+  "worldTraitScale": 0.06,
+  "worldsize": {
+    "X": 64,
+    "Y": 96
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 4,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 15,
+      "OverworldDensityMax": 15,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/oil/OilSurface"
+    },
+    {
+      "name": "subworlds/oil/OilPatch"
+    },
+    {
+      "name": "subworlds/magma/Bottom"
+    },
+    {
+      "name": "subworlds/rust/Rust"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/oil/OilPatch",
+        "subworlds/rust/Rust"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/oil/OilSurface"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/oil/OilPatch",
+        "subworlds/rust/Rust"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/Bottom"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_a",
+        "poi/oil/small_oilpockets_geyser_b",
+        "poi/oil/small_oilpockets_geyser_c",
+        "poi/oil/small_oilpockets_geyser_d",
+        "poi/oil/small_oilpockets_geyser_e",
+        "poi/oil/small_oilpockets_geyser_f",
+        "poi/oil/small_oilpockets_geyser_g",
+        "poi/oil/small_oilpockets_geyser_h"
+      ],
+      "listRule": "GuaranteeOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    }
+  ]
+}

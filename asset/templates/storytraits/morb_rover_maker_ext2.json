@@ -1,0 +1,213 @@
+{
+  "info": {
+    "size": {
+      "X": 5,
+      "Y": 6
+    },
+    "min": {
+      "X": -1,
+      "Y": -2
+    },
+    "area": 20
+  },
+  "cells": [
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 298.065094,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 6000,
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.121521,
+      "location_x": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_y": -2
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.122986,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -1,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -1,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.211853,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 31980,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.307648,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 25584
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.326111,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 20685,
+      "location_x": 1,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 300.115143,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 1572,
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 3,
+      "location_y": 1
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.146576,
+      "location_x": 2,
+      "location_y": 1
+    }
+  ],
+  "otherEntities": [
+    {
+      "id": "EvilFlower",
+      "location_x": 2,
+      "location_y": -1,
+      "element": "Creature",
+      "temperature": 293.254333,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure",
+          "value": 0.5
+        },
+        {
+          "id": "Temperature",
+          "value": 293.241974
+        }
+      ]
+    },
+    {
+      "id": "EvilFlower",
+      "element": "Creature",
+      "temperature": 296.106384,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure",
+          "value": 0.5
+        },
+        {
+          "id": "Temperature",
+          "value": 296.096161
+        }
+      ]
+    },
+    {
+      "id": "EvilFlower",
+      "location_x": 1,
+      "location_y": 1,
+      "element": "Creature",
+      "temperature": 296.106293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure",
+          "value": 0.5
+        },
+        {
+          "id": "Temperature",
+          "value": 296.09613
+        }
+      ]
+    }
+  ]
+}

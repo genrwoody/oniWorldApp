@@ -1,0 +1,58 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    2,
+    1
+  ],
+  "blobSize": {
+    "min": 6,
+    "max": 16
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Diamond",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "IronOre",
+          "weight": 1
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 2
+        },
+        {
+          "element": "Carbon",
+          "weight": 2,
+          "overrides": {
+            "massOverride": 350
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "IronOre",
+          "weight": 1
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

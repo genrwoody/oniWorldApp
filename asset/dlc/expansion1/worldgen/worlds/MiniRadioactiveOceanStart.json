@@ -1,0 +1,338 @@
+{
+  "name": "STRINGS.WORLDS.MINIRADIOACTIVEOCEAN.NAME",
+  "description": "STRINGS.WORLDS.MINIRADIOACTIVEOCEAN.DESCRIPTION",
+  "nameTables": [
+    "WATER",
+    "RADIOACTIVE"
+  ],
+  "asteroidIcon": "asteroid_mini_radiation_kanim",
+  "iconScale": 1.2,
+  "worldTraitScale": 0.2,
+  "worldsize": {
+    "X": 128,
+    "Y": 153
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 5,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "poiPadding": 1
+    },
+    "startingWorldElements": []
+  },
+  "startSubworldName": "expansion1::subworlds/forest/med_ForestStart",
+  "startingBaseTemplate": "bases/forestBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "startingBasePositionVertical": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "worldTraitRules": [
+    {
+      "min": 1,
+      "max": 2,
+      "forbiddenTags": [
+        "GenericGeysers",
+        "Oil",
+        "LargeWorld",
+        "Surface",
+        "StartChange",
+        "AboveCore"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightLow",
+    "cosmicRadiationHigh"
+  ],
+  "seasons": [
+    "MiniRadioactiveOceanMeteorShowers"
+  ],
+  "subworldFiles": [
+    {
+      "name": "expansion1::subworlds/forest/med_ForestStart"
+    },
+    {
+      "name": "subworlds/forest/ForestMiniWater",
+      "minCount": 4,
+      "maxCount": 6
+    },
+    {
+      "name": "expansion1::subworlds/ocean/med_OceanDeep"
+    },
+    {
+      "name": "expansion1::subworlds/ocean/med_Ocean",
+      "minCount": 1
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_Radioactive",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_UraniumFields"
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_FrozenUraniumFields"
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithSaltyBorder",
+      "overridePower": 1.25
+    },
+    {
+      "name": "expansion1::subworlds/magma/BottomSmall"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/ocean/med_OceanDeep",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/forest/ForestMiniWater"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/ocean/med_Ocean",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithSaltyBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/radioactive/med_Radioactive",
+        "expansion1::subworlds/radioactive/med_UraniumFields",
+        "expansion1::subworlds/radioactive/med_FrozenUraniumFields"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/magma/BottomSmall"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "UnionWith",
+      "sortOrder": 100,
+      "subworldNames": [
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser",
+        "expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser_b",
+        "expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser_c"
+      ],
+      "listRule": "TrySome",
+      "someCount": 2,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Radioactive"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "subworldNames": [
+            "expansion1::subworlds/radioactive/med_UraniumFields",
+            "expansion1::subworlds/radioactive/med_FrozenUraniumFields"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/poi_ocean_geyser_saltwater"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Ocean"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender_mini",
+        "expansion1::poi/warp/receiver_mini",
+        "expansion1::poi/warp/teleporter_mini"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 0
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Space"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGravitasFeatures"
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/filthy_water",
+        "geysers/hot_steam",
+        "geysers/hot_water",
+        "geysers/salt_water",
+        "geysers/slush_water",
+        "expansion1::geysers/dirty_slush",
+        "expansion1::geysers/slush_salt_water"
+      ],
+      "listRule": "TryOne",
+      "times": 2,
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/filthy_water",
+        "geysers/hot_co2",
+        "geysers/hot_steam",
+        "geysers/hot_water",
+        "geysers/salt_water",
+        "geysers/slimy_po2",
+        "geysers/slush_water",
+        "geysers/steam",
+        "expansion1::geysers/dirty_slush",
+        "expansion1::geysers/slush_salt_water"
+      ],
+      "listRule": "TryOne",
+      "times": 1,
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/genericGravitas/monument_room"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "ignoreIfMissingTag": true,
+          "minDistance": 0,
+          "maxDistance": 1
+        }
+      ]
+    }
+  ]
+}

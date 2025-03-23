@@ -1,0 +1,249 @@
+{
+  "name": "STRINGS.WORLDS.WARPOILYSWAMP.NAME",
+  "description": "STRINGS.WORLDS.WARPOILYSWAMP.DESCRIPTION",
+  "nameTables": [
+    "SWAMP"
+  ],
+  "asteroidIcon": "asteroid_swamp_oil_kanim",
+  "disableWorldTraits": true,
+  "worldTraitScale": 0.12,
+  "worldsize": {
+    "X": 96,
+    "Y": 128
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 3,
+      "WorldBorderRange": 1,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "POIPadding": 1
+    }
+  },
+  "startSubworldName": "expansion1::subworlds/swamp/SwampWarpStart",
+  "startingBaseTemplate": "expansion1::bases/warpworldSwampBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.4,
+    "max": 0.7
+  },
+  "startingBasePositionVertical": {
+    "min": 0.5,
+    "max": 0.55
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithFrozenBorder"
+    },
+    {
+      "name": "expansion1::subworlds/swamp/Swamp"
+    },
+    {
+      "name": "expansion1::subworlds/swamp/SwampWarpStart"
+    },
+    {
+      "name": "expansion1::subworlds/rust/med_Rust"
+    },
+    {
+      "name": "expansion1::subworlds/oil/OilSparse",
+      "minCount": 1
+    },
+    {
+      "name": "expansion1::subworlds/oil/OilWells",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/barren/BarrenCore"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/swamp/Swamp"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithFrozenBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/rust/med_Rust"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/swamp/Swamp",
+        "expansion1::subworlds/oil/OilSparse"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/oil/OilWells",
+        "expansion1::subworlds/barren/BarrenCore"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "expansion1::poi/warp/sender",
+        "expansion1::poi/warp/receiver"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 2
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Swamp",
+            "Rust"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGravitasFeatures"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/boon/bedroom",
+        "expansion1::poi/boon/washroom",
+        "expansion1::poi/boon/power",
+        "expansion1::poi/boon/kitchen"
+      ],
+      "listRule": "TrySome",
+      "someCount": 2,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 2,
+          "maxDistance": 2
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Rust"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/boon/bedroom",
+        "expansion1::poi/boon/washroom",
+        "expansion1::poi/boon/power",
+        "expansion1::poi/boon/kitchen",
+        "expansion1::poi/boon/well",
+        "expansion1::poi/boon/farm"
+      ],
+      "listRule": "TrySome",
+      "someCount": 2,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 3
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Swamp"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_a",
+        "poi/oil/small_oilpockets_geyser_b",
+        "poi/oil/small_oilpockets_geyser_c",
+        "poi/oil/small_oilpockets_geyser_d",
+        "poi/oil/small_oilpockets_geyser_e",
+        "poi/oil/small_oilpockets_geyser_f",
+        "poi/oil/small_oilpockets_geyser_g",
+        "poi/oil/small_oilpockets_geyser_h"
+      ],
+      "listRule": "GuaranteeSomeTryMore",
+      "someCount": 1,
+      "moreCount": 2,
+      "priority": 105,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/generic"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "allowDuplicates": true
+    }
+  ]
+}

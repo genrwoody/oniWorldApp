@@ -1,0 +1,44 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Blob",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 0.5,
+    "max": 2.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "SedimentaryRock",
+          "weight": 0.66,
+          "overrides": {
+            "massOverride": 750
+          }
+        },
+        {
+          "element": "Obsidian",
+          "weight": 0.33
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Obsidian",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

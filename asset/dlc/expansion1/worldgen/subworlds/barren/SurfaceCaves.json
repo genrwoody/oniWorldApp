@@ -1,0 +1,29 @@
+{
+  "biomeNoise": "expansion1::noise/SmallCaves",
+  "temperatureRange": "HumanWarm",
+  "minChildCount": 2,
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Barren/RockyCaves",
+      "weight": 2,
+      "tags": null
+    },
+    {
+      "name": "expansion1::biomes/Barren/RockyWetCaves",
+      "weight": 1,
+      "tags": null
+    }
+  ],
+  "features": [],
+  "tags": [
+    "IgnoreCaveOverride",
+    "ErodePointToBorderInv"
+  ],
+  "zoneType": "Sandstone"
+}

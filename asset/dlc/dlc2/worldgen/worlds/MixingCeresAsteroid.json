@@ -1,0 +1,182 @@
+{
+  "name": "STRINGS.WORLDS.CERESMIXING.NAME",
+  "description": "STRINGS.WORLDS.CERESMIXING.DESCRIPTION",
+  "nameTables": [
+    "CERES"
+  ],
+  "asteroidIcon": "asteroid_classic_mini_ceres_so_kanim",
+  "worldTags": [
+    "Mixing",
+    "CeresWorld",
+    "CeresStart",
+    "Cold",
+    "SmallWorld",
+    "SubsurfaceSubworldReserved",
+    "NoDamagingMeteorShowers"
+  ],
+  "dlcIdFrom": "DLC2_ID",
+  "requiredDlcIds": [
+    "EXPANSION1_ID",
+    "DLC2_ID"
+  ],
+  "worldTraitScale": 0.08,
+  "worldsize": {
+    "X": 64,
+    "Y": 128
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 4,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 15,
+      "OverworldDensityMax": 15,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "POIPadding": 1
+    }
+  },
+  "worldTraitRules": [
+    {
+      "min": 0,
+      "max": 2,
+      "forbiddenTags": [
+        "StartWorldOnly",
+        "Geodes",
+        "Oil",
+        "GenericGeysers",
+        "StartChange",
+        "VeryCold",
+        "LargeWorld",
+        "Surface"
+      ],
+      "forbiddenTraits": [
+        "traits/MagmaVents",
+        "expansion1::traits/Volcanoes",
+        "expansion1::traits/MetalCaves"
+      ]
+    }
+  ],
+  "fixedTraits": [
+    "sunlightVeryVeryLow",
+    "cosmicRadiationMed",
+    "northernLightsOn"
+  ],
+  "seasons": [
+    "CeresMeteorShowers"
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3,
+      "forbiddenTags": [
+        "Ceres"
+      ]
+    }
+  ],
+  "subworldFiles": [
+    {
+      "name": "subworlds/space/SpaceNoBorder"
+    },
+    {
+      "name": "dlc2::subworlds/icecaves/IceCavesBasic",
+      "minCount": 2
+    },
+    {
+      "name": "dlc2::subworlds/carrotquarry/CarrotQuarryBasic",
+      "weight": 0.5,
+      "minCount": 1
+    },
+    {
+      "name": "dlc2::subworlds/carrotquarry/CarrotQuarryEthanolPools",
+      "weight": 0.5,
+      "minCount": 1
+    },
+    {
+      "name": "dlc2::subworlds/sugarwoods/SugarWoodsBasic",
+      "minCount": 2
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/carrotquarry/CarrotQuarryBasic",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryEthanolPools",
+        "dlc2::subworlds/icecaves/IceCavesBasic",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/SpaceNoBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/sugarwoods/SugarWoodsBasic"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/sugarwoods/SugarWoodsBasic",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryBasic",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryEthanolPools",
+        "dlc2::subworlds/icecaves/IceCavesBasic",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "UnionWith",
+      "sortOrder": 100,
+      "subworldNames": [
+        "(Mixing1)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "geysers/generic"
+      ],
+      "listRule": "TryOne",
+      "times": 4,
+      "allowDuplicates": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    }
+  ]
+}

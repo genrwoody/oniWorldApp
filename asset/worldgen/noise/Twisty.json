@@ -1,0 +1,254 @@
+{
+  "settings": {
+    "zoom": 0.004,
+    "lowerBound": {
+      "X": 2,
+      "Y": 2
+    },
+    "upperBound": {
+      "X": 4,
+      "Y": 4
+    },
+    "name": "Twisty"
+  },
+  "links": [
+    {
+      "target": {
+        "type": "Filter",
+        "name": "FilterNodeEditor0"
+      },
+      "source0": {
+        "type": "Primitive",
+        "name": "PrimitiveNodeEditor2"
+      }
+    },
+    {
+      "target": {
+        "type": "Modifier",
+        "name": "ModifierModuleNodeEditor0"
+      },
+      "source0": {
+        "type": "Selector",
+        "name": "SelectorModuleNodeEditor0"
+      },
+      "source1": {
+        "type": "ControlPoints",
+        "name": "Curve Control0"
+      },
+      "source2": {
+        "type": "FloatPoints",
+        "name": "Terrace Control1"
+      }
+    },
+    {
+      "target": {
+        "type": "Selector",
+        "name": "SelectorModuleNodeEditor0"
+      },
+      "source0": {
+        "type": "Filter",
+        "name": "FilterNodeEditor0"
+      },
+      "source1": {
+        "type": "Transformer",
+        "name": "TransformerNodeEditor0"
+      },
+      "source2": {
+        "type": "Primitive",
+        "name": "BobTheBuilder"
+      }
+    },
+    {
+      "target": {
+        "type": "Transformer",
+        "name": "TransformerNodeEditor0"
+      },
+      "source0": {
+        "type": "Filter",
+        "name": "FilterNodeEditor0"
+      },
+      "source1": {
+        "type": "Primitive",
+        "name": "PrimitiveNodeEditor3"
+      },
+      "source2": {
+        "type": "Primitive",
+        "name": "FrankenPrimitive"
+      },
+      "source3": {
+        "type": "Primitive",
+        "name": "BobTheBuilder"
+      }
+    },
+    {
+      "target": {
+        "type": "Combiner",
+        "name": "CombinerModuleNodeEditor0"
+      },
+      "source0": {
+        "type": "Modifier",
+        "name": "ModifierModuleNodeEditor0"
+      },
+      "source1": {
+        "type": "Primitive",
+        "name": "PrimitiveNodeEditor3"
+      }
+    },
+    {
+      "target": {
+        "type": "Terminator",
+        "name": "TERMINATOR"
+      },
+      "source0": {
+        "type": "Combiner",
+        "name": "CombinerModuleNodeEditor0"
+      }
+    }
+  ],
+  "primitives": {
+    "PrimitiveNodeEditor3": {
+      "primative": "Cylinders",
+      "quality": "Best",
+      "seed": 144,
+      "offset": 0.16,
+      "name": "PrimitiveNodeEditor3",
+      "pos": {
+        "X": -859,
+        "Y": -148
+      }
+    },
+    "FrankenPrimitive": {
+      "primative": "Spheres",
+      "quality": "Best",
+      "seed": 1088,
+      "offset": 0.1,
+      "name": "FrankenPrimitive",
+      "pos": {
+        "X": -1125,
+        "Y": -128
+      }
+    },
+    "BobTheBuilder": {
+      "primative": "ImprovedPerlin",
+      "quality": "Best",
+      "seed": 128,
+      "offset": 1,
+      "name": "BobTheBuilder",
+      "pos": {
+        "X": -1566,
+        "Y": -91
+      }
+    },
+    "PrimitiveNodeEditor2": {
+      "primative": "SimplexPerlin",
+      "quality": "Best",
+      "seed": 82,
+      "offset": 1,
+      "name": "PrimitiveNodeEditor2",
+      "pos": {
+        "X": -1574.4,
+        "Y": -629.2
+      }
+    }
+  },
+  "filters": {
+    "FilterNodeEditor0": {
+      "filter": "HybridMultiFractal",
+      "frequency": 9.23,
+      "lacunarity": 8.3,
+      "octaves": 10,
+      "offset": 1,
+      "gain": 19.77,
+      "name": "FilterNodeEditor0",
+      "pos": {
+        "X": -1254.6,
+        "Y": -700.6
+      }
+    }
+  },
+  "transformers": {
+    "TransformerNodeEditor0": {
+      "transformerType": "Displace",
+      "power": 1,
+      "name": "TransformerNodeEditor0",
+      "pos": {
+        "X": -448,
+        "Y": -116
+      }
+    }
+  },
+  "selectors": {
+    "SelectorModuleNodeEditor0": {
+      "selectType": "Select",
+      "lower": 0.1,
+      "upper": 0.9,
+      "edge": 0.1,
+      "name": "SelectorModuleNodeEditor0",
+      "pos": {
+        "X": -806.6,
+        "Y": -521.4
+      }
+    }
+  },
+  "modifiers": {
+    "ModifierModuleNodeEditor0": {
+      "modifyType": "Invert",
+      "lower": -1,
+      "upper": 1,
+      "exponent": 0.02,
+      "scale": 1,
+      "scale2d": {
+        "X": 1,
+        "Y": 1
+      },
+      "name": "ModifierModuleNodeEditor0",
+      "pos": {
+        "X": -503.4,
+        "Y": -700.4
+      }
+    }
+  },
+  "combiners": {
+    "CombinerModuleNodeEditor0": {
+      "combineType": "Multiply",
+      "name": "CombinerModuleNodeEditor0",
+      "pos": {
+        "X": -134,
+        "Y": -565.2
+      }
+    }
+  },
+  "floats": {
+    "Terrace Control1": {
+      "points": [
+        -1,
+        0.3,
+        0.8,
+        2
+      ],
+      "name": "Terrace Control1",
+      "pos": {
+        "X": -1350.6,
+        "Y": -876.8001
+      }
+    }
+  },
+  "controlpoints": {
+    "Curve Control0": {
+      "points": [
+        {
+          "input": -1
+        },
+        {
+          "input": 2,
+          "output": 1
+        }
+      ],
+      "name": "Curve Control0",
+      "pos": {
+        "X": -1000.8,
+        "Y": -881
+      }
+    }
+  }
+}

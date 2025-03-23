@@ -1,0 +1,67 @@
+{
+  "biomeNoise": "expansion1::noise/Swamp",
+  "temperatureRange": "Room",
+  "pdWeight": 1.0,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Swamp/Basic",
+      "weight": 2,
+      "tags": [
+        "WineCups",
+        "WineCupsSeed",
+        "SwampHarvestPlantSeed",
+        "SwampHarvestPlant",
+        "SwampForagePlant",
+        "SwampForagePlantPlanted"
+      ]
+    },
+    {
+      "name": "expansion1::biomes/Swamp/Water_CO2",
+      "weight": 3,
+      "tags": [
+        "Pacu",
+        "SwampForagePlant",
+        "SwampForagePlantPlanted",
+        "WineCups",
+        "WineCupsSeed",
+        "SwampHarvestPlantSeed",
+        "SwampHarvestPlant"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "expansion1::features/swamp/AirPocket"
+    },
+    {
+      "type": "expansion1::features/swamp/BigAirPocket"
+    },
+    {
+      "type": "expansion1::features/swamp/MetalCavern"
+    },
+    {
+      "type": "expansion1::features/swamp/FreshwaterWell"
+    },
+    {
+      "type": "expansion1::features/swamp/ShallowPool"
+    },
+    {
+      "type": "expansion1::features/swamp/DirtyPool"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning",
+    "StartWorld"
+  ],
+  "zoneType": "Swamp"
+}

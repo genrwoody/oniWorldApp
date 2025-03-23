@@ -1,0 +1,52 @@
+{
+  "tags": [
+    "Wet",
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 6,
+    "max": 8
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "ContaminatedOxygen",
+          "weight": 0.5
+        },
+        {
+          "element": "DirtyWater",
+          "weight": 0.3,
+          "overrides": {
+            "massOverride": 750
+          }
+        },
+        {
+          "element": "ToxicMud",
+          "weight": 0.2,
+          "overrides": {
+            "massOverride": 750
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "ToxicSand",
+          "weight": 0.5
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 0.5
+        }
+      ]
+    }
+  }
+}

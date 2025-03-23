@@ -1,0 +1,31 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.DEEP_OIL.NAME",
+  "description": "STRINGS.WORLD_TRAITS.DEEP_OIL.DESCRIPTION",
+  "colorHex": "6C6C6C",
+  "traitTags": [
+    "AboveCore",
+    "Oil"
+  ],
+  "additionalSubworldFiles": [
+    {
+      "name": "subworlds/oil/OilPatchDouble",
+      "weight": 2
+    },
+    {
+      "name": "subworlds/oil/OilDry"
+    }
+  ],
+  "additionalUnknownCellFilters": [
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/oil/OilPatchDouble",
+        "subworlds/oil/OilDry"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "STRINGS.SUBWORLDS.SUGARWOODS.NAME",
+  "description": "STRINGS.SUBWORLDS.SUGARWOODS.DESC",
+  "icon": "biomeIconSugarwoods",
+  "mixingTags": [
+    "Cold",
+    "Subsurface",
+    "Ceres"
+  ],
+  "forbiddenClusterTags": [
+    "CeresCluster"
+  ],
+  "subworld": {
+    "name": "dlc2::subworlds/sugarwoods/SugarWoodsMix"
+  }
+}

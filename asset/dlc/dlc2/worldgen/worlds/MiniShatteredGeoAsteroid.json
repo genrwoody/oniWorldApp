@@ -1,0 +1,300 @@
+{
+  "name": "STRINGS.WORLDS.MINISHATTEREDGEO.NAME",
+  "description": "STRINGS.WORLDS.MINISHATTEREDGEO.DESCRIPTION",
+  "nameTables": [
+    "CERES",
+    "MAGMA"
+  ],
+  "asteroidIcon": "asteroid_moonlet_bottom_kanim",
+  "worldTags": [
+    "Ceres"
+  ],
+  "dlcIdFrom": "DLC2_ID",
+  "requiredDlcIds": [
+    "EXPANSION1_ID",
+    "DLC2_ID"
+  ],
+  "worldTraitScale": 0.2,
+  "worldsize": {
+    "X": 128,
+    "Y": 153
+  },
+  "layoutMethod": "PowerTree",
+  "worldTraitRules": [
+    {
+      "min": 1,
+      "max": 2,
+      "forbiddenTags": [
+        "LargeWorld",
+        "GenericGeysers",
+        "Surface",
+        "Crust",
+        "StartWorldOnly",
+        "Oil"
+      ],
+      "forbiddenTraits": [
+        "traits/MagmaVents",
+        "expansion1::traits/CrashedSatellites"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightVeryVeryLow",
+    "cosmicRadiationLow",
+    "northernLightsOn"
+  ],
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 5,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "poiPadding": 1
+    },
+    "startingWorldElements": []
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/forest/ForestHot",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/magma/MagmaNoUnobtanium"
+    },
+    {
+      "name": "expansion1::subworlds/jungle/med_JungleInactive",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/barren/CoalyGranite",
+      "overridePower": 1,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "subworlds/space/SpaceNoBorder"
+    },
+    {
+      "name": "subworlds/space/SpaceWithBorder",
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "name": "dlc2::subworlds/space/SpaceWithDebris",
+      "minCount": 1,
+      "maxCount": 3,
+      "overridePower": 1
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/jungle/med_JungleInactive",
+        "subworlds/forest/ForestHot",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/MagmaNoUnobtanium",
+        "subworlds/space/SpaceWithBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtEdge",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "ExceptWith",
+      "subworldNames": [
+        "subworlds/space/SpaceWithBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/jungle/med_JungleInactive",
+        "subworlds/forest/ForestHot",
+        "expansion1::subworlds/barren/CoalyGranite",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/SpaceNoBorder",
+        "dlc2::subworlds/space/SpaceWithDebris"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtEdge",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "ExceptWith",
+      "subworldNames": [
+        "dlc2::subworlds/space/SpaceWithDebris"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "expansion1::poi/genericGravitas/monument_room"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "All"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/hot_steam"
+      ],
+      "listRule": "GuaranteeAll",
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/small_volcano",
+        "geysers/hot_water",
+        "geysers/steam",
+        "geysers/big_volcano",
+        "geysers/molten_copper",
+        "geysers/oil_drip",
+        "geysers/methane",
+        "geysers/salt_water"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc2::poi/geothermal/geothermal_controller"
+      ],
+      "listRule": "GuaranteeAll",
+      "useRelaxedFiltering": false,
+      "priority": 500,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 1,
+          "maxDistance": 3
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtEdge",
+          "minDistance": 0,
+          "maxDistance": 0
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc2::poi/geothermal/geothermal_vent_1",
+        "dlc2::poi/geothermal/geothermal_vent_2",
+        "dlc2::poi/geothermal/geothermal_vent_3",
+        "dlc2::poi/geothermal/geothermal_vent_1",
+        "dlc2::poi/geothermal/geothermal_vent_2",
+        "dlc2::poi/geothermal/geothermal_vent_3"
+      ],
+      "listRule": "GuaranteeRange",
+      "range": {
+        "X": 3,
+        "Y": 3
+      },
+      "useRelaxedFiltering": true,
+      "allowExtremeTemperatureOverlap": true,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 3
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtEdge",
+          "minDistance": 0,
+          "maxDistance": 0
+        }
+      ]
+    }
+  ]
+}

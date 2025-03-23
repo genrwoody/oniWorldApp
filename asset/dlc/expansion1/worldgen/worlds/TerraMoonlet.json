@@ -1,0 +1,403 @@
+{
+  "name": "STRINGS.WORLDS.TERRAMOONLET.NAME",
+  "description": "STRINGS.WORLDS.TERRAMOONLET.DESCRIPTION",
+  "nameTables": [
+    "TERRA"
+  ],
+  "asteroidIcon": "asteroid_sandstone_start_kanim",
+  "disableWorldTraits": true,
+  "worldTraitScale": 0.44,
+  "worldsize": {
+    "X": 160,
+    "Y": 274
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "startSubworldName": "expansion1::subworlds/sandstone/SandstoneStart",
+  "startingBaseTemplate": "bases/sandstoneBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "startingBasePositionVertical": {
+    "min": 0.46,
+    "max": 0.46
+  },
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing3)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightVeryLow",
+    "cosmicRadiationVeryLow"
+  ],
+  "seasons": [
+    "SpacedOutStyleStartMeteorShowers",
+    "TerraMoonletMeteorShowers"
+  ],
+  "subworldFiles": [
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "subworlds/magma/Bottom"
+    },
+    {
+      "name": "expansion1::subworlds/sandstone/SandstoneMiniWater",
+      "minCount": 3,
+      "maxCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/sandstone/SandstoneMini",
+      "maxCount": 1
+    },
+    {
+      "name": "subworlds/marsh/HotMarsh",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/jungle/JungleSteamy",
+      "minCount": 2
+    },
+    {
+      "name": "subworlds/jungle/Jungle",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/sandstone/SandstoneStart",
+      "overridePower": 4
+    },
+    {
+      "name": "expansion1::subworlds/space/IcySurface",
+      "overridePower": 1.3
+    },
+    {
+      "name": "expansion1::subworlds/barren/CoalyGranite",
+      "overridePower": 1
+    },
+    {
+      "name": "expansion1::subworlds/wasteland/WastelandBeetle",
+      "minCount": 2
+    },
+    {
+      "name": "expansion1::subworlds/wasteland/WastelandWorm",
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "name": "expansion1::subworlds/frozen/FrozenSlush",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 99,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/jungle/Jungle",
+        "subworlds/marsh/HotMarsh",
+        "expansion1::subworlds/wasteland/WastelandBeetle",
+        "expansion1::subworlds/wasteland/WastelandWorm",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarsh",
+        "expansion1::subworlds/jungle/JungleSteamy",
+        "expansion1::subworlds/sandstone/SandstoneMini",
+        "expansion1::subworlds/sandstone/SandstoneMiniWater"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/Bottom"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/barren/CoalyGranite",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/IcySurface",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/frozen/FrozenSlush",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/jungle/geyser_steam"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "subworlds/jungle/Jungle"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/poi_geyser_dirty_slush",
+        "expansion1::poi/poi_frozen_salt_water_geyser"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "FrozenWastes"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/hotmarsh/geyser_methane"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/poi_geyser_magma",
+        "expansion1::poi/poi_geyser_magma_2",
+        "expansion1::poi/poi_geyser_magma_3"
+      ],
+      "listRule": "TryAll",
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 1,
+          "maxDistance": 1
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Barren",
+            "MagmaCore"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/steam",
+        "geysers/chlorine_gas",
+        "geysers/hot_po2",
+        "geysers/methane",
+        "geysers/filthy_water",
+        "geysers/liquid_co2",
+        "geysers/hot_hydrogen",
+        "geysers/big_volcano"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 2,
+          "maxDistance": 10
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Space"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender",
+        "expansion1::poi/warp/receiver",
+        "expansion1::poi/warp/teleporter"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 2
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Wasteland",
+            "BoggyMarsh",
+            "ToxicJungle"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGravitasFeatures"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/genericGravitas/poi_office"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 2,
+          "maxDistance": 99
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGravitasFeatures"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/radioactive/uranium_geode1"
+      ],
+      "listRule": "GuaranteeOne",
+      "useRelaxedFiltering": true,
+      "allowExtremeTemperatureOverlap": true,
+      "priority": 200,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 1
+        }
+      ]
+    }
+  ]
+}

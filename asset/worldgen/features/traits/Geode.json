@@ -1,0 +1,110 @@
+{
+  "shape": "Blob",
+  "tags": [
+    "HighPriorityFeature",
+    "AllowExceedNodeBorders"
+  ],
+  "borders": [
+    1,
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 1.1,
+    "max": 2.1
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "PickOneWeighted",
+      "choices": [
+        {
+          "element": "Ice",
+          "weight": 50
+        },
+        {
+          "element": "DirtyIce",
+          "weight": 50
+        },
+        {
+          "element": "IronOre",
+          "weight": 50
+        },
+        {
+          "element": "Cuprite",
+          "weight": 50
+        },
+        {
+          "element": "GoldAmalgam",
+          "weight": 50
+        },
+        {
+          "element": "Diamond",
+          "weight": 20
+        },
+        {
+          "element": "Phosphorite",
+          "weight": 50
+        },
+        {
+          "element": "SolidMethane",
+          "weight": 20
+        },
+        {
+          "element": "SolidOxygen",
+          "weight": 15
+        },
+        {
+          "element": "SolidChlorine",
+          "weight": 10
+        },
+        {
+          "element": "SolidCarbonDioxide",
+          "weight": 10
+        },
+        {
+          "element": "SolidHydrogen",
+          "weight": 3
+        },
+        {
+          "element": "Diamond",
+          "weight": 20
+        },
+        {
+          "element": "Carbon",
+          "weight": 50
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Diamond",
+          "weight": 1
+        },
+        {
+          "element": "Obsidian",
+          "weight": 2
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Obsidian",
+          "weight": 2
+        }
+      ]
+    },
+    "RoomBorderChoices2": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Katairite",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

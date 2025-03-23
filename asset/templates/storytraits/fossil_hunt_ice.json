@@ -1,0 +1,504 @@
+{
+  "info": {
+    "size": {
+      "X": 11,
+      "Y": 11
+    },
+    "min": {
+      "X": -5,
+      "Y": -5
+    },
+    "area": 69
+  },
+  "cells": [
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": -3,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": -2,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.038269,
+      "location_x": -1,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 229.991562,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 229.994431,
+      "location_x": 1,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.014816,
+      "location_x": 2,
+      "location_y": 4
+    },
+    {
+      "element": "Wolframite",
+      "mass": 600,
+      "temperature": 100.448334,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_y": 5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.089127,
+      "location_x": -2,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 229.980164,
+      "location_x": -1,
+      "location_y": 3
+    },
+    {
+      "element": "Wolframite",
+      "mass": 600,
+      "temperature": 100.46524,
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 229.958618,
+      "location_x": 2,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.02916,
+      "location_x": 3,
+      "location_y": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.258255,
+      "location_x": -3,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 229.986298,
+      "location_x": -2,
+      "location_y": -2
+    },
+    {
+      "element": "Snow",
+      "mass": 10,
+      "temperature": 100.349068,
+      "location_x": -1,
+      "location_y": -2
+    },
+    {
+      "element": "Snow",
+      "mass": 10,
+      "temperature": 100.174652,
+      "location_y": -2
+    },
+    {
+      "element": "Snow",
+      "mass": 10,
+      "temperature": 100.174652,
+      "location_x": 1,
+      "location_y": -2
+    },
+    {
+      "element": "Snow",
+      "mass": 10,
+      "temperature": 100.34906,
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 229.986206,
+      "location_x": 3,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.203583,
+      "location_x": 4,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.112076,
+      "location_x": -3,
+      "location_y": -1
+    },
+    {
+      "element": "Snow",
+      "mass": 10,
+      "temperature": 100.349052,
+      "location_x": -2,
+      "location_y": -1
+    },
+    {
+      "element": "Ice",
+      "mass": 1000,
+      "temperature": 100.149994,
+      "location_x": -1,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 100,
+      "location_y": -1
+    },
+    {
+      "element": "Fossil",
+      "mass": 500,
+      "temperature": 100,
+      "location_x": 1,
+      "location_y": -1
+    },
+    {
+      "element": "Ice",
+      "mass": 1000,
+      "temperature": 100.149994,
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "element": "Ice",
+      "mass": 1000,
+      "temperature": 100.150787,
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.079376,
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.105347,
+      "location_x": -3
+    },
+    {
+      "element": "Snow",
+      "mass": 10,
+      "temperature": 230,
+      "location_x": -2
+    },
+    {
+      "element": "Ice",
+      "mass": 1000,
+      "temperature": 100.149994,
+      "location_x": -1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.00172799989,
+      "temperature": 100.937241
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.0345599949,
+      "temperature": 100.942223,
+      "location_x": 1
+    },
+    {
+      "element": "Ice",
+      "mass": 1000,
+      "temperature": 230,
+      "location_x": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 1,
+      "temperature": 230,
+      "location_x": 3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.04953,
+      "location_x": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.08075,
+      "location_x": -3,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 1,
+      "temperature": 230,
+      "location_x": -2,
+      "location_y": 1
+    },
+    {
+      "element": "Snow",
+      "mass": 10,
+      "temperature": 100.851784,
+      "location_x": -1,
+      "location_y": 1
+    },
+    {
+      "element": "Ice",
+      "mass": 1000,
+      "temperature": 100.149994,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.249407992,
+      "temperature": 100.995682,
+      "location_x": 1,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.783424079,
+      "temperature": 101.117622,
+      "location_x": 2,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.967167974,
+      "temperature": 104.247597,
+      "location_x": 3,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.03154,
+      "location_x": 4,
+      "location_y": 1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149094,
+      "location_x": -3,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 229.971756,
+      "location_x": -2,
+      "location_y": 2
+    },
+    {
+      "element": "Ice",
+      "mass": 1000,
+      "temperature": 100.15036,
+      "location_x": -1,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 1,
+      "temperature": 100.939972,
+      "location_y": 2
+    },
+    {
+      "element": "Ice",
+      "mass": 1000,
+      "temperature": 100.150566,
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.965439975,
+      "temperature": 101.236954,
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 30.0428295,
+      "location_x": 3,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.069977,
+      "location_x": 4,
+      "location_y": 2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": 5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": 5,
+      "location_y": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": -5,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": -4,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.264984,
+      "location_x": -2,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.126251,
+      "location_x": -1,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.12265,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.113327,
+      "location_x": 1,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.117554,
+      "location_x": 2,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.231796,
+      "location_x": 3,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": -2,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": 1,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": 2,
+      "location_y": -5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": 4,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 230.149994,
+      "location_x": 5,
+      "location_y": -4
+    }
+  ],
+  "otherEntities": [
+    {
+      "id": "FossilBitsSmall",
+      "location_x": -2,
+      "element": "Fossil",
+      "temperature": 230,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "FossilBitsLarge",
+      "location_x": 2,
+      "element": "Fossil",
+      "temperature": 230,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "FossilIce",
+      "element": "Fossil",
+      "temperature": 230,
+      "units": 1,
+      "type": "Other"
+    }
+  ]
+}

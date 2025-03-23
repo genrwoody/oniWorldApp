@@ -1,0 +1,91 @@
+{
+  "name": "STRINGS.WORLDS.MOON_BARREN.NAME",
+  "description": "STRINGS.WORLDS.MOON_BARREN.DESCRIPTION",
+  "disableWorldTraits": true,
+  "worldTraitScale": 0.09,
+  "worldsize": {
+    "X": 96,
+    "Y": 96
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "OverworldDensityMin": 10,
+      "OverworldDensityMax": 10,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    },
+    "defaultMoveTags": null,
+    "overworldAddTags": null
+  },
+  "subworldFiles": [
+    {
+      "name": "expansion1::subworlds/moon_barren/BarrenStart"
+    },
+    {
+      "name": "expansion1::subworlds/moon_barren/BarrenGranite"
+    },
+    {
+      "name": "subworlds/space/SurfaceCrags"
+    },
+    {
+      "name": "subworlds/space/Space"
+    }
+  ],
+  "startSubworldName": "expansion1::subworlds/moon_barren/BarrenStart",
+  "startingBaseTemplate": "bases/sandstoneBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.2,
+    "max": 0.2
+  },
+  "startingBasePositionVertical": {
+    "min": 0.2,
+    "max": 0.7
+  },
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/moon_barren/BarrenGranite"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/SurfaceCrags"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 3,
+      "command": "UnionWith",
+      "subworldNames": [
+        "subworlds/space/SurfaceCrags"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "ExceptWith",
+      "subworldNames": [
+        "subworlds/space/SurfaceCrags"
+      ]
+    }
+  ]
+}

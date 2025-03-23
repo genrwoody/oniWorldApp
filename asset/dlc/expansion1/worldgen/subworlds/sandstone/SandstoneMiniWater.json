@@ -1,0 +1,67 @@
+{
+  "biomeNoise": "noise/SandstoneStart",
+  "temperatureRange": "Room",
+  "pdWeight": 1.0,
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Sedimentary/Basic",
+      "weight": 4,
+      "tags": [
+        "LightBug",
+        "PrickleFlower",
+        "PrickleFlowerSeed",
+        "PrickleGrass",
+        "PrickleGrassSeed",
+        "Hatch",
+        "HatchBuried",
+        "BasicSingleHarvestPlantSeed",
+        "BasicSingleHarvestPlant",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    },
+    {
+      "name": "biomes/Sedimentary/Metal_CO2",
+      "weight": 2,
+      "tags": [
+        "Hatch",
+        "HatchBuried",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    },
+    {
+      "name": "biomes/Sedimentary/Basic_CO2",
+      "weight": 1,
+      "tags": [
+        "Hatch",
+        "HatchBuried",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "expansion1::features/sedimentary/TinyEmptyLake"
+    },
+    {
+      "type": "expansion1::features/sedimentary/SmallMetalVacuumBlob"
+    },
+    {
+      "type": "expansion1::features/sedimentary/SmallAlgaeBall"
+    }
+  ],
+  "zoneType": "Sandstone"
+}

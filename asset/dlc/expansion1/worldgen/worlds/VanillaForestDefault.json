@@ -1,0 +1,462 @@
+{
+  "name": "STRINGS.WORLDS.VANILLAFORESTDEFAULT.NAME",
+  "description": "STRINGS.WORLDS.VANILLAFORESTDEFAULT.DESCRIPTION",
+  "nameTables": [
+    "FOREST"
+  ],
+  "asteroidIcon": "asteroid_vanilla_forest_start_kanim",
+  "worldTraitScale": 0.9,
+  "worldsize": {
+    "X": 240,
+    "Y": 380
+  },
+  "layoutMethod": "PowerTree",
+  "worldTraitRules": [
+    {
+      "min": 2,
+      "max": 4,
+      "forbiddenTags": [
+        "Surface",
+        "NonStartWorld"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing3)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing4)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing5)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing6)",
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ],
+  "fixedTraits": [
+    "sunlightMed",
+    "cosmicRadiationVeryLow"
+  ],
+  "seasons": [
+    "ClassicStyleStartMeteorShowers",
+    "VanillaForestDefaultMeteorShowers"
+  ],
+  "defaultsOverrides": {
+    "startingWorldElements": [],
+    "data": {
+      "OverworldDensityMin": 20,
+      "OverworldDensityMax": 20,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "subworldFiles": [
+    {
+      "name": "subworlds/forest/ForestStart"
+    },
+    {
+      "name": "subworlds/forest/ForestMiniWater",
+      "weight": 0.5,
+      "minCount": 1,
+      "maxCount": 4
+    },
+    {
+      "name": "subworlds/forest/ForestMiniOxy",
+      "minCount": 1
+    },
+    {
+      "name": "subworlds/forest/ForestMiniMetal",
+      "minCount": 1
+    },
+    {
+      "name": "subworlds/forest/Forest"
+    },
+    {
+      "name": "subworlds/marsh/HotMarsh",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/jungle/Jungle",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/magma/Bottom"
+    },
+    {
+      "name": "subworlds/oil/OilPatch",
+      "weight": 0.7,
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/ocean/Ocean",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/rust/Rust",
+      "minCount": 5
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithNoBorder"
+    },
+    {
+      "name": "expansion1::subworlds/space/HospitableClassicSurface"
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/UraniumSprinkles",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "expansion1::subworlds/swamp/Swamp",
+      "minCount": 5
+    }
+  ],
+  "startSubworldName": "subworlds/forest/ForestStart",
+  "startingBaseTemplate": "bases/forestBase",
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/forest/Forest"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/forest/ForestMiniOxy",
+        "subworlds/forest/ForestMiniWater",
+        "subworlds/forest/ForestMiniMetal"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarsh",
+        "subworlds/ocean/Ocean"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/jungle/Jungle",
+        "subworlds/oil/OilPatch",
+        "expansion1::subworlds/swamp/Swamp",
+        "subworlds/rust/Rust",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 4,
+      "maxDistance": 4,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarsh",
+        "subworlds/ocean/Ocean",
+        "subworlds/oil/OilPatch",
+        "expansion1::subworlds/radioactive/UraniumSprinkles",
+        "expansion1::subworlds/swamp/Swamp",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 5,
+      "maxDistance": 999,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/marsh/HotMarsh",
+        "subworlds/jungle/Jungle",
+        "subworlds/ocean/Ocean",
+        "subworlds/rust/Rust",
+        "subworlds/forest/Forest",
+        "subworlds/oil/OilPatch",
+        "expansion1::subworlds/radioactive/UraniumSprinkles",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/Bottom"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithNoBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/HospitableClassicSurface"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/jungle/geyser_steam"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "ToxicJungle"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/jungle/geyser_methane",
+        "poi/jungle/geyser_chlorine"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "ToxicJungle"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/hotmarsh/geyser_steam"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/hotmarsh/geyser_methane"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/poi_ocean_geyser_saltwater"
+      ],
+      "listRule": "GuaranteeSome",
+      "someCount": 1,
+      "times": 2,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Ocean"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_a",
+        "poi/oil/small_oilpockets_geyser_b",
+        "poi/oil/small_oilpockets_geyser_c",
+        "poi/oil/small_oilpockets_geyser_d",
+        "poi/oil/small_oilpockets_geyser_e",
+        "poi/oil/small_oilpockets_geyser_f",
+        "poi/oil/small_oilpockets_geyser_g",
+        "poi/oil/small_oilpockets_geyser_h"
+      ],
+      "listRule": "GuaranteeOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender",
+        "expansion1::poi/warp/receiver",
+        "expansion1::poi/warp/teleporter_no_oil"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 500,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 3,
+          "maxDistance": 4
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Ocean",
+            "BoggyMarsh",
+            "ToxicJungle",
+            "Swamp",
+            "Rust"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGravitasFeatures"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/genericGravitas/poi_office"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 2,
+          "maxDistance": 99
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGravitasFeatures"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 2
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/generic"
+      ],
+      "listRule": "TryOne",
+      "times": 12,
+      "ruleId": "GenericGeysers",
+      "allowDuplicates": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/radioactive/uranium_geode1"
+      ],
+      "listRule": "GuaranteeOne",
+      "useRelaxedFiltering": true,
+      "allowExtremeTemperatureOverlap": true,
+      "priority": 200,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 1
+        }
+      ]
+    }
+  ]
+}

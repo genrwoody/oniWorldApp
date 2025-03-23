@@ -1,0 +1,46 @@
+{
+  "shape": "ShortWide",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 5.1,
+    "max": 8.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.01
+        },
+        {
+          "element": "Propane",
+          "weight": 0.01
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Granite",
+          "weight": 2
+        },
+        {
+          "element": "IronOre",
+          "weight": 1
+        },
+        {
+          "element": "BleachStone",
+          "weight": 0.5
+        },
+        {
+          "element": "FoolsGold",
+          "weight": 0.5
+        }
+      ]
+    }
+  }
+}

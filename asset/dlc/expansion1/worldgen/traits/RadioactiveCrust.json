@@ -1,0 +1,30 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.RADIOACTIVE_CRUST.NAME",
+  "description": "STRINGS.WORLD_TRAITS.RADIOACTIVE_CRUST.DESCRIPTION",
+  "colorHex": "5CD64C",
+  "exclusiveWithTags": [
+    "CrustTrait"
+  ],
+  "traitTags": [
+    "Crust",
+    "NonStartWorld",
+    "Radiation"
+  ],
+  "additionalSubworldFiles": [
+    {
+      "name": "expansion1::subworlds/space/SpaceWithRadioactiveBorder"
+    }
+  ],
+  "additionalUnknownCellFilters": [
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithRadioactiveBorder"
+      ]
+    }
+  ]
+}

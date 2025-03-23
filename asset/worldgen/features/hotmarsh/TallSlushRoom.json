@@ -1,0 +1,58 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "TallThin",
+  "borders": [
+    1,
+    3
+  ],
+  "blobSize": {
+    "min": 8,
+    "max": 12
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "CarbonDioxide",
+          "weight": 3,
+          "overrides": {
+            "massOverride": 1
+          }
+        },
+        {
+          "element": "Water",
+          "weight": 0.3
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "DirtyWater",
+          "weight": 2
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "SlimeMold",
+          "weight": 2,
+          "overrides": {
+            "diseaseOverride": "SlimeLung",
+            "diseaseAmountOverride": 1000000
+          }
+        },
+        {
+          "element": "Algae",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

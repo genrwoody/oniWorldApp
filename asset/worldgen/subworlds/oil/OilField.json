@@ -1,0 +1,26 @@
+{
+  "biomeNoise": "noise/OilField",
+  "temperatureRange": "Hot",
+  "minChildCount": 2,
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Oil/OilField",
+      "weight": 2
+    },
+    {
+      "name": "biomes/Misc/NaturalGasField",
+      "weight": 1
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "OilField"
+  ],
+  "zoneType": "OilField"
+}

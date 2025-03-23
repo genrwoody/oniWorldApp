@@ -1,0 +1,25 @@
+{
+  "biomeNoise": "noise/subworldRust",
+  "temperatureRange": "Cold",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Rust/Snowy",
+      "weight": 2,
+      "tags": [
+        "BeanPlantSeed",
+        "ColdBreatherSparse"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Rust"
+}

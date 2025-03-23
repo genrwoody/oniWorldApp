@@ -1,0 +1,25 @@
+{
+  "biomeNoise": "noise/SandstoneStrange",
+  "temperatureRange": "VeryVeryCold",
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc2::biomes/Misc/SnowBanks",
+      "weight": 4,
+      "tags": []
+    }
+  ],
+  "features": [],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "zoneType": "IceCaves"
+}

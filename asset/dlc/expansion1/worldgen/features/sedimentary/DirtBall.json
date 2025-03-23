@@ -1,0 +1,40 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Blob",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 2.5,
+    "max": 3.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 0.8,
+          "overrides": {
+            "massOverride": 1100
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Sand",
+          "weight": 1
+        },
+        {
+          "element": "SandStone",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

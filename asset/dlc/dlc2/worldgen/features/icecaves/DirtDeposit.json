@@ -1,0 +1,65 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 2.1,
+    "max": 4.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 1
+        },
+        {
+          "element": "Ice",
+          "weight": 0.15
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 0.3
+        },
+        {
+          "element": "Ice",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices2": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Snow",
+          "weight": 0.5
+        },
+        {
+          "element": "Ice",
+          "weight": 0.7
+        }
+      ]
+    }
+  }
+}

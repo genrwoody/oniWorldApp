@@ -1,0 +1,65 @@
+{
+  "biomeNoise": "noise/subworldJungle",
+  "temperatureRange": "Cold",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 15.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "centralFeature": {
+    "type": "features/jungle/SmallRoom"
+  },
+  "features": [
+    {
+      "type": "features/jungle/SmallRoom"
+    },
+    {
+      "type": "features/jungle/BleachRoom"
+    },
+    {
+      "type": "features/jungle/SandGeode"
+    }
+  ],
+  "biomes": [
+    {
+      "name": "biomes/Jungle/Basic",
+      "weight": 1,
+      "tags": [
+        "SwampLilySeed",
+        "SpiceVineSeed",
+        "LeafyPlantSeed"
+      ]
+    },
+    {
+      "name": "biomes/Jungle/Toxic",
+      "weight": 1,
+      "tags": [
+        "SwampLilySeed",
+        "SpiceVineSeed",
+        "LeafyPlantSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "poi/jungle/lab_poolbottom_frozen",
+        "poi/jungle/buttongate",
+        "poi/jungle/lab_vinetank",
+        "poi/jungle/lab_daytimer",
+        "poi/jungle/frag_lightbugs",
+        "poi/jungle/frag_lockers",
+        "poi/jungle/oxylite_spiral"
+      ],
+      "listRule": "TrySome",
+      "someCount": 3
+    }
+  ],
+  "zoneType": "ToxicJungle"
+}

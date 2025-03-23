@@ -1,0 +1,63 @@
+{
+  "name": "STRINGS.WORLDS.TINYMAGMA.NAME",
+  "description": "STRINGS.WORLDS.TINYMAGMA.DESCRIPTION",
+  "disableWorldTraits": true,
+  "worldTraitScale": 0.04,
+  "worldsize": {
+    "X": 64,
+    "Y": 64
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorder": true,
+      "DrawWorldBorderForce": false,
+      "WorldBorderThickness": 0,
+      "WorldBorderRange": 0,
+      "OverworldDensityMin": 30,
+      "OverworldDensityMax": 30,
+      "OverworldAvoidRadius": 30,
+      "OverworldSampleBehaviour": "PoissonDisk"
+    }
+  },
+  "startSubworldName": "subworlds/magma/Bottom",
+  "startingBaseTemplate": "bases/sandstoneBase",
+  "subworldFiles": [
+    {
+      "name": "subworlds/magma/Bottom"
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "subworlds/space/Surface"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/Bottom"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Surface"
+      ]
+    }
+  ]
+}

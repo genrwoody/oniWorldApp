@@ -1,0 +1,312 @@
+{
+  "name": "STRINGS.WORLDS.MINISHATTEREDSTART.NAME",
+  "description": "STRINGS.WORLDS.MINISHATTEREDSTART.DESCRIPTION",
+  "nameTables": [
+    "CERES"
+  ],
+  "asteroidIcon": "asteroid_moonlet_middle_kanim",
+  "worldTags": [
+    "Ceres"
+  ],
+  "dlcIdFrom": "DLC2_ID",
+  "requiredDlcIds": [
+    "EXPANSION1_ID",
+    "DLC2_ID"
+  ],
+  "worldTraitScale": 0.2,
+  "worldsize": {
+    "X": 128,
+    "Y": 153
+  },
+  "layoutMethod": "PowerTree",
+  "worldTraitRules": [
+    {
+      "min": 1,
+      "max": 2,
+      "forbiddenTags": [
+        "Oil",
+        "LargeWorld",
+        "GenericGeysers",
+        "NonStartWorld"
+      ],
+      "forbiddenTraits": [
+        "traits/MisalignedStart"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightVeryVeryLow",
+    "cosmicRadiationMedLow",
+    "northernLightsOn"
+  ],
+  "seasons": [
+    "MiniCeresStartShowers"
+  ],
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 5,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "poiPadding": 1
+    },
+    "startingWorldElements": [
+      {
+        "element": "OxyRock",
+        "amount": 7000
+      }
+    ]
+  },
+  "subworldFiles": [
+    {
+      "name": "dlc2::subworlds/icecaves/IceCavesStart",
+      "overridePower": 4
+    },
+    {
+      "name": "dlc2::subworlds/icecaves/IceCavesMiniWater",
+      "weight": 0.5,
+      "overridePower": 1
+    },
+    {
+      "name": "dlc2::subworlds/icecaves/IceCavesMiniOxy",
+      "overridePower": 1
+    },
+    {
+      "name": "dlc2::subworlds/icecaves/IceCavesMiniMetal",
+      "overridePower": 1
+    },
+    {
+      "name": "dlc2::subworlds/carrotquarry/CarrotQuarryBasicScarce",
+      "weight": 0.5,
+      "minCount": 3
+    },
+    {
+      "name": "dlc2::subworlds/carrotquarry/CarrotQuarryEthanolPools",
+      "weight": 0.5,
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/ocean/OceanFrozen",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/rust/RustFrozen",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "subworlds/space/SpaceNoBorder"
+    }
+  ],
+  "startSubworldName": "dlc2::subworlds/icecaves/IceCavesStart",
+  "startingBaseTemplate": "dlc2::bases/ceresBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "startingBasePositionVertical": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/rust/RustFrozen",
+        "subworlds/ocean/OceanFrozen",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryBasicScarce",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryEthanolPools",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc2::subworlds/icecaves/IceCavesMiniOxy",
+        "dlc2::subworlds/icecaves/IceCavesMiniWater",
+        "dlc2::subworlds/icecaves/IceCavesMiniMetal",
+        "dlc2::subworlds/carrotquarry/CarrotQuarryEthanolPools"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/SpaceNoBorder"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "dlc2::poi/icecaves/ceres_research_unlock",
+        "dlc2::poi/icecaves/ceres_cozy_cabin"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowNearStart": true,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "dlc2::subworlds/icecaves/IceCavesStart"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc2::poi/poi_ocean_geyser_brine"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Ocean"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender_mini",
+        "expansion1::poi/warp/receiver_mini",
+        "expansion1::poi/warp/teleporter_mini"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 500,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 99
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Space",
+            "MagmaCore"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/genericGravitas/directors_room"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "ignoreIfMissingTag": true,
+          "minDistance": 0,
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/filthy_water"
+      ],
+      "listRule": "GuaranteeAll",
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/liquid_co2",
+        "geysers/chlorine_gas",
+        "geysers/slush_water",
+        "geysers/slimy_po2",
+        "geysers/oil_drip",
+        "geysers/methane"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc2::poi/ceres/jorge_campsite"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "CarrotQuarry"
+          ]
+        }
+      ]
+    }
+  ]
+}

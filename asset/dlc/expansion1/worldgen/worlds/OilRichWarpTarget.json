@@ -1,0 +1,341 @@
+{
+  "name": "STRINGS.WORLDS.OILRICHWARPTARGET.NAME",
+  "description": "STRINGS.WORLDS.OILRICHWARPTARGET.DESCRIPTION",
+  "nameTables": [
+    "TERRA",
+    "OILY"
+  ],
+  "asteroidIcon": "asteroid_swamp_teleport_kanim",
+  "worldTraitScale": 0.2,
+  "worldsize": {
+    "X": 128,
+    "Y": 153
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 4,
+      "WorldBorderRange": 1,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "POIPadding": 1
+    }
+  },
+  "worldTraitRules": [
+    {
+      "min": 1,
+      "max": 2,
+      "forbiddenTags": [
+        "StartWorldOnly",
+        "LargeWorld",
+        "Challenge",
+        "Surface",
+        "GenericGeysers"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightMedLow",
+    "cosmicRadiationLow"
+  ],
+  "seasons": [
+    "SpacedOutStyleWarpMeteorShowers",
+    "OilRichWarpTargetMeteorShowers"
+  ],
+  "startSubworldName": "expansion1::subworlds/sandstone/SandstoneWarpStart",
+  "startingBaseTemplate": "expansion1::bases/warpworldSandstoneBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.4,
+    "max": 0.6
+  },
+  "startingBasePositionVertical": {
+    "min": 0.5,
+    "max": 0.55
+  },
+  "subworldFiles": [
+    {
+      "name": "expansion1::subworlds/sandstone/SandstoneWarpStart"
+    },
+    {
+      "name": "expansion1::subworlds/sandstone/med_SandstoneWarp"
+    },
+    {
+      "name": "expansion1::subworlds/sandstone/SandstoneMini",
+      "minCount": 2
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithSaltyBorder"
+    },
+    {
+      "name": "expansion1::subworlds/magma/BottomSmall"
+    },
+    {
+      "name": "expansion1::subworlds/oil/OilSparse"
+    },
+    {
+      "name": "expansion1::subworlds/oil/OilWells"
+    },
+    {
+      "name": "expansion1::subworlds/rust/med_Rust",
+      "maxCount": 2
+    },
+    {
+      "name": "expansion1::subworlds/ocean/med_OceanSurface",
+      "minCount": 4
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/sandstone/med_SandstoneWarp",
+        "expansion1::subworlds/rust/med_Rust",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/sandstone/SandstoneMini"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/sandstone/med_SandstoneWarp",
+        "expansion1::subworlds/ocean/med_OceanSurface",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithSaltyBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/oil/OilSparse",
+        "expansion1::subworlds/oil/OilWells",
+        "expansion1::subworlds/rust/med_Rust"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 0,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/oil/OilWells",
+        "expansion1::subworlds/magma/BottomSmall"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/poi_ocean_geyser_saltwater"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Ocean"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_a",
+        "poi/oil/small_oilpockets_geyser_b",
+        "poi/oil/small_oilpockets_geyser_c",
+        "poi/oil/small_oilpockets_geyser_d",
+        "poi/oil/small_oilpockets_geyser_e",
+        "poi/oil/small_oilpockets_geyser_f",
+        "poi/oil/small_oilpockets_geyser_g",
+        "poi/oil/small_oilpockets_geyser_h"
+      ],
+      "listRule": "GuaranteeSomeTryMore",
+      "someCount": 2,
+      "moreCount": 3,
+      "priority": 105,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender",
+        "expansion1::poi/warp/receiver"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 4
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Sandstone",
+            "Ocean",
+            "Rust"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGravitasFeatures"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/boon/bedroom",
+        "expansion1::poi/boon/washroom",
+        "expansion1::poi/boon/power",
+        "expansion1::poi/boon/kitchen",
+        "expansion1::poi/boon/well",
+        "expansion1::poi/boon/farm"
+      ],
+      "listRule": "TrySome",
+      "someCount": 4,
+      "priority": 50,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 3
+        },
+        {
+          "command": "IntersectWith",
+          "zoneTypes": [
+            "Sandstone",
+            "Ocean",
+            "Rust"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::geysers/liquid_sulfur"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 200,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 2,
+          "maxDistance": 10
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Space"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/chlorine_gas",
+        "geysers/methane",
+        "geysers/hot_co2",
+        "geysers/small_volcano",
+        "geysers/liquid_co2",
+        "expansion1::geysers/liquid_sulfur"
+      ],
+      "listRule": "TryOne",
+      "times": 2,
+      "allowDuplicates": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 2,
+          "maxDistance": 10
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Space"
+          ]
+        }
+      ]
+    }
+  ]
+}

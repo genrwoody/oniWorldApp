@@ -1,0 +1,18 @@
+{
+  "name": "STRINGS.WORLDS.SANDSTONE_DEFAULT.NAME",
+  "description": "STRINGS.WORLDS.SANDSTONE_DEFAULT.DESCRIPTION",
+  "coordinatePrefix": "SNDST-A",
+  "clusterCategory": "Vanilla",
+  "difficulty": 0,
+  "menuOrder": 0,
+  "startWorldIndex": 0,
+  "worldPlacements": [
+    {
+      "world": "worlds/SandstoneDefault",
+      "allowedRings": {
+        "min": 0,
+        "max": 0
+      }
+    }
+  ]
+}

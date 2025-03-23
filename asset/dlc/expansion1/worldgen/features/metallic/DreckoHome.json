@@ -1,0 +1,88 @@
+{
+  "tags": [
+    "Wet",
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "TallThin",
+  "borders": [
+    1,
+    1
+  ],
+  "internalMobs": [
+    {
+      "type": "Drecko",
+      "count": {
+        "min": 1,
+        "max": 2
+      }
+    },
+    {
+      "type": "SwampLily",
+      "count": {
+        "min": 1,
+        "max": 3
+      }
+    }
+  ],
+  "blobSize": {
+    "min": 7,
+    "max": 9
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Chlorine",
+          "weight": 0.5,
+          "overrides": {
+            "massOverride": 2
+          }
+        },
+        {
+          "element": "Hydrogen",
+          "weight": 1.0,
+          "overrides": {
+            "massOverride": 2
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "AluminumOre",
+          "weight": 0.3
+        },
+        {
+          "element": "Hydrogen",
+          "weight": 0.3,
+          "overrides": {
+            "massOverride": 2
+          }
+        },
+        {
+          "element": "Chlorine",
+          "weight": 0.3,
+          "overrides": {
+            "massOverride": 2
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "AluminumOre",
+          "weight": 0.5
+        },
+        {
+          "element": "Dirt",
+          "weight": 0.5
+        }
+      ]
+    }
+  }
+}

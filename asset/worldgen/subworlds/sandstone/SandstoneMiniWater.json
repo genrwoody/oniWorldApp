@@ -1,0 +1,36 @@
+{
+  "biomeNoise": "noise/Sandstone",
+  "temperatureRange": "Room",
+  "pdWeight": 0.5,
+  "density": {
+    "min": 15,
+    "max": 30
+  },
+  "avoidRadius": 20,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "biomes/Sedimentary/Basic_CO2",
+      "weight": 1,
+      "tags": [
+        "Hatch",
+        "HatchBuried",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    }
+  ],
+  "centralFeature": {
+    "type": "features/sedimentary/SmallLake"
+  },
+  "features": [],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning",
+    "StartWorld"
+  ],
+  "zoneType": "Sandstone"
+}

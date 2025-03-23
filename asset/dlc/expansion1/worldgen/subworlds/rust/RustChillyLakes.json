@@ -1,0 +1,67 @@
+{
+  "biomeNoise": "noise/subworldRust",
+  "temperatureRange": "Cool",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "extraBiomeChildren": 2,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Rust/Snowy",
+      "weight": 2,
+      "tags": [
+        "BeanPlantSeed",
+        "ColdBreatherSparse",
+        "PuftBleachstone",
+        "SaltPlantSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "features": [
+    {
+      "type": "features/rust/EthanolLake"
+    },
+    {
+      "type": "features/rust/MiniBleachBall"
+    },
+    {
+      "type": "features/rust/SaltDeposit"
+    },
+    {
+      "type": "features/rust/SulfurHole"
+    },
+    {
+      "type": "features/rust/BigRock"
+    }
+  ],
+  "zoneType": "Rust",
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "poi/poi_broken_farm",
+        "poi/poi_old_pool"
+      ],
+      "listRule": "TryOne"
+    },
+    {
+      "names": [
+        "poi/poi_dupe_sensor_puzzle"
+      ],
+      "listRule": "TryOne"
+    },
+    {
+      "names": [
+        "poi/poi_salt_spiral",
+        "poi/poi_salt_spiral_2",
+        "poi/poi_salt_spiral_3"
+      ],
+      "listRule": "TryOne"
+    }
+  ]
+}

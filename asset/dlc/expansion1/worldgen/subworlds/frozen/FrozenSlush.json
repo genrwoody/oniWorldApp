@@ -1,0 +1,55 @@
+{
+  "biomeNoise": "noise/subworldFrozen",
+  "temperatureRange": "Chilly",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "extraBiomeChildren": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Frozen/SaltySlush",
+      "weight": 2,
+      "tags": [
+        "ColdWheat",
+        "ColdWheatSeed",
+        "ColdBreather"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "features": [
+    {
+      "type": "expansion1::features/frozen/SlushPool"
+    },
+    {
+      "type": "expansion1::features/frozen/SlushPool"
+    },
+    {
+      "type": "expansion1::features/frozen/SaltShelf"
+    },
+    {
+      "type": "expansion1::features/frozen/SaltShelf"
+    },
+    {
+      "type": "expansion1::features/frozen/RustShelf"
+    },
+    {
+      "type": "expansion1::features/frozen/RustShelf"
+    }
+  ],
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "poi/frozen/lab_basement",
+        "poi/frozen/lab_splitroom"
+      ],
+      "listRule": "TryOne"
+    }
+  ],
+  "zoneType": "FrozenWastes"
+}

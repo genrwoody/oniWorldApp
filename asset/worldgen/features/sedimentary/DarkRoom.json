@@ -1,0 +1,44 @@
+{
+  "shape": "ShortWide",
+  "borders": [
+    3
+  ],
+  "blobSize": {
+    "min": 6.1,
+    "max": 15.1
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "CarbonDioxide",
+          "weight": 0.5,
+          "overrides": {
+            "massOverride": 1
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Fertilizer",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 50
+          }
+        },
+        {
+          "element": "Sand",
+          "weight": 0.2
+        },
+        {
+          "element": "SandStone",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

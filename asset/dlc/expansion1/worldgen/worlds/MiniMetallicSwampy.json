@@ -1,0 +1,320 @@
+{
+  "name": "STRINGS.WORLDS.MINIMETALLICSWAMPY.NAME",
+  "description": "STRINGS.WORLDS.MINIMETALLICSWAMPY.DESCRIPTION",
+  "nameTables": [
+    "SWAMP"
+  ],
+  "asteroidIcon": "asteroid_mini_metallicswampy_kanim",
+  "worldTraitScale": 0.2,
+  "worldsize": {
+    "X": 128,
+    "Y": 153
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 5,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "poiPadding": 1
+    },
+    "startingWorldElements": []
+  },
+  "worldTraitRules": [
+    {
+      "min": 1,
+      "max": 2,
+      "forbiddenTags": [
+        "StartWorldOnly",
+        "GenericGeysers",
+        "LargeWorld",
+        "Oil"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightLow",
+    "cosmicRadiationVeryLow"
+  ],
+  "seasons": [
+    "MiniMetallicSwampyMeteorShowers"
+  ],
+  "subworldFiles": [
+    {
+      "name": "expansion1::subworlds/swamp/Swamp"
+    },
+    {
+      "name": "subworlds/space/Space"
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithSwampyBorder"
+    },
+    {
+      "name": "expansion1::subworlds/marsh/med_HotMarshInactive",
+      "minCount": 2
+    },
+    {
+      "name": "expansion1::subworlds/marsh/med_HotMarshMushrooms",
+      "minCount": 2
+    },
+    {
+      "name": "expansion1::subworlds/metallic/SwampyRenewableMetallicCold",
+      "minCount": 4
+    },
+    {
+      "name": "expansion1::subworlds/magma/BottomSmall"
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/marsh/med_HotMarshInactive",
+        "expansion1::subworlds/marsh/med_HotMarshMushrooms",
+        "expansion1::subworlds/metallic/SwampyRenewableMetallicCold",
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/swamp/Swamp",
+        "expansion1::subworlds/marsh/med_HotMarshMushrooms"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/swamp/Swamp"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/Space"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithSwampyBorder"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/magma/BottomSmall"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "UnionWith",
+      "sortOrder": 100,
+      "subworldNames": [
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "UnionWith",
+      "sortOrder": 100,
+      "subworldNames": [
+        "(Mixing1)",
+        "(Mixing2)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/hotmarsh/geyser_methane"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "BoggyMarsh"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/poi_molten_gold_volcano",
+        "expansion1::poi/poi_molten_cobalt_volcano"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Metallic"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 1,
+          "maxDistance": 3
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/poi_molten_gold_volcano",
+        "expansion1::poi/poi_molten_cobalt_volcano"
+      ],
+      "listRule": "TryOne",
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Metallic"
+          ]
+        },
+        {
+          "command": "IntersectWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 1,
+          "maxDistance": 3
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/mini/frozen_chunk_ice",
+        "expansion1::poi/mini/frozen_chunk_large",
+        "expansion1::poi/mini/frozen_chunk_metal",
+        "expansion1::poi/mini/frozen_chunk_shape"
+      ],
+      "listRule": "TryAll",
+      "allowDuplicates": true,
+      "allowExtremeTemperatureOverlap": true,
+      "useRelaxedFiltering": true,
+      "overrideOffset": {
+        "X": 0,
+        "Y": -10
+      },
+      "priority": 200,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 1,
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/molten_copper",
+        "geysers/molten_gold",
+        "geysers/molten_iron",
+        "expansion1::geysers/molten_aluminum",
+        "expansion1::geysers/molten_cobalt"
+      ],
+      "listRule": "TryOne",
+      "times": 2,
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/big_volcano",
+        "geysers/chlorine_gas",
+        "geysers/hot_co2",
+        "geysers/hot_hydrogen",
+        "geysers/hot_po2",
+        "geysers/liquid_co2",
+        "geysers/methane",
+        "geysers/molten_copper",
+        "geysers/molten_gold",
+        "geysers/molten_iron",
+        "geysers/slimy_po2",
+        "geysers/small_volcano",
+        "expansion1::geysers/molten_aluminum",
+        "expansion1::geysers/molten_cobalt"
+      ],
+      "listRule": "TryOne",
+      "times": 2,
+      "useRelaxedFiltering": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/genericGravitas/poi_office"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+{
+  "name": "STRINGS.CLUSTER_NAMES.SANDSTONE_START_CLUSTER.NAME",
+  "description": "STRINGS.CLUSTER_NAMES.SANDSTONE_START_CLUSTER.DESCRIPTION",
+  "requiredDlcIds": [
+    "EXPANSION1_ID"
+  ],
+  "coordinatePrefix": "SNDST-C",
+  "menuOrder": 0,
+  "clusterCategory": "SpacedOutStyle",
+  "startWorldIndex": 0,
+  "numRings": 12,
+  "worldPlacements": [
+    {
+      "world": "expansion1::worlds/TerraMoonlet",
+      "buffer": 2,
+      "locationType": "StartWorld",
+      "allowedRings": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    {
+      "world": "expansion1::worlds/IdealLandingSite",
+      "buffer": 2,
+      "locationType": "InnerCluster",
+      "allowedRings": {
+        "min": 3,
+        "max": 3
+      }
+    },
+    {
+      "world": "expansion1::worlds/WarpOilySwamp",
+      "buffer": 4,
+      "locationType": "InnerCluster",
+      "allowedRings": {
+        "min": 5,
+        "max": 5
+      }
+    },
+    {
+      "world": "expansion1::worlds/TundraMoonlet",
+      "buffer": 4,
+      "allowedRings": {
+        "min": 6,
+        "max": 8
+      },
+      "worldMixing": {
+        "requiredTags": [
+          "Mixing",
+          "SmallWorld"
+        ],
+        "additionalWorldTemplateRules": [
+          {
+            "names": [
+              "expansion1::poi/poi_temporal_tear_opener_lab"
+            ],
+            "listRule": "GuaranteeAll",
+            "priority": 201,
+            "allowedCellsFilter": [
+              {
+                "command": "Replace",
+                "tagcommand": "DistanceFromTag",
+                "tag": "AtSurface",
+                "minDistance": 2,
+                "maxDistance": 3
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoGlobalFeatureSpawning"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoMixingTemplateSpawning"
+              }
+            ]
+          },
+          {
+            "names": [
+              "expansion1::poi/genericGravitas/poi_gift_shop"
+            ],
+            "listRule": "GuaranteeAll",
+            "priority": 200,
+            "allowedCellsFilter": [
+              {
+                "command": "All"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoGlobalFeatureSpawning"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoMixingTemplateSpawning"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "world": "expansion1::worlds/MarshyMoonlet",
+      "buffer": 4,
+      "allowedRings": {
+        "min": 5,
+        "max": 7
+      },
+      "worldMixing": {
+        "requiredTags": [
+          "Mixing",
+          "SmallWorld"
+        ],
+        "forbiddenTags": [
+          "Challenge"
+        ],
+        "additionalWorldTemplateRules": [
+          {
+            "names": [
+              "expansion1::poi/worldmixing/sap_tree_room"
+            ],
+            "listRule": "GuaranteeAll",
+            "priority": 500,
+            "allowExtremeTemperatureOverlap": true,
+            "allowedCellsFilter": [
+              {
+                "command": "All"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoGlobalFeatureSpawning"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoMixingTemplateSpawning"
+              }
+            ]
+          },
+          {
+            "names": [
+              "expansion1::geysers/molten_tungsten_compact"
+            ],
+            "listRule": "GuaranteeAll",
+            "priority": 150,
+            "allowedCellsFilter": [
+              {
+                "command": "All"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoGlobalFeatureSpawning"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoMixingTemplateSpawning"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "world": "expansion1::worlds/MooMoonlet",
+      "buffer": 3,
+      "allowedRings": {
+        "min": 6,
+        "max": 8
+      },
+      "worldMixing": {
+        "requiredTags": [
+          "Mixing",
+          "SmallWorld"
+        ],
+        "forbiddenTags": [
+          "NoExtraSeasons",
+          "ModifiedSurfaceHeight",
+          "SurfaceSubworldReserved"
+        ],
+        "additionalSubworldFiles": [
+          {
+            "name": "expansion1::subworlds/moo/MooCaverns",
+            "minCount": 2
+          }
+        ],
+        "additionalUnknownCellFilters": [
+          {
+            "tagcommand": "DistanceFromTag",
+            "tag": "AtSurface",
+            "minDistance": 2,
+            "maxDistance": 2,
+            "command": "Replace",
+            "sortOrder": 1000,
+            "subworldNames": [
+              "expansion1::subworlds/moo/MooCaverns"
+            ]
+          }
+        ],
+        "additionalSeasons": [
+          "GassyMooteorShowers"
+        ],
+        "additionalWorldTemplateRules": [
+          {
+            "names": [
+              "expansion1::poi/genericGravitas/poi_genetics_lab",
+              "geysers/chlorine_gas"
+            ],
+            "listRule": "GuaranteeAll",
+            "priority": 150,
+            "allowedCellsFilter": [
+              {
+                "command": "All"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoGlobalFeatureSpawning"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoMixingTemplateSpawning"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "world": "expansion1::worlds/WaterMoonlet",
+      "buffer": 4,
+      "allowedRings": {
+        "min": 6,
+        "max": 8
+      },
+      "worldMixing": {
+        "requiredTags": [
+          "Mixing",
+          "SmallWorld"
+        ],
+        "forbiddenTags": [
+          "AboveCoreSubworldReserved"
+        ],
+        "additionalSubworldFiles": [
+          {
+            "name": "expansion1::subworlds/aquatic/GraphiteCaves",
+            "minCount": 2
+          }
+        ],
+        "additionalUnknownCellFilters": [
+          {
+            "tagcommand": "DistanceFromTag",
+            "tag": "AtDepths",
+            "minDistance": 1,
+            "maxDistance": 1,
+            "command": "Replace",
+            "sortOrder": 1000,
+            "subworldNames": [
+              "expansion1::subworlds/aquatic/GraphiteCaves"
+            ]
+          }
+        ],
+        "additionalWorldTemplateRules": [
+          {
+            "names": [
+              "expansion1::poi/genericGravitas/poi_thermo_building"
+            ],
+            "listRule": "GuaranteeAll",
+            "priority": 450,
+            "allowedCellsFilter": [
+              {
+                "command": "All"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoGlobalFeatureSpawning"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoMixingTemplateSpawning"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "world": "expansion1::worlds/NiobiumMoonlet",
+      "buffer": 3,
+      "allowedRings": {
+        "min": 7,
+        "max": 10
+      },
+      "worldMixing": {
+        "requiredTags": [
+          "Mixing",
+          "SmallWorld",
+          "Challenge"
+        ],
+        "forbiddenTags": [
+          "AboveCoreSubworldReserved"
+        ],
+        "additionalSubworldFiles": [
+          {
+            "name": "expansion1::subworlds/niobium/NiobiumPatch",
+            "minCount": 2,
+            "maxCount": 3
+          }
+        ],
+        "additionalUnknownCellFilters": [
+          {
+            "tagcommand": "DistanceFromTag",
+            "tag": "AtDepths",
+            "minDistance": 1,
+            "maxDistance": 1,
+            "command": "Replace",
+            "sortOrder": 1000,
+            "subworldNames": [
+              "expansion1::subworlds/niobium/NiobiumPatch"
+            ]
+          }
+        ],
+        "additionalWorldTemplateRules": [
+          {
+            "names": [
+              "expansion1::geysers/molten_niobium"
+            ],
+            "listRule": "GuaranteeAll",
+            "allowExtremeTemperatureOverlap": true,
+            "priority": 150,
+            "allowedCellsFilter": [
+              {
+                "command": "Replace",
+                "subworldNames": [
+                  "expansion1::subworlds/niobium/NiobiumPatch"
+                ]
+              }
+            ]
+          },
+          {
+            "names": [
+              "expansion1::poi/genericGravitas/poi_mining_room"
+            ],
+            "listRule": "GuaranteeAll",
+            "priority": 150,
+            "allowedCellsFilter": [
+              {
+                "command": "All"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoGlobalFeatureSpawning"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoMixingTemplateSpawning"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "world": "expansion1::worlds/RegolithMoonlet",
+      "buffer": 4,
+      "allowedRings": {
+        "min": 5,
+        "max": 10
+      },
+      "worldMixing": {
+        "requiredTags": [
+          "Mixing",
+          "SmallWorld"
+        ],
+        "forbiddenTags": [
+          "SubsurfaceSubworldReserved",
+          "NoDamagingMeteorShowers"
+        ],
+        "additionalSubworldFiles": [
+          {
+            "name": "expansion1::subworlds/regolith/BarrenDust",
+            "minCount": 2,
+            "overridePower": 1
+          }
+        ],
+        "additionalUnknownCellFilters": [
+          {
+            "tagcommand": "DistanceFromTag",
+            "tag": "AtSurface",
+            "minDistance": 2,
+            "maxDistance": 2,
+            "command": "Replace",
+            "sortOrder": 1000,
+            "subworldNames": [
+              "expansion1::subworlds/regolith/BarrenDust"
+            ]
+          }
+        ],
+        "additionalSeasons": [
+          "RegolithMoonMeteorShowers"
+        ],
+        "additionalWorldTemplateRules": [
+          {
+            "names": [
+              "expansion1::poi/regolith/bunker_lab"
+            ],
+            "listRule": "GuaranteeAll",
+            "priority": 200,
+            "allowedCellsFilter": [
+              {
+                "command": "All"
+              },
+              {
+                "command": "ExceptWith",
+                "tagcommand": "AtTag",
+                "tag": "NoGlobalFeatureSpawning"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "poiPlacements": [
+    {
+      "pois": [
+        "TemporalTear"
+      ],
+      "numToSpawn": 1,
+      "avoidClumping": false,
+      "allowedRings": {
+        "min": 8,
+        "max": 11
+      }
+    },
+    {
+      "pois": [
+        "HarvestableSpacePOI_SandyOreField"
+      ],
+      "numToSpawn": 1,
+      "allowedRings": {
+        "min": 2,
+        "max": 3
+      }
+    },
+    {
+      "pois": [
+        "HarvestableSpacePOI_OrganicMassField"
+      ],
+      "numToSpawn": 1,
+      "allowedRings": {
+        "min": 5,
+        "max": 7
+      }
+    },
+    {
+      "pois": [
+        "HarvestableSpacePOI_GildedAsteroidField",
+        "HarvestableSpacePOI_GlimmeringAsteroidField",
+        "HarvestableSpacePOI_HeliumCloud",
+        "HarvestableSpacePOI_OilyAsteroidField",
+        "HarvestableSpacePOI_FrozenOreField"
+      ],
+      "numToSpawn": 5,
+      "allowedRings": {
+        "min": 8,
+        "max": 11
+      }
+    },
+    {
+      "pois": [
+        "HarvestableSpacePOI_RadioactiveGasCloud",
+        "HarvestableSpacePOI_RadioactiveAsteroidField"
+      ],
+      "numToSpawn": 2,
+      "avoidClumping": true,
+      "allowedRings": {
+        "min": 10,
+        "max": 11
+      }
+    },
+    {
+      "pois": [
+        "HarvestableSpacePOI_RockyAsteroidField",
+        "HarvestableSpacePOI_InterstellarIceField",
+        "HarvestableSpacePOI_InterstellarOcean",
+        "HarvestableSpacePOI_ForestyOreField",
+        "HarvestableSpacePOI_SwampyOreField",
+        "HarvestableSpacePOI_OrganicMassField"
+      ],
+      "numToSpawn": 5,
+      "canSpawnDuplicates": true,
+      "allowedRings": {
+        "min": 5,
+        "max": 7
+      }
+    },
+    {
+      "pois": [
+        "HarvestableSpacePOI_CarbonAsteroidField",
+        "HarvestableSpacePOI_MetallicAsteroidField",
+        "HarvestableSpacePOI_SatelliteField",
+        "HarvestableSpacePOI_IceAsteroidField",
+        "HarvestableSpacePOI_GasGiantCloud",
+        "HarvestableSpacePOI_ChlorineCloud",
+        "HarvestableSpacePOI_OxidizedAsteroidField",
+        "HarvestableSpacePOI_SaltyAsteroidField",
+        "HarvestableSpacePOI_OxygenRichAsteroidField",
+        "HarvestableSpacePOI_GildedAsteroidField",
+        "HarvestableSpacePOI_GlimmeringAsteroidField",
+        "HarvestableSpacePOI_HeliumCloud",
+        "HarvestableSpacePOI_OilyAsteroidField",
+        "HarvestableSpacePOI_FrozenOreField",
+        "HarvestableSpacePOI_RadioactiveGasCloud",
+        "HarvestableSpacePOI_RadioactiveAsteroidField"
+      ],
+      "numToSpawn": 10,
+      "canSpawnDuplicates": true,
+      "allowedRings": {
+        "min": 7,
+        "max": 11
+      }
+    },
+    {
+      "pois": [
+        "ArtifactSpacePOI_GravitasSpaceStation1",
+        "ArtifactSpacePOI_GravitasSpaceStation4",
+        "ArtifactSpacePOI_GravitasSpaceStation6"
+      ],
+      "numToSpawn": 1,
+      "avoidClumping": true,
+      "allowedRings": {
+        "min": 2,
+        "max": 3
+      }
+    },
+    {
+      "pois": [
+        "ArtifactSpacePOI_RussellsTeapot"
+      ],
+      "numToSpawn": 1,
+      "avoidClumping": true,
+      "allowedRings": {
+        "min": 9,
+        "max": 11
+      }
+    },
+    {
+      "pois": [
+        "ArtifactSpacePOI_GravitasSpaceStation2",
+        "ArtifactSpacePOI_GravitasSpaceStation3",
+        "ArtifactSpacePOI_GravitasSpaceStation5",
+        "ArtifactSpacePOI_GravitasSpaceStation7",
+        "ArtifactSpacePOI_GravitasSpaceStation8"
+      ],
+      "numToSpawn": 4,
+      "avoidClumping": true,
+      "allowedRings": {
+        "min": 4,
+        "max": 11
+      }
+    }
+  ]
+}

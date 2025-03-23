@@ -1,0 +1,11 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.SLIME_SPLATS.NAME",
+  "description": "STRINGS.WORLD_TRAITS.SLIME_SPLATS.DESCRIPTION",
+  "colorHex": "83B520",
+  "traitTags": [
+    "Germs"
+  ],
+  "globalFeatureMods": {
+    "features/traits/SlimeSplat": 30
+  }
+}

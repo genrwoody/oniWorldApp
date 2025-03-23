@@ -1,0 +1,17 @@
+{
+  "temperatureRange": "ExtremelyCold",
+  "minChildCount": 0,
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Misc/TheVoid",
+      "weight": 1
+    }
+  ],
+  "zoneType": "ToxicJungle"
+}

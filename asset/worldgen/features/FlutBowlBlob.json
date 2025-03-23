@@ -1,0 +1,57 @@
+{
+  "shape": "Blob",
+  "borders": [
+    2
+  ],
+  "blobSize": {
+    "min": 10.1,
+    "max": 15.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.1,
+          "overrides": {
+            "massOverride": 0.2
+          }
+        },
+        {
+          "element": "Water",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 700
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "BleachStone",
+          "weight": 1
+        },
+        {
+          "element": "IronOre",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

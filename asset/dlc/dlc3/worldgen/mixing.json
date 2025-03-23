@@ -1,0 +1,14 @@
+{
+  "globalLoreUnlocks": [
+    {
+      "id": "researchnotes",
+      "collection": "dlc3researchnotes",
+      "orderRule": "Prepend"
+    },
+    {
+      "id": "journals",
+      "collection": "dlc3journals",
+      "orderRule": "Prepend"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "nameKey": "STRINGS.SUBWORLDS.SANDSTONE.NAME",
+  "descriptionKey": "STRINGS.SUBWORLDS.SANDSTONE.DESCRIPTION",
+  "utilityKey": "STRINGS.SUBWORLDS.SANDSTONE.UTILITY",
+  "biomeNoise": "noise/Sandstone",
+  "temperatureRange": "Room",
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Sedimentary/Basic",
+      "weight": 4,
+      "tags": [
+        "LightBug",
+        "PrickleFlower",
+        "PrickleFlowerSeed",
+        "PrickleGrass",
+        "PrickleGrassSeed",
+        "Hatch",
+        "HatchBuried",
+        "BasicSingleHarvestPlantSeed",
+        "BasicSingleHarvestPlant",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    },
+    {
+      "name": "biomes/Sedimentary/Metal_CO2",
+      "weight": 2,
+      "tags": [
+        "Hatch",
+        "HatchBuried",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    },
+    {
+      "name": "biomes/Sedimentary/Basic_CO2",
+      "weight": 1,
+      "tags": [
+        "Hatch",
+        "HatchBuried",
+        "BasicForagePlant",
+        "BasicForagePlantPlanted"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "features/sedimentary/SmallEmptyLake"
+    },
+    {
+      "type": "features/sedimentary/MetalVacuumBlob"
+    }
+  ],
+  "zoneType": "Sandstone"
+}

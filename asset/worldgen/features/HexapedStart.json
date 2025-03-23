@@ -1,0 +1,109 @@
+{
+  "shape": "Blob",
+  "borders": [
+    2
+  ],
+  "blobSize": {
+    "min": 3.1,
+    "max": 4.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "Weighted",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 9,
+          "overrides": {
+            "massOverride": 2
+          }
+        },
+        {
+          "element": "Propane",
+          "weight": 3,
+          "overrides": {
+            "massOverride": 25
+          }
+        },
+        {
+          "element": "CarbonDioxide",
+          "weight": 2,
+          "overrides": {
+            "massOverride": 15
+          }
+        },
+        {
+          "element": "ChlorineGas",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 20
+          }
+        },
+        {
+          "element": "Water",
+          "weight": 0.001,
+          "overrides": {
+            "massOverride": 1000
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "Weighted",
+      "choices": [
+        {
+          "element": "SandStone",
+          "weight": 3,
+          "overrides": {
+            "massMultiplier": 2
+          }
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 3,
+          "overrides": {
+            "massMultiplier": 2
+          }
+        },
+        {
+          "element": "Granite",
+          "weight": 10,
+          "overrides": {
+            "massMultiplier": 2
+          }
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 5,
+          "overrides": {
+            "massMultiplier": 2
+          }
+        },
+        {
+          "element": "PhosphateNodules",
+          "weight": 2
+        },
+        {
+          "element": "Phosphorite",
+          "weight": 2
+        },
+        {
+          "element": "Radium",
+          "weight": 0.1
+        },
+        {
+          "element": "Katairite",
+          "weight": 1
+        },
+        {
+          "element": "Obsidian",
+          "weight": 2
+        },
+        {
+          "element": "IronOre",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

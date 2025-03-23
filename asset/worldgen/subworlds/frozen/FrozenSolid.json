@@ -1,0 +1,25 @@
+{
+  "biomeNoise": "noise/subworldFrozen",
+  "temperatureRange": "ExtremelyCold",
+  "minChildCount": 12,
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Frozen/Solid",
+      "weight": 1,
+      "tags": [
+        "ColdBreather",
+        "ColdBreatherSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "FrozenWastes"
+}

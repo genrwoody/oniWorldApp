@@ -1,0 +1,49 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.MAGMA_VENTS.NAME",
+  "description": "STRINGS.WORLD_TRAITS.MAGMA_VENTS.DESCRIPTION",
+  "colorHex": "FA4545",
+  "traitTags": [
+    "VeryHot",
+    "AboveCore",
+    "Challenge"
+  ],
+  "additionalSubworldFiles": [
+    {
+      "name": "subworlds/magma/MagmaVent",
+      "minCount": 2
+    }
+  ],
+  "additionalUnknownCellFilters": [
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 2,
+      "command": "UnionWith",
+      "subworldNames": [
+        "subworlds/magma/MagmaVent"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "ExceptWith",
+      "ignoreIfMissingTag": true,
+      "subworldNames": [
+        "subworlds/magma/MagmaVent"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 4,
+      "command": "ExceptWith",
+      "subworldNames": [
+        "subworlds/magma/MagmaVent"
+      ]
+    }
+  ]
+}

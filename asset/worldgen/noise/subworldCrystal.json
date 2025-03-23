@@ -1,0 +1,121 @@
+{
+  "settings": {
+    "zoom": 0.004,
+    "normalise": true,
+    "lowerBound": {
+      "X": 2,
+      "Y": 2
+    },
+    "upperBound": {
+      "X": 4,
+      "Y": 4
+    },
+    "name": "subworldCrystal"
+  },
+  "links": [
+    {
+      "target": {
+        "type": "Modifier",
+        "name": "Modifier2"
+      },
+      "source0": {
+        "type": "Modifier",
+        "name": "Modifier0"
+      }
+    },
+    {
+      "target": {
+        "type": "Modifier",
+        "name": "Modifier0"
+      },
+      "source0": {
+        "type": "Filter",
+        "name": "DefaultBaseFilter"
+      }
+    },
+    {
+      "target": {
+        "type": "Terminator",
+        "name": "TERMINATOR"
+      },
+      "source0": {
+        "type": "Modifier",
+        "name": "Modifier2"
+      }
+    },
+    {
+      "target": {
+        "type": "Filter",
+        "name": "DefaultBaseFilter"
+      },
+      "source0": {
+        "type": "Primitive",
+        "name": "DefaultDensityPrimative"
+      }
+    }
+  ],
+  "primitives": {
+    "DefaultDensityPrimative": {
+      "primative": "BevinsValue",
+      "quality": "Standard",
+      "seed": 5,
+      "offset": 2,
+      "name": "DefaultDensityPrimative",
+      "pos": {
+        "X": -796.2,
+        "Y": 28.39999
+      }
+    }
+  },
+  "filters": {
+    "DefaultBaseFilter": {
+      "filter": "HybridMultiFractal",
+      "frequency": 3,
+      "lacunarity": 2,
+      "octaves": 3,
+      "offset": 1,
+      "gain": 1,
+      "exponent": 0.25,
+      "name": "DefaultBaseFilter",
+      "pos": {
+        "X": -632.7999,
+        "Y": 316.2
+      }
+    }
+  },
+  "modifiers": {
+    "Modifier2": {
+      "modifyType": "Invert",
+      "lower": -1,
+      "upper": 1,
+      "exponent": 0.02,
+      "scale": 1,
+      "scale2d": {
+        "X": 1,
+        "Y": 1
+      },
+      "name": "Modifier2",
+      "pos": {
+        "X": -81.1004,
+        "Y": 255
+      }
+    },
+    "Modifier0": {
+      "modifyType": "Scale2d",
+      "lower": -1,
+      "upper": 1,
+      "exponent": 0.02,
+      "scale": 10,
+      "bias": 4,
+      "scale2d": {
+        "X": 8,
+        "Y": 32
+      },
+      "name": "Modifier0",
+      "pos": {
+        "X": -174.2799,
+        "Y": 395.4402
+      }
+    }
+  }
+}

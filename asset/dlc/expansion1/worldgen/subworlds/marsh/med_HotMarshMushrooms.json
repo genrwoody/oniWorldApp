@@ -1,0 +1,67 @@
+{
+  "biomeNoise": "noise/subworldHotMarsh",
+  "temperatureRange": "HumanWarm",
+  "density": {
+    "min": 20,
+    "max": 25
+  },
+  "avoidRadius": 40.0,
+  "minChildCount": 4,
+  "extraBiomeChildren": 1,
+  "sampleBehaviour": "PoissonDisk",
+  "features": [
+    {
+      "type": "features/hotmarsh/TallRoom"
+    },
+    {
+      "type": "features/hotmarsh/LargeBlobRoomDry"
+    },
+    {
+      "type": "features/hotmarsh/BlobRoom"
+    }
+  ],
+  "biomes": [
+    {
+      "name": "biomes/HotMarsh/Dry",
+      "weight": 2,
+      "tags": [
+        "med_MushroomPlant",
+        "med_MushroomSeed"
+      ]
+    },
+    {
+      "name": "biomes/HotMarsh/Basic",
+      "weight": 5,
+      "tags": [
+        "med_MushroomPlant",
+        "med_MushroomSeed",
+        "med_Puft",
+        "med_BasicFabricPlant",
+        "med_BasicFabricMaterialPlantSeed",
+        "med_Pacu",
+        "med_BulbPlant",
+        "med_BulbPlantSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "poi/hotmarsh/frag_doorway",
+        "poi/hotmarsh/frag_table"
+      ],
+      "listRule": "TryOne"
+    },
+    {
+      "names": [
+        "poi/hotmarsh/lab_burrow",
+        "poi/hotmarsh/lab_splitroom"
+      ],
+      "listRule": "TryOne"
+    }
+  ],
+  "zoneType": "BoggyMarsh"
+}

@@ -1,0 +1,88 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1,
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 1.5,
+    "max": 3.5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Steam",
+          "weight": 5,
+          "overrides": {
+            "massOverride": 1,
+            "temperatureOverride": 415
+          }
+        },
+        {
+          "element": "Water",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 1
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Clay",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 1
+        },
+        {
+          "element": "Steam",
+          "weight": 2,
+          "overrides": {
+            "massOverride": 1,
+            "temperatureOverride": 415
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Clay",
+          "weight": 1
+        },
+        {
+          "element": "SedimentaryRock",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices2": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "SlimeMold",
+          "weight": 2,
+          "overrides": {
+            "diseaseOverride": "SlimeLung",
+            "diseaseAmountOverride": 1000000
+          }
+        },
+        {
+          "element": "Algae",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

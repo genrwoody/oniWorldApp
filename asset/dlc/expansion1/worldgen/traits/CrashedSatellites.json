@@ -1,0 +1,37 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.CRASHED_SATELLITES.NAME",
+  "description": "STRINGS.WORLD_TRAITS.CRASHED_SATELLITES.DESCRIPTION",
+  "colorHex": "5CD64C",
+  "traitTags": [
+    "Radiation"
+  ],
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "expansion1::poi/traits/crashed_satellite1",
+        "expansion1::poi/traits/crashed_satellite2",
+        "expansion1::poi/traits/crashed_satellite3",
+        "expansion1::poi/traits/crashed_satellite4"
+      ],
+      "listRule": "GuaranteeSomeTryMore",
+      "useRelaxedFiltering": true,
+      "allowExtremeTemperatureOverlap": true,
+      "someCount": 1,
+      "moreCount": 2,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 3
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    }
+  ]
+}

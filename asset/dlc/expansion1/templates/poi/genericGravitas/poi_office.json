@@ -1,0 +1,780 @@
+{
+  "info": {
+    "size": {
+      "X": 11,
+      "Y": 6
+    },
+    "area": 58
+  },
+  "cells": [
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -5,
+      "location_y": -2
+    },
+    {
+      "element": "Cuprite",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -5,
+      "location_y": -1
+    },
+    {
+      "element": "Cuprite",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -5
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -5,
+      "location_y": 1
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -5,
+      "location_y": 2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -4
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -3
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -4,
+      "location_y": 1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -3,
+      "location_y": 1
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -4,
+      "location_y": 2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -3,
+      "location_y": 2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.225281,
+      "location_x": -3,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -2,
+      "location_y": -2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -3,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -2,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -2,
+      "location_y": 1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -2,
+      "location_y": 2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -3,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -2,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.156311,
+      "location_x": -1,
+      "location_y": -2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -1,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -1,
+      "location_y": 1
+    },
+    {
+      "element": "Vacuum",
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum"
+    },
+    {
+      "element": "Vacuum",
+      "location_y": 1
+    },
+    {
+      "element": "Vacuum",
+      "location_y": 2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 1,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.21817,
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 1,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 1,
+      "location_y": 1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 2,
+      "location_y": 1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 2,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 3,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 4,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 5,
+      "location_y": -2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 5,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 3
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 4
+    },
+    {
+      "element": "Diamond",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 5
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 3,
+      "location_y": 1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 4,
+      "location_y": 1
+    },
+    {
+      "element": "Diamond",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 5,
+      "location_y": 1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 3,
+      "location_y": 2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 4,
+      "location_y": 2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 5,
+      "location_y": 2
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": 4,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 100,
+      "temperature": 293.149994,
+      "location_x": -4,
+      "location_y": 3
+    }
+  ],
+  "buildings": [
+    {
+      "id": "TilePOI",
+      "location_x": -2,
+      "location_y": 3,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -4,
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_y": 3,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 1,
+      "location_y": 3,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "GlassTile",
+      "location_x": 5,
+      "element": "Diamond",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 4,
+      "location_y": 3,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 5,
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 5,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -3,
+      "location_y": 3,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -4,
+      "location_y": 3,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -5,
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -3,
+      "location_y": -2,
+      "element": "SandStone",
+      "temperature": 293.202148
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -2,
+      "location_y": -2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -1,
+      "location_y": -2,
+      "element": "SandStone",
+      "temperature": 293.154236
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 1,
+      "location_y": -2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 2,
+      "location_y": -2,
+      "element": "SandStone",
+      "temperature": 293.19873
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 3,
+      "location_y": -2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 4,
+      "location_y": -2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 5,
+      "location_y": -2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -5,
+      "location_y": -2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -2,
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -2,
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -2,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -1,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -1,
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -3,
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 1,
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 2,
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 3,
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 4,
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 4,
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 4,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 4,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 3,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 2,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 1,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 3,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 3,
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 2,
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 1,
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "GravitasPedestal",
+      "location_x": -2,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994,
+      "storage": null
+    },
+    {
+      "id": "GlassTile",
+      "location_x": 5,
+      "location_y": 1,
+      "element": "Diamond",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 2,
+      "location_y": 3,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "POIBunkerExteriorDoor",
+      "location_x": -5,
+      "location_y": -1,
+      "element": "Cuprite",
+      "temperature": 293.149994,
+      "other_values": [
+        {
+          "id": "sealedDoorDirection"
+        }
+      ]
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -5,
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -4,
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -3,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -3,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -4,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_y": 1,
+      "element": "SandStone",
+      "temperature": 293.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -3,
+      "location_y": 2,
+      "element": "SandStone",
+      "temperature": 293.149994
+    }
+  ],
+  "otherEntities": [
+    {
+      "id": "PropLight",
+      "location_y": 2,
+      "element": "Steel",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropClock",
+      "location_x": 3,
+      "location_y": 1,
+      "element": "Unobtanium",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropDesk",
+      "location_x": 2,
+      "location_y": -1,
+      "element": "Steel",
+      "temperature": 293.770996,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropFacilityGlobeDroors",
+      "location_x": -3,
+      "location_y": -1,
+      "element": "Granite",
+      "temperature": 293.894135,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropTallPlant",
+      "location_x": -1,
+      "location_y": -1,
+      "element": "Polypropylene",
+      "temperature": 294.139435,
+      "units": 1,
+      "type": "Other"
+    }
+  ]
+}

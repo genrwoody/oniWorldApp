@@ -1,0 +1,40 @@
+{
+  "biomeNoise": "expansion1::noise/subworldMooOuter",
+  "temperatureRange": "Cold",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 15.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "extraBiomeChildren": 0,
+  "borderOverride": "mooWorld",
+  "sampleBehaviour": "PoissonDisk",
+  "features": [
+    {
+      "type": "expansion1::features/moo/MooBubbleSmall"
+    },
+    {
+      "type": "expansion1::features/moo/MooBubbleSmall"
+    },
+    {
+      "type": "expansion1::features/moo/MooBubbleSmall"
+    },
+    {
+      "type": "expansion1::features/moo/MooBubbleSmall"
+    }
+  ],
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Moo/Lacy",
+      "weight": 1,
+      "tags": []
+    }
+  ],
+  "tags": [
+    "GasGrass",
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Moo"
+}

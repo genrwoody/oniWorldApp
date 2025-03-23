@@ -1,0 +1,33 @@
+{
+  "biomeNoise": "noise/subworldForest",
+  "temperatureRange": "Cool",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 4,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc2::biomes/CarrotQuarry/Slush",
+      "weight": 2,
+      "tags": [
+        "IceBelly",
+        "CarrotPlant",
+        "CarrotPlantSeed",
+        "PinkRock"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "centralFeature": null,
+  "features": [
+    {
+      "type": "dlc2::features/carrotquarry/IceBellyCave"
+    }
+  ],
+  "zoneType": "CarrotQuarry"
+}

@@ -1,0 +1,68 @@
+{
+  "name": "STRINGS.WORLD_TRAITS.VOLCANOES.NAME",
+  "description": "STRINGS.WORLD_TRAITS.VOLCANOES.DESCRIPTION",
+  "colorHex": "FA4545",
+  "forbiddenDLCIds": [
+    "EXPANSION1_ID"
+  ],
+  "traitTags": [
+    "VeryHot",
+    "Challenge"
+  ],
+  "additionalSubworldFiles": [
+    {
+      "name": "subworlds/magma/VolcanoBiome"
+    }
+  ],
+  "additionalUnknownCellFilters": [
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 3,
+      "maxDistance": 999,
+      "command": "UnionWith",
+      "subworldNames": [
+        "subworlds/magma/VolcanoBiome"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "ExceptWith",
+      "subworldNames": [
+        "subworlds/magma/VolcanoBiome"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "ExceptWith",
+      "subworldNames": [
+        "subworlds/magma/VolcanoBiome"
+      ]
+    }
+  ],
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "geysers/volcanohole"
+      ],
+      "listRule": "TryOne",
+      "times": 8,
+      "allowDuplicates": true,
+      "allowExtremeTemperatureOverlap": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "subworlds/magma/VolcanoBiome"
+          ]
+        }
+      ]
+    }
+  ]
+}

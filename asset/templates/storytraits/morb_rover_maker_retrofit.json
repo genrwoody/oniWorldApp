@@ -1,0 +1,1960 @@
+{
+  "info": {
+    "size": {
+      "X": 16,
+      "Y": 13
+    },
+    "min": {
+      "X": -7,
+      "Y": -6
+    },
+    "area": 163
+  },
+  "cells": [
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149017,
+      "location_x": -1,
+      "location_y": -6
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149384,
+      "location_x": 1,
+      "location_y": -6
+    },
+    {
+      "element": "Oxygen",
+      "mass": 6.30599573e-09,
+      "temperature": 302.555908,
+      "location_y": -6
+    },
+    {
+      "element": "Oxygen",
+      "mass": 6.47281269e-08,
+      "temperature": 302.559937,
+      "location_x": 2,
+      "location_y": -6
+    },
+    {
+      "element": "Oxygen",
+      "mass": 6.24607992e-08,
+      "temperature": 302.559967,
+      "location_x": 3,
+      "location_y": -6
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 4,
+      "location_y": -6
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 5,
+      "location_y": -6
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 6,
+      "location_y": -6
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149689,
+      "location_x": -2,
+      "location_y": -5
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.120789,
+      "location_x": -1,
+      "location_y": -5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.14975,
+      "location_y": -5
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 1,
+      "location_y": -5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149292,
+      "location_x": 2,
+      "location_y": -5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 3,
+      "location_y": -5
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.149994,
+      "location_x": 4,
+      "location_y": -5
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.148041,
+      "location_x": 5,
+      "location_y": -5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 6,
+      "location_y": -5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -2,
+      "location_y": -4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.130005,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 26149,
+      "location_x": -1,
+      "location_y": -4
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.11908,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.14978,
+      "location_x": 1,
+      "location_y": -4
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 2,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 3,
+      "location_y": -4
+    },
+    {
+      "element": "Sand",
+      "mass": 1000,
+      "temperature": 300.149017,
+      "location_x": 4,
+      "location_y": -4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.407593,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 1000,
+      "location_x": 5,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 6,
+      "location_y": -4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -3,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -2,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.294952,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 32161,
+      "location_x": -1,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.584595,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 20345,
+      "location_y": -3
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.145844,
+      "location_x": 1,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.14978,
+      "location_x": 2,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 3,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.40741,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 1000,
+      "location_x": 4,
+      "location_y": -3
+    },
+    {
+      "element": "Carbon",
+      "mass": 600,
+      "temperature": 300.148041,
+      "location_x": 5,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 6,
+      "location_y": -3
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -4,
+      "location_y": -2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -3,
+      "location_y": -2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -2,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -1,
+      "location_y": -2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 300.108215,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 1482,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": -2
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 3,
+      "location_y": -2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.76889,
+      "diseaseName": "ZombieSpores",
+      "diseaseCount": 1000,
+      "location_x": 4,
+      "location_y": -2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 299.768341,
+      "location_x": 5,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 6,
+      "location_y": -2
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.1492,
+      "location_x": -5,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -4,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": -3,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -2,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": -1,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "element": "Vacuum",
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.5,
+      "temperature": 300.149994,
+      "location_x": 5,
+      "location_y": -1
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 6,
+      "location_y": -1
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 243.787216,
+      "location_x": -7
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 252.041672,
+      "location_x": -6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 260.486206,
+      "location_x": -5
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 305.486908,
+      "location_x": -4
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 301.536652,
+      "location_x": -3
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 302.445221,
+      "location_x": -2
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 303.403625,
+      "location_x": -1
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 303.894714
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 304.071777,
+      "location_x": 1
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 304.206757,
+      "location_x": 2
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 304.213593,
+      "location_x": 3
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 303.586945,
+      "location_x": 4
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149963,
+      "location_x": 5
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 302.160217,
+      "location_x": 6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 301.321106,
+      "location_x": 7
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 300.660706,
+      "location_x": 8
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.401686281,
+      "temperature": 244.075943,
+      "location_x": -7,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.616757691,
+      "temperature": 256.535858,
+      "location_x": -6,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.754435599,
+      "temperature": 265.565277,
+      "location_x": -5,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.847340286,
+      "temperature": 273.7323,
+      "location_x": -4,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.9026829,
+      "temperature": 300.521576,
+      "location_x": -3,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.926929235,
+      "temperature": 301.575867,
+      "location_x": -2,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.504296124,
+      "temperature": 302.517883,
+      "location_x": -1,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.934250772,
+      "temperature": 302.995117,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.929937661,
+      "temperature": 303.06366,
+      "location_x": 1,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.909136653,
+      "temperature": 303.296661,
+      "location_x": 2,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.897138417,
+      "temperature": 303.139313,
+      "location_x": 3,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.860379755,
+      "temperature": 302.881012,
+      "location_x": 4,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.795107484,
+      "temperature": 298.230896,
+      "location_x": 5,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.717801273,
+      "temperature": 300.742767,
+      "location_x": 6,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.576548576,
+      "temperature": 300.370148,
+      "location_x": 7,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.386192262,
+      "temperature": 300.136444,
+      "location_x": 8,
+      "location_y": 1
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.385300189,
+      "temperature": 246.437912,
+      "location_x": -7,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.599961281,
+      "temperature": 264.265564,
+      "location_x": -6,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.741986096,
+      "temperature": 281.084167,
+      "location_x": -5,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.833635271,
+      "temperature": 286.735687,
+      "location_x": -4,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.889609814,
+      "temperature": 289.036804,
+      "location_x": -3,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.911934912,
+      "temperature": 289.277344,
+      "location_x": -2,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.911071837,
+      "temperature": 290.088715,
+      "location_x": -1,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.903200507,
+      "temperature": 301.56189,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.896682918,
+      "temperature": 291.615021,
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.224455491,
+      "temperature": 295.71051,
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.871039867,
+      "temperature": 291.765137,
+      "location_x": 3,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.842351973,
+      "temperature": 291.414978,
+      "location_x": 4,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.795880735,
+      "temperature": 291.661591,
+      "location_x": 5,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.716908574,
+      "temperature": 293.519653,
+      "location_x": 6,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.00185605825,
+      "temperature": 298.06488,
+      "location_x": 7,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.44494763,
+      "temperature": 300.129852,
+      "location_x": 8,
+      "location_y": 2
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.382606626,
+      "temperature": 246.800812,
+      "location_x": -7,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.634458601,
+      "temperature": 276.372223,
+      "location_x": -6,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.755296588,
+      "temperature": 285.021027,
+      "location_x": -5,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.833981574,
+      "temperature": 287.032593,
+      "location_x": -4,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.881287098,
+      "temperature": 287.939819,
+      "location_x": -3,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.89693588,
+      "temperature": 288.736755,
+      "location_x": -2,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.879386842,
+      "temperature": 290.598175,
+      "location_x": -1,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.861167908,
+      "temperature": 290.357117,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.841466188,
+      "temperature": 290.701385,
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.814758122,
+      "temperature": 289.97345,
+      "location_x": 2,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.83346957,
+      "temperature": 288.668518,
+      "location_x": 3,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.806747198,
+      "temperature": 290.736603,
+      "location_x": 4,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.711818576,
+      "temperature": 297.993896,
+      "location_x": 5,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.783725977,
+      "temperature": 290.435394,
+      "location_x": 6,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.569248557,
+      "temperature": 298.840881,
+      "location_x": 7,
+      "location_y": 3
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.524370968,
+      "temperature": 300.142487,
+      "location_x": 8,
+      "location_y": 3
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 253.310974,
+      "location_x": -7,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.747810125,
+      "temperature": 261.621887,
+      "location_x": -6,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.773992121,
+      "temperature": 286.881989,
+      "location_x": -5,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.836688936,
+      "temperature": 286.794189,
+      "location_x": -4,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.872642219,
+      "temperature": 272.591339,
+      "location_x": -3,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.884998381,
+      "temperature": 289.168518,
+      "location_x": -2,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.860081732,
+      "temperature": 290.050629,
+      "location_x": -1,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.809852719,
+      "temperature": 290.612915,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.765267611,
+      "temperature": 290.853638,
+      "location_x": 1,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.683258414,
+      "temperature": 291.036377,
+      "location_x": 2,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.693309069,
+      "temperature": 290.871094,
+      "location_x": 3,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.774909079,
+      "temperature": 298.475433,
+      "location_x": 4,
+      "location_y": 4
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.693017006,
+      "temperature": 298.011383,
+      "location_x": 5,
+      "location_y": 4
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 299.092957,
+      "location_x": 6,
+      "location_y": 4
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 300.062073,
+      "location_x": 7,
+      "location_y": 4
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 300.534363,
+      "location_x": 8,
+      "location_y": 4
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 300.040649,
+      "location_x": 6,
+      "location_y": 5
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 299.596741,
+      "location_x": 4,
+      "location_y": 5
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 300.583893,
+      "location_x": 4,
+      "location_y": 6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 300.755646,
+      "location_x": 3,
+      "location_y": 6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 294.854492,
+      "location_x": -4,
+      "location_y": 6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 297.783905,
+      "location_x": -3,
+      "location_y": 6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 299.319061,
+      "location_x": -2,
+      "location_y": 6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 300.383118,
+      "location_x": -1,
+      "location_y": 6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 301.01532,
+      "location_y": 6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 267.241333,
+      "location_x": -6,
+      "location_y": 5
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 272.18045,
+      "location_x": -6,
+      "location_y": 6
+    },
+    {
+      "element": "Obsidian",
+      "mass": 100,
+      "temperature": 254.394394,
+      "location_x": -7,
+      "location_y": 5
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.71053791,
+      "temperature": 272.193634,
+      "location_x": -5,
+      "location_y": 5
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.831967175,
+      "temperature": 295.319366,
+      "location_x": -4,
+      "location_y": 5
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.865548253,
+      "temperature": 295.690918,
+      "location_x": -3,
+      "location_y": 5
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.879362941,
+      "temperature": 298.295929,
+      "location_x": -2,
+      "location_y": 5
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.860856116,
+      "temperature": 299.517578,
+      "location_x": -1,
+      "location_y": 5
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.79747349,
+      "temperature": 299.393158,
+      "location_y": 5
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.63317889,
+      "temperature": 297.046906,
+      "location_x": 1,
+      "location_y": 5
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.562355101,
+      "temperature": 297.408051,
+      "location_x": 2,
+      "location_y": 5
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.386706233,
+      "temperature": 281.43396,
+      "location_x": -5,
+      "location_y": 6
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 1,
+      "location_y": 6
+    },
+    {
+      "element": "Katairite",
+      "mass": 500,
+      "temperature": 300.149994,
+      "location_x": 2,
+      "location_y": 6
+    },
+    {
+      "element": "Oxygen",
+      "mass": 0.391517878,
+      "temperature": 299.014557,
+      "location_x": 5,
+      "location_y": 5
+    }
+  ],
+  "buildings": [
+    {
+      "id": "TilePOI",
+      "location_x": -7,
+      "element": "Obsidian",
+      "temperature": 243.457581
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -6,
+      "element": "Obsidian",
+      "temperature": 251.963425
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -5,
+      "element": "Obsidian",
+      "temperature": 260.693451
+    },
+    {
+      "id": "GravitasDoor",
+      "location_x": -7,
+      "location_y": 1,
+      "element": "Aluminum",
+      "temperature": 242.025848
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -7,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 253.194916
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -7,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 253.866562
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -6,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 264.915039
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -6,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 267.707977
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -6,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 270.091797
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -6,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 271.230988
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -6,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 267.588287
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -6,
+      "location_y": 6,
+      "element": "Obsidian",
+      "temperature": 272.236176
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -5,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 274.01593
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -5,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 276.113281
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -5,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 280.723053
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -5,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 280.34256
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -5,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 277.978882
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -4,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 287.787079
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -4,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 284.337708
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -4,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 285.14917
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -4,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 286.812469
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -4,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 288.260925
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -4,
+      "location_y": 6,
+      "element": "Obsidian",
+      "temperature": 294.856201
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -3,
+      "element": "Obsidian",
+      "temperature": 301.559601
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -3,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 295.752197
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -3,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 289.076996
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -3,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 288.986603
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -3,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 289.541718
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -3,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 294.005676
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -3,
+      "location_y": 6,
+      "element": "Obsidian",
+      "temperature": 297.901245
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -2,
+      "element": "Obsidian",
+      "temperature": 302.457275
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -2,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 297.463654
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -2,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 291.928162
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -2,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 292.219696
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -2,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 292.861664
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -2,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 296.990845
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -2,
+      "location_y": 6,
+      "element": "Obsidian",
+      "temperature": 299.344788
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -1,
+      "element": "Obsidian",
+      "temperature": 303.414673
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -1,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 298.133392
+    },
+    {
+      "id": "MorbRoverMaker",
+      "location_x": -1,
+      "location_y": 1,
+      "element": "Steel",
+      "temperature": 273.149994
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -1,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 293.439362
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -1,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 293.932159
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 8,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 300.546814
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -1,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 294.744507
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": -1,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 298.923187
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -1,
+      "location_y": 6,
+      "element": "Obsidian",
+      "temperature": 300.448456
+    },
+    {
+      "id": "TilePOI",
+      "element": "Obsidian",
+      "temperature": 304.142456
+    },
+    {
+      "id": "ExteriorWall",
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 298.402008
+    },
+    {
+      "id": "ExteriorWall",
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 295.664246
+    },
+    {
+      "id": "ExteriorWall",
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 294.880371
+    },
+    {
+      "id": "GravitasDoor",
+      "location_x": 8,
+      "location_y": 1,
+      "element": "Aluminum",
+      "temperature": 300.13089
+    },
+    {
+      "id": "ExteriorWall",
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 295.610107
+    },
+    {
+      "id": "ExteriorWall",
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 299.890625
+    },
+    {
+      "id": "TilePOI",
+      "location_y": 6,
+      "element": "Obsidian",
+      "temperature": 301.072144
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 1,
+      "element": "Obsidian",
+      "temperature": 304.103424
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 1,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 298.378571
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 1,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 295.727417
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 4,
+      "location_y": 6,
+      "element": "Obsidian",
+      "temperature": 300.583618
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 1,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 295.327118
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 8,
+      "element": "Obsidian",
+      "temperature": 300.660706
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 1,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 295.843201
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 1,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 299.998871
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 2,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 298.140381
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 2,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 296.08905
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 2,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 295.378479
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 2,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 296.006409
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 2,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 299.936096
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 3,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 295.769196
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 3,
+      "location_y": 6,
+      "element": "Obsidian",
+      "temperature": 300.800354
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 2,
+      "element": "Obsidian",
+      "temperature": 304.234314
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 3,
+      "element": "Obsidian",
+      "temperature": 304.22644
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 3,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 295.668884
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 3,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 295.711273
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 3,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 295.362885
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 4,
+      "element": "Obsidian",
+      "temperature": 303.586945
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 4,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 297.620605
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 4,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 295.757446
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 4,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 295.051239
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 4,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 296.105255
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 4,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 299.641571
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 5,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 297.422241
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 5,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 295.909546
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 5,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 295.022705
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 5,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 298.357422
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 6,
+      "element": "Obsidian",
+      "temperature": 302.191528
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 6,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 296.687836
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 6,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 295.200287
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 6,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 295.639008
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 6,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 299.109192
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 6,
+      "location_y": 5,
+      "element": "Obsidian",
+      "temperature": 300.043213
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 7,
+      "element": "Obsidian",
+      "temperature": 301.340607
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 7,
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 296.908539
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 7,
+      "location_y": 2,
+      "element": "Obsidian",
+      "temperature": 295.276154
+    },
+    {
+      "id": "ExteriorWall",
+      "location_x": 7,
+      "location_y": 3,
+      "element": "Obsidian",
+      "temperature": 296.831421
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 7,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 300.094513
+    },
+    {
+      "id": "InsulatedGasConduit",
+      "location_y": 1,
+      "element": "Obsidian",
+      "temperature": 293.15097,
+      "connections": 8
+    },
+    {
+      "id": "InsulatedGasConduit",
+      "element": "Obsidian",
+      "temperature": 294.829926,
+      "connections": 4
+    },
+    {
+      "id": "InsulatedGasConduit",
+      "location_x": 1,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 293.144257,
+      "connections": 2
+    },
+    {
+      "id": "InsulatedGasConduit",
+      "location_x": 2,
+      "location_y": 4,
+      "element": "Obsidian",
+      "temperature": 293.14447,
+      "connections": 1
+    }
+  ],
+  "otherEntities": [
+    {
+      "id": "EvilFlower",
+      "location_x": -1,
+      "location_y": -4,
+      "element": "Creature",
+      "temperature": 293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure"
+        },
+        {
+          "id": "Temperature",
+          "value": 293.142151
+        }
+      ]
+    },
+    {
+      "id": "EvilFlower",
+      "location_y": -3,
+      "element": "Creature",
+      "temperature": 293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure"
+        },
+        {
+          "id": "Temperature",
+          "value": 293.141418
+        }
+      ]
+    },
+    {
+      "id": "EvilFlower",
+      "location_x": 5,
+      "location_y": -2,
+      "element": "Creature",
+      "temperature": 293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure"
+        },
+        {
+          "id": "Temperature",
+          "value": 293.083618
+        }
+      ]
+    },
+    {
+      "id": "EvilFlower",
+      "location_x": 4,
+      "location_y": -3,
+      "element": "Creature",
+      "temperature": 293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure"
+        },
+        {
+          "id": "Temperature",
+          "value": 293.080933
+        }
+      ]
+    },
+    {
+      "id": "EvilFlower",
+      "location_x": 5,
+      "location_y": -4,
+      "element": "Creature",
+      "temperature": 293,
+      "units": 1,
+      "type": "Other",
+      "amounts": [
+        {
+          "id": "AirPressure"
+        },
+        {
+          "id": "Temperature",
+          "value": 293.08252
+        }
+      ]
+    },
+    {
+      "id": "PropTallPlant",
+      "location_x": -5,
+      "location_y": 1,
+      "element": "Polypropylene",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropLight",
+      "location_x": -3,
+      "location_y": 5,
+      "element": "Steel",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropLight",
+      "location_y": 5,
+      "element": "Steel",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "SetLocker",
+      "location_x": 2,
+      "location_y": 1,
+      "element": "Unobtanium",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropGravitasSmallSeedLocker",
+      "location_x": 3,
+      "location_y": 2,
+      "element": "Unobtanium",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "SetLocker",
+      "location_x": 4,
+      "location_y": 1,
+      "element": "Unobtanium",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropClock",
+      "location_x": 5,
+      "location_y": 3,
+      "element": "Unobtanium",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropDesk",
+      "location_x": 6,
+      "location_y": 1,
+      "element": "Steel",
+      "temperature": 294.149994,
+      "units": 1,
+      "type": "Other"
+    }
+  ]
+}

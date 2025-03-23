@@ -1,0 +1,26 @@
+{
+  "biomeNoise": "expansion1::noise/subworldMooCore",
+  "temperatureRange": "ExtremelyCold",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 15.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "extraBiomeChildren": 0,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "hardToDig",
+  "features": [],
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Moo/Core",
+      "weight": 1,
+      "tags": []
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "FrozenWastes"
+}

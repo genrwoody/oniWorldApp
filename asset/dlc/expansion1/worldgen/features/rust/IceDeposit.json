@@ -1,0 +1,33 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Blob",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 1.4,
+    "max": 1.7
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "BrineIce",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "MaficRock",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

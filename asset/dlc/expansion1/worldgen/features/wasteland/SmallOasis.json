@@ -1,0 +1,59 @@
+{
+  "tags": [
+    "Wet"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1,
+    2
+  ],
+  "blobSize": {
+    "min": 2.5,
+    "max": 4
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.5
+        },
+        {
+          "element": "Water",
+          "weight": 0.3
+        },
+        {
+          "element": "Sand",
+          "weight": 0.2
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.5
+        },
+        {
+          "element": "Algae",
+          "weight": 0.5
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Granite",
+          "weight": 1
+        },
+        {
+          "element": "MaficRock",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

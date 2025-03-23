@@ -1,0 +1,34 @@
+{
+  "biomeNoise": "expansion1::noise/Radioactive",
+  "temperatureRange": "Cold",
+  "minChildCount": 4,
+  "density": {
+    "min": 12,
+    "max": 17
+  },
+  "avoidRadius": 12,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "expansion1::biomes/Radioactive/Basic",
+      "weight": 1,
+      "tags": [
+        "med_ToePlant",
+        "med_ToePlantSeed",
+        "med_CritterTrapPlant",
+        "med_CritterTrapPlantSeed"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "expansion1::features/radioactive/BeeBubble"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Radioactive"
+}

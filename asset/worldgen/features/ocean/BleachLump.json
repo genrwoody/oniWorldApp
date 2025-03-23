@@ -1,0 +1,48 @@
+{
+  "shape": "TallThin",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 2,
+    "max": 2
+  },
+  "forceBiome": "biomes/Ocean/Dry",
+  "biomeTags": [
+    "Pacu",
+    "Crab",
+    "SeaLettuceSeed",
+    "SpiceVineSeed"
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "CarbonDioxide",
+          "weight": 1
+        },
+        {
+          "element": "BleachStone",
+          "weight": 3,
+          "overrides": {
+            "massMultiplier": 8
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Sand",
+          "weight": 2
+        },
+        {
+          "element": "Salt",
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

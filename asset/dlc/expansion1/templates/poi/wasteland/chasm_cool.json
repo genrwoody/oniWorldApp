@@ -1,0 +1,1821 @@
+{
+  "info": {
+    "size": {
+      "X": 17,
+      "Y": 20
+    },
+    "min": {
+      "X": -8,
+      "Y": -9
+    },
+    "area": 223
+  },
+  "cells": [
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -1,
+      "location_y": 9
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 2.31186557,
+      "temperature": 265.149994,
+      "location_y": 9
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 2.39460373,
+      "temperature": 265.149994,
+      "location_x": 1,
+      "location_y": 9
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 2,
+      "location_y": 9
+    },
+    {
+      "element": "MaficRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -1,
+      "location_y": 10
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_y": 10
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 1,
+      "location_y": 10
+    },
+    {
+      "element": "MaficRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 2,
+      "location_y": 10
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.28837824,
+      "temperature": 265.190002,
+      "location_x": 3,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.57268548,
+      "temperature": 265.156769,
+      "location_x": 4,
+      "location_y": 1
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.16952991,
+      "temperature": 265.158112,
+      "location_x": 5,
+      "location_y": 1
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 6,
+      "location_y": 1
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 7,
+      "location_y": 1
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 8,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.90676951,
+      "temperature": 265.163788,
+      "location_x": 3,
+      "location_y": 2
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.197113663,
+      "temperature": 265.16333,
+      "location_x": 4,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.51400626,
+      "temperature": 265.156586,
+      "location_x": 5,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.38926899,
+      "temperature": 265.150757,
+      "location_x": 6,
+      "location_y": 2
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 7,
+      "location_y": 2
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 8,
+      "location_y": 2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.5583744,
+      "temperature": 265.176666,
+      "location_x": 4,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 2.63622379,
+      "temperature": 265.152496,
+      "location_x": 5,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.11092603,
+      "temperature": 265.150452,
+      "location_x": 6,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.13286936,
+      "temperature": 265.15033,
+      "location_x": 7,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 8,
+      "location_y": 3
+    },
+    {
+      "element": "Glass",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": 4
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4,
+      "location_y": 4
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.153890625,
+      "temperature": 265.150024,
+      "location_x": 5,
+      "location_y": 4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.155998155,
+      "temperature": 265.15033,
+      "location_x": 6,
+      "location_y": 4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 7,
+      "location_y": 4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 8,
+      "location_y": 4
+    },
+    {
+      "element": "Glass",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": 5
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4,
+      "location_y": 5
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.825232983,
+      "temperature": 265.150024,
+      "location_x": 5,
+      "location_y": 5
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.893758595,
+      "temperature": 265.150208,
+      "location_x": 6,
+      "location_y": 5
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 7,
+      "location_y": 5
+    },
+    {
+      "element": "Glass",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": 6
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4,
+      "location_y": 6
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.10932338,
+      "temperature": 265.151093,
+      "location_x": 5,
+      "location_y": 6
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.20772982,
+      "temperature": 265.150116,
+      "location_x": 6,
+      "location_y": 6
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 7,
+      "location_y": 6
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": 7
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4,
+      "location_y": 7
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 5,
+      "location_y": 7
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 6,
+      "location_y": 7
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 7,
+      "location_y": 7
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 5
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 6
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 7
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.0330451801,
+      "temperature": 265.163239,
+      "location_x": -1,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.548601806,
+      "temperature": 265.175171,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.724746168,
+      "temperature": 265.183563,
+      "location_x": 1,
+      "location_y": -1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.861309052,
+      "temperature": 265.276947,
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.0330451801,
+      "temperature": 265.163239,
+      "location_x": -1
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.320138335,
+      "temperature": 265.163574
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.350503743,
+      "temperature": 265.180298,
+      "location_x": 1
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.838074088,
+      "temperature": 265.164215,
+      "location_x": -1,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.0976734683,
+      "temperature": 265.940369,
+      "location_y": 1
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.85533535,
+      "temperature": 265.16449,
+      "location_x": 1,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.203814164,
+      "temperature": 265.190277,
+      "location_x": 2,
+      "location_y": 1
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.159990236,
+      "temperature": 265.164215,
+      "location_x": -1,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.10604763,
+      "temperature": 265.378967,
+      "location_y": 2
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.28421009,
+      "temperature": 265.1633,
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.20996261,
+      "temperature": 265.163483,
+      "location_x": 2,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.44685507,
+      "temperature": 265.578247,
+      "location_x": -1,
+      "location_y": 3
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.181888118,
+      "temperature": 265.162323,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.459512055,
+      "temperature": 265.409912,
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.294518173,
+      "temperature": 265.326904,
+      "location_x": 2,
+      "location_y": 3
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.947650313,
+      "temperature": 265.162323,
+      "location_x": -1,
+      "location_y": 4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.62295675,
+      "temperature": 265.297729,
+      "location_y": 4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.0648487359,
+      "temperature": 265.415558,
+      "location_x": 1,
+      "location_y": 4
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.11866438,
+      "temperature": 265.160583,
+      "location_x": 2,
+      "location_y": 4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.40223932,
+      "temperature": 265.163727,
+      "location_x": -1,
+      "location_y": 5
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.11299264,
+      "temperature": 265.161926,
+      "location_y": 5
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.300409526,
+      "temperature": 265.164917,
+      "location_x": 1,
+      "location_y": 5
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.77391744,
+      "temperature": 265.164917,
+      "location_x": 2,
+      "location_y": 5
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.34133315,
+      "temperature": 265.170715,
+      "location_x": -1,
+      "location_y": 6
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 2.57357836,
+      "temperature": 265.178833,
+      "location_y": 6
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.80027223,
+      "temperature": 265.16507,
+      "location_x": 1,
+      "location_y": 6
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.300409526,
+      "temperature": 265.164917,
+      "location_x": 2,
+      "location_y": 6
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.210976645,
+      "temperature": 265.170715,
+      "location_x": -1,
+      "location_y": 7
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.687627375,
+      "temperature": 265.150146,
+      "location_y": 7
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.264735013,
+      "temperature": 265.16507,
+      "location_x": 1,
+      "location_y": 7
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.84041363,
+      "temperature": 265.150787,
+      "location_x": 2,
+      "location_y": 7
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.35900176,
+      "temperature": 265.149994,
+      "location_x": -1,
+      "location_y": 8
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.19856523,
+      "temperature": 265.15744,
+      "location_y": 8
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 2.30215836,
+      "temperature": 265.150696,
+      "location_x": 1,
+      "location_y": 8
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.28088403,
+      "temperature": 265.149994,
+      "location_x": 2,
+      "location_y": 8
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": 7
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": 8
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": 9
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": 8
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": 9
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.412476,
+      "location_x": -8
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 266.008301,
+      "location_x": -7
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 267,
+      "location_x": -6
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 267.528503,
+      "location_x": -5
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 267.495605,
+      "location_x": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.935333,
+      "location_x": -3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.175842,
+      "location_x": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.565033,
+      "location_x": -8,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.952410877,
+      "temperature": 266.476257,
+      "location_x": -7,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.01296186,
+      "temperature": 266.351929,
+      "location_x": -6,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.20143938,
+      "temperature": 266.796814,
+      "location_x": -5,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.19595778,
+      "temperature": 266.649017,
+      "location_x": -4,
+      "location_y": 1
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.31808507,
+      "temperature": 266.341217,
+      "location_x": -3,
+      "location_y": 1
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.159990236,
+      "temperature": 265.164154,
+      "location_x": -2,
+      "location_y": 1
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.939514,
+      "location_x": -8,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.949463129,
+      "temperature": 266.748901,
+      "location_x": -7,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.01784134,
+      "temperature": 266.841888,
+      "location_x": -6,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.18805097,
+      "temperature": 266.796814,
+      "location_x": -5,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.18197298,
+      "temperature": 266.648499,
+      "location_x": -4,
+      "location_y": 2
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.206676215,
+      "temperature": 265.38858,
+      "location_x": -3,
+      "location_y": 2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.585235834,
+      "temperature": 265.854492,
+      "location_x": -2,
+      "location_y": 2
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.079407,
+      "location_x": -8,
+      "location_y": 3
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 266.03949,
+      "location_x": -7,
+      "location_y": 3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.07917047,
+      "temperature": 266.625488,
+      "location_x": -6,
+      "location_y": 3
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.93275654,
+      "temperature": 265.315796,
+      "location_x": -5,
+      "location_y": 3
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.62309241,
+      "temperature": 265.380432,
+      "location_x": -4,
+      "location_y": 3
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.39783788,
+      "temperature": 265.38858,
+      "location_x": -3,
+      "location_y": 3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.151306,
+      "location_x": -2,
+      "location_y": 3
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -8,
+      "location_y": 4
+    },
+    {
+      "element": "MaficRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -7,
+      "location_y": 4
+    },
+    {
+      "element": "MaficRock",
+      "mass": 1,
+      "temperature": 265.918457,
+      "location_x": -6,
+      "location_y": 4
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.83646011,
+      "temperature": 265.362579,
+      "location_x": -5,
+      "location_y": 4
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.80565083,
+      "temperature": 265.308044,
+      "location_x": -4,
+      "location_y": 4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -3,
+      "location_y": 4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": 4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -3,
+      "location_y": 5
+    },
+    {
+      "element": "Glass",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": 5
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -3,
+      "location_y": 6
+    },
+    {
+      "element": "Glass",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": 6
+    },
+    {
+      "element": "MaficRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -6,
+      "location_y": 5
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -5,
+      "location_y": 5
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -4,
+      "location_y": 5
+    },
+    {
+      "element": "Cuprite",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -7,
+      "location_y": 5
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": -3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.315979,
+      "location_x": -2,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -4,
+      "location_y": -5
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -3,
+      "location_y": -5
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.625031,
+      "location_x": -4,
+      "location_y": -4
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -3,
+      "location_y": -4
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 266.266846,
+      "location_x": -4,
+      "location_y": -3
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.695343,
+      "location_x": -3,
+      "location_y": -3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -4,
+      "location_y": -7
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -4,
+      "location_y": -6
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -3,
+      "location_y": -9
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": -9
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -3,
+      "location_y": -8
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 1009.328,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": -8
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -4,
+      "location_y": -8
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": -1,
+      "location_y": -9
+    },
+    {
+      "element": "Sulfur",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_y": -9
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 1009.31458,
+      "temperature": 265.149994,
+      "location_x": -1,
+      "location_y": -8
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 1009.3335,
+      "temperature": 265.149994,
+      "location_y": -8
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 1,
+      "location_y": -8
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 2,
+      "location_y": -8
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 999.654358,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": -7
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 999.542908,
+      "temperature": 265.149994,
+      "location_x": -1,
+      "location_y": -7
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 999.66333,
+      "temperature": 265.149994,
+      "location_y": -7
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 999.833374,
+      "temperature": 265.149994,
+      "location_x": 1,
+      "location_y": -7
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 2,
+      "location_y": -7
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 456.275513,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": -6
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 592.659119,
+      "temperature": 265.149994,
+      "location_x": -1,
+      "location_y": -6
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 732.967102,
+      "temperature": 265.149994,
+      "location_y": -6
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 834.459351,
+      "temperature": 265.149994,
+      "location_x": 1,
+      "location_y": -6
+    },
+    {
+      "element": "DirtyWater",
+      "mass": 882.543945,
+      "temperature": 265.149994,
+      "location_x": 2,
+      "location_y": -6
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.66151756,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": -5
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.16584587,
+      "temperature": 265.149994,
+      "location_x": -1,
+      "location_y": -5
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.393009752,
+      "temperature": 265.149994,
+      "location_y": -5
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.226876765,
+      "temperature": 265.151917,
+      "location_x": 1,
+      "location_y": -5
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.58147049,
+      "temperature": 265.149994,
+      "location_x": 2,
+      "location_y": -5
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 1.49501002,
+      "temperature": 265.149994,
+      "location_x": -2,
+      "location_y": -4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.696632862,
+      "temperature": 265.153687,
+      "location_x": -1,
+      "location_y": -4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.106679089,
+      "temperature": 265.153534,
+      "location_y": -4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.719264269,
+      "temperature": 265.15155,
+      "location_x": 1,
+      "location_y": -4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.797871947,
+      "temperature": 265.151062,
+      "location_x": 2,
+      "location_y": -4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.14951539,
+      "temperature": 265.155884,
+      "location_x": -1,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.843556821,
+      "temperature": 265.159943,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.781789839,
+      "temperature": 265.154541,
+      "location_x": 1,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.82136488,
+      "temperature": 265.151611,
+      "location_x": 2,
+      "location_y": -3
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 1.13104618,
+      "temperature": 265.188599,
+      "location_x": -1,
+      "location_y": -2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.694274843,
+      "temperature": 265.172211,
+      "location_y": -2
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.735202312,
+      "temperature": 265.175934,
+      "location_x": 1,
+      "location_y": -2
+    },
+    {
+      "element": "ContaminatedOxygen",
+      "mass": 0.451951951,
+      "temperature": 265.151703,
+      "location_x": 2,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.277008,
+      "location_x": -2,
+      "location_y": -1
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": -6
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4,
+      "location_y": -6
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 5,
+      "location_y": -6
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.715770721,
+      "temperature": 265.150604,
+      "location_x": 3,
+      "location_y": -5
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.895180941,
+      "temperature": 265.150177,
+      "location_x": 4,
+      "location_y": -5
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 5,
+      "location_y": -5
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.851066411,
+      "temperature": 265.150238,
+      "location_x": 3,
+      "location_y": -4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.951163292,
+      "temperature": 265.15097,
+      "location_x": 4,
+      "location_y": -4
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 5,
+      "location_y": -4
+    },
+    {
+      "element": "CarbonDioxide",
+      "mass": 0.880214989,
+      "temperature": 265.150757,
+      "location_x": 3,
+      "location_y": -3
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4,
+      "location_y": -3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 5,
+      "location_y": -3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4,
+      "location_y": -2
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 5,
+      "location_y": -2
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 5,
+      "location_y": -1
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 6,
+      "location_y": -1
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.788635,
+      "location_x": -6,
+      "location_y": -2
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 266.530396,
+      "location_x": -5,
+      "location_y": -2
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 267.13974,
+      "location_x": -4,
+      "location_y": -2
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 266.249969,
+      "location_x": -3,
+      "location_y": -2
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.55188,
+      "location_x": -7,
+      "location_y": -1
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 266.306702,
+      "location_x": -6,
+      "location_y": -1
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 267.185364,
+      "location_x": -5,
+      "location_y": -1
+    },
+    {
+      "element": "Sand",
+      "mass": 1,
+      "temperature": 267.009003,
+      "location_x": -4,
+      "location_y": -1
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 266.056244,
+      "location_x": -3,
+      "location_y": -1
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.868835,
+      "location_x": -5,
+      "location_y": -3
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 1,
+      "location_y": -9
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 3,
+      "location_y": -7
+    },
+    {
+      "element": "IgneousRock",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 4,
+      "location_y": -7
+    },
+    {
+      "element": "SandStone",
+      "mass": 1,
+      "temperature": 265.149994,
+      "location_x": 7,
+      "location_y": -1
+    }
+  ],
+  "buildings": [
+    {
+      "id": "TilePOI",
+      "location_x": -2,
+      "element": "SandStone",
+      "temperature": 265.175323
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 2,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 3,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 4,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -3,
+      "element": "SandStone",
+      "temperature": 265.787689
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -2,
+      "location_y": 3,
+      "element": "SandStone",
+      "temperature": 265.150452
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -2,
+      "location_y": 4,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 3,
+      "location_y": 3,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 2,
+      "location_y": 9,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 3,
+      "location_y": 7,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -2,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 265.273254
+    },
+    {
+      "id": "TilePOI",
+      "location_y": 10,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 1,
+      "location_y": 10,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -5,
+      "location_y": 5,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -2,
+      "location_y": 7,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 6,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": -3,
+      "location_y": 4,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "TilePOI",
+      "location_x": 3,
+      "location_y": -1,
+      "element": "SandStone",
+      "temperature": 265.149994
+    },
+    {
+      "id": "GlassTile",
+      "location_x": 3,
+      "location_y": 4,
+      "element": "Glass",
+      "temperature": 265.149994
+    },
+    {
+      "id": "GlassTile",
+      "location_x": 3,
+      "location_y": 5,
+      "element": "Glass",
+      "temperature": 265.149994
+    },
+    {
+      "id": "GlassTile",
+      "location_x": -2,
+      "location_y": 6,
+      "element": "Glass",
+      "temperature": 265.149994
+    },
+    {
+      "id": "GlassTile",
+      "location_x": -2,
+      "location_y": 5,
+      "element": "Glass",
+      "temperature": 265.149994
+    },
+    {
+      "id": "CarpetTile",
+      "location_x": -5,
+      "element": "SandStone",
+      "temperature": 267.528503
+    },
+    {
+      "id": "CarpetTile",
+      "location_x": -6,
+      "element": "SandStone",
+      "temperature": 267
+    },
+    {
+      "id": "Door",
+      "location_x": 3,
+      "location_y": 1,
+      "element": "Cuprite",
+      "temperature": 265.150146
+    },
+    {
+      "id": "Door",
+      "location_x": -2,
+      "location_y": 1,
+      "element": "Cuprite",
+      "temperature": 265.158356
+    },
+    {
+      "id": "GlassTile",
+      "location_x": 3,
+      "location_y": 6,
+      "element": "Glass",
+      "temperature": 265.149994
+    },
+    {
+      "id": "Wire",
+      "location_x": -5,
+      "location_y": 5,
+      "element": "Cuprite",
+      "temperature": 265.149994,
+      "connections": 8
+    },
+    {
+      "id": "Wire",
+      "location_x": -5,
+      "location_y": 4,
+      "element": "Cuprite",
+      "temperature": 265.154053,
+      "connections": 4
+    },
+    {
+      "id": "Wire",
+      "location_x": 2,
+      "location_y": 9,
+      "element": "Cuprite",
+      "temperature": 265.149994,
+      "connections": 8
+    },
+    {
+      "id": "Wire",
+      "location_x": 2,
+      "location_y": 8,
+      "element": "Cuprite",
+      "temperature": 265.149994,
+      "connections": 4
+    }
+  ],
+  "pickupables": [
+    {
+      "id": "CylindricaSeed",
+      "location_x": -4,
+      "element": "Creature",
+      "temperature": 269.518677,
+      "units": 1,
+      "type": "Pickupable",
+      "rottable": {}
+    }
+  ],
+  "otherEntities": [
+    {
+      "id": "SetLocker",
+      "location_x": 6,
+      "location_y": 1,
+      "element": "Unobtanium",
+      "temperature": 265.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "SetLocker",
+      "location_x": 5,
+      "location_y": 1,
+      "element": "Unobtanium",
+      "temperature": 265.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropLadder",
+      "location_x": 2,
+      "location_y": -3,
+      "element": "Polypropylene",
+      "temperature": 265.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropLadder",
+      "location_x": 2,
+      "location_y": -2,
+      "element": "Polypropylene",
+      "temperature": 265.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropLadder",
+      "location_x": 2,
+      "location_y": -1,
+      "element": "Polypropylene",
+      "temperature": 265.149994,
+      "units": 1,
+      "type": "Other"
+    },
+    {
+      "id": "PropLight",
+      "location_x": -5,
+      "location_y": 4,
+      "element": "Steel",
+      "temperature": 265.151001,
+      "units": 1,
+      "type": "Other"
+    }
+  ]
+}
