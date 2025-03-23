@@ -1,0 +1,38 @@
+{
+    "name": "oni-map",
+    "version": "1.0.0",
+    "description": "generate oni world",
+    "main": "index.js",
+    "author": "woody",
+    "license": "MIT",
+    "scripts": {
+        "start": "webpack-dev-server --open --hot --mode=development",
+        "build": "webpack --mode=production"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.8",
+        "bootstrap": "^5.3.3",
+        "font-awesome": "^4.7.0",
+        "react": "^19.0.0",
+        "react-bootstrap": "^2.10.9",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.15.7",
+        "@types/react": "^19.0.10",
+        "@types/react-dom": "^19.0.4",
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^7.1.2",
+        "html-webpack-plugin": "^5.5.0",
+        "style-loader": "^4.0.0",
+        "ts-loader": "^9.4.2",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.2",
+        "webpack": "^5.76.3",
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.13.1"
+    },
+    "prettier": {
+        "tabWidth": 4
+    }
+}

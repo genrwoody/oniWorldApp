@@ -1,0 +1,7 @@
+#pragma once
+
+#ifdef EMSCRIPTEN
+#define SETTING_ASSERT_FILEPATH "/data.zip"
+#else
+#define SETTING_ASSERT_FILEPATH "@CMAKE_CURRENT_BINARY_DIR@/data/data.zip"
+#endif

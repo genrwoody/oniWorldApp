@@ -1,0 +1,15 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+---
+BasedOnStyle: LLVM
+Language: Cpp
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+AccessModifierOffset: -4
+AlwaysBreakTemplateDeclarations: true
+BreakBeforeBraces: Linux
+BreakConstructorInitializers: BeforeComma
+IndentCaseLabels: false
+SortIncludes: false
+SpaceAfterTemplateKeyword: false
+...
