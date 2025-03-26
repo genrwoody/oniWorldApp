@@ -355,7 +355,7 @@ std::vector<WorldTrait *> SettingsCache::GetRandomTraits(World &world)
                     })) {
                 continue;
             }
-            if (std::ranges::contains(rule.forbiddenTags, trait->filePath)) {
+            if (std::ranges::contains(rule.forbiddenTraits, trait->filePath)) {
                 continue;
             }
             if (trait->IsValid(world)) {

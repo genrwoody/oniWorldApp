@@ -34,6 +34,7 @@ struct WeightedSubWorld {
 
 static std::vector<Site *> ForceLowestToLeaf(std::vector<Site> &sites);
 static void ApplySwapTags(std::vector<Site> &sites, KRandom &random);
+extern void WriteToBinary(const std::vector<Site> &sites);
 
 bool WorldGen::GenerateOverworld()
 {
@@ -575,7 +576,6 @@ void WorldGen::GenerateChildren(Site &site, KRandom &externRrandom, int seed,
         child.tags = site.tags;
         child.tags.insert("CenteralFeature");
         child.parent = &site;
-        child.minDistanceToTag = site.minDistanceToTag;
         SetFeatureBiome(child, externRrandom, &feature);
     }
     std::vector<Vector2f> points;

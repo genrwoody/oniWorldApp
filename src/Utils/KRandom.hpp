@@ -40,7 +40,7 @@ private:
     int InternalSample();
     double Sample()
     {
-        return 1.0 / std::numeric_limits<int>::max() * InternalSample();
+        return InternalSample() * 4.656612875245797E-10; // 1/max_int
     }
     double GetSampleForLargeRange();
 };

@@ -39,9 +39,9 @@ inline static Vector2f Denormalize(const Vector2f &point,
 static Vector2f GenerateRandomAround(const Vector2f &center, Settings &settings)
 {
     KRandom &random = *settings.Random;
+    double num1 = random.NextSingle();
+    float num2 = settings.MinimumDistance + settings.MinimumDistance * num1;
     float num = random.NextSingle();
-    float num2 = settings.MinimumDistance + settings.MinimumDistance * num;
-    num = random.NextSingle();
     double num3 = (double)(std::numbers::pi_v<float> * 2.0f * num);
     float num4 = num2 * (float)std::sin(num3);
     float num5 = num2 * (float)std::cos(num3);

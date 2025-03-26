@@ -145,8 +145,9 @@ static bool IsSafeToSpawnPOINearStartRelaxed(const Site *site)
 }
 
 static bool DoesCellMatchFilter(const Site &site,
-                                const AllowedCellsFilter &filter)
+                                const AllowedCellsFilter &filter, bool &applied)
 {
+    applied = true;
     switch (filter.tagcommand) {
     case TagCommand::AtTag:
         return site.tags.contains(filter.tag);
@@ -179,13 +180,14 @@ static bool DoesCellMatchFilter(const Site &site,
         }
         return true;
     case TagCommand::DistanceFromTag: {
-        auto itr = site.minDistanceToTag.find(filter.tag);
-        if (itr != site.minDistanceToTag.end()) {
+        auto itr = site.parent->minDistanceToTag.find(filter.tag);
+        if (itr != site.parent->minDistanceToTag.end()) {
             if (itr->second >= filter.minDistance) {
                 return itr->second <= filter.maxDistance;
             }
             return false;
         }
+        applied = false;
         return true;
     }
     }
@@ -197,8 +199,9 @@ static bool DoesCellMatchFilters(const Site &site,
 {
     bool flag = false;
     for (auto &filter : filters) {
-        bool flag2 = DoesCellMatchFilter(site, filter);
-        if (flag2 && filter.tagcommand == TagCommand::DistanceFromTag) {
+        bool applied;
+        bool flag2 = DoesCellMatchFilter(site, filter, applied);
+        if (!applied) {
             continue;
         }
         switch (filter.command) {

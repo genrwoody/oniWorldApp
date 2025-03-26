@@ -66,6 +66,7 @@ public:
     void Initialize() { m_settings.LoadSettingsCache(SETTING_ASSERT_FILEPATH); }
 
     bool Generate(const std::string &code);
+    void SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits);
 };
 
 bool App::Generate(const std::string &code)
@@ -95,42 +96,47 @@ bool App::Generate(const std::string &code)
             LogE("generate overworld failed.");
             return false;
         }
-        // 0 打印仓, 1 特质, 2 间歇泉, 3 多边形
-        Vector2i starting = worldGen.GetStarting();
-        jsSetGeyserInfo(0, 0, (size_t)&starting);
-        std::vector<int> result;
-        for (auto &item : traits) {
-            uint32_t index = 0;
-            for (auto &pair : m_settings.traits) {
-                if (item == &pair.second) {
-                    result.push_back(index);
-                    break;
-                } else {
-                    index++;
-                }
-            }
-        }
-        jsSetGeyserInfo(1, (uint32_t)result.size(), (size_t)result.data());
-        result.clear();
-        auto geysers = worldGen.GetGeysers();
-        for (auto &item : geysers) {
-            result.insert(result.end(), {item.z, item.x, item.y});
-        }
-        jsSetGeyserInfo(2, (uint32_t)result.size(), (size_t)result.data());
-        result.clear();
-        auto &sites = worldGen.GetSites();
-        for (auto &item : sites) {
-            result.push_back((int)item.subworld->zoneType);
-            result.push_back((int)item.polygon.Vertices.size());
-            for (auto &vex : item.polygon.Vertices) {
-                result.push_back(vex.x);
-                result.push_back(vex.y);
-            }
-        }
-        jsSetGeyserInfo(3, (uint32_t)result.size(), (size_t)result.data());
+        SetReault(worldGen, traits);
         break;
     }
     return true;
+}
+
+void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
+{
+    // 0 打印仓, 1 特质, 2 间歇泉, 3 多边形
+    Vector2i starting = worldGen.GetStarting();
+    jsSetGeyserInfo(0, 0, (size_t)&starting);
+    std::vector<int> result;
+    for (auto &item : traits) {
+        uint32_t index = 0;
+        for (auto &pair : m_settings.traits) {
+            if (item == &pair.second) {
+                result.push_back(index);
+                break;
+            } else {
+                index++;
+            }
+        }
+    }
+    jsSetGeyserInfo(1, (uint32_t)result.size(), (size_t)result.data());
+    result.clear();
+    auto geysers = worldGen.GetGeysers();
+    for (auto &item : geysers) {
+        result.insert(result.end(), {item.z, item.x, item.y});
+    }
+    jsSetGeyserInfo(2, (uint32_t)result.size(), (size_t)result.data());
+    result.clear();
+    auto &sites = worldGen.GetSites();
+    for (auto &item : sites) {
+        result.push_back((int)item.subworld->zoneType);
+        result.push_back((int)item.polygon.Vertices.size());
+        for (auto &vex : item.polygon.Vertices) {
+            result.push_back(vex.x);
+            result.push_back(vex.y);
+        }
+    }
+    jsSetGeyserInfo(3, (uint32_t)result.size(), (size_t)result.data());
 }
 
 extern "C" void EMSCRIPTEN_KEEPALIVE app_init()
@@ -145,6 +151,9 @@ extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
                             "OASIS-A-", "CER-A-",  "CERS-A-", "V-SNDST-C-"};
     if (type < 0 || sizeof(worlds) / sizeof(worlds[0]) <= type) {
         return false;
+    }
+    if (type == 9 || type == 10) {
+        mix = mix % 5;
     }
     std::string code = worlds[type];
     code += std::to_string(seed);
