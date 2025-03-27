@@ -11,7 +11,7 @@ struct Settings {
     Vector2f LowerRight;
     Vector2f Center;
     Vector2f Dimensions;
-    float MinimumDistance{};
+    float MinDistance{};
     float CellSize{};
     int GridWidth{};
     int GridHeight{};
@@ -39,10 +39,10 @@ inline static Vector2f Denormalize(const Vector2f &point,
 static Vector2f GenerateRandomAround(const Vector2f &center, Settings &settings)
 {
     KRandom &random = *settings.Random;
-    double num1 = random.NextSingle();
-    float num2 = settings.MinimumDistance + settings.MinimumDistance * num1;
-    float num = random.NextSingle();
-    double num3 = (double)(std::numbers::pi_v<float> * 2.0f * num);
+    float num0 = random.NextSingle();
+    double num2 = settings.MinDistance + settings.MinDistance * (double)num0;
+    float num1 = random.NextSingle();
+    double num3 = std::numbers::pi_v<float> * 2.0f * num1;
     float num4 = num2 * (float)std::sin(num3);
     float num5 = num2 * (float)std::cos(num3);
     return {center.x + num4, center.y + num5};
@@ -84,7 +84,7 @@ static bool AddNextPoint(const Vector2f &point, Settings &settings,
                 }
                 auto &item = state.Grid[i * settings.GridHeight + j];
                 if (item.x != 0.0f && item.y != 0.0f &&
-                    item.Distance(vector) < settings.MinimumDistance) {
+                    item.Distance(vector) < settings.MinDistance) {
                     flag = true;
                 }
             }
@@ -109,7 +109,7 @@ PoissonDiskSample(KRandom &random, Vector2f topLeft, Vector2f lowerRight,
     settings.LowerRight = lowerRight;
     settings.Center = (topLeft + lowerRight) / 2.0f;
     settings.Dimensions = lowerRight - topLeft;
-    settings.MinimumDistance = minimumDistance;
+    settings.MinDistance = minimumDistance;
     settings.CellSize = minimumDistance / SquareRootTwo;
     settings.GridWidth = (int)(settings.Dimensions.x / settings.CellSize) + 1;
     settings.GridHeight = (int)(settings.Dimensions.y / settings.CellSize) + 1;
@@ -176,7 +176,7 @@ std::vector<Vector2f> GetRandomPoints(const Polygon &boundingArea,
         LogE("Unsupport sampler behaviour: %d", (int)behaviour);
         return points;
     }
-    float squaredAvoidRadius = avoidRadius * avoidRadius;
+    double squaredAvoidRadius = avoidRadius * avoidRadius;
     auto first = points.begin();
     for (auto itr = points.begin(); itr != points.end(); ++itr) {
         if (testInsideBounds && !boundingArea.Contains(*itr)) {

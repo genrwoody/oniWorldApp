@@ -85,24 +85,24 @@ struct Vector2 {
 
     T Cross(const Vector2 &rhs) const { return x * rhs.y - y * rhs.x; }
 
-    T Length() const { return std::sqrt(LengthSquared()); }
+    T Length() const { return (T)std::sqrt(LengthSquared()); }
 
-    T LengthSquared() const { return x * x + y * y; }
+    double LengthSquared() const { return (double)x * x + (double)y * y; }
 
     T Distance(const Vector2 &other) const
     {
-        return std::sqrt(DistanceSquared(other));
+        return (T)std::sqrt(DistanceSquared(other));
     }
 
-    T DistanceSquared(const Vector2 &other) const
+    double DistanceSquared(const Vector2 &other) const
     {
         return (*this - other).LengthSquared();
     }
 
     Vector2 Normalized() const
     {
-        T factor = 1.0f / Length();
-        return {x * factor, y * factor};
+        double length = Length();
+        return {x / length, y / length};
     }
 };
 
