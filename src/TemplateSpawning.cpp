@@ -6,6 +6,7 @@
 #include <string_view>
 
 #include "Utils/PointGenerator.hpp"
+#include "Utils/SortHelper.hpp"
 
 using TagSet = std::vector<std::string>;
 
@@ -449,10 +450,11 @@ void TemplateSpawning::SpawnTemplatesFromTemplateRules()
         LogE("template rules is empty, check setting file.");
         return;
     }
-    std::sort(rules.begin(), rules.end(),
-              [](const TemplateSpawnRules *lhs, const TemplateSpawnRules *rhs) {
-                  return rhs->priority < lhs->priority;
-              });
+    ArraySortHelper::Sort(
+        rules, 0, (int)rules.size(),
+        [](const TemplateSpawnRules *lhs, const TemplateSpawnRules *rhs) {
+            return rhs->priority < lhs->priority;
+        });
     std::set<std::string> usedTemplates;
     size_t count = 0;
     for (auto rule : rules) {

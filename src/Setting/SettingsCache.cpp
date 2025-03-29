@@ -88,9 +88,6 @@ bool SettingsCache::LoadSettingsCache(const std::string &assetFile)
         if (mz_zip_reader_is_file_a_directory(&zip, i)) {
             continue;
         }
-        if (strstr(stat.m_filename, "dlc/expansion1") != nullptr) {
-            continue;
-        }
         if (strstr(stat.m_filename, "Asubworlds.json") != nullptr) {
             LoadJsonFile(zip, i, Asubworlds);
             continue;
@@ -328,7 +325,17 @@ std::vector<WorldTrait *> SettingsCache::GetRandomTraits(World &world)
     KRandom kRandom(seed);
     std::vector<WorldTrait *> total;
     for (auto &pair : traits) {
-        total.push_back(&pair.second);
+        if (pair.first[0] == 't') {
+            if (IsSpaceOutEnabled() && pair.second.ForbiddenSpaceOut()) {
+                continue;
+            }
+            total.push_back(&pair.second);
+        }
+    }
+    for (auto &pair : traits) {
+        if (pair.first[0] == 'e' && IsSpaceOutEnabled()) {
+            total.push_back(&pair.second);
+        }
     }
     std::vector<WorldTrait *> result;
     std::vector<std::string> names;
@@ -399,7 +406,7 @@ std::vector<WorldTrait *> SettingsCache::GetRandomTraits(World &world)
     return result;
 }
 
-void SettingsCache::DoSubworldMixing(std::vector<World *> &worlds)
+void SettingsCache::DoSubworldMixing(std::vector<World *> worlds)
 {
     std::vector<MixingConfig *> filtered;
     for (auto &config : mixConfigs) {

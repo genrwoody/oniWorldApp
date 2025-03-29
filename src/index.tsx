@@ -67,10 +67,31 @@ const clusterConfigs = [
     { type: 0, key: "CER-A", name: "谷神星" },
     { type: 0, key: "CERS-A", name: "炸裂的谷神星" },
     { type: 1, key: "V-SNDST-C", name: "类地星群" },
+    { type: 1, key: "V-OCAN-C", name: "海洋星群" },
+    { type: 1, key: "V-SWMP-C", name: "泥泞星群" },
+    { type: 1, key: "V-SFRZ-C", name: "冰霜星群" },
+    { type: 1, key: "V-LUSH-C", name: "翠绿星群" },
+    { type: 1, key: "V-FRST-C", name: "乔木星群" },
+    { type: 1, key: "V-VOLCA-C", name: "火山星群" },
+    { type: 1, key: "V-BAD-C", name: "荒芜星群" },
+    { type: 1, key: "V-HTFST-C", name: "干热星群" },
+    { type: 1, key: "V-OASIS-C", name: "绿洲星群" },
+    { type: 1, key: "V-CER-C", name: "谷神星星群" },
+    { type: 1, key: "V-CERS-C", name: "炸裂的谷神星星群" },
+//    { type: 1, key: "SNDST-C", name: "砂土星群" },
+//    { type: 1, key: "CER-C", name: "小谷神星星群" },
+//    { type: 1, key: "FRST-C", name: "绿叶星群" },
+//    { type: 1, key: "SWMP-C", name: "泥潭星群" },
+//    { type: 1, key: "M-SWMP-C", name: "卫星星群 - 金属沼泽" },
+//    { type: 1, key: "M-BAD-C", name: "卫星星群 - 荒凉" },
+//    { type: 1, key: "M-FRZ-C", name: "卫星星群 - 冰冻森林" },
+//    { type: 1, key: "M-FLIP-C", name: "卫星星群 - 倒置" },
+//    { type: 1, key: "M-RAD-C", name: "卫星星群 - 放射性海洋" },
+//    { type: 1, key: "M-CERS-C", name: "卫星星群 - 谷神星地幔" },
 ];
 const mixingConfigs = [
     { key: "dlc3", type: 0, name: "仿生增幅包" },
-    { key: "mix4", type: 1, name: "谷神小行星" },
+    { key: "mix4", type: 1, name: "谷神星碎片" },
     { key: "mix3", type: 1, name: "花蜜" },
     { key: "mix2", type: 1, name: "冷池" },
     { key: "mix1", type: 1, name: "冰窟" },
@@ -78,7 +99,7 @@ const mixingConfigs = [
 ];
 const geyserConfigs = [
     { width: 2, height: 4, color: 1, name: "低温蒸汽喷孔" },
-    { width: 2, height: 4, color: 1, name: "蒸汽喷孔" },
+    { width: 2, height: 4, color: 0, name: "蒸汽喷孔" },
     { width: 4, height: 2, color: 1, name: "清水泉" },
     { width: 4, height: 2, color: 1, name: "低温泥浆泉" },
     { width: 4, height: 2, color: 1, name: "污水泉" },
@@ -88,7 +109,7 @@ const geyserConfigs = [
     { width: 3, height: 3, color: 0, name: "火山" },
     { width: 4, height: 4, color: 2, name: "二氧化碳泉" },
     { width: 2, height: 4, color: 2, name: "二氧化碳喷孔" },
-    { width: 2, height: 4, color: 0, name: "氢气喷孔" },
+    { width: 2, height: 4, color: 2, name: "氢气喷孔" },
     { width: 2, height: 4, color: 2, name: "高温污氧喷孔" },
     { width: 2, height: 4, color: 2, name: "含菌污氧喷孔" },
     { width: 2, height: 4, color: 2, name: "氯气喷孔" },
@@ -106,6 +127,14 @@ const geyserConfigs = [
 ];
 const traitConfigs = [
     { name: "没有不寻常的特质" },
+    { name: "坠毁的卫星群" },
+    { name: "冰封之友" },
+    { name: "不规则原油区" },
+    { name: "繁茂核心" },
+    { name: "金属洞穴" },
+    { name: "放射性地壳" },
+    { name: "地下海洋" },
+    { name: "火山活跃" },
     { name: "大型石块" },
     { name: "中型石块" },
     { name: "混合型石块" },
@@ -124,21 +153,13 @@ const traitConfigs = [
     { name: "粘液菌团" },
     { name: "地下海洋" },
     { name: "火山活跃" },
-    { name: "坠毁的卫星群" },
-    { name: "冰封之友" },
-    { name: "不规则原油区" },
-    { name: "繁茂核心" },
-    { name: "金属洞穴" },
-    { name: "放射性地壳" },
-    { name: "地下海洋" },
-    { name: "火山活跃" },
 ];
 
 // prettier-ignore
 const zoneColor = [
     "#5A6870", "#000080", "#545B42", "#5A4E3C", "#5B5B52", "#D73518", "#56403C",
-    "#000000", "#665A57", "#756763", "#4F593E", "#8000FF", "#808000", "#808080",
-    "#8080FF", "#80FF00", "#80FF80", "#80FFFF", "#5D6B76", "#49545C", "#738391",
+    "#000000", "#665A57", "#756763", "#4F593E", "#91888C", "#808000", "#808080",
+    "#8080FF", "#80FF00", "#6F5E45", "#80FFFF", "#5D6B76", "#49545C", "#738391",
 ];
 
 function generate(cluster: number, seed: number, mixing: number) {
@@ -294,7 +315,7 @@ const MixingItem = (props: ConfigProps) => {
 };
 
 const Mixings = ({ type, onSetActive }: ConfigProps) => {
-    const [options, setOptions] = useState([1, 0, 2, 2, 2, 1]);
+    const [options, setOptions] = useState([1, 0, 0, 0, 0, 1]);
     const handleActive = (index: number, value: number) => {
         const temp = options.map((n, i) => (index === i ? value : n));
         let active = 0;
@@ -328,7 +349,7 @@ const Mixings = ({ type, onSetActive }: ConfigProps) => {
 const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
     const [checked, setChecked] = useState(false);
     const [cluster, setCluster] = useState(0);
-    const [mixings, setMixings] = useState(4676);
+    const [mixings, setMixings] = useState(3126);
     const [seed, setSeed] = useState("");
     const clickSpaceOut = (value: boolean) => {
         setChecked(value);

@@ -86,7 +86,13 @@ bool App::Generate(const std::string &code)
         worlds.push_back(&itr->second);
     }
     m_settings.DoSubworldMixing(worlds);
-    for (auto world : worlds) {
+    for (size_t i = 0; i < worlds.size(); ++i) {
+        auto &placement = cluster.worldPlacements[i];
+        if (worlds.size() > 1 &&
+            placement.locationType != LocationType::StartWorld) {
+            continue;
+        }
+        auto world = worlds[i];
         auto traits = m_settings.GetRandomTraits(*world);
         for (auto trait : traits) {
             world->ApplayTraits(*trait, m_settings);
@@ -146,9 +152,14 @@ extern "C" void EMSCRIPTEN_KEEPALIVE app_init()
 
 extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
 {
-    const char *worlds[] = {"SNDST-A-", "OCAN-A-", "S-FRZ-",  "LUSH-A-",
-                            "FRST-A-",  "VOLCA-",  "BAD-A-",  "HTFST-A-",
-                            "OASIS-A-", "CER-A-",  "CERS-A-", "V-SNDST-C-"};
+    const char *worlds[] = {
+        "SNDST-A-",   "OCAN-A-",    "S-FRZ-",     "LUSH-A-",   "FRST-A-",
+        "VOLCA-",     "BAD-A-",     "HTFST-A-",   "OASIS-A-",  "CER-A-",
+        "CERS-A-",    "V-SNDST-C-", "V-OCAN-C-",  "V-SWMP-C-", "V-SFRZ-C-",
+        "V-LUSH-C-",  "V-FRST-C-",  "V-VOLCA-C-", "V-BAD-C-",  "V-HTFST-C-",
+        "V-OASIS-C-", "V-CER-C-",   "V-CERS-C-",  "SNDST-C-",  "CER-C-",
+        "FRST-C-",    "SWMP-C-",    "M-SWMP-C-",  "M-BAD-C-",  "M-FRZ-C-",
+        "M-FLIP-C-",  "M-RAD-C-",   "M-CERS-C-"};
     if (type < 0 || sizeof(worlds) / sizeof(worlds[0]) <= type) {
         return false;
     }

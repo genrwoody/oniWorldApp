@@ -55,6 +55,11 @@ bool WorldTrait::IsValid(const World &world) const
     return true;
 }
 
+bool WorldTrait::ForbiddenSpaceOut() const
+{
+    return std::ranges::contains(forbiddenDLCIds, "EXPANSION1_ID");
+}
+
 static MixingConfig *FindSubworldMixing(SubworldMixingRule &rule,
                                         std::vector<MixingConfig *> &configs)
 {

@@ -61,6 +61,7 @@ struct WorldTrait {
     std::vector<ElementBandModifier> elementBandModifiers;
 
     bool IsValid(const struct World &world) const;
+    bool ForbiddenSpaceOut() const;
 };
 
 struct World {
