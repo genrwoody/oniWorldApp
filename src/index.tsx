@@ -54,6 +54,7 @@ declare const Module: {
     _app_generate(cluster: number, seed: number, mixing: number): boolean;
 };
 
+const gameCategories = ["本体", "经典", "眼冒金星"];
 const clusterConfigs = [
     { type: 0, key: "SNDST-A", name: "类地星体" },
     { type: 0, key: "OCAN-A", name: "海洋星体" },
@@ -78,16 +79,16 @@ const clusterConfigs = [
     { type: 1, key: "V-OASIS-C", name: "绿洲星群" },
     { type: 1, key: "V-CER-C", name: "谷神星星群" },
     { type: 1, key: "V-CERS-C", name: "炸裂的谷神星星群" },
-//    { type: 1, key: "SNDST-C", name: "砂土星群" },
-//    { type: 1, key: "CER-C", name: "小谷神星星群" },
-//    { type: 1, key: "FRST-C", name: "绿叶星群" },
-//    { type: 1, key: "SWMP-C", name: "泥潭星群" },
-//    { type: 1, key: "M-SWMP-C", name: "卫星星群 - 金属沼泽" },
-//    { type: 1, key: "M-BAD-C", name: "卫星星群 - 荒凉" },
-//    { type: 1, key: "M-FRZ-C", name: "卫星星群 - 冰冻森林" },
-//    { type: 1, key: "M-FLIP-C", name: "卫星星群 - 倒置" },
-//    { type: 1, key: "M-RAD-C", name: "卫星星群 - 放射性海洋" },
-//    { type: 1, key: "M-CERS-C", name: "卫星星群 - 谷神星地幔" },
+    { type: 2, key: "SNDST-C", name: "砂土星群" },
+    { type: 2, key: "CER-C", name: "小谷神星星群" },
+    { type: 2, key: "FRST-C", name: "绿叶星群" },
+    { type: 2, key: "SWMP-C", name: "泥潭星群" },
+    { type: 2, key: "M-SWMP-C", name: "卫星星群 - 金属沼泽" },
+    { type: 2, key: "M-BAD-C", name: "卫星星群 - 荒凉" },
+    { type: 2, key: "M-FRZ-C", name: "卫星星群 - 冰冻森林" },
+    { type: 2, key: "M-FLIP-C", name: "卫星星群 - 倒置" },
+    { type: 2, key: "M-RAD-C", name: "卫星星群 - 放射性海洋" },
+    { type: 2, key: "M-CERS-C", name: "卫星星群 - 谷神星地幔" },
 ];
 const mixingConfigs = [
     { key: "dlc3", type: 0, name: "仿生增幅包" },
@@ -126,33 +127,33 @@ const geyserConfigs = [
     { width: 4, height: 4, color: 0, name: "打印仓" },
 ];
 const traitConfigs = [
-    { name: "没有不寻常的特质" },
-    { name: "坠毁的卫星群" },
-    { name: "冰封之友" },
-    { name: "不规则原油区" },
-    { name: "繁茂核心" },
-    { name: "金属洞穴" },
-    { name: "放射性地壳" },
-    { name: "地下海洋" },
-    { name: "火山活跃" },
-    { name: "大型石块" },
-    { name: "中型石块" },
-    { name: "混合型石块" },
-    { name: "小型石块" },
-    { name: "被圈闭的原油" },
-    { name: "冰冻核心" },
-    { name: "活跃性地质" },
-    { name: "晶洞" },
-    { name: "休眠性地质" },
-    { name: "大型冰川" },
-    { name: "不规则原油区" },
-    { name: "岩浆通道" },
-    { name: "金属贫瘠" },
-    { name: "金属富足" },
-    { name: "备选的打印舱位置" },
-    { name: "粘液菌团" },
-    { name: "地下海洋" },
-    { name: "火山活跃" },
+    { color: 0, name: "没有不寻常的特质" },
+    { color: 0, name: "坠毁的卫星群" },
+    { color: 0, name: "冰封之友" },
+    { color: 0, name: "不规则原油区" },
+    { color: 0, name: "繁茂核心" },
+    { color: 0, name: "金属洞穴" },
+    { color: 0, name: "放射性地壳" },
+    { color: 0, name: "地下海洋" },
+    { color: 0, name: "火山活跃" },
+    { color: 2, name: "大型石块" },
+    { color: 0, name: "中型石块" },
+    { color: 2, name: "混合型石块" },
+    { color: 0, name: "小型石块" },
+    { color: 0, name: "被圈闭的原油" },
+    { color: 0, name: "冰冻核心" },
+    { color: 1, name: "活跃性地质" },
+    { color: 1, name: "晶洞" },
+    { color: 2, name: "休眠性地质" },
+    { color: 0, name: "大型冰川" },
+    { color: 0, name: "不规则原油区" },
+    { color: 0, name: "岩浆通道" },
+    { color: 2, name: "金属贫瘠" },
+    { color: 1, name: "金属富足" },
+    { color: 0, name: "备选的打印舱位置" },
+    { color: 0, name: "粘液菌团" },
+    { color: 0, name: "地下海洋" },
+    { color: 0, name: "火山活跃" },
 ];
 
 // prettier-ignore
@@ -347,13 +348,13 @@ const Mixings = ({ type, onSetActive }: ConfigProps) => {
 };
 
 const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
-    const [checked, setChecked] = useState(false);
+    const [category, setCategory] = useState(0);
     const [cluster, setCluster] = useState(0);
     const [mixings, setMixings] = useState(3126);
     const [seed, setSeed] = useState("");
-    const clickSpaceOut = (value: boolean) => {
-        setChecked(value);
-        setCluster(value ? 11 : 0);
+    const onSetCategory = (value: number) => {
+        setCategory(value);
+        setCluster(value === 0 ? 0 : value === 1 ? 11 : 23);
     };
     const toBase36 = (num: number) => {
         if (num === 0) return "0";
@@ -373,23 +374,29 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
     return (
         <ButtonToolbar className="mb-3">
             <InputGroup>
-                <ToggleButton
-                    id="toggle-check"
-                    type="checkbox"
-                    variant="outline-primary"
-                    checked={checked}
-                    value="1"
-                    onChange={(e) => clickSpaceOut(e.currentTarget.checked)}
-                >
-                    眼冒金星
-                </ToggleButton>
+                <Dropdown>
+                    <Dropdown.Toggle variant="primary" id="category">
+                        {gameCategories[category]}
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {gameCategories.map((item, index) => (
+                            <Dropdown.Item
+                                key={index}
+                                active={category === index}
+                                onClick={() => onSetCategory(index)}
+                            >
+                                {item}
+                            </Dropdown.Item>
+                        ))}
+                    </Dropdown.Menu>
+                </Dropdown>
                 <Clusters
-                    type={checked ? 1 : 0}
+                    type={category}
                     active={cluster}
                     onSetActive={(active) => setCluster(active)}
                 />
                 <Mixings
-                    type={checked ? 1 : 0}
+                    type={category === 0 ? 0 : 1}
                     active={mixings}
                     onSetActive={(active) => setMixings(active)}
                 />
@@ -441,7 +448,7 @@ const WorldInfo = ({ world }: { world: World }) => {
         <>
             <Row xs={2} md={4}>
                 {world.traits.map((item, index) => (
-                    <Card key={index}>
+                    <Card key={index} text={convert(traitConfigs[item].color)}>
                         <Card.Body>{traitConfigs[item].name}</Card.Body>
                     </Card>
                 ))}
@@ -483,8 +490,8 @@ const App: React.FC = () => {
             if (process.env.NODE_ENV === "development") {
                 return prefix + path;
             } else {
-                if (path.endsWith(".data")) return "data.bin";
-                else if (path.endsWith(".wasm")) return "wasm.bin";
+                if (path.endsWith(".data")) return "data-1.bin";
+                else if (path.endsWith(".wasm")) return "wasm-1.bin";
                 else return prefix + path;
             }
         };
@@ -495,7 +502,7 @@ const App: React.FC = () => {
         setShow(true);
         setTimeout(() => {
             const script = document.createElement("script");
-            script.src = "oniWorldApp.js";
+            script.src = "oniWorldApp-1.js";
             script.async = true;
             document.body.appendChild(script);
         }, 100);

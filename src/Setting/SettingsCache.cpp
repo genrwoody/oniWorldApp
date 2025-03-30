@@ -15,6 +15,7 @@
 #include "Utils/KRandom.hpp"
 #include "Utils/Polygon.hpp"
 #include "Utils/PointGenerator.hpp"
+#include "Utils/SortHelper.hpp"
 
 template<typename T>
 static bool LoadJsonFile(mz_zip_archive &zip, int index, T &result)
@@ -205,6 +206,7 @@ bool SettingsCache::LoadSettingsCache(const std::string &assetFile)
             TemplateContainer &templt = templates[key];
             LoadJsonFile(zip, i, templt);
             templt.RefreshInfo();
+            templt.name = key;
             continue;
         }
         printf("error: %s, unknown file: %s\n", __func__, stat.m_filename);
@@ -432,7 +434,11 @@ void SettingsCache::DoSubworldMixing(std::vector<World *> worlds)
     }
     KRandom random(seed);
     ShuffleSeeded(worlds, random);
-    // TODO:
+    ArraySortHelper::Sort(
+        worlds, 0, (int)worlds.size(), [](World *a, World *b) {
+            const int dict[] = {3, 1, 2};
+            return dict[(int)a->locationType] < dict[(int)b->locationType];
+        });
     for (auto world : worlds) {
         ShuffleSeeded(filtered, random);
         world->ClearMixingsAndTraits();

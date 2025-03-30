@@ -83,16 +83,16 @@ bool App::Generate(const std::string &code)
             LogE("world %s was wrong.", worldPlacement.world.c_str());
             return false;
         }
+        itr->second.locationType = worldPlacement.locationType;
         worlds.push_back(&itr->second);
     }
     m_settings.DoSubworldMixing(worlds);
     for (size_t i = 0; i < worlds.size(); ++i) {
-        auto &placement = cluster.worldPlacements[i];
+        auto world = worlds[i];
         if (worlds.size() > 1 &&
-            placement.locationType != LocationType::StartWorld) {
+            world->locationType != LocationType::StartWorld) {
             continue;
         }
-        auto world = worlds[i];
         auto traits = m_settings.GetRandomTraits(*world);
         for (auto trait : traits) {
             world->ApplayTraits(*trait, m_settings);

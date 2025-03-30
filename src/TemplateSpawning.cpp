@@ -317,7 +317,6 @@ Site *TemplateSpawning::FindTargetForTemplate(const TemplateContainer &templt,
         filtered.erase(itr.begin(), itr.end());
     }
     if (filtered.empty()) {
-        LogE("all templates have been remove.");
         return nullptr;
     }
     ShuffleSeeded(filtered, m_random);
@@ -456,14 +455,12 @@ void TemplateSpawning::SpawnTemplatesFromTemplateRules()
             return rhs->priority < lhs->priority;
         });
     std::set<std::string> usedTemplates;
-    size_t count = 0;
     for (auto rule : rules) {
         for (int i = 0; i < rule->times; i++) {
             if (!ApplyTemplateRules(*rule, usedTemplates)) {
                 break;
             }
         }
-        count = m_poiBounds.size();
     }
 }
 

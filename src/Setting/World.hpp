@@ -98,6 +98,7 @@ struct World {
 
     // ignore lines
 
+    LocationType locationType{};
     MinMax startingPositionHorizontal2;
     MinMax startingPositionVertical2;
     std::vector<const Feature *> globalFeatures2;
