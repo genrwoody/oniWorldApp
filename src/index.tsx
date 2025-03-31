@@ -7,7 +7,6 @@ import Card from "react-bootstrap/Card";
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
-import ToggleButton from "react-bootstrap/ToggleButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
@@ -125,6 +124,11 @@ const geyserConfigs = [
     { width: 3, height: 3, color: 0, name: "钨火山" },
     { width: 3, height: 3, color: 0, name: "铌火山" },
     { width: 4, height: 4, color: 0, name: "打印仓" },
+    { width: 4, height: 4, color: 0, name: "储油石" },
+    { width: 4, height: 4, color: 0, name: "供给传送器输出端" },
+    { width: 4, height: 4, color: 0, name: "供给传送器输入端" },
+    { width: 4, height: 4, color: 0, name: "传送发射/接收器" },
+    { width: 4, height: 4, color: 0, name: "低温箱3000" },
 ];
 const traitConfigs = [
     { color: 0, name: "没有不寻常的特质" },
@@ -207,6 +211,7 @@ function generate(cluster: number, seed: number, mixing: number) {
         ctx.strokeRect(x, y - h, w, h);
         ctx.fillText(item.config.name, x, y);
     });
+    world.geysers.sort((a, b) => a.index - b.index);
 }
 
 function updateWorld(type: number, count: number, data: number) {
@@ -491,7 +496,7 @@ const App: React.FC = () => {
                 return prefix + path;
             } else {
                 if (path.endsWith(".data")) return "data-1.bin";
-                else if (path.endsWith(".wasm")) return "wasm-1.bin";
+                else if (path.endsWith(".wasm")) return "wasm-2.bin";
                 else return prefix + path;
             }
         };

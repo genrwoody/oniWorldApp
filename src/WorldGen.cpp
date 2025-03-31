@@ -630,7 +630,7 @@ void WorldGen::GenerateChildren(Site &site, KRandom &externRrandom, int seed,
     }
 }
 
-std::vector<Vector3i> WorldGen::GetGeysers()
+std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed)
 {
     const char *configs[] = {
         "steam",          "hot_steam",       "hot_water",
@@ -646,26 +646,37 @@ std::vector<Vector3i> WorldGen::GetGeysers()
     std::vector<Vector3i> result;
     int count = m_settings.IsSpaceOutEnabled() ? 23 : 20;
     for (auto &templt : m_templates) {
+        const std::string &name = templt.container->name;
+        Vector2<int> pos{templt.position};
         if (templt.container->name == "geysers/generic") {
-            Vector2<int> pos{templt.position};
-            int seed = m_seed + pos.x + pos.y;
+            int seed = globalWorldSeed + pos.x + pos.y;
             int index = KRandom(seed).Next(0, count);
             if (!m_settings.IsSpaceOutEnabled() && index == 19) {
                 index = 21;
             }
             result.emplace_back(pos.x, pos.y, index);
+        } else if (name.starts_with("poi/oil/")) {
+            result.emplace_back(pos.x, pos.y, 26);
+        } else if (name.starts_with("expansion1::poi/warp/receiver")) {
+            result.emplace_back(pos.x, pos.y, 27);
+        } else if (name.starts_with("expansion1::poi/warp/sender")) {
+            result.emplace_back(pos.x, pos.y, 28);
+        } else if (name.starts_with("expansion1::poi/warp/teleporter")) {
+            result.emplace_back(pos.x, pos.y, 29);
+        } else if (name.starts_with("expansion1::poi/traits/cryopod")) {
+            result.emplace_back(pos.x, pos.y, 30);
         } else if (!templt.container->otherEntities.empty()) {
             for (auto &item : templt.container->otherEntities) {
                 if (item.id.find("GeyserGeneric_") == item.id.npos) {
                     continue;
                 }
                 std::string name = item.id.substr(14);
-                for (int index = 0; index < 25; ++index) {
+                for (int index = 0; index < std::size(configs); ++index) {
                     if (name == configs[index]) {
-                        Vector2<int> pos{templt.position};
                         pos.x += item.location_x;
                         pos.y += item.location_y;
                         result.emplace_back(pos.x, pos.y, index);
+                        break;
                     }
                 }
             }

@@ -127,7 +127,9 @@ void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
     }
     jsSetGeyserInfo(1, (uint32_t)result.size(), (size_t)result.data());
     result.clear();
-    auto geysers = worldGen.GetGeysers();
+    int seed = m_settings.seed - 1;
+    seed += (int)m_settings.cluster->worldPlacements.size();
+    auto geysers = worldGen.GetGeysers(seed);
     for (auto &item : geysers) {
         result.insert(result.end(), {item.z, item.x, item.y});
     }
@@ -202,8 +204,8 @@ void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data)
         "高温污氧喷孔", "含菌污氧喷孔", "氯气喷孔",     "天然气喷孔",
         "铜火山",       "铁火山",       "金火山",       "铝火山",
         "钴火山",       "渗油裂缝",     "液硫泉",       "钨火山",
-        "铌火山",
-    };
+        "铌火山",       "打印仓",       "储油石",       "输出端",
+        "输入端",       "传送器",       "低温箱"};
     if (type == 2) {
         auto ptr = (uint32_t *)data;
         auto end = ptr + count;

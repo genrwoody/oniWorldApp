@@ -30,7 +30,7 @@ public:
     }
 
     bool GenerateOverworld();
-    std::vector<Vector3i> GetGeysers();
+    std::vector<Vector3i> GetGeysers(int seed);
     Vector2i GetStarting() { return {m_sites[0].x, m_sites[0].y}; }
     std::vector<Site> &GetSites() { return m_sites; }
 
