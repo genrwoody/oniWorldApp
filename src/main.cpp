@@ -110,7 +110,7 @@ bool App::Generate(const std::string &code)
 
 void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
 {
-    // 0 打印仓, 1 特质, 2 间歇泉, 3 多边形
+    // 0 starting base, 1 traits, 2 geysers, 3 polygons, 4 world size
     Vector2i starting = worldGen.GetStarting();
     jsSetGeyserInfo(0, 0, (size_t)&starting);
     std::vector<int> result;
@@ -145,6 +145,8 @@ void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
         }
     }
     jsSetGeyserInfo(3, (uint32_t)result.size(), (size_t)result.data());
+    Vector2i worldSize = worldGen.GetWorldSize();
+    jsSetGeyserInfo(4, 0, (size_t)&worldSize);
 }
 
 extern "C" void EMSCRIPTEN_KEEPALIVE app_init()

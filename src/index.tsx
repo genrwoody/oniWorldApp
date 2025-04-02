@@ -1,17 +1,20 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
+import Stack from "react-bootstrap/Stack";
+import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import Navbar from "react-bootstrap/Navbar";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 class Point {
     x: number = 0;
@@ -37,6 +40,7 @@ class Geyser {
 }
 
 class World {
+    size: Point = new Point();
     starting: Point = new Point();
     traits: Array<number> = [];
     sites: Array<Site> = [];
@@ -176,15 +180,16 @@ function generate(cluster: number, seed: number, mixing: number) {
     Module._app_generate(cluster, seed, mixing);
 
     const cvs = document.getElementById("world") as HTMLCanvasElement;
+    cvs.height = 650;
+    const scale = cvs.height / world.size.y;
+    cvs.width = Math.floor(scale * world.size.x);
     const ctx = cvs.getContext("2d")!;
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillRect(0, 0, cvs.width, cvs.height);
     ctx.strokeRect(0, 0, cvs.width, cvs.height);
-    const scale = cvs.height / 384;
     world.sites.forEach((item) => {
-        if (item.zone === 7) return;
         ctx.beginPath();
         item.poly.forEach((point, index) => {
             if (index === 0) {
@@ -249,6 +254,9 @@ function updateWorld(type: number, count: number, data: number) {
             }
             world.sites.push({ zone: zone, poly: poly });
         }
+    } else if (type == 4) {
+        world.size.x = Module.HEAP32[offset++];
+        world.size.y = Module.HEAP32[offset++];
     }
 }
 
@@ -259,29 +267,6 @@ interface ConfigProps {
     active: number;
     onSetActive: (active: number) => void;
 }
-
-const Clusters = ({ type, active, onSetActive }: ConfigProps) => {
-    return (
-        <Dropdown>
-            <Dropdown.Toggle variant="success" id="clusters">
-                {clusterConfigs[active].name}
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-                {clusterConfigs.map((item, index) => (
-                    <Dropdown.Item
-                        key={item.key}
-                        eventKey={index}
-                        active={active === index}
-                        onClick={() => onSetActive(index)}
-                        hidden={type !== item.type}
-                    >
-                        {item.name}
-                    </Dropdown.Item>
-                ))}
-            </Dropdown.Menu>
-        </Dropdown>
-    );
-};
 
 const MixingItem = (props: ConfigProps) => {
     const states = [
@@ -303,7 +288,12 @@ const MixingItem = (props: ConfigProps) => {
                 >
                     {props.name}
                 </Dropdown.Toggle>
-                <Dropdown.Menu>
+                <Dropdown.Menu
+                    style={{
+                        top: "auto",
+                        left: "var(--bs-dropdown-item-padding-x)",
+                    }}
+                >
                     {states[props.type].map((item, index) => (
                         <Dropdown.Item
                             key={index}
@@ -333,7 +323,11 @@ const Mixings = ({ type, onSetActive }: ConfigProps) => {
     };
     return (
         <Dropdown autoClose="outside">
-            <Dropdown.Toggle variant="primary" id="mixings">
+            <Dropdown.Toggle
+                variant="primary"
+                id="mixings"
+                style={{ borderRadius: 0 }}
+            >
                 生态融入
             </Dropdown.Toggle>
             <Dropdown.Menu>
@@ -377,29 +371,53 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
         } catch (err) {}
     };
     return (
-        <ButtonToolbar className="mb-3">
+        <Stack direction="horizontal">
+            <Dropdown>
+                <Dropdown.Toggle
+                    variant="primary"
+                    id="category"
+                    style={{
+                        borderTopRightRadius: 0,
+                        borderBottomRightRadius: 0,
+                    }}
+                >
+                    {gameCategories[category]}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                    {gameCategories.map((item, index) => (
+                        <Dropdown.Item
+                            key={index}
+                            active={category === index}
+                            onClick={() => onSetCategory(index)}
+                        >
+                            {item}
+                        </Dropdown.Item>
+                    ))}
+                </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown>
+                <Dropdown.Toggle
+                    variant="success"
+                    id="clusters"
+                    style={{ borderRadius: 0 }}
+                >
+                    {clusterConfigs[cluster].name}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                    {clusterConfigs.map((item, index) => (
+                        <Dropdown.Item
+                            key={item.key}
+                            eventKey={index}
+                            active={cluster === index}
+                            onClick={() => setCluster(index)}
+                            hidden={category !== item.type}
+                        >
+                            {item.name}
+                        </Dropdown.Item>
+                    ))}
+                </Dropdown.Menu>
+            </Dropdown>
             <InputGroup>
-                <Dropdown>
-                    <Dropdown.Toggle variant="primary" id="category">
-                        {gameCategories[category]}
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        {gameCategories.map((item, index) => (
-                            <Dropdown.Item
-                                key={index}
-                                active={category === index}
-                                onClick={() => onSetCategory(index)}
-                            >
-                                {item}
-                            </Dropdown.Item>
-                        ))}
-                    </Dropdown.Menu>
-                </Dropdown>
-                <Clusters
-                    type={category}
-                    active={cluster}
-                    onSetActive={(active) => setCluster(active)}
-                />
                 <Mixings
                     type={category === 0 ? 0 : 1}
                     active={mixings}
@@ -440,7 +458,7 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
                     复制
                 </Button>
             </InputGroup>
-        </ButtonToolbar>
+        </Stack>
     );
 };
 
@@ -469,22 +487,10 @@ const WorldInfo = ({ world }: { world: World }) => {
     );
 };
 
-const LeftSide = () => {
-    const [world, setWorld] = useState(new World());
-    return (
-        <>
-            <ToolBar onSetWorld={() => setWorld({ ...Module.world })} />
-            <WorldInfo world={world} />
-        </>
-    );
-};
-
-const RightSide = () => {
-    return <canvas id="world" width="460" height="690"></canvas>;
-};
-
 const App: React.FC = () => {
     const [show, setShow] = useState(false);
+    const [world, setWorld] = useState(new World());
+    const [theme, setTheme] = useState(0);
     const wasmLoaded = useRef(false);
     useEffect(() => {
         if (wasmLoaded.current) return;
@@ -496,7 +502,7 @@ const App: React.FC = () => {
                 return prefix + path;
             } else {
                 if (path.endsWith(".data")) return "data-1.bin";
-                else if (path.endsWith(".wasm")) return "wasm-2.bin";
+                else if (path.endsWith(".wasm")) return "wasm-3.bin";
                 else return prefix + path;
             }
         };
@@ -512,16 +518,42 @@ const App: React.FC = () => {
             document.body.appendChild(script);
         }, 100);
     }, []);
+    const switchTheme = () => {
+        const expect = theme ? "light" : "dark";
+        setTheme(theme ? 0 : 1);
+        document.documentElement.setAttribute("data-bs-theme", expect);
+    };
     return (
-        <div className="container" style={{ marginTop: "1rem" }}>
-            <Row>
-                <Col lg={12} xl={6}>
-                    <LeftSide />
-                </Col>
-                <Col>
-                    <RightSide />
-                </Col>
-            </Row>
+        <>
+            <Navbar className="bg-body-tertiary justify-content-between">
+                <Container>
+                    <ToolBar onSetWorld={() => setWorld({ ...Module.world })} />
+                    <Stack direction="horizontal" gap={3}>
+                        <a
+                            href="https://github.com/genrwoody/oniWorldApp"
+                            target="_blank"
+                            className="header-github-link"
+                        />
+                        <Button
+                            variant={"outline-" + (theme ? "light" : "dark")}
+                            onClick={() => switchTheme()}
+                        >
+                            {theme ? "浅色" : "暗黑"}
+                        </Button>
+                        <span>v1.0.0</span>
+                    </Stack>
+                </Container>
+            </Navbar>
+            <Container>
+                <Row>
+                    <Col lg={12} xl={6}>
+                        <WorldInfo world={world} />
+                    </Col>
+                    <Col>
+                        <canvas id="world" width="100" height="100"></canvas>
+                    </Col>
+                </Row>
+            </Container>
             <Modal
                 id="loading"
                 show={show}
@@ -531,7 +563,7 @@ const App: React.FC = () => {
             >
                 <Modal.Body>正在初始化, 请稍候...</Modal.Body>
             </Modal>
-        </div>
+        </>
     );
 };
 

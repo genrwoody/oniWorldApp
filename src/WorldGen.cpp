@@ -648,7 +648,7 @@ std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed)
     for (auto &templt : m_templates) {
         const std::string &name = templt.container->name;
         Vector2<int> pos{templt.position};
-        if (templt.container->name == "geysers/generic") {
+        if (name == "geysers/generic") {
             int seed = globalWorldSeed + pos.x + pos.y;
             int index = KRandom(seed).Next(0, count);
             if (!m_settings.IsSpaceOutEnabled() && index == 19) {

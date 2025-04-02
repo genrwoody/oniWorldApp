@@ -49,10 +49,8 @@ module.exports = (
             }),
             new CopyWebpackPlugin({
                 patterns: [
-                    {
-                        from: "oniWorldApp.*",
-                        context: wasmpath,
-                    },
+                    { from: "oniWorldApp.*", context: wasmpath },
+                    { from: "*", context: "public" },
                 ],
             }),
         ],
