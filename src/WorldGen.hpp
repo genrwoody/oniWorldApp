@@ -49,3 +49,24 @@ private:
     void SetFeatureBiome(Site &site, KRandom &random, const Feature *feature);
     bool DetermineTemplates(std::vector<Site *> &sites, KRandom &random);
 };
+
+inline std::string ZoneTypeToString(ZoneType zone)
+{
+    const char *dict[] = {"FrozenWastes", "CrystalCaverns", "BoggyMarsh",
+                          "Sandstone",    "ToxicJungle",    "MagmaCore",
+                          "OilField",     "Space",          "Ocean",
+                          "Rust",         "Forest",         "Radioactive",
+                          "Swamp",        "Wasteland",      "RocketInterior",
+                          "Metallic",     "Barren",         "Moo",
+                          "IceCaves",     "CarrotQuarry",   "SugarWoods"};
+    return dict[(int)zone];
+}
+
+inline std::string TempRangeToString(Range range)
+{
+    const char *dict[] = {
+        "ExtremelyCold", "VeryVeryCold", "VeryCold",    "Cold",      "Chilly",
+        "Cool",          "Mild",         "Room",        "HumanWarm", "HumanHot",
+        "Hot",           "VeryHot",      "ExtremelyHot"};
+    return dict[(int)range];
+}

@@ -67,6 +67,5 @@ struct ClusterLayout {
     int menuOrder{};
     std::string coordinatePrefix;
     std::vector<std::string> clusterTags;
-    // mutable
     std::vector<SpaceMapPOIPlacement> mixedPoiPlacements;
 };

@@ -68,13 +68,13 @@ static std::string GenerateKey(const char *filename)
     return key;
 }
 
-bool SettingsCache::LoadSettingsCache(const std::string &assetFile)
+bool SettingsCache::LoadSettingsCache(const std::string_view &content)
 {
     if (!defaults.data.empty()) {
         return false;
     }
     mz_zip_archive zip = {0};
-    if (!mz_zip_reader_init_file(&zip, assetFile.c_str(), 0)) {
+    if (!mz_zip_reader_init_mem(&zip, content.data(), content.size(), 0)) {
         printf("error: %s:%d\n", __func__, __LINE__);
         return false;
     }

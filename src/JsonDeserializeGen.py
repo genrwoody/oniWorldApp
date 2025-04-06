@@ -106,11 +106,11 @@ struct Deserializer<{}>
             "JsonDeserializeGen.hpp",
             "ComposableDictionary.hpp",
             "Vector2f.hpp"
-        ];
+        ]
         if file.name in skip:
             return
         print(f"generate file: {file}")
-        self.header += '#include "{}"\n'.format(file.name)
+        self.header += '#include "Setting/{}"\n'.format(file.name)
         with open(file, "r") as stm:
             for line in stm:
                 self.parse_line(line)
@@ -123,7 +123,7 @@ struct Deserializer<{}>
             stm.write("""/* {} Generate by tool, Do *NOT* edit! */
 #pragma once
 
-#include "JsonDeserialize.hpp"
+#include "Setting/JsonDeserialize.hpp"
 """.format(datetime.now().ctime()))
             stm.write(self.header)
             stm.write(self.output)

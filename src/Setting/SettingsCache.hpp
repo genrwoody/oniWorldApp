@@ -63,7 +63,7 @@ private:
     int m_dlcState = 0;
 
 public:
-    bool LoadSettingsCache(const std::string &assetPath);
+    bool LoadSettingsCache(const std::string_view &content);
     bool CoordinateChanged(const std::string &text, SettingsCache &settings);
     bool IsSpaceOutEnabled() const { return (m_dlcState & 1) == 1; }
     std::vector<WorldTrait *> GetRandomTraits(World &world);
@@ -92,29 +92,3 @@ public:
 private:
     void ParseAndApplyMixingSettingsCode(const std::string &code);
 };
-
-inline std::string ZoneTypeToString(ZoneType zone)
-{
-    const char *dict[] = {"FrozenWastes", "CrystalCaverns", "BoggyMarsh",
-                          "Sandstone",    "ToxicJungle",    "MagmaCore",
-                          "OilField",     "Space",          "Ocean",
-                          "Rust",         "Forest",         "Radioactive",
-                          "Swamp",        "Wasteland",      "RocketInterior",
-                          "Metallic",     "Barren",         "Moo",
-                          "IceCaves",     "CarrotQuarry",   "SugarWoods"};
-    return dict[(int)zone];
-}
-
-inline std::string TempRangeToString(Range range)
-{
-    const char *dict[] = {
-        "ExtremelyCold", "VeryVeryCold", "VeryCold",    "Cold",      "Chilly",
-        "Cool",          "Mild",         "Room",        "HumanWarm", "HumanHot",
-        "Hot",           "VeryHot",      "ExtremelyHot"};
-    return dict[(int)range];
-}
-
-#define LogI(format, ...)                                                      \
-    printf("info %s:%d " format "\n", __func__, __LINE__, ##__VA_ARGS__)
-#define LogE(format, ...)                                                      \
-    printf("error %s:%d " format "\n", __func__, __LINE__, ##__VA_ARGS__)

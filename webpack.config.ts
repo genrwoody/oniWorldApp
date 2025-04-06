@@ -3,7 +3,7 @@ import * as webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 
-module.exports = (
+export default (
     _env: any,
     argv: webpack.WebpackOptionsNormalized
 ): webpack.Configuration => {
@@ -28,7 +28,7 @@ module.exports = (
         },
         output: {
             path: path.resolve(__dirname, "out/html"),
-            filename: "bundle-[fullhash:8].js",
+            filename: "bundle-[contenthash:8].js",
         },
         resolve: {
             extensions: [".tsx", ".ts", ".js"],
@@ -49,7 +49,8 @@ module.exports = (
             }),
             new CopyWebpackPlugin({
                 patterns: [
-                    { from: "oniWorldApp.*", context: wasmpath },
+                    { from: "oniWorldApp-*.js", context: wasmpath },
+                    { from: "*-*.bin", context: wasmpath },
                     { from: "*", context: "public" },
                 ],
             }),

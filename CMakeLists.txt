@@ -6,6 +6,10 @@ set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<$<CONFIG:Debug,RelWithDebInfo>:Progra
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+if(EMSCRIPTEN)
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -flto")
+endif()
+
 if("$ENV{EMSDK_PYTHON}" STREQUAL "")
     find_program(PYTHON_CMD "python" REQUIRED)
 else()
@@ -34,7 +38,7 @@ add_library(miniz STATIC
     "3rdparty/miniz/miniz_tinfl.c"
     "3rdparty/miniz/miniz_zip.c"
 )
-target_compile_definitions(miniz PUBLIC MINIZ_NO_TIME)
+target_compile_definitions(miniz PUBLIC MINIZ_NO_TIME MINIZ_NO_STDIO)
 target_include_directories(miniz
     PUBLIC "${CMAKE_CURRENT_BINARY_DIR}"
     PUBLIC "${CMAKE_SOURCE_DIR}/3rdparty/miniz"

@@ -14,6 +14,15 @@
 
 extern "C" void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data);
 
+enum ResultType {
+    RT_Starting,
+    RT_Trait,
+    RT_Geyser,
+    RT_Polygon,
+    RT_WorldSize,
+    RT_Resource
+};
+
 void WriteToBinary(const std::vector<Site> &sites)
 {
     static int index = 10;
@@ -63,7 +72,14 @@ public:
         return &inst;
     }
 
-    void Initialize() { m_settings.LoadSettingsCache(SETTING_ASSERT_FILEPATH); }
+    void Initialize()
+    {
+        uint32_t count = SETTING_ASSET_FILESIZE;
+        auto data = std::make_unique<char[]>(count);
+        jsSetGeyserInfo(RT_Resource, count, (size_t)data.get());
+        std::string_view content(data.get(), count);
+        m_settings.LoadSettingsCache(content);
+    }
 
     bool Generate(const std::string &code);
     void SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits);
@@ -112,7 +128,7 @@ void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
 {
     // 0 starting base, 1 traits, 2 geysers, 3 polygons, 4 world size
     Vector2i starting = worldGen.GetStarting();
-    jsSetGeyserInfo(0, 0, (size_t)&starting);
+    jsSetGeyserInfo(RT_Starting, 0, (size_t)&starting);
     std::vector<int> result;
     for (auto &item : traits) {
         uint32_t index = 0;
@@ -125,7 +141,7 @@ void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
             }
         }
     }
-    jsSetGeyserInfo(1, (uint32_t)result.size(), (size_t)result.data());
+    jsSetGeyserInfo(RT_Trait, (uint32_t)result.size(), (size_t)result.data());
     result.clear();
     int seed = m_settings.seed - 1;
     seed += (int)m_settings.cluster->worldPlacements.size();
@@ -133,7 +149,7 @@ void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
     for (auto &item : geysers) {
         result.insert(result.end(), {item.z, item.x, item.y});
     }
-    jsSetGeyserInfo(2, (uint32_t)result.size(), (size_t)result.data());
+    jsSetGeyserInfo(RT_Geyser, (uint32_t)result.size(), (size_t)result.data());
     result.clear();
     auto &sites = worldGen.GetSites();
     for (auto &item : sites) {
@@ -144,9 +160,9 @@ void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
             result.push_back(vex.y);
         }
     }
-    jsSetGeyserInfo(3, (uint32_t)result.size(), (size_t)result.data());
+    jsSetGeyserInfo(RT_Polygon, (uint32_t)result.size(), (size_t)result.data());
     Vector2i worldSize = worldGen.GetWorldSize();
-    jsSetGeyserInfo(4, 0, (size_t)&worldSize);
+    jsSetGeyserInfo(RT_WorldSize, 0, (size_t)&worldSize);
 }
 
 extern "C" void EMSCRIPTEN_KEEPALIVE app_init()
@@ -164,13 +180,13 @@ extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
         "V-OASIS-C-", "V-CER-C-",   "V-CERS-C-",  "SNDST-C-",  "CER-C-",
         "FRST-C-",    "SWMP-C-",    "M-SWMP-C-",  "M-BAD-C-",  "M-FRZ-C-",
         "M-FLIP-C-",  "M-RAD-C-",   "M-CERS-C-"};
-    if (type < 0 || sizeof(worlds) / sizeof(worlds[0]) <= type) {
+    if (type < 0 || std::size(worlds) <= type) {
         return false;
     }
-    if (type == 9 || type == 10) {
+    std::string code = worlds[type];
+    if (code.find("CER") != code.npos) {
         mix = mix % 5;
     }
-    std::string code = worlds[type];
     code += std::to_string(seed);
     code += "-0-D3-";
     code += SettingsCache::BinaryToBase36(mix);
@@ -208,7 +224,14 @@ void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data)
         "钴火山",       "渗油裂缝",     "液硫泉",       "钨火山",
         "铌火山",       "打印仓",       "储油石",       "输出端",
         "输入端",       "传送器",       "低温箱"};
-    if (type == 2) {
+    switch (type) {
+    default:
+        break;
+    case RT_Starting:
+        break;
+    case RT_Trait:
+        break;
+    case RT_Geyser: {
         auto ptr = (uint32_t *)data;
         auto end = ptr + count;
         while (ptr < end) {
@@ -217,12 +240,26 @@ void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data)
             auto y = *ptr++;
             LogI("%s: %d, %d", configs[index], x, y);
         }
-    } else if (type >= 10) {
-        std::string filename("sites");
-        filename += std::to_string(type - 10) + ".bin";
-        std::ofstream fstm(filename, std::ios::binary | std::ios::trunc);
-        fstm.write((char *)data, sizeof(uint32_t) * count);
-        fstm.close();
+        break;
+    }
+    case RT_Polygon:
+        break;
+    case RT_Resource: {
+        auto ptr = (char *)data;
+        *ptr = 'E';
+        std::ifstream fstm(SETTING_ASSET_FILEPATH, std::ios::binary);
+        if (fstm.is_open()) {
+            auto size = fstm.seekg(0, std::ios::end).tellg();
+            if (size == count) {
+                fstm.seekg(0).read(ptr, count);
+            } else {
+                LogE("wrong count.");
+            }
+        } else {
+            LogE("can not open file.");
+        }
+        break;
+    }
     }
 }
 
