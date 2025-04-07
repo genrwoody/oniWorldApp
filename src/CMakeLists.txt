@@ -73,9 +73,17 @@ target_link_options(oniWorldApp
     PUBLIC "-sMINIMAL_RUNTIME=1" "-sEXPORTED_RUNTIME_METHODS=[HEAP32,HEAPU8]"
     PUBLIC "--pre-js" "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/prefix.js"
     PUBLIC "--js-library" "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/getresult.js")
-set_target_properties(oniWorldApp PROPERTIES
-    LINK_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/prefix.js"
-    LINK_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/getresult.js")
+add_custom_command(TARGET oniWorldApp POST_BUILD
+    COMMAND ${PYTHON_CMD} "${CMAKE_CURRENT_SOURCE_DIR}/CopyWasmFiles.py"
+    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+    VERBATIM
+)
+list(APPEND WASM_LINK_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/prefix.js"
+    "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/getresult.js"
+    "${CMAKE_CURRENT_SOURCE_DIR}/CopyWasmFiles.py"
+)
+set_target_properties(oniWorldApp PROPERTIES LINK_DEPENDS "${WASM_LINK_DEPENDS}")
 elseif(MSVC)
 target_compile_options(oniWorldApp
     PUBLIC "/source-charset:utf-8" "/execution-charset:GBK")
@@ -88,14 +96,5 @@ target_include_directories(oniWorldApp
     PUBLIC "${CMAKE_SOURCE_DIR}/3rdparty/miniz"
 )
 target_link_libraries(oniWorldApp PUBLIC clipper jsoncpp miniz)
-
-if(EMSCRIPTEN)
-add_custom_command(TARGET oniWorldApp POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy "oniWorldApp.wasm" "wasm.bin"
-    COMMAND ${PYTHON_CMD} "${CMAKE_CURRENT_SOURCE_DIR}/CopyWebAssemblyFiles.py"
-    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-    VERBATIM
-)
-endif()
 
 configure_file("config.h.in" "config.h")

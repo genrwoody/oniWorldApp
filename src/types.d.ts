@@ -21,6 +21,7 @@ interface Geyser {
 }
 
 interface World {
+    type: number;
     size: Point;
     starting: Point;
     traits: Array<number>;
@@ -31,7 +32,7 @@ interface World {
 declare const Module: {
     wasm: Uint8Array | null;
     data: Uint8Array | null;
-    world: World;
+    worlds: Array<World>;
     HEAP32: Int32Array;
     HEAPU8: Uint8Array;
     updateWorld(type: number, count: number, data: number): void;

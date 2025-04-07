@@ -17,12 +17,6 @@ import { configuration, LanguageContext, useTranslation } from "./jsUtils";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./jsUtils/index.css";
 
-interface WasmFiles {
-    launcher: string;
-    wasm: string;
-    data: string;
-}
-
 interface ConfigProps {
     type: number;
     name?: string;
@@ -196,6 +190,7 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {
                             let nseed = parseInt(seed);
+                            Module.worlds.length = 0;
                             Module.app_generate(cluster, nseed, mixings);
                             onSetWorld();
                         }
@@ -207,6 +202,7 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
                         nseed = nseed * (Math.random() * 32768);
                         nseed = Math.round(nseed);
                         setSeed(nseed.toString());
+                        Module.worlds.length = 0;
                         Module.app_generate(cluster, nseed, mixings);
                         onSetWorld();
                     }}
@@ -236,7 +232,7 @@ const WorldInfo = ({ world }: { world: World }) => {
     };
     const traits = configuration.traits;
     return (
-        <Col lg={12} xl={6}>
+        <>
             <Row xs={2} md={4}>
                 {world.traits.map((item, index) => (
                     <Card key={index} text={convert(traits[item].type)}>
@@ -251,7 +247,7 @@ const WorldInfo = ({ world }: { world: World }) => {
                     </Card>
                 ))}
             </Row>
-        </Col>
+        </>
     );
 };
 
@@ -262,58 +258,74 @@ const zoneColor = [
     "#8080FF", "#8E7A5C", "#6F5E45", "#80FFFF", "#5D6B76", "#49545C", "#738391",
 ];
 
-const WorldCanvas = ({ world, theme }: { world: World; theme: number }) => {
+interface WorldCanvasProps {
+    worlds: Array<World>;
+    theme: number;
+}
+
+const WorldCanvas = ({ worlds, theme }: WorldCanvasProps) => {
     const language = useContext(LanguageContext);
     const translation = useTranslation();
     useEffect(() => {
-        if (world.sites.length === 0) return;
+        if (worlds.length === 0) return;
         const cvs = document.getElementById("world") as HTMLCanvasElement;
         cvs.style.aspectRatio = `${cvs.clientWidth} / ${cvs.clientHeight}`;
         cvs.width = cvs.clientWidth;
         cvs.height = cvs.clientHeight;
         let width = 0;
         let height = 0;
-        if (cvs.clientWidth / cvs.clientHeight < world.size.x / world.size.y) {
+        let sumY = 0;
+        worlds.forEach((world) => (sumY += world.size.y));
+        if (cvs.clientWidth / cvs.clientHeight < worlds[0].size.x / sumY) {
             width = cvs.clientWidth;
-            height = (world.size.y / world.size.x) * width;
+            height = (sumY / worlds[0].size.x) * width;
         } else {
             height = cvs.clientHeight;
-            width = (world.size.x / world.size.y) * height;
+            width = (worlds[0].size.x / sumY) * height;
         }
-        const scale = height / world.size.y;
+        const scale = width / worlds[0].size.x;
         const ctx = cvs.getContext("2d")!;
         ctx.fillStyle = theme ? "#212529" : "white";
         ctx.fillRect(0, 0, cvs.width, cvs.height);
         ctx.strokeRect(0, 0, width, height);
-        world.sites.forEach((item) => {
-            ctx.beginPath();
-            item.poly.forEach((point, index) => {
-                if (index === 0) {
-                    ctx.moveTo(point.x * scale, height - point.y * scale);
-                } else {
-                    ctx.lineTo(point.x * scale, height - point.y * scale);
-                }
+        let offset = 0;
+        worlds.forEach((world) => {
+            world.sites.forEach((item) => {
+                ctx.beginPath();
+                item.poly.forEach((point, index) => {
+                    if (index === 0) {
+                        ctx.moveTo(point.x * scale, point.y * scale + offset);
+                    } else {
+                        ctx.lineTo(point.x * scale, point.y * scale + offset);
+                    }
+                });
+                ctx.closePath();
+                ctx.fillStyle = zoneColor[item.zone];
+                ctx.fill();
             });
-            ctx.closePath();
-            ctx.fillStyle = zoneColor[item.zone];
-            ctx.fill();
+            offset += world.size.y * scale;
         });
         ctx.fillStyle = "black";
         ctx.font = "16px sans-serif";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        let point = world.starting;
-        let text = translation("Printing Pod");
-        ctx.fillText(text, point.x * scale, height - point.y * scale);
-        world.geysers.forEach((item) => {
-            const w = 5 * scale;
-            const h = 5 * scale;
-            const x = item.pos.x * scale;
-            const y = height - item.pos.y * scale;
-            ctx.strokeRect(x - w / 2, y - h, w, h);
-            ctx.fillText(translation(item.desc.name), x, y);
+        const startBaseName = ["Printing Pod", "Secondary Asteroid Base", ""];
+        offset = 0;
+        worlds.forEach((world) => {
+            let point = world.starting;
+            let text = translation(startBaseName.at(world.type)!);
+            ctx.fillText(text, point.x * scale, point.y * scale + offset);
+            world.geysers.forEach((item) => {
+                const w = 5 * scale;
+                const h = 5 * scale;
+                const x = item.pos.x * scale;
+                const y = item.pos.y * scale + offset;
+                ctx.strokeRect(x - w / 2, y - h, w, h);
+                ctx.fillText(translation(item.desc.name), x, y);
+            });
+            offset += world.size.y * scale;
         });
-    }, [world, language, theme]);
+    }, [worlds, language, theme]);
     return (
         <Col>
             <Card className="world-canvas-container">
@@ -323,24 +335,16 @@ const WorldCanvas = ({ world, theme }: { world: World; theme: number }) => {
     );
 };
 
-const emptyWorld: World = {
-    size: { x: 0, y: 0 },
-    starting: { x: 0, y: 0 },
-    traits: [],
-    sites: [],
-    geysers: [],
-};
-
 const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
     const [show, setShow] = useState(false);
-    const [world, setWorld] = useState(emptyWorld);
+    const [worlds, setWorlds] = useState(new Array<World>());
     const [theme, setTheme] = useState(0);
     const language = useContext(LanguageContext);
     const translation = useTranslation();
     useEffect(() => {
         if (Module.wasm !== undefined) return;
         Module.wasm = null;
-        Module.world = world;
+        Module.worlds = [];
         Module.onRuntimeInitialized = () => {
             Module.app_init();
             setShow(false);
@@ -369,6 +373,7 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
                 .catch((reason) => console.log("fetch error: " + reason));
         });
     }, []);
+    const onSetWorlds = () => setWorlds([...Module.worlds]);
     const switchTheme = () => {
         const expect = theme ? "light" : "dark";
         setTheme(theme ? 0 : 1);
@@ -378,7 +383,7 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
         <>
             <Navbar className="bg-body-tertiary justify-content-between">
                 <Container>
-                    <ToolBar onSetWorld={() => setWorld({ ...Module.world })} />
+                    <ToolBar onSetWorld={onSetWorlds} />
                     <Stack direction="horizontal" gap={3}>
                         <Dropdown>
                             <Dropdown.Toggle>{"En/中"}</Dropdown.Toggle>
@@ -405,14 +410,18 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
                             target="_blank"
                             className="header-github-link"
                         />
-                        <span>v1.0.1</span>
+                        <span>v1.0.2</span>
                     </Stack>
                 </Container>
             </Navbar>
             <Container>
                 <Row>
-                    <WorldInfo world={world} />
-                    <WorldCanvas world={world} theme={theme} />
+                    <Col lg={12} xl={6}>
+                        {worlds.map((world) => (
+                            <WorldInfo world={world} />
+                        ))}
+                    </Col>
+                    <WorldCanvas worlds={worlds} theme={theme} />
                 </Row>
             </Container>
             <Modal

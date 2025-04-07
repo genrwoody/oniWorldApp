@@ -82,7 +82,7 @@ public:
     }
 
     bool Generate(const std::string &code);
-    void SetReault(int seed, WorldGen &worldGen,
+    void SetReault(int seed, int worldType, WorldGen &worldGen,
                    std::vector<const WorldTrait *> &traits);
 };
 
@@ -103,12 +103,22 @@ bool App::Generate(const std::string &code)
         itr->second.locationType = worldPlacement.locationType;
         worlds.push_back(&itr->second);
     }
+    if (worlds.size() == 1) {
+        worlds[0]->locationType = LocationType::StartWorld;
+    }
     m_settings.DoSubworldMixing(worlds);
     int seed = m_settings.seed;
+    bool genWarpWorld = code.find("M-") == 0;
     for (size_t i = 0; i < worlds.size(); ++i) {
         auto world = worlds[i];
-        if (worlds.size() > 1 &&
-            world->locationType != LocationType::StartWorld) {
+        int worldType = 1; // second world
+        if (world->locationType == LocationType::Cluster) {
+            continue;
+        } else if (world->locationType == LocationType::StartWorld) {
+            worldType = 0;
+        } else if (!world->startingBaseTemplate.contains("::bases/warpworld")) {
+            continue; // other inner cluster
+        } else if (!genWarpWorld) {
             continue;
         }
         m_settings.seed = seed + i;
@@ -121,18 +131,20 @@ bool App::Generate(const std::string &code)
             LogE("generate overworld failed.");
             return false;
         }
-        SetReault(seed, worldGen, traits);
-        break;
+        SetReault(seed, worldType, worldGen, traits);
     }
     return true;
 }
 
-void App::SetReault(int seed, WorldGen &worldGen,
+void App::SetReault(int seed, int worldType, WorldGen &worldGen,
                     std::vector<const WorldTrait *> &traits)
 {
     // 0 starting base, 1 traits, 2 geysers, 3 polygons, 4 world size
     Vector2i starting = worldGen.GetStarting();
-    jsSetGeyserInfo(RT_Starting, 0, (size_t)&starting);
+    Vector2i worldSize = worldGen.GetWorldSize();
+    starting.y = worldSize.y - starting.y;
+    jsSetGeyserInfo(RT_Starting, worldType, (size_t)&starting);
+    jsSetGeyserInfo(RT_WorldSize, 0, (size_t)&worldSize);
     std::vector<int> result;
     for (auto &item : traits) {
         uint32_t index = 0;
@@ -150,7 +162,7 @@ void App::SetReault(int seed, WorldGen &worldGen,
     seed += (int)m_settings.cluster->worldPlacements.size() - 1;
     auto geysers = worldGen.GetGeysers(seed);
     for (auto &item : geysers) {
-        result.insert(result.end(), {item.z, item.x, item.y});
+        result.insert(result.end(), {item.z, item.x, worldSize.y - item.y});
     }
     jsSetGeyserInfo(RT_Geyser, (uint32_t)result.size(), (size_t)result.data());
     result.clear();
@@ -160,12 +172,10 @@ void App::SetReault(int seed, WorldGen &worldGen,
         result.push_back((int)item.polygon.Vertices.size());
         for (auto &vex : item.polygon.Vertices) {
             result.push_back(vex.x);
-            result.push_back(vex.y);
+            result.push_back(worldSize.y - vex.y);
         }
     }
     jsSetGeyserInfo(RT_Polygon, (uint32_t)result.size(), (size_t)result.data());
-    Vector2i worldSize = worldGen.GetWorldSize();
-    jsSetGeyserInfo(RT_WorldSize, 0, (size_t)&worldSize);
 }
 
 extern "C" void EMSCRIPTEN_KEEPALIVE app_init()
@@ -225,7 +235,7 @@ void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data)
         "高温污氧喷孔", "含菌污氧喷孔", "氯气喷孔",     "天然气喷孔",
         "铜火山",       "铁火山",       "金火山",       "铝火山",
         "钴火山",       "渗油裂缝",     "液硫泉",       "钨火山",
-        "铌火山",       "打印仓",       "储油石",       "输出端",
+        "铌火山",       "打印舱",       "储油石",       "输出端",
         "输入端",       "传送器",       "低温箱"};
     const char *traits[] = {
         "坠毁的卫星群", "冰封之友",   "不规则的原油区",   "繁茂核心",
@@ -233,7 +243,7 @@ void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data)
         "大型石块",     "中型石块",   "混合型石块",       "小型石块",
         "被圈闭的原油", "冰冻核心",   "活跃性地质",       "晶洞",
         "休眠性地质",   "大型冰川",   "不规则的原油区",   "岩浆通道",
-        "金属贫瘠",     "金属富足",   "备选的打印仓位置", "粘液菌团",
+        "金属贫瘠",     "金属富足",   "备选的打印舱位置", "粘液菌团",
         "地下海洋",     "火山活跃"};
     switch (type) {
     default:

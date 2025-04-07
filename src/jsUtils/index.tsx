@@ -10,15 +10,23 @@ const enum ResultType {
 }
 
 Module.updateWorld = (type: number, count: number, data: number) => {
-    const world = Module.world;
     let offset = data >> 2;
     switch (type) {
-        case ResultType.RT_Starting:
-            world.starting.x = Module.HEAP32[offset++];
-            world.starting.y = Module.HEAP32[offset++];
+        case ResultType.RT_Starting: {
+            const x = Module.HEAP32[offset++];
+            const y = Module.HEAP32[offset++];
+            Module.worlds.push({
+                type: count,
+                starting: { x: x, y: y },
+                size: { x: 0, y: 0 },
+                traits: [],
+                geysers: [],
+                sites: [],
+            });
             break;
-        case ResultType.RT_Trait:
-            world.traits.length = 0;
+        }
+        case ResultType.RT_Trait: {
+            const world = Module.worlds.at(-1)!;
             if (count === 0) {
                 world.traits.push(0);
             } else {
@@ -27,8 +35,9 @@ Module.updateWorld = (type: number, count: number, data: number) => {
                 }
             }
             break;
+        }
         case ResultType.RT_Geyser: {
-            world.geysers.length = 0;
+            const world = Module.worlds.at(-1)!;
             const end = offset + count;
             while (offset < end) {
                 const index = Module.HEAP32[offset++];
@@ -44,7 +53,7 @@ Module.updateWorld = (type: number, count: number, data: number) => {
             break;
         }
         case ResultType.RT_Polygon: {
-            world.sites.length = 0;
+            const world = Module.worlds.at(-1)!;
             const end = offset + count;
             while (offset < end) {
                 const zone = Module.HEAP32[offset++];
@@ -59,10 +68,12 @@ Module.updateWorld = (type: number, count: number, data: number) => {
             }
             break;
         }
-        case ResultType.RT_WorldSize:
+        case ResultType.RT_WorldSize: {
+            const world = Module.worlds.at(-1)!;
             world.size.x = Module.HEAP32[offset++];
             world.size.y = Module.HEAP32[offset++];
             break;
+        }
         case ResultType.RT_Resource:
             if (Module.data!.length === count) {
                 Module.HEAPU8.set(Module.data!, data);

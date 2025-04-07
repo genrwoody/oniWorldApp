@@ -1,5 +1,6 @@
 import hashlib
 import shutil
+import re
 import os
 
 
@@ -19,9 +20,21 @@ def copy_with_hash(filepath):
     return copyname
 
 
+def remove_old_files():
+    regex = re.compile(r"^\w+: \"(.+)\",$")
+    with open("WasmFiles.ts", "r") as stm:
+        for line in stm:
+            matchs = regex.match(line.strip())
+            if matchs and os.path.exists(matchs[1]):
+                print("remove old file: " + matchs[1])
+                os.remove(matchs[1])
+
+
 def main():
-    typescript = """
-export const WasmFiles = {{
+    if os.path.exists("WasmFiles.ts"):
+        remove_old_files()
+    shutil.copy("oniWorldApp.wasm", "wasm.bin")
+    typescript = """export const WasmFiles = {{
     launcher: "{}",
     wasm: "{}",
     data: "{}",
