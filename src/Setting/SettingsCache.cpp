@@ -23,7 +23,7 @@ static bool LoadJsonFile(mz_zip_archive &zip, int index, T &result)
     size_t size;
     char *ptr = (char *)mz_zip_reader_extract_to_heap(&zip, index, &size, 0);
     if (!ptr) {
-        printf("can not open file %d.\n", index);
+        LogE("can not open file %d.", index);
         return false;
     }
     Json::CharReaderBuilder builder;
@@ -34,11 +34,11 @@ static bool LoadJsonFile(mz_zip_archive &zip, int index, T &result)
     auto ret = reader->parse(ptr, ptr + size, &root, &errs);
     mz_free(ptr);
     if (!ret) {
-        printf("parse %d failed, error: %s.\n", index, errs.c_str());
+        LogE("parse %d failed, error: %s.", index, errs.c_str());
         return false;
     }
     if (!Setting::deserialize(root, result)) {
-        printf("deserialize failed, file: %d\n", index);
+        LogE("deserialize failed, file: %d", index);
         return false;
     }
     return true;
@@ -75,7 +75,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
     }
     mz_zip_archive zip = {0};
     if (!mz_zip_reader_init_mem(&zip, content.data(), content.size(), 0)) {
-        printf("error: %s:%d\n", __func__, __LINE__);
+        LogE("wrong content");
         return false;
     }
     std::map<std::string, std::vector<std::string>> Asubworlds;
@@ -83,7 +83,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
     for (unsigned i = 0; i < count; ++i) {
         mz_zip_archive_file_stat stat;
         if (!mz_zip_reader_file_stat(&zip, i, &stat)) {
-            printf("Failed to get file stat for file index: %d\n", i);
+            LogE("Failed to get file stat for file index: %d", i);
             continue;
         }
         if (mz_zip_reader_is_file_a_directory(&zip, i)) {
@@ -209,7 +209,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             templt.name = key;
             continue;
         }
-        printf("error: %s, unknown file: %s\n", __func__, stat.m_filename);
+        LogE("unknown file: %s", stat.m_filename);
     }
     mz_zip_end(&zip);
     for (auto &pair : Asubworlds) {
@@ -318,14 +318,15 @@ void SettingsCache::ParseAndApplyMixingSettingsCode(const std::string &code)
     }
 }
 
-std::vector<WorldTrait *> SettingsCache::GetRandomTraits(World &world)
+std::vector<const WorldTrait *>
+SettingsCache::GetRandomTraits(World &world) const
 {
     if (seed == 0 || world.disableWorldTraits ||
         world.worldTraitRules.empty()) {
         return {};
     }
     KRandom kRandom(seed);
-    std::vector<WorldTrait *> total;
+    std::vector<const WorldTrait *> total;
     for (auto &pair : traits) {
         if (pair.first[0] == 't') {
             if (IsSpaceOutEnabled() && pair.second.ForbiddenSpaceOut()) {
@@ -339,7 +340,7 @@ std::vector<WorldTrait *> SettingsCache::GetRandomTraits(World &world)
             total.push_back(&pair.second);
         }
     }
-    std::vector<WorldTrait *> result;
+    std::vector<const WorldTrait *> result;
     std::vector<std::string> names;
     std::set<std::string> except;
     for (auto &rule : world.worldTraitRules) {
@@ -348,7 +349,7 @@ std::vector<WorldTrait *> SettingsCache::GetRandomTraits(World &world)
                 names.emplace_back(specificTrait);
             }
         }
-        std::vector<WorldTrait *> subtotal;
+        std::vector<const WorldTrait *> subtotal;
         for (auto &trait : total) {
             if (!rule.requiredTags.empty() &&
                 !std::ranges::all_of(
@@ -401,8 +402,8 @@ std::vector<WorldTrait *> SettingsCache::GetRandomTraits(World &world)
             subtotal.erase(subtotal.begin() + index);
         }
         if ((int)names.size() != count + num) {
-            printf("TraitRule on %s tried to generate %d but only generated %d",
-                   world.name.c_str(), num, (int)names.size() - count);
+            LogI("TraitRule on %s tried to generate %d but only generated %d",
+                 world.name.c_str(), num, (int)names.size() - count);
         }
     }
     return result;

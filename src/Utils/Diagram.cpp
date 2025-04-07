@@ -26,7 +26,6 @@ static void PolyForRandomPoints(std::vector<Vector2f> &verts)
     }
     std::vector<Vector2f> result;
     if (area < 0.0) {
-        printf("area < 0;\n");
         for (auto itr = Points.rbegin(); itr != Points.rend(); ++itr) {
             result.emplace_back(**itr);
         }

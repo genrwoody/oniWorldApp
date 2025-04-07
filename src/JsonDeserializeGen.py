@@ -24,7 +24,7 @@ class JsonSerializeGenerater:
             if self.scope == 1:
                 self.output += """
         if (value.size() != count) {{
-            printf("object {} parse failed.\\n");
+            LogE("object {} parse failed.");
             return false;
         }}
         return true;
@@ -37,7 +37,7 @@ class JsonSerializeGenerater:
         }};
         auto itr = dict.find(name);
         if (itr == dict.end()) {{
-            printf("enum {}::%s parse failed.\\n", name.c_str());
+            LogE("enum {}::%s parse failed.", name.c_str());
             return false;
         }}
         obj = itr->second;

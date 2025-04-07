@@ -66,7 +66,7 @@ public:
     bool LoadSettingsCache(const std::string_view &content);
     bool CoordinateChanged(const std::string &text, SettingsCache &settings);
     bool IsSpaceOutEnabled() const { return (m_dlcState & 1) == 1; }
-    std::vector<WorldTrait *> GetRandomTraits(World &world);
+    std::vector<const WorldTrait *> GetRandomTraits(World &world) const;
     void DoSubworldMixing(std::vector<World *> worlds);
     static uint32_t Base36ToBinary(const std::string &input);
     static std::string BinaryToBase36(uint32_t input);
@@ -83,7 +83,7 @@ public:
         }
         auto itr = defaults.data.find(key);
         if (itr == defaults.data.end()) {
-            printf("Can not get value for '%s'.", key.c_str());
+            LogE("Can not get value for '%s'.", key.c_str());
             return std::get<T>(nil);
         }
         return std::get<T>(itr->second);

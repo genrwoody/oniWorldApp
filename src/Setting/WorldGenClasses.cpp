@@ -47,9 +47,9 @@ bool WorldTrait::IsValid(const World &world) const
         num2 += (int)floor(world.worldTraitScale * globalFeatureMod.second);
     }
     if (globalFeatureMods.size() > 0 && num2 == 0) {
-        printf("Trait %s cannot be applied to world %s due to globalFeatureMods"
-               " and worldTraitScale resulting in no features being generated.",
-               name.c_str(), world.name.c_str());
+        LogE("Trait %s cannot be applied to world %s due to globalFeatureMods"
+             " and worldTraitScale resulting in no features being generated.",
+             name.c_str(), world.name.c_str());
         return false;
     }
     return true;

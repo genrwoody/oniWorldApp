@@ -79,7 +79,7 @@ struct Deserializer<std::vector<T>> {
             count += Deserializer<T>::deserialize(item, tmp) ? 1 : 0;
         }
         if (value.size() != count) {
-            printf("object std::vector parse failed.\n");
+            LogE("object std::vector parse failed.");
             return false;
         }
         return true;
@@ -97,7 +97,7 @@ struct Deserializer<std::map<std::string, T>> {
             count += Deserializer<T>::deserialize(*itr, obj[key]) ? 1 : 0;
         }
         if (value.size() != count) {
-            printf("object std::map parse failed.\n");
+            LogE("object std::map parse failed.");
             return false;
         }
         return true;
@@ -140,7 +140,7 @@ struct Deserializer<Vector2f> {
             count += Setting::deserialize(*ptr, obj.y) ? 1 : 0;
 
         if (value.size() != count) {
-            printf("object Vector2f parse failed.\n");
+            LogE("object Vector2f parse failed.");
             return false;
         }
         return true;
@@ -161,7 +161,7 @@ struct Deserializer<ComposableDictionary<T>> {
             count += Setting::deserialize(*ptr, obj.remove) ? 1 : 0;
 
         if (value.size() != count) {
-            printf("object ComposableDictionary parse failed.\n");
+            LogE("object ComposableDictionary parse failed.");
             return false;
         }
         return true;

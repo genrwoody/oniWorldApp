@@ -82,7 +82,8 @@ public:
     }
 
     bool Generate(const std::string &code);
-    void SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits);
+    void SetReault(int seed, WorldGen &worldGen,
+                   std::vector<const WorldTrait *> &traits);
 };
 
 bool App::Generate(const std::string &code)
@@ -103,12 +104,14 @@ bool App::Generate(const std::string &code)
         worlds.push_back(&itr->second);
     }
     m_settings.DoSubworldMixing(worlds);
+    int seed = m_settings.seed;
     for (size_t i = 0; i < worlds.size(); ++i) {
         auto world = worlds[i];
         if (worlds.size() > 1 &&
             world->locationType != LocationType::StartWorld) {
             continue;
         }
+        m_settings.seed = seed + i;
         auto traits = m_settings.GetRandomTraits(*world);
         for (auto trait : traits) {
             world->ApplayTraits(*trait, m_settings);
@@ -118,13 +121,14 @@ bool App::Generate(const std::string &code)
             LogE("generate overworld failed.");
             return false;
         }
-        SetReault(worldGen, traits);
+        SetReault(seed, worldGen, traits);
         break;
     }
     return true;
 }
 
-void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
+void App::SetReault(int seed, WorldGen &worldGen,
+                    std::vector<const WorldTrait *> &traits)
 {
     // 0 starting base, 1 traits, 2 geysers, 3 polygons, 4 world size
     Vector2i starting = worldGen.GetStarting();
@@ -143,8 +147,7 @@ void App::SetReault(WorldGen &worldGen, std::vector<WorldTrait *> &traits)
     }
     jsSetGeyserInfo(RT_Trait, (uint32_t)result.size(), (size_t)result.data());
     result.clear();
-    int seed = m_settings.seed - 1;
-    seed += (int)m_settings.cluster->worldPlacements.size();
+    seed += (int)m_settings.cluster->worldPlacements.size() - 1;
     auto geysers = worldGen.GetGeysers(seed);
     for (auto &item : geysers) {
         result.insert(result.end(), {item.z, item.x, item.y});
@@ -215,7 +218,7 @@ int main()
 
 void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data)
 {
-    const char *configs[] = {
+    const char *geysers[] = {
         "低温蒸汽喷孔", "蒸汽喷孔",     "清水泉",       "低温泥浆泉",
         "污水泉",       "低温盐泥泉",   "盐水泉",       "小型火山",
         "火山",         "二氧化碳泉",   "二氧化碳喷孔", "氢气喷孔",
@@ -224,13 +227,28 @@ void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data)
         "钴火山",       "渗油裂缝",     "液硫泉",       "钨火山",
         "铌火山",       "打印仓",       "储油石",       "输出端",
         "输入端",       "传送器",       "低温箱"};
+    const char *traits[] = {
+        "坠毁的卫星群", "冰封之友",   "不规则的原油区",   "繁茂核心",
+        "金属洞穴",     "放射性地壳", "地下海洋",         "火山活跃",
+        "大型石块",     "中型石块",   "混合型石块",       "小型石块",
+        "被圈闭的原油", "冰冻核心",   "活跃性地质",       "晶洞",
+        "休眠性地质",   "大型冰川",   "不规则的原油区",   "岩浆通道",
+        "金属贫瘠",     "金属富足",   "备选的打印仓位置", "粘液菌团",
+        "地下海洋",     "火山活跃"};
     switch (type) {
     default:
         break;
     case RT_Starting:
         break;
-    case RT_Trait:
+    case RT_Trait: {
+        auto ptr = (uint32_t *)data;
+        auto end = ptr + count;
+        while (ptr < end) {
+            auto index = *ptr++;
+            LogI("%s", traits[index]);
+        }
         break;
+    }
     case RT_Geyser: {
         auto ptr = (uint32_t *)data;
         auto end = ptr + count;
@@ -238,7 +256,7 @@ void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data)
             auto index = *ptr++;
             auto x = *ptr++;
             auto y = *ptr++;
-            LogI("%s: %d, %d", configs[index], x, y);
+            LogI("%s: %d, %d", geysers[index], x, y);
         }
         break;
     }
