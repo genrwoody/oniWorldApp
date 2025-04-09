@@ -1,30 +1,36 @@
 # oniWorldApp
-生成缺氧世界的间歇泉信息.
 
-## 构建
-需要的工具:
-- pc版: msvc, cmake, python
-```sh
-cmake --preset=x86-release
-cmake --build out/build/x86-release
-# run
-./out/build/x86-release/src/oniWorldApp
-```
-- web版: emsdk, cmake, python, node.js, yarn, emsdk中带有python和node.js
+English | [简体中文](./README.zh-CN.md)
+
+## Introduction
+Generate world for the game [Oxygen Not Included](https://www.klei.com/games/oxygen-not-included).  
+You can try it on the [website](https://genrwoody.neocities.org/oni-map/index.html).
+
+## Build
+Prerequisites: emsdk, cmake, python, node.js, yarn, the emsdk include python and node.js.
 ```sh
 cmake --preset=wasm-release
 cmake --build out/build/wasm-release
 yarn install
 yarn run build
 ```
-或者debug
+or debug
 ```sh
 cmake --preset=wasm-debug
-cmake --build out/build/wasm-release
+cmake --build out/build/wasm-debug
 yarn install
 yarn run start
 ```
+or x86 target
+```sh
+cmake --preset=x86-release
+cmake --build out/build/x86-release
+# run
+./out/build/x86-release/src/oniWorldApp
+```
 
-## license
-MIT, 第三方库见[3rdparyt](./3rdparty/README.md), 以及[科雷](https://www.klei.com/), [缺氧](https://www.klei.com/games/oxygen-not-included)
+## License
+This project is licensed under the [MIT License](./LICENSE).  
+Third party libraries and their [licenses](./3rdparty/README.md).  
+And [Klei](https://www.klei.com), [Oxygen Not Included](https://www.klei.com/games/oxygen-not-included)
 

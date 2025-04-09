@@ -6,8 +6,8 @@
     "author": "woody",
     "license": "MIT",
     "scripts": {
-        "start": "webpack-dev-server --open --hot --mode=development",
-        "build": "webpack --mode=production"
+        "start": "webpack serve --open --hot --mode=development",
+        "build": "webpack serve --open --mode=production"
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",

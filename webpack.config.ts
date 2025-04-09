@@ -27,6 +27,7 @@ export default (
             ],
         },
         output: {
+            clean: true,
             path: path.resolve(__dirname, "out/html"),
             filename: "bundle-[contenthash:8].js",
         },
