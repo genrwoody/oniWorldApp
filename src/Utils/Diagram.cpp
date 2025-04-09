@@ -8,14 +8,67 @@
 
 constexpr float EPSILON = std::numeric_limits<float>::denorm_min();
 
+static Vector2f GetDualPoint(ConvexFace<Site> &face)
+{
+    if (!face.dualPoint.has_value()) {
+        auto &Vertices = face.Vertices;
+        Vector3d vec1(Vertices[0]->x, Vertices[0]->y, Vertices[0]->z);
+        Vector3d vec2(Vertices[1]->x, Vertices[1]->y, Vertices[1]->z);
+        Vector3d vec3(Vertices[2]->x, Vertices[2]->y, Vertices[2]->z);
+        double num1 = vec1.y * (vec2.z - vec3.z) + vec2.y * (vec3.z - vec1.z) +
+                      vec3.y * (vec1.z - vec2.z);
+        double num2 = vec1.z * (vec2.x - vec3.x) + vec2.z * (vec3.x - vec1.x) +
+                      vec3.z * (vec1.x - vec2.x);
+        double num3 = vec1.x * (vec2.y - vec3.y) + vec2.x * (vec3.y - vec1.y) +
+                      vec3.x * (vec1.y - vec2.y);
+        num3 = -0.5 / num3;
+        face.dualPoint.emplace((float)(num1 * num3), (float)(num2 * num3));
+    }
+    return face.dualPoint.value();
+}
+
+inline static double Det(Vector3d *m)
+{
+    return m[0].x * (m[1].y * m[2].z - m[2].y * m[1].z) -
+           m[0].y * (m[1].x * m[2].z - m[2].x * m[1].z) +
+           m[0].z * (m[1].x * m[2].y - m[2].x * m[1].y);
+}
+
+inline static double LengthSquared(double x, double y) { return x * x + y * y; }
+
+static Vector2f GetCircumcenter(ConvexFace<Site> &face)
+{
+    if (!face.circumcenter.has_value()) {
+        auto &Vertices = face.Vertices;
+        Vector3d data[3];
+        for (int i = 0; i < 3; i++) {
+            data[i].x = Vertices[i]->x;
+            data[i].y = Vertices[i]->y;
+            data[i].z = 1.0;
+        }
+        double num = Det(data);
+        double num2 = -1.0 / (2.0 * num);
+        for (int j = 0; j < 3; j++) {
+            data[j].x = LengthSquared(Vertices[j]->x, Vertices[j]->y);
+        }
+        double num3 = 0.0 - Det(data);
+        for (int k = 0; k < 3; k++) {
+            data[k].y = Vertices[k]->x;
+        }
+        double num4 = Det(data);
+        face.circumcenter.emplace((float)(num2 * num3), (float)(num2 * num4));
+    }
+    return face.circumcenter.value();
+}
+
 static void PolyForRandomPoints(std::vector<Vector2f> &verts)
 {
     if (verts.empty()) {
         return;
     }
     ConvexHull hull;
-    hull.Create2D(verts);
-    auto &Points = *(std::vector<Vector2f *> *)&hull.Points;
+    auto hullResult = hull.Create2D(verts);
+    auto &Points = hullResult.Points;
     double area = 0.0;
     int count = Points.size();
     for (int i = 0; i < count; i++) {
@@ -37,7 +90,7 @@ static void PolyForRandomPoints(std::vector<Vector2f> &verts)
     verts.swap(result);
 }
 
-static bool ContainsVert(const ConvexFace *face, const Site *target)
+static bool ContainsVert(const ConvexFace<Site> *face, const Site *target)
 {
     if (face == nullptr || target == nullptr) {
         return false;
@@ -50,7 +103,7 @@ static bool ContainsVert(const ConvexFace *face, const Site *target)
     return false;
 }
 
-static Edge GetEdge(ConvexFace &face0, ConvexFace &face1)
+static Edge GetEdge(ConvexFace<Site> &face0, ConvexFace<Site> &face1)
 {
     Edge edge;
     for (int i = 0; i < 3; i++) {
@@ -67,11 +120,11 @@ static Edge GetEdge(ConvexFace &face0, ConvexFace &face1)
     return edge;
 }
 
-static void TouchingFaces(Site *site, ConvexFace &startingFace,
-                          std::vector<ConvexFace *> &result)
+static void TouchingFaces(Site *site, ConvexFace<Site> &startingFace,
+                          std::vector<ConvexFace<Site> *> &result)
 {
     result.clear();
-    std::stack<ConvexFace *> stack;
+    std::stack<ConvexFace<Site> *> stack;
     stack.push(&startingFace);
     while (!stack.empty()) {
         auto convexFaceExt = stack.top();
@@ -89,11 +142,11 @@ static void TouchingFaces(Site *site, ConvexFace &startingFace,
     }
 }
 
-static std::vector<Site *> GenerateNeighbors(Site *site, ConvexFace &startFace)
+static std::vector<Site *> GenerateNeighbors(Site *site, ConvexFace<Site> &startFace)
 {
     std::vector<Site *> list;
-    std::vector<ConvexFace *> list2;
-    std::stack<ConvexFace *> stack;
+    std::vector<ConvexFace<Site> *> list2;
+    std::stack<ConvexFace<Site> *> stack;
     stack.push(&startFace);
     while (!stack.empty()) {
         auto convexFaceExt = stack.top();
@@ -189,10 +242,10 @@ bool Diagram::ComputeNode()
 bool Diagram::ComputeVD()
 {
     ConvexHull hull;
-    hull.CreateDelaunay(m_sites);
-    std::vector<ConvexFace *> roundFaces;
-    for (auto &cell : hull.Faces) {
-        cell.GetCircumcenter();
+    auto hullResult = hull.CreateDelaunay(m_sites);
+    std::vector<ConvexFace<Site> *> roundFaces;
+    for (auto &cell : hullResult.Faces) {
+        GetCircumcenter(cell);
         for (auto site : cell.Vertices) {
             if (site->dummy || site->visited) {
                 continue;
@@ -201,7 +254,7 @@ bool Diagram::ComputeVD()
             site->polygon.Clear();
             TouchingFaces(site, cell, roundFaces);
             for (auto item : roundFaces) {
-                auto center = item->GetCircumcenter();
+                auto center = GetCircumcenter(*item);
                 site->polygon.Vertices.emplace_back(center);
             }
             PolyForRandomPoints(site->polygon.Vertices);
@@ -218,9 +271,9 @@ bool Diagram::ComputeVD()
 bool Diagram::ComputePD()
 {
     ConvexHull hull;
-    hull.Create(m_sites);
-    std::vector<ConvexFace *> roundFaces;
-    for (auto &face : hull.Faces) {
+    auto hullResult= hull.Create(m_sites);
+    std::vector<ConvexFace<Site> *> roundFaces;
+    for (auto &face : hullResult.Faces) {
         if (face.Normal[2] >= -EPSILON) {
             continue;
         }
@@ -234,7 +287,7 @@ bool Diagram::ComputePD()
             TouchingFaces(site, face, roundFaces);
             site->neighbours = GenerateNeighbors(site, face);
             for (auto item : roundFaces) {
-                auto center = item->GetDualPoint();
+                auto center = GetDualPoint(*item);
                 site->polygon.Vertices.emplace_back(center);
             }
             PolyForRandomPoints(site->polygon.Vertices);

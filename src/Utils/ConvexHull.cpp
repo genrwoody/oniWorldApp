@@ -1,57 +1,6 @@
 #include "ConvexHull.hpp"
 
-Vector2f ConvexFace::GetDualPoint()
-{
-    if (!dualPoint.has_value()) {
-        Vector3d vec1(Vertices[0]->x, Vertices[0]->y, Vertices[0]->z);
-        Vector3d vec2(Vertices[1]->x, Vertices[1]->y, Vertices[1]->z);
-        Vector3d vec3(Vertices[2]->x, Vertices[2]->y, Vertices[2]->z);
-        double num1 = vec1.y * (vec2.z - vec3.z) + vec2.y * (vec3.z - vec1.z) +
-                      vec3.y * (vec1.z - vec2.z);
-        double num2 = vec1.z * (vec2.x - vec3.x) + vec2.z * (vec3.x - vec1.x) +
-                      vec3.z * (vec1.x - vec2.x);
-        double num3 = vec1.x * (vec2.y - vec3.y) + vec2.x * (vec3.y - vec1.y) +
-                      vec3.x * (vec1.y - vec2.y);
-        num3 = -0.5 / num3;
-        dualPoint.emplace((float)(num1 * num3), (float)(num2 * num3));
-    }
-    return dualPoint.value();
-}
-
-inline static double Det(Vector3d *m)
-{
-    return m[0].x * (m[1].y * m[2].z - m[2].y * m[1].z) -
-           m[0].y * (m[1].x * m[2].z - m[2].x * m[1].z) +
-           m[0].z * (m[1].x * m[2].y - m[2].x * m[1].y);
-}
-
-inline static double LengthSquared(double x, double y) { return x * x + y * y; }
-
-Vector2f ConvexFace::GetCircumcenter()
-{
-    if (!circumcenter.has_value()) {
-        Vector3d data[3];
-        for (int i = 0; i < 3; i++) {
-            data[i].x = Vertices[i]->x;
-            data[i].y = Vertices[i]->y;
-            data[i].z = 1.0;
-        }
-        double num = Det(data);
-        double num2 = -1.0 / (2.0 * num);
-        for (int j = 0; j < 3; j++) {
-            data[j].x = LengthSquared(Vertices[j]->x, Vertices[j]->y);
-        }
-        double num3 = 0.0 - Det(data);
-        for (int k = 0; k < 3; k++) {
-            data[k].y = Vertices[k]->x;
-        }
-        double num4 = Det(data);
-        circumcenter.emplace((float)(num2 * num3), (float)(num2 * num4));
-    }
-    return circumcenter.value();
-}
-
-void ConvexHull::Create2D(std::vector<Vector2f> &vertices)
+ConvexHullResult<Vector2f> ConvexHull::Create2D(std::vector<Vector2f> &vertices)
 {
     int NumOfDimensions = 2;
     int NumberOfVertices = (int)vertices.size();
@@ -63,10 +12,12 @@ void ConvexHull::Create2D(std::vector<Vector2f> &vertices)
     }
     chAlgo.Initialize(Positions.data(), NumberOfVertices, NumOfDimensions);
     chAlgo.GetConvexHull();
-    Return2DResultInOrder(vertices);
+    ConvexHullResult<Vector2f> result;
+    Get2DResultInOrder(vertices, result);
+    return result;
 }
 
-void ConvexHull::Create(std::vector<Site> &vertices)
+ConvexHullResult<Site> ConvexHull::Create(std::vector<Site> &vertices)
 {
     int NumOfDimensions = 3;
     int NumberOfVertices = (int)vertices.size();
@@ -79,11 +30,13 @@ void ConvexHull::Create(std::vector<Site> &vertices)
     }
     chAlgo.Initialize(Positions.data(), NumberOfVertices, NumOfDimensions);
     chAlgo.GetConvexHull();
-    GetHullVertices(vertices);
-    GetConvexFaces(vertices, false, NumOfDimensions);
+    ConvexHullResult<Site> result;
+    GetHullVertices(vertices, result.Points);
+    GetConvexFaces(vertices, false, NumOfDimensions, result.Faces);
+    return result;
 }
 
-void ConvexHull::CreateDelaunay(std::vector<Site> &vertices)
+ConvexHullResult<Site> ConvexHull::CreateDelaunay(std::vector<Site> &vertices)
 {
     int NumOfDimensions = 3;
     int NumberOfVertices = (int)vertices.size();
@@ -100,10 +53,13 @@ void ConvexHull::CreateDelaunay(std::vector<Site> &vertices)
     chAlgo.Initialize(Positions.data(), NumberOfVertices, NumOfDimensions);
     chAlgo.GetConvexHull();
     chAlgo.RemoveUpperFaces();
-    GetConvexFaces(vertices, true, NumOfDimensions);
+    ConvexHullResult<Site> result;
+    GetConvexFaces(vertices, true, NumOfDimensions, result.Faces);
+    return result;
 }
 
-void ConvexHull::GetHullVertices(std::vector<Site> &vertices)
+void ConvexHull::GetHullVertices(std::vector<Site> &vertices,
+                                 std::vector<Site *> &Points)
 {
     int NumberOfVertices = (int)vertices.size();
     auto hullVertexCount = chAlgo.GetHullVertices();
@@ -117,7 +73,8 @@ void ConvexHull::GetHullVertices(std::vector<Site> &vertices)
 }
 
 template<typename T>
-void ConvexHull::GetConvexFaces(std::vector<T> &vertices, bool lift, int dim)
+void ConvexHull::GetConvexFaces(std::vector<T> &vertices, bool lift, int dim,
+                                std::vector<ConvexFace<T>> &Faces)
 {
     if (dim < 2 || 3 < dim) {
         return;
@@ -132,7 +89,7 @@ void ConvexHull::GetConvexFaces(std::vector<T> &vertices, bool lift, int dim)
         auto &face = FacePool[faces[i]];
         auto &cell = Faces[i];
         for (auto j = 0; j < NumOfDimensions; j++) {
-            cell.Vertices[j] = (Site *)&vertices[face.Vertices[j]];
+            cell.Vertices[j] = &vertices[face.Vertices[j]];
         }
         cell.Normal = lift ? nullptr : face.Normal.data();
         face.Tag = i;
@@ -162,39 +119,36 @@ void ConvexHull::GetConvexFaces(std::vector<T> &vertices, bool lift, int dim)
     }
 }
 
-void ConvexHull::Return2DResultInOrder(std::vector<Vector2f> &data)
+void ConvexHull::Get2DResultInOrder(std::vector<Vector2f> &data,
+                                    ConvexHullResult<Vector2f> &result)
 {
-    GetConvexFaces<Vector2f>(data, true, 2);
+    std::vector<ConvexFace<Vector2f>> Faces;
+    GetConvexFaces<Vector2f>(data, true, 2, Faces);
     int num = Faces.size();
-    std::map<Vector2f *, ConvexFace *> dictionary;
+    std::map<Vector2f *, ConvexFace<Vector2f> *> dictionary;
     for (auto &val : Faces) {
         auto ptr = (Vector2f *)val.Vertices[1];
         dictionary.insert({ptr, &val});
     }
-    auto val2 = (Vector2f *)(Faces[0].Vertices[1]);
-    auto val3 = (Vector2f *)(Faces[0].Vertices[0]);
+    auto val2 = Faces[0].Vertices[1];
+    auto val3 = Faces[0].Vertices[0];
     std::vector<Vector2f *> list;
     list.push_back(val2);
-    std::vector<ConvexFace *> list2;
-    list2.push_back(&Faces[1]);
     int num2 = 0;
     int num3 = 0;
     while (val3 != val2) {
         list.push_back(val3);
         auto val4 = dictionary[val3];
-        list2.push_back(val4);
         if (val3->x < list[num2]->x ||
             (val3->x == list[num2]->x && val3->y <= list[num2]->y)) {
             num2 = num3;
         }
         num3++;
-        val3 = (Vector2f *)(val4->Vertices[0]);
+        val3 = val4->Vertices[0];
     }
-    Points.resize(num);
-    Faces2D.resize(num);
+    result.Points.resize(num);
     for (int j = 0; j < num; j++) {
         int index = (j + num2) % num;
-        Points[j] = (Site *)(list[index]);
-        Faces2D[j] = list2[index];
+        result.Points[j] = list[index];
     }
 }
