@@ -74,14 +74,14 @@ target_link_options(oniWorldApp
     PUBLIC "--pre-js" "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/prefix.js"
     PUBLIC "--js-library" "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/getresult.js")
 add_custom_command(TARGET oniWorldApp POST_BUILD
-    COMMAND ${PYTHON_CMD} "${CMAKE_CURRENT_SOURCE_DIR}/CopyWasmFiles.py"
+    COMMAND ${PYTHON_CMD} "${CMAKE_CURRENT_SOURCE_DIR}/JoinWasmFilesHash.py"
     WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
     VERBATIM
 )
 list(APPEND WASM_LINK_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/prefix.js"
     "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/getresult.js"
-    "${CMAKE_CURRENT_SOURCE_DIR}/CopyWasmFiles.py"
+    "${CMAKE_CURRENT_SOURCE_DIR}/JoinWasmFilesHash.py"
 )
 set_target_properties(oniWorldApp PROPERTIES LINK_DEPENDS "${WASM_LINK_DEPENDS}")
 elseif(MSVC)

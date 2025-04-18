@@ -131,7 +131,7 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
     };
     return (
         <Stack direction="horizontal">
-            <Dropdown>
+            <Dropdown key="category">
                 <Dropdown.Toggle
                     variant="primary"
                     id="category"
@@ -154,7 +154,7 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
                     ))}
                 </Dropdown.Menu>
             </Dropdown>
-            <Dropdown>
+            <Dropdown key="cluster">
                 <Dropdown.Toggle
                     variant="success"
                     id="clusters"
@@ -183,6 +183,7 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
                     onSetActive={(active) => setMixings(active)}
                 />
                 <Form.Control
+                    id="seed"
                     type="text"
                     value={seed}
                     placeholder={translation("Worldgen Seed")}
@@ -197,6 +198,7 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
                     }}
                 />
                 <Button
+                    key="reroll"
                     onClick={() => {
                         let nseed = Math.random() * 32768;
                         nseed = nseed * (Math.random() * 32768);
@@ -210,6 +212,7 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
                     {translation("Reroll")}
                 </Button>
                 <Button
+                    key="copy"
                     onClick={() => {
                         const name = configuration.cluster[cluster].key;
                         const mix = toBase36(mixings);
@@ -342,6 +345,9 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
     const language = useContext(LanguageContext);
     const translation = useTranslation();
     useEffect(() => {
+        document.title = translation("ONI World Generator");
+    }, [language]);
+    useEffect(() => {
         if (Module.wasm !== undefined) return;
         Module.wasm = null;
         Module.worlds = [];
@@ -372,6 +378,9 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
                 })
                 .catch((reason) => console.log("fetch error: " + reason));
         });
+        //if ("serviceWorker" in navigator) {
+        //    navigator.serviceWorker.register("./serviceworker.js");
+        //}
     }, []);
     const onSetWorlds = () => setWorlds([...Module.worlds]);
     const switchTheme = () => {
@@ -409,16 +418,17 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
                             href="https://github.com/genrwoody/oniWorldApp"
                             target="_blank"
                             className="header-github-link"
+                            title={translation("Open on GitHub")}
                         />
-                        <span>v1.0.2</span>
+                        <span>v1.0.3</span>
                     </Stack>
                 </Container>
             </Navbar>
             <Container>
                 <Row>
                     <Col lg={12} xl={6}>
-                        {worlds.map((world) => (
-                            <WorldInfo world={world} />
+                        {worlds.map((world, index) => (
+                            <WorldInfo key={index} world={world} />
                         ))}
                     </Col>
                     <WorldCanvas worlds={worlds} theme={theme} />

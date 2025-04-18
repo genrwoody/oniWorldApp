@@ -1,0 +1,16 @@
+{
+    "short_name": "ONI-WG",
+    "name": "ONI World Generator",
+    "description": "Generate world for the game Oxygen Not Included.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "categories": ["games"],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "./128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ]
+}

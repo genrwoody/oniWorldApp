@@ -7,7 +7,7 @@
     "license": "MIT",
     "scripts": {
         "start": "webpack serve --open --hot --mode=development",
-        "build": "webpack serve --open --mode=production"
+        "build": "webpack build --mode=production"
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",

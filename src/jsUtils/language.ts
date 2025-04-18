@@ -6,11 +6,13 @@ interface Languages {
 
 const languages: Languages = {
     "zh-CN": {
+        "ONI World Generator": "缺氧世界生成器",
         "Worldgen Seed": "世界种子",
         Reroll: "刷新",
         Copy: "复制",
         Light: "浅色",
         Dark: "暗黑",
+        "Open on GitHub": "在GitHub上查看源码",
         "Scramble DLCs": "DLC混搭",
         Disable: "禁用",
         Enable: "启用",

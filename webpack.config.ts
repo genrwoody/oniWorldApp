@@ -29,7 +29,7 @@ export default (
         output: {
             clean: true,
             path: path.resolve(__dirname, "out/html"),
-            filename: "bundle-[contenthash:8].js",
+            filename: "bundle.js",
         },
         resolve: {
             extensions: [".tsx", ".ts", ".js"],
@@ -50,8 +50,8 @@ export default (
             }),
             new CopyWebpackPlugin({
                 patterns: [
-                    { from: "oniWorldApp-*.js", context: wasmpath },
-                    { from: "*-*.bin", context: wasmpath },
+                    { from: "oniWorldApp.js", context: wasmpath },
+                    { from: "*.bin", context: wasmpath },
                     { from: "*", context: "public" },
                 ],
             }),
