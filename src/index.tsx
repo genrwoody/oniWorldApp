@@ -254,12 +254,19 @@ const WorldInfo = ({ world }: { world: World }) => {
     );
 };
 
-// prettier-ignore
-const zoneColor = [
-    "#5A6870", "#000080", "#545B42", "#5A4E3C", "#5B5B52", "#D73518", "#56403C",
-    "#000000", "#665A57", "#756763", "#4F593E", "#91888C", "#808000", "#808080",
-    "#8080FF", "#8E7A5C", "#6F5E45", "#80FFFF", "#5D6B76", "#49545C", "#738391",
-];
+const zoneSprite: Array<ImageBitmap> = [];
+const zonePattern: Array<CanvasPattern> = [];
+
+const createZoneSprite = (image: HTMLImageElement) => {
+    const promises = [];
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            const promise = createImageBitmap(image, j * 32, i * 32, 32, 32);
+            promises.push(promise);
+        }
+    }
+    Promise.all(promises).then((sprites) => zoneSprite.push(...sprites));
+};
 
 interface WorldCanvasProps {
     worlds: Array<World>;
@@ -291,6 +298,11 @@ const WorldCanvas = ({ worlds, theme }: WorldCanvasProps) => {
         ctx.fillStyle = theme ? "#212529" : "white";
         ctx.fillRect(0, 0, cvs.width, cvs.height);
         ctx.strokeRect(0, 0, width, height);
+        if (zonePattern.length === 0) {
+            zoneSprite.forEach((sprite) => {
+                zonePattern.push(ctx.createPattern(sprite, "repeat")!);
+            });
+        }
         let offset = 0;
         worlds.forEach((world) => {
             world.sites.forEach((item) => {
@@ -303,7 +315,8 @@ const WorldCanvas = ({ worlds, theme }: WorldCanvasProps) => {
                     }
                 });
                 ctx.closePath();
-                ctx.fillStyle = zoneColor[item.zone];
+                const pattern = zonePattern[item.zone];
+                ctx.fillStyle = pattern;
                 ctx.fill();
             });
             offset += world.size.y * scale;
@@ -378,6 +391,9 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
                 })
                 .catch((reason) => console.log("fetch error: " + reason));
         });
+        const image = new Image();
+        image.onload = () => createZoneSprite(image);
+        image.src = "zones.png?1";
         //if ("serviceWorker" in navigator) {
         //    navigator.serviceWorker.register("./serviceworker.js");
         //}
