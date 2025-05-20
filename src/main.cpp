@@ -8,6 +8,11 @@
 #define EMSCRIPTEN_KEEPALIVE
 #endif
 
+#include <stack>
+#include <algorithm>
+
+#include <clipper.hpp>
+
 #include "config.h"
 #include "Setting/SettingsCache.hpp"
 #include "WorldGen.hpp"
@@ -84,6 +89,7 @@ public:
     bool Generate(const std::string &code);
     void SetReault(int seed, int worldType, WorldGen &worldGen,
                    std::vector<const WorldTrait *> &traits);
+    static Polygon GetZonePolygon(Site &site);
 };
 
 bool App::Generate(const std::string &code)
@@ -167,15 +173,64 @@ void App::SetReault(int seed, int worldType, WorldGen &worldGen,
     jsSetGeyserInfo(RT_Geyser, (uint32_t)result.size(), (size_t)result.data());
     result.clear();
     auto &sites = worldGen.GetSites();
+    std::ranges::for_each(sites, [](Site &site) { site.visited = false; });
     for (auto &item : sites) {
+        if (item.visited) {
+            continue;
+        }
+        auto polygon = GetZonePolygon(item);
         result.push_back((int)item.subworld->zoneType);
-        result.push_back((int)item.polygon.Vertices.size());
-        for (auto &vex : item.polygon.Vertices) {
+        result.push_back((int)polygon.Vertices.size());
+        for (auto &vex : polygon.Vertices) {
             result.push_back(vex.x);
             result.push_back(worldSize.y - vex.y);
         }
     }
     jsSetGeyserInfo(RT_Polygon, (uint32_t)result.size(), (size_t)result.data());
+}
+
+Polygon App::GetZonePolygon(Site &site)
+{
+    ZoneType zoneType = site.subworld->zoneType;
+    ClipperLib::Clipper clipper;
+    std::stack<Site *> stack;
+    stack.push(&site);
+    while (!stack.empty()) {
+        auto top = stack.top();
+        stack.pop();
+        if (top->visited) {
+            continue;
+        }
+        ClipperLib::Path path;
+        for (Vector2f point : top->polygon.Vertices) {
+            point *= 10000.0f;
+            path.emplace_back((int)point.x, (int)point.y);
+        }
+        clipper.AddPath(path, ClipperLib::ptSubject, true);
+        top->visited = true;
+        for (auto neighbour : top->neighbours) {
+            if (neighbour->visited) {
+                continue;
+            }
+            if (neighbour->subworld->zoneType != zoneType) {
+                continue;
+            }
+            stack.push(neighbour);
+        }
+    }
+    ClipperLib::PolyTree polytree;
+    ClipperLib::Paths paths;
+    clipper.Execute(ClipperLib::ctUnion, polytree, ClipperLib::pftEvenOdd);
+    ClipperLib::PolyTreeToPaths(polytree, paths);
+    Polygon polygon;
+    if (!paths.empty()) {
+        auto &path = paths[0];
+        for (auto &item : path) {
+            Vector2f point{(float)item.X, (float)item.Y};
+            polygon.Vertices.emplace_back(point * 0.0001f);
+        }
+    }
+    return polygon;
 }
 
 extern "C" void EMSCRIPTEN_KEEPALIVE app_init()
@@ -193,7 +248,7 @@ extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
         "V-OASIS-C-", "V-CER-C-",   "V-CERS-C-",  "SNDST-C-",  "CER-C-",
         "FRST-C-",    "SWMP-C-",    "M-SWMP-C-",  "M-BAD-C-",  "M-FRZ-C-",
         "M-FLIP-C-",  "M-RAD-C-",   "M-CERS-C-"};
-    if (type < 0 || std::size(worlds) <= type) {
+    if (type < 0 || (int)std::size(worlds) <= type) {
         return false;
     }
     std::string code = worlds[type];
