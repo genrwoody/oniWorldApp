@@ -68,6 +68,7 @@ add_executable(oniWorldApp
     "main.cpp"
 )
 if(EMSCRIPTEN)
+target_compile_options(oniWorldApp PUBLIC "-Wall" "-Wextra" "-Werror")
 target_link_options(oniWorldApp
     PUBLIC "-sALLOW_MEMORY_GROWTH" "-sINITIAL_HEAP=33554432"
     PUBLIC "-sMINIMAL_RUNTIME=1" "-sEXPORTED_RUNTIME_METHODS=[HEAP32,HEAPU8]"

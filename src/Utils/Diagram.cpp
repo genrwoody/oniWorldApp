@@ -399,8 +399,8 @@ bool Diagram::ComputeNodePD()
         m_weightSum += site.weight;
     }
     int j = 1;
-    for (int i = 0; i < m_bounds.Vertices.size(); j++, i++) {
-        if (j == m_bounds.Vertices.size())
+    for (int i = 0; i < (int)m_bounds.Vertices.size(); j++, i++) {
+        if (j == (int)m_bounds.Vertices.size())
             j = 0;
         auto &point1 = m_bounds.Vertices[i];
         auto &point2 = m_bounds.Vertices[j];

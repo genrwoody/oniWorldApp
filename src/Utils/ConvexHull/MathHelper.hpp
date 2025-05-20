@@ -12,7 +12,7 @@ private:
     /// <summary>
     /// The dimension
     /// </summary>
-    size_t Dimension = 0;
+    int Dimension = 0;
 
     /// <summary>
     /// The position data

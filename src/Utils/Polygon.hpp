@@ -6,13 +6,6 @@
 
 #include "Vector2f.hpp"
 
-struct LineSegment {
-    Vector2f p0;
-    Vector2f p1;
-
-    Vector2f Direction() const { return p1 - p0; }
-};
-
 struct Rect {
     float x{};
     float y{};

@@ -13,7 +13,7 @@
 
 template<typename T>
 struct Deserializer {
-    static bool deserialize(const Json::Value &json, T &obj)
+    static bool deserialize(const Json::Value & /*json*/, T & /*obj*/)
     {
         static_assert(false, "unsupport");
     }
@@ -78,7 +78,7 @@ struct Deserializer<std::vector<T>> {
             T &tmp = obj.emplace_back();
             count += Deserializer<T>::deserialize(item, tmp) ? 1 : 0;
         }
-        if (value.size() != count) {
+        if ((int)value.size() != count) {
             LogE("object std::vector parse failed.");
             return false;
         }
@@ -96,7 +96,7 @@ struct Deserializer<std::map<std::string, T>> {
             auto key = itr.name();
             count += Deserializer<T>::deserialize(*itr, obj[key]) ? 1 : 0;
         }
-        if (value.size() != count) {
+        if ((int)value.size() != count) {
             LogE("object std::map parse failed.");
             return false;
         }
@@ -139,7 +139,7 @@ struct Deserializer<Vector2f> {
         if ((ptr = value.find("Y")) != nullptr)
             count += Setting::deserialize(*ptr, obj.y) ? 1 : 0;
 
-        if (value.size() != count) {
+        if ((int)value.size() != count) {
             LogE("object Vector2f parse failed.");
             return false;
         }
@@ -152,7 +152,7 @@ struct Deserializer<ComposableDictionary<T>> {
     static bool deserialize(const Json::Value &value,
                             ComposableDictionary<T> &obj)
     {
-         value.find("ff");
+        value.find("ff");
         int count = 0;
         const Json::Value *ptr = nullptr;
         if ((ptr = value.find("add")) != nullptr)
@@ -160,7 +160,7 @@ struct Deserializer<ComposableDictionary<T>> {
         if ((ptr = value.find("remove")) != nullptr)
             count += Setting::deserialize(*ptr, obj.remove) ? 1 : 0;
 
-        if (value.size() != count) {
+        if ((int)value.size() != count) {
             LogE("object ComposableDictionary parse failed.");
             return false;
         }

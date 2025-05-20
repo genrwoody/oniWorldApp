@@ -24,7 +24,7 @@ struct State {
     std::vector<Vector2f> Points;
 };
 
-constexpr int DefaultPointsPerIteration = 30;
+// constexpr int DefaultPointsPerIteration = 30;
 constexpr float SquareRootTwo = std::numbers::sqrt2_v<float>;
 
 inline static Vector2f Denormalize(const Vector2f &point,

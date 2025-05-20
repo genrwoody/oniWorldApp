@@ -57,7 +57,7 @@ bool WorldGen::GenerateOverworld()
     if (usePD) {
         diagram.ComputeNodePD();
     }
-    for (int i = 0; i < sites.size(); ++i) {
+    for (int i = 0; i < (int)sites.size(); ++i) {
         GenerateChildren(sites[i], random, m_seed + i, usePD);
     }
     auto allSites = ForceLowestToLeaf(sites);
@@ -85,7 +85,7 @@ static std::vector<Site *> ForceLowestToLeaf(std::vector<Site> &sites)
         return {};
     }
     for (auto &site : *startSite->parent->children) {
-        startSite->tags.insert("IgnoreCaveOverride");
+        site.tags.insert("IgnoreCaveOverride");
     }
     for (auto neighbour : startSite->neighbours) {
         neighbour->tags.insert("NearStartLocation");
@@ -370,7 +370,7 @@ void WorldGen::ConvertUnknownCells(std::vector<Site> &sites, KRandom &random)
         }
     }
     ShuffleSeeded(list2, random);
-    for (int i = 0; i < list2.size() && i < globalFeatures.size(); ++i) {
+    for (size_t i = 0; i < list2.size() && i < globalFeatures.size(); ++i) {
         list2[i]->globalFeature = globalFeatures[i];
     }
 }
@@ -583,9 +583,9 @@ void WorldGen::GenerateChildren(Site &site, KRandom &externRrandom, int seed,
         points = GetRandomPoints(boundingArea, density, avoidRadius, position,
                                  subworld.sampleBehaviour, true, random, true,
                                  subworld.doAvoidPoints);
-        if (minPointCount <= points.size()) {
+        if (minPointCount <= (int)points.size()) {
             break;
-        } else if (maxPointCount < points.size()) {
+        } else if (maxPointCount < (int)points.size()) {
             points.resize(maxPointCount);
             break;
         } else {
@@ -604,7 +604,7 @@ void WorldGen::GenerateChildren(Site &site, KRandom &externRrandom, int seed,
     if (points.size() > 200) {
         points.resize(200);
     }
-    for (int i = 0; i < points.size(); ++i) {
+    for (size_t i = 0; i < points.size(); ++i) {
         const Feature *feature = nullptr;
         if (i < subworld.features.size()) {
             feature = &subworld.features[i];
@@ -671,7 +671,7 @@ std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed)
                     continue;
                 }
                 std::string name = item.id.substr(14);
-                for (int index = 0; index < std::size(configs); ++index) {
+                for (int index = 0; index < (int)std::size(configs); ++index) {
                     if (name == configs[index]) {
                         pos.x += item.location_x;
                         pos.y += item.location_y;

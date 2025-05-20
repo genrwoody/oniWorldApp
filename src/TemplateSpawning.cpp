@@ -479,7 +479,7 @@ void TemplateSpawning::DrawWorldBorder()
     if (!GetDefaultData<bool>("DrawWorldBorder")) {
         return;
     }
-    bool force = GetDefaultData<bool>("DrawWorldBorderForce");
+    // bool force = GetDefaultData<bool>("DrawWorldBorderForce");
     int thickness = (int)GetDefaultData<float>("WorldBorderThickness");
     float range = GetDefaultData<float>("WorldBorderRange");
     float mapWidth = (int)m_world.worldsize.x;

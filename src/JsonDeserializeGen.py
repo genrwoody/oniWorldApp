@@ -23,7 +23,7 @@ class JsonSerializeGenerater:
             self.ignore = False
             if self.scope == 1:
                 self.output += """
-        if (value.size() != count) {{
+        if ((int)value.size() != count) {{
             LogE("object {} parse failed.");
             return false;
         }}

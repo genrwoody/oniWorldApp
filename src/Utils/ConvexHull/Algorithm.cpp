@@ -130,10 +130,6 @@ void ConvexHullAlgorithm::GetConvexHull()
     while (FirstUnprocessedFace != nullptr) {
         auto &currentFace = *FirstUnprocessedFace;
         CurrentVertex = currentFace.FurthestVertex;
-        if(CurrentVertex == 83) {
-            int i = 0;
-            i++;
-        }
 
         UpdateCenter();
         // The affected faces get tagged
@@ -147,7 +143,7 @@ void ConvexHullAlgorithm::GetConvexHull()
             HandleSingular();
 
         // Need to reset the tags
-        auto count = AffectedFaceBuffer.size();
+        auto count = (int)AffectedFaceBuffer.size();
         for (auto i = 0; i < count; i++)
             AffectedFaceFlags[AffectedFaceBuffer[i]] = false;
     }
@@ -213,7 +209,7 @@ void ConvexHullAlgorithm::FindBoundingBoxPoints()
         maxima[i] = max;
         minIndices.insert(minIndices.end(), maxIndices.begin(),
                           maxIndices.end());
-        if (minIndices.size() < minNumExtremes) {
+        if ((int)minIndices.size() < minNumExtremes) {
             minNumExtremes = minIndices.size();
             indexOfDimensionWithLeastExtremes = i;
         }
@@ -376,7 +372,7 @@ std::vector<int> ConvexHullAlgorithm::FindInitialPoints()
     // unique points, we start again with ALL the vertices. The following is a
     // near replica of the code above, but instead of extremes, we consider
     // "allVertices".
-    if (initialPoints.size() <= NumOfDimensions && !IsLifted) {
+    if ((int)initialPoints.size() <= NumOfDimensions && !IsLifted) {
         std::vector<int> allVertices(NumberOfVertices);
         std::iota(allVertices.begin(), allVertices.end(), 0);
         while (index < NumOfDimensions && !allVertices.empty()) {
@@ -410,7 +406,7 @@ std::vector<int> ConvexHullAlgorithm::FindInitialPoints()
             UpdateCenter();
         }
     }
-    if (initialPoints.size() <= NumOfDimensions && IsLifted) {
+    if ((int)initialPoints.size() <= NumOfDimensions && IsLifted) {
         /*
         std::vector<int> allVertices(NumberOfVertices);
         std::iota(allVertices.begin(), allVertices.end(), 0);
@@ -555,7 +551,7 @@ bool ConvexHullAlgorithm::CreateCone()
     auto currentVertexIndex = CurrentVertex;
     ConeFaceBuffer.clear();
 
-    for (auto fIndex = 0; fIndex < AffectedFaceBuffer.size(); fIndex++) {
+    for (auto fIndex = 0; fIndex < (int)AffectedFaceBuffer.size(); fIndex++) {
         auto oldFaceIndex = AffectedFaceBuffer[fIndex];
         auto &oldFace = FacePool[oldFaceIndex];
 
@@ -585,10 +581,6 @@ bool ConvexHullAlgorithm::CreateCone()
 
             int forbidden = UpdateIndices[i];
             // Index of the face that corresponds to this adjacent face
-            if (fIndex == 3 && i == 1) {
-                int sdfaliae = 0;
-                sdfaliae++;
-            }
             auto &newFace = FacePool[GetFaceFromPool()];
             auto &vertices = newFace.Vertices;
             for (auto j = 0; j < NumOfDimensions; j++)
@@ -637,7 +629,7 @@ bool ConvexHullAlgorithm::CreateCone()
 void ConvexHullAlgorithm::CommitCone()
 {
     // Fill the adjacency.
-    for (auto i = 0; i < ConeFaceBuffer.size(); i++) {
+    for (auto i = 0; i < (int)ConeFaceBuffer.size(); i++) {
         auto &face = ConeFaceBuffer[i];
 
         auto &newFace = *face.Face;
@@ -683,7 +675,7 @@ void ConvexHullAlgorithm::CommitCone()
     }
 
     // Recycle the affected faces.
-    for (auto fIndex = 0; fIndex < AffectedFaceBuffer.size(); fIndex++) {
+    for (auto fIndex = 0; fIndex < (int)AffectedFaceBuffer.size(); fIndex++) {
         auto face = AffectedFaceBuffer[fIndex];
         RemoveFromUnprocessedFaces(FacePool[face]);
         DepositFaceToPool(face);
@@ -736,10 +728,10 @@ void ConvexHullAlgorithm::FindBeyondVertices(ConvexFaceInternal &face,
     FurthestVertex = 0;
     int v;
 
-    for (auto i = 0; i < beyond1.size(); i++)
+    for (auto i = 0; i < (int)beyond1.size(); i++)
         VertexVisited[beyond1[i]] = true;
     VertexVisited[CurrentVertex] = false;
-    for (auto i = 0; i < beyond.size(); i++) {
+    for (auto i = 0; i < (int)beyond.size(); i++) {
         v = beyond[i];
         if (v == CurrentVertex)
             continue;
@@ -747,7 +739,7 @@ void ConvexHullAlgorithm::FindBeyondVertices(ConvexFaceInternal &face,
         IsBeyond(face, beyondVertices, v);
     }
 
-    for (auto i = 0; i < beyond1.size(); i++) {
+    for (auto i = 0; i < (int)beyond1.size(); i++) {
         v = beyond1[i];
         if (VertexVisited[v])
             IsBeyond(face, beyondVertices, v);
@@ -768,7 +760,7 @@ void ConvexHullAlgorithm::FindBeyondVertices(ConvexFaceInternal &face,
     MaxDistance = std::numeric_limits<double>::lowest();
     FurthestVertex = 0;
 
-    for (auto i = 0; i < beyond.size(); i++) {
+    for (auto i = 0; i < (int)beyond.size(); i++) {
         auto v = beyond[i];
         if (v == CurrentVertex)
             continue;
@@ -812,10 +804,10 @@ void ConvexHullAlgorithm::HandleSingular()
 
     // This means that all the affected faces must be on the hull and that
     // all their "vertices beyond" are singular.
-    for (auto fIndex = 0; fIndex < AffectedFaceBuffer.size(); fIndex++) {
+    for (auto fIndex = 0; fIndex < (int)AffectedFaceBuffer.size(); fIndex++) {
         auto &face = FacePool[AffectedFaceBuffer[fIndex]];
         auto &vb = face.VerticesBeyond;
-        for (auto i = 0; i < vb.size(); i++) {
+        for (auto i = 0; i < (int)vb.size(); i++) {
             SingularVertices.emplace(vb[i]);
         }
 
@@ -827,7 +819,7 @@ void ConvexHullAlgorithm::HandleSingular()
 
 int ConvexHullAlgorithm::GetHullVertices()
 {
-    auto cellCount = ConvexFaces.size();
+    auto cellCount = (int)ConvexFaces.size();
     auto hullVertexCount = 0;
 
     for (auto i = 0; i < NumberOfVertices; i++)

@@ -73,7 +73,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
     if (!defaults.data.empty()) {
         return false;
     }
-    mz_zip_archive zip = {0};
+    mz_zip_archive zip{};
     if (!mz_zip_reader_init_mem(&zip, content.data(), content.size(), 0)) {
         LogE("wrong content");
         return false;
@@ -187,7 +187,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             LoadJsonFile(zip, i, trait);
             trait.filePath = key;
             for (auto &item : trait.globalFeatureMods) {
-                traitFeatures.emplace(Feature{item.first});
+                traitFeatures.emplace(item.first);
             }
             continue;
         }

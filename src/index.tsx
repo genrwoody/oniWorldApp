@@ -436,7 +436,7 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
                             className="header-github-link"
                             title={translation("Open on GitHub")}
                         />
-                        <span>v1.0.3</span>
+                        <span>v1.0.4</span>
                     </Stack>
                 </Container>
             </Navbar>

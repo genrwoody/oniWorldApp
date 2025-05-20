@@ -44,7 +44,7 @@ ConvexHullResult<Site> ConvexHull::CreateDelaunay(std::vector<Site> &vertices)
 
     size_t index = 0;
     for (auto &v : vertices) {
-        auto parabolaTerm = 0.0; // the lifted term is a sum of squares.
+        // auto parabolaTerm = 0.0; // the lifted term is a sum of squares.
         Positions[index++] = v.x;
         Positions[index++] = v.y;
         Positions[index++] = (double)v.x * v.x + (double)v.y * v.y;
@@ -82,7 +82,7 @@ void ConvexHull::GetConvexFaces(std::vector<T> &vertices, bool lift, int dim,
     int NumOfDimensions = dim;
     auto &FacePool = chAlgo.FacePool;
     auto &faces = chAlgo.ConvexFaces;
-    auto cellCount = faces.size();
+    auto cellCount = (int)faces.size();
     Faces.resize(cellCount);
 
     for (auto i = 0; i < cellCount; i++) {

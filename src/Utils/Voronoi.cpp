@@ -227,7 +227,7 @@ void Voronoi::FortunesAlgorithm()
                 halfedge2->ystar = vertex->y + site->Distance(*vertex);
                 halfedgePriorityQueue.insert(halfedge2);
             }
-            if (sites_cursor < m_sites.size()) {
+            if (sites_cursor < (int)m_sites.size()) {
                 site = m_sites[sites_cursor++];
             } else {
                 site = nullptr;

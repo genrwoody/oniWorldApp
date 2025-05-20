@@ -40,10 +40,10 @@ void SubWorld::EnforceTemplateSpawnRuleSelfConsistency()
 
 bool WorldTrait::IsValid(const World &world) const
 {
-    int num = 0;
+    // int num = 0;
     int num2 = 0;
     for (auto &globalFeatureMod : globalFeatureMods) {
-        num += globalFeatureMod.second;
+        // num += globalFeatureMod.second;
         num2 += (int)floor(world.worldTraitScale * globalFeatureMod.second);
     }
     if (globalFeatureMods.size() > 0 && num2 == 0) {
