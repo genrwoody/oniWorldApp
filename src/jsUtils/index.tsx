@@ -17,6 +17,7 @@ Module.updateWorld = (type: number, count: number, data: number) => {
             const y = Module.HEAP32[offset++];
             Module.worlds.push({
                 type: count,
+                seed: 0,
                 starting: { x: x, y: y },
                 size: { x: 0, y: 0 },
                 traits: [],
@@ -70,6 +71,7 @@ Module.updateWorld = (type: number, count: number, data: number) => {
         }
         case ResultType.RT_WorldSize: {
             const world = Module.worlds.at(-1)!;
+            world.seed = count;
             world.size.x = Module.HEAP32[offset++];
             world.size.y = Module.HEAP32[offset++];
             break;

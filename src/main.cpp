@@ -67,6 +67,7 @@ class App
 {
 private:
     SettingsCache m_settings;
+    KRandom m_random{0};
 
     App() = default;
 
@@ -77,22 +78,24 @@ public:
         return &inst;
     }
 
-    void Initialize()
+    void Initialize(int seed)
     {
         uint32_t count = SETTING_ASSET_FILESIZE;
         auto data = std::make_unique<char[]>(count);
         jsSetGeyserInfo(RT_Resource, count, (size_t)data.get());
         std::string_view content(data.get(), count);
         m_settings.LoadSettingsCache(content);
+        m_random = KRandom(seed);
     }
 
-    bool Generate(const std::string &code);
-    void SetReault(int seed, int worldType, WorldGen &worldGen,
+    bool Generate(const std::string &code, int traits);
+    void SetSeedWithTraits(const std::vector<World *> &worlds, int traitsFlag);
+    void SetResult(int seed, int worldType, WorldGen &worldGen,
                    std::vector<const WorldTrait *> &traits);
     static Polygon GetZonePolygon(Site &site);
 };
 
-bool App::Generate(const std::string &code)
+bool App::Generate(const std::string &code, int traitsFlag)
 {
     if (!m_settings.CoordinateChanged(code, m_settings)) {
         LogE("parse seed code %s failed.", code.c_str());
@@ -111,6 +114,9 @@ bool App::Generate(const std::string &code)
     }
     if (worlds.size() == 1) {
         worlds[0]->locationType = LocationType::StartWorld;
+    }
+    if (traitsFlag != 0) { // roll seed for preset traits
+        SetSeedWithTraits(worlds, traitsFlag);
     }
     m_settings.DoSubworldMixing(worlds);
     int seed = m_settings.seed;
@@ -137,12 +143,49 @@ bool App::Generate(const std::string &code)
             LogE("generate overworld failed.");
             return false;
         }
-        SetReault(seed, worldType, worldGen, traits);
+        SetResult(seed, worldType, worldGen, traits);
     }
     return true;
 }
 
-void App::SetReault(int seed, int worldType, WorldGen &worldGen,
+void App::SetSeedWithTraits(const std::vector<World *> &worlds, int traitsFlag)
+{
+    std::vector<const WorldTrait *> presets;
+    int index = 0;
+    for (auto &pair : m_settings.traits) {
+        if ((traitsFlag >> index & 1) == 1) {
+            presets.push_back(&pair.second);
+        }
+        ++index;
+    }
+    if (presets.empty()) {
+        m_settings.seed = m_random.Next();
+        return;
+    }
+    index = 0;
+    World *world = worlds[index];
+    for (size_t i = 0; i < worlds.size(); ++i) {
+        world = worlds[i];
+        if (world->locationType == LocationType::StartWorld) {
+            index = i;
+            break;
+        }
+    }
+    for (int i = 0; i < 200; ++i) {
+        int seed = m_random.Next();
+        m_settings.seed = seed + index;
+        auto traits = m_settings.GetRandomTraits(*world);
+        m_settings.seed = seed;
+        if (std::ranges::all_of(presets, [&traits](const WorldTrait *trait) {
+                return std::ranges::contains(traits, trait);
+            })) {
+            return;
+        }
+    }
+    LogI("can not find seed for preset traits");
+}
+
+void App::SetResult(int seed, int worldType, WorldGen &worldGen,
                     std::vector<const WorldTrait *> &traits)
 {
     // 0 starting base, 1 traits, 2 geysers, 3 polygons, 4 world size
@@ -150,7 +193,7 @@ void App::SetReault(int seed, int worldType, WorldGen &worldGen,
     Vector2i worldSize = worldGen.GetWorldSize();
     starting.y = worldSize.y - starting.y;
     jsSetGeyserInfo(RT_Starting, worldType, (size_t)&starting);
-    jsSetGeyserInfo(RT_WorldSize, 0, (size_t)&worldSize);
+    jsSetGeyserInfo(RT_WorldSize, seed, (size_t)&worldSize);
     std::vector<int> result;
     for (auto &item : traits) {
         uint32_t index = 0;
@@ -233,9 +276,9 @@ Polygon App::GetZonePolygon(Site &site)
     return polygon;
 }
 
-extern "C" void EMSCRIPTEN_KEEPALIVE app_init()
+extern "C" void EMSCRIPTEN_KEEPALIVE app_init(int seed)
 {
-    App::Instance()->Initialize();
+    App::Instance()->Initialize(seed);
 }
 
 extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
@@ -255,11 +298,16 @@ extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
     if (code.find("CER") != code.npos) {
         mix = mix % 5;
     }
+    int traits = 0;
+    if (seed < 0) {
+        traits = -seed;
+        seed = 0;
+    }
     code += std::to_string(seed);
     code += "-0-D3-";
     code += SettingsCache::BinaryToBase36(mix);
     LogI("generate with code: %s", code.c_str());
-    return App::Instance()->Generate(code);
+    return App::Instance()->Generate(code, traits);
 }
 
 #ifndef EMSCRIPTEN
@@ -267,7 +315,7 @@ extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
 int main()
 {
     int type, seed, mixing;
-    app_init();
+    app_init(time(nullptr));
     while (true) {
         std::cout << "input type, seed, mixing: ";
         std::cin >> type >> seed >> mixing;

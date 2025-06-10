@@ -66,7 +66,7 @@ public:
     bool LoadSettingsCache(const std::string_view &content);
     bool CoordinateChanged(const std::string &text, SettingsCache &settings);
     bool IsSpaceOutEnabled() const { return (m_dlcState & 1) == 1; }
-    std::vector<const WorldTrait *> GetRandomTraits(World &world) const;
+    std::vector<const WorldTrait *> GetRandomTraits(const World &world) const;
     void DoSubworldMixing(std::vector<World *> worlds);
     static uint32_t Base36ToBinary(const std::string &input);
     static std::string BinaryToBase36(uint32_t input);

@@ -11,7 +11,7 @@ private:
     int m_seeds[56];
 
 public:
-    KRandom(int seed);
+    explicit KRandom(int seed);
 
     int Next() { return InternalSample(); }
 

@@ -22,6 +22,7 @@ interface Geyser {
 
 interface World {
     type: number;
+    seed: number;
     size: Point;
     starting: Point;
     traits: Array<number>;
@@ -38,6 +39,6 @@ declare const Module: {
     updateWorld(type: number, count: number, data: number): void;
     locateFile(path: string, prefix: string): string;
     onRuntimeInitialized(): void;
-    app_init(): void;
+    app_init(seed: number): void;
     app_generate(cluster: number, seed: number, mixing: number): boolean;
 };

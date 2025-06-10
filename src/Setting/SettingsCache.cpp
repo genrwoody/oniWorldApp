@@ -319,7 +319,7 @@ void SettingsCache::ParseAndApplyMixingSettingsCode(const std::string &code)
 }
 
 std::vector<const WorldTrait *>
-SettingsCache::GetRandomTraits(World &world) const
+SettingsCache::GetRandomTraits(const World &world) const
 {
     if (seed == 0 || world.disableWorldTraits ||
         world.worldTraitRules.empty()) {

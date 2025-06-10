@@ -193,6 +193,7 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
                             let nseed = parseInt(seed);
                             Module.worlds.length = 0;
                             Module.app_generate(cluster, nseed, mixings);
+                            setSeed(Module.worlds[0].seed.toString());
                             onSetWorld();
                         }
                     }}
@@ -203,9 +204,9 @@ const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
                         let nseed = Math.random() * 32768;
                         nseed = nseed * (Math.random() * 32768);
                         nseed = Math.round(nseed);
-                        setSeed(nseed.toString());
                         Module.worlds.length = 0;
                         Module.app_generate(cluster, nseed, mixings);
+                        setSeed(Module.worlds[0].seed.toString());
                         onSetWorld();
                     }}
                 >
@@ -352,7 +353,7 @@ const WorldCanvas = ({ worlds, theme }: WorldCanvasProps) => {
 };
 
 const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
-    const [show, setShow] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [worlds, setWorlds] = useState(new Array<World>());
     const [theme, setTheme] = useState(0);
     const language = useContext(LanguageContext);
@@ -365,10 +366,10 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
         Module.wasm = null;
         Module.worlds = [];
         Module.onRuntimeInitialized = () => {
-            Module.app_init();
-            setShow(false);
+            Module.app_init(new Date().getTime() & 0x7FFFFFFF);
+            setLoading(false);
         };
-        setShow(true);
+        setLoading(true);
         const load = async (url: string) => {
             const response = await fetch(url, { credentials: "same-origin" });
             return response.arrayBuffer();
@@ -452,7 +453,7 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
             </Container>
             <Modal
                 id="loading"
-                show={show}
+                show={loading}
                 backdrop="static"
                 keyboard={false}
                 centered
