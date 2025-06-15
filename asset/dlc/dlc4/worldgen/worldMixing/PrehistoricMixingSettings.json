@@ -1,0 +1,9 @@
+{
+  "name": "STRINGS.WORLDS.PREHISTORICMIXING.NAME",
+  "description": "STRINGS.WORLDS.PREHISTORICMIXING.DESCRIPTION",
+  "forbiddenClusterTags": [
+    "PrehistoricCluster"
+  ],
+  "icon": "asteroid_prehistoric_kanim",
+  "world": "dlc4::worlds/MixingPrehistoricAsteroid"
+}

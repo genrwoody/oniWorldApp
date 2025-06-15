@@ -1,0 +1,36 @@
+{
+  "biomeNoise": "dlc4::noise/Raptor",
+  "temperatureRange": "Chilly",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 5,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "hardToDig",
+  "borderOverridePriority": 5,
+  "biomes": [
+    {
+      "name": "dlc4::biomes/Raptor/Basic",
+      "weight": 2,
+      "tags": [
+        "DewDripperPlant",
+        "Raptor",
+        "Dinofern",
+        "Chameleon",
+        "ColdBreather"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "features": [
+    {
+      "type": "dlc4::features/raptor/RaptorHabitat"
+    }
+  ],
+  "zoneType": "PrehistoricRaptor"
+}

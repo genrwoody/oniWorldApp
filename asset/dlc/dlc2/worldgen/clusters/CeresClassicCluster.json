@@ -8,7 +8,7 @@
     "DLC2_ID"
   ],
   "coordinatePrefix": "V-CER-C",
-  "menuOrder": 1,
+  "menuOrder": 9,
   "clusterCategory": "SpacedOutVanillaStyle",
   "difficulty": 3,
   "clusterTags": [
@@ -411,7 +411,32 @@
           "SmallWorld"
         ],
         "forbiddenTags": [
+          "SubsurfaceSubworldReserved",
+          "NoDamagingMeteorShowers",
           "CeresWorld"
+        ],
+        "additionalSubworldFiles": [
+          {
+            "name": "expansion1::subworlds/regolith/BarrenDust",
+            "minCount": 2,
+            "overridePower": 1
+          }
+        ],
+        "additionalUnknownCellFilters": [
+          {
+            "tagcommand": "DistanceFromTag",
+            "tag": "AtSurface",
+            "minDistance": 2,
+            "maxDistance": 2,
+            "command": "Replace",
+            "sortOrder": 1000,
+            "subworldNames": [
+              "expansion1::subworlds/regolith/BarrenDust"
+            ]
+          }
+        ],
+        "additionalSeasons": [
+          "RegolithMoonMeteorShowers"
         ],
         "additionalWorldTemplateRules": [
           {
@@ -428,33 +453,6 @@
                 "command": "ExceptWith",
                 "tagcommand": "AtTag",
                 "tag": "NoGlobalFeatureSpawning"
-              }
-            ]
-          },
-          {
-            "names": [
-              "expansion1::poi/worldmixing/vole_geode1",
-              "expansion1::poi/worldmixing/vole_geode2",
-              "expansion1::poi/worldmixing/vole_geode3"
-            ],
-            "listRule": "GuaranteeSomeTryMore",
-            "someCount": 2,
-            "moreCount": 1,
-            "priority": 150,
-            "allowExtremeTemperatureOverlap": true,
-            "allowedCellsFilter": [
-              {
-                "command": "All"
-              },
-              {
-                "command": "ExceptWith",
-                "tagcommand": "AtTag",
-                "tag": "NoGlobalFeatureSpawning"
-              },
-              {
-                "command": "ExceptWith",
-                "tagcommand": "AtTag",
-                "tag": "NoMixingTemplateSpawning"
               }
             ]
           }

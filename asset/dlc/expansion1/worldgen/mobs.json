@@ -98,7 +98,7 @@
           "max": 0.15
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_Drecko": {
         "prefabName": "Drecko",
@@ -120,7 +120,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "exp1_BasicSingleHarvestPlantSeed": {
         "prefabName": "BasicSingleHarvestPlantSeed",
@@ -142,7 +142,7 @@
           "max": 0.3
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_BasicSingleHarvestPlantSeed": {
         "prefabName": "BasicSingleHarvestPlantSeed",
@@ -175,7 +175,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "exp1_BasicForagePlant": {
         "prefabName": "BasicForagePlant",
@@ -229,7 +229,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_SwampHarvestPlant": {
         "prefabName": "SwampHarvestPlant",
@@ -240,7 +240,7 @@
           "max": 0.45
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "SwampHarvestPlantSeed": {
         "location": "Solid",
@@ -292,7 +292,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_SwampForagePlantPlanted": {
         "prefabName": "SwampForagePlantPlanted",
@@ -303,7 +303,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "WineCups": {
         "location": "Floor",
@@ -376,7 +376,7 @@
           "max": 0.4
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "SuperWormPlant": {
         "location": "Floor",
@@ -386,7 +386,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "CritterTrapPlant": {
         "location": "Floor",
@@ -396,7 +396,7 @@
           "max": 0.1
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_CritterTrapPlant": {
         "prefabName": "CritterTrapPlant",
@@ -407,7 +407,7 @@
           "max": 0.4
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_CritterTrapPlantSeed": {
         "prefabName": "CritterTrapPlantSeed",
@@ -428,7 +428,7 @@
           "max": 0.35
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_BasicFabricPlant": {
         "prefabName": "BasicFabricPlant",
@@ -439,7 +439,7 @@
           "max": 0.4
         },
         "width": 1,
-        "height": 1
+        "height": 3
       },
       "med_SwampLily": {
         "prefabName": "SwampLily",
@@ -450,7 +450,7 @@
           "max": 0.8
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_BasicFabricMaterialPlantSeed": {
         "prefabName": "BasicFabricMaterialPlantSeed",
@@ -472,7 +472,7 @@
           "max": 0.28
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_ColdBreatherSeed": {
         "prefabName": "ColdBreatherSeed",
@@ -494,7 +494,7 @@
           "max": 0.4
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_BeanPlantSeed": {
         "prefabName": "BeanPlantSeed",
@@ -527,7 +527,7 @@
           "max": 0.3
         },
         "width": 1,
-        "height": 1
+        "height": 3
       },
       "med_SpiceVineSeed": {
         "prefabName": "SpiceVineSeed",
@@ -582,7 +582,7 @@
           "max": 0.5
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_MushroomSeed": {
         "prefabName": "MushroomSeed",
@@ -604,7 +604,7 @@
           "max": 0.42
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_PrickleFlowerSeed": {
         "prefabName": "PrickleFlowerSeed",
@@ -626,7 +626,7 @@
           "max": 0.18
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "exp1_PrickleFlowerSeed": {
         "prefabName": "PrickleFlowerSeed",
@@ -871,7 +871,7 @@
           "max": 0.75
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_SeaLettuceSeed": {
         "prefabName": "SeaLettuceSeed",
@@ -926,7 +926,7 @@
           "max": 0.24
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_OxyfernSeed": {
         "prefabName": "OxyfernSeed",
@@ -948,7 +948,7 @@
           "max": 0.3
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "med_SaltPlantSeed": {
         "prefabName": "SaltPlantSeed",
@@ -1003,7 +1003,7 @@
           "max": 0.3
         },
         "width": 1,
-        "height": 2
+        "height": 3
       },
       "GasGrassSeed": {
         "prefabName": "GasGrassSeed",
@@ -1025,7 +1025,7 @@
           "max": 0.2
         },
         "width": 1,
-        "height": 1
+        "height": 2
       }
     }
   }

@@ -1,0 +1,531 @@
+{
+  "name": "STRINGS.WORLDS.PREHISTORICCLASSIC.NAME",
+  "description": "STRINGS.WORLDS.PREHISTORICCLASSIC.DESCRIPTION",
+  "nameTables": [
+    "PREHISTORIC"
+  ],
+  "asteroidIcon": "prehistoric_asteroid_classic_kanim",
+  "worldTags": [
+    "Prehistoric"
+  ],
+  "dlcIdFrom": "DLC4_ID",
+  "requiredDlcIds": [
+    "EXPANSION1_ID",
+    "DLC4_ID"
+  ],
+  "worldTraitScale": 0.9,
+  "worldsize": {
+    "X": 240,
+    "Y": 380
+  },
+  "layoutMethod": "PowerTree",
+  "worldTraitRules": [
+    {
+      "min": 2,
+      "max": 4,
+      "forbiddenTags": [
+        "Surface",
+        "Oil",
+        "NonStartWorld"
+      ],
+      "forbiddenTraits": [
+        "traits/MisalignedStart",
+        "expansion1::traits/CrashedSatellites"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing3)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing4)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing5)",
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "name": "(Mixing6)",
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ],
+  "fixedTraits": [
+    "sunlightMed",
+    "cosmicRadiationVeryLow",
+    "largeImpactorFragmentsAllowed"
+  ],
+  "seasons": [
+    "LargeImpactor",
+    "PrehistoricMeteorShowers"
+  ],
+  "defaultsOverrides": {
+    "data": {
+      "OverworldDensityMin": 20,
+      "OverworldDensityMax": 20,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "POIPadding": 1
+    }
+  },
+  "subworldFiles": [
+    {
+      "name": "dlc4::subworlds/garden/GardenStart",
+      "overridePower": 3
+    },
+    {
+      "name": "dlc4::subworlds/garden/GardenBasic"
+    },
+    {
+      "name": "dlc4::subworlds/garden/GardenMiniMetal",
+      "minCount": 1,
+      "overridePower": 0.75
+    },
+    {
+      "name": "dlc4::subworlds/garden/GardenMiniWater",
+      "minCount": 3,
+      "overridePower": 0.75
+    },
+    {
+      "name": "dlc4::subworlds/garden/GardenMiniOxygen",
+      "minCount": 2,
+      "overridePower": 0.75
+    },
+    {
+      "name": "dlc4::subworlds/raptor/RaptorBasic",
+      "minCount": 5
+    },
+    {
+      "name": "dlc4::subworlds/wetlands/WetlandsBasic",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/ocean/Ocean",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/rust/RustWarm",
+      "minCount": 5
+    },
+    {
+      "name": "subworlds/oil/OilPocketsSandy"
+    },
+    {
+      "name": "subworlds/magma/Bottom"
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithNoBorder"
+    },
+    {
+      "name": "dlc4::subworlds/space/SpaceWithPrehistoricBorder"
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_Radioactive",
+      "minCount": 3,
+      "weight": 0.5
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_UraniumFields",
+      "minCount": 1,
+      "weight": 0.25
+    }
+  ],
+  "startSubworldName": "dlc4::subworlds/garden/GardenStart",
+  "startingBaseTemplate": "dlc4::bases/gardenBase",
+  "startingBasePositionHorizontal": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "startingBasePositionVertical": {
+    "min": 0.55,
+    "max": 0.55
+  },
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/garden/GardenStart"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/garden/GardenMiniMetal",
+        "dlc4::subworlds/garden/GardenMiniWater",
+        "dlc4::subworlds/garden/GardenMiniOxygen"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/raptor/RaptorBasic",
+        "subworlds/ocean/Ocean"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/raptor/RaptorBasic",
+        "subworlds/ocean/Ocean",
+        "dlc4::subworlds/wetlands/WetlandsBasic",
+        "subworlds/rust/RustWarm",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 4,
+      "maxDistance": 4,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/wetlands/WetlandsBasic",
+        "dlc4::subworlds/raptor/RaptorBasic",
+        "subworlds/rust/RustWarm",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 5,
+      "maxDistance": 99,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/wetlands/WetlandsBasic",
+        "dlc4::subworlds/raptor/RaptorBasic",
+        "dlc4::subworlds/garden/GardenBasic",
+        "subworlds/rust/RustWarm",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)",
+        "(Mixing4)",
+        "(Mixing5)",
+        "(Mixing6)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "command": "UnionWith",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 4,
+      "subworldNames": [
+        "expansion1::subworlds/radioactive/med_Radioactive",
+        "expansion1::subworlds/radioactive/med_UraniumFields"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/magma/Bottom"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/oil/OilPocketsSandy"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithNoBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/space/SpaceWithPrehistoricBorder"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "poi/poi_ocean_geyser_saltwater"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Ocean"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 6
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc4::poi/raptor/cool_chlorine_vent"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "PrehistoricRaptor"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 6
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc4::poi/wetlands/pwater_geyser"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "PrehistoricWetlands"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 6
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/oil/small_oilpockets_geyser_a_dry",
+        "poi/oil/small_oilpockets_geyser_b_dry",
+        "poi/oil/small_oilpockets_geyser_c",
+        "poi/oil/small_oilpockets_geyser_d",
+        "poi/oil/small_oilpockets_geyser_e_dry",
+        "poi/oil/small_oilpockets_geyser_f_dry",
+        "poi/oil/small_oilpockets_geyser_g",
+        "poi/oil/small_oilpockets_geyser_h"
+      ],
+      "listRule": "GuaranteeOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "OilField"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender",
+        "expansion1::poi/warp/receiver",
+        "expansion1::poi/warp/teleporter_no_oil"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 3,
+          "maxDistance": 4
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 6
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/genericGravitas/poi_office"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 2,
+          "maxDistance": 99
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/generic"
+      ],
+      "listRule": "TryOne",
+      "times": 12,
+      "ruleId": "GenericGeysers",
+      "allowDuplicates": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 6
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/radioactive/uranium_geode1"
+      ],
+      "listRule": "GuaranteeOne",
+      "useRelaxedFiltering": true,
+      "allowExtremeTemperatureOverlap": true,
+      "priority": 200,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc4::poi/garden/prehistoric_research_unlock"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowNearStart": true,
+      "useRelaxedFiltering": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "dlc4::subworlds/garden/GardenStart"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc4::poi/blaster_ruins"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 500,
+      "useRelaxedFiltering": true,
+      "allowExtremeTemperatureOverlap": true,
+      "overrideOffset": {
+        "X": 0,
+        "Y": -7
+      },
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "dlc4::subworlds/space/SpaceWithPrehistoricBorder"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtEdge",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    }
+  ]
+}

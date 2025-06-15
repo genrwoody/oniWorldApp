@@ -1,0 +1,213 @@
+{
+  "name": "STRINGS.WORLDS.PREHISTORICMIXING.NAME",
+  "description": "STRINGS.WORLDS.PREHISTORICMIXING.DESCRIPTION",
+  "nameTables": [
+    "PREHISTORIC"
+  ],
+  "asteroidIcon": "asteroid_prehistoric_kanim",
+  "worldTags": [
+    "Mixing",
+    "PrehistoricWorld",
+    "PrehistoricStart",
+    "SmallWorld"
+  ],
+  "dlcIdFrom": "DLC4_ID",
+  "requiredDlcIds": [
+    "EXPANSION1_ID",
+    "DLC4_ID"
+  ],
+  "worldTraitScale": 0.08,
+  "worldsize": {
+    "X": 64,
+    "Y": 128
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 4,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 15,
+      "OverworldDensityMax": 15,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "POIPadding": 1
+    }
+  },
+  "worldTraitRules": [
+    {
+      "min": 0,
+      "max": 2,
+      "forbiddenTags": [
+        "StartWorldOnly",
+        "Geodes",
+        "Oil",
+        "GenericGeysers",
+        "StartChange",
+        "LargeWorld",
+        "Surface"
+      ],
+      "forbiddenTraits": [
+        "traits/MagmaVents",
+        "expansion1::traits/Volcanoes",
+        "expansion1::traits/MetalCaves",
+        "expansion1::traits/CrashedSatellites"
+      ]
+    }
+  ],
+  "fixedTraits": [
+    "sunlightVeryLow",
+    "cosmicRadiationVeryLow",
+    "largeImpactorFragmentsAllowed"
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3,
+      "forbiddenTags": [
+        "Prehistoric"
+      ]
+    }
+  ],
+  "subworldFiles": [
+    {
+      "name": "subworlds/space/SpaceNoBorder"
+    },
+    {
+      "name": "dlc4::subworlds/garden/GardenBasic",
+      "minCount": 2
+    },
+    {
+      "name": "dlc4::subworlds/raptor/RaptorBasic",
+      "minCount": 2
+    },
+    {
+      "name": "dlc4::subworlds/wetlands/WetlandsBasic",
+      "minCount": 2
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/garden/GardenBasic",
+        "dlc4::subworlds/raptor/RaptorBasic",
+        "dlc4::subworlds/wetlands/WetlandsBasic",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "subworlds/space/SpaceNoBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/wetlands/WetlandsBasic"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc4::subworlds/garden/GardenBasic",
+        "dlc4::subworlds/raptor/RaptorBasic",
+        "dlc4::subworlds/wetlands/WetlandsBasic",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "UnionWith",
+      "sortOrder": 100,
+      "subworldNames": [
+        "(Mixing1)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "geysers/generic"
+      ],
+      "listRule": "TryOne",
+      "times": 4,
+      "allowDuplicates": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 3
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc4::poi/raptor/cool_chlorine_vent"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "PrehistoricRaptor"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 3
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc4::poi/wetlands/pwater_geyser"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "PrehistoricWetlands"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 3
+        }
+      ]
+    }
+  ]
+}

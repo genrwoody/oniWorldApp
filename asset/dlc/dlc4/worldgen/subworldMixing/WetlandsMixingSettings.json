@@ -1,0 +1,31 @@
+{
+  "name": "STRINGS.SUBWORLDS.WETLANDS.NAME",
+  "description": "STRINGS.SUBWORLDS.WETLANDS.DESC",
+  "icon": "biomeIconWetlands",
+  "mixingTags": [
+    "Prehistoric"
+  ],
+  "forbiddenClusterTags": [
+    "PrehistoricCluster"
+  ],
+  "subworld": {
+    "name": "dlc4::subworlds/wetlands/WetlandsMix"
+  },
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "dlc4::poi/wetlands/pwater_geyser_mix"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "PrehistoricWetlands"
+          ]
+        }
+      ]
+    }
+  ]
+}

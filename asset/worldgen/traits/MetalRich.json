@@ -43,6 +43,11 @@
       "element": "Cinnabar",
       "massMultiplier": 2,
       "bandMultiplier": 1.5
+    },
+    {
+      "element": "NickelOre",
+      "massMultiplier": 2,
+      "bandMultiplier": 1.5
     }
   ]
 }

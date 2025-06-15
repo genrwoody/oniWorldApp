@@ -98,6 +98,32 @@
           }
         }
       ],
+      "OilPocketsSandy": [
+        {
+          "content": "Sand",
+          "bandSize": 0.2
+        },
+        {
+          "content": "IgneousRock",
+          "bandSize": 0.75
+        },
+        {
+          "content": "Lead",
+          "bandSize": 0.25
+        },
+        {
+          "content": "Granite",
+          "bandSize": 0.125
+        },
+        {
+          "content": "Lead",
+          "bandSize": 0.25
+        },
+        {
+          "content": "CarbonDioxide",
+          "bandSize": 3.5
+        }
+      ],
       "OilPatch": [
         {
           "content": "Fossil",

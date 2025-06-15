@@ -1,0 +1,45 @@
+{
+  "biomeNoise": "dlc4::noise/Garden",
+  "temperatureRange": "HumanWarm",
+  "pdWeight": 0.5,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 5,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "dlc4::biomes/Garden/Oxygen",
+      "weight": 2,
+      "tags": [
+        "GardenFoodPlant",
+        "GardenFoodPlantSeed",
+        "VineMotherSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "StartWorld",
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "features": [
+    {
+      "type": "dlc4::features/garden/AlgaeBall"
+    },
+    {
+      "type": "dlc4::features/garden/AlgaeBall"
+    },
+    {
+      "type": "dlc4::features/garden/Vines"
+    },
+    {
+      "type": "dlc4::features/garden/Vines"
+    }
+  ],
+  "zoneType": "PrehistoricGarden"
+}

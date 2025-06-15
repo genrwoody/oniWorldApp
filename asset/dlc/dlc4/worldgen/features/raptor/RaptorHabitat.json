@@ -1,0 +1,84 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    2
+  ],
+  "blobSize": {
+    "min": 16,
+    "max": 20
+  },
+  "internalMobs": [
+    {
+      "type": "Raptor",
+      "count": {
+        "min": 1,
+        "max": 1
+      }
+    },
+    {
+      "type": "Chameleon",
+      "count": {
+        "min": 2,
+        "max": 3
+      }
+    },
+    {
+      "type": "Dinofern",
+      "count": {
+        "min": 1,
+        "max": 1
+      }
+    },
+    {
+      "type": "DewDripperPlant",
+      "count": {
+        "min": 3,
+        "max": 5
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 1.0
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Chlorine",
+          "weight": 0.55,
+          "overrides": {
+            "massOverride": 1
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "IronOre",
+          "weight": 0.3
+        },
+        {
+          "element": "BleachStone",
+          "weight": 0.4
+        },
+        {
+          "element": "IgneousRock",
+          "weight": 0.3
+        }
+      ]
+    }
+  }
+}

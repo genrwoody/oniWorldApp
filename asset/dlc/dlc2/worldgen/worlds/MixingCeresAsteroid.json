@@ -55,7 +55,8 @@
       "forbiddenTraits": [
         "traits/MagmaVents",
         "expansion1::traits/Volcanoes",
-        "expansion1::traits/MetalCaves"
+        "expansion1::traits/MetalCaves",
+        "expansion1::traits/CrashedSatellites"
       ]
     }
   ],

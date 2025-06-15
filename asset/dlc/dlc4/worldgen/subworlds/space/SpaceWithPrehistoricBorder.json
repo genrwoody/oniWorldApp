@@ -1,0 +1,26 @@
+{
+  "biomeNoise": "noise/Generic",
+  "borderOverride": "prehistoricCrust",
+  "borderOverridePriority": 6,
+  "temperatureRange": "VeryCold",
+  "singleChildCount": true,
+  "minChildCount": 1,
+  "density": {
+    "min": 35,
+    "max": 45
+  },
+  "avoidRadius": 50.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Misc/Space",
+      "weight": 1
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning",
+    "RemoveWorldBorderOverVacuum"
+  ],
+  "zoneType": "Space"
+}

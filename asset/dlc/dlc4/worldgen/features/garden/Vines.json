@@ -1,0 +1,69 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "PreventAmbientMobsInFeature"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 4.5,
+    "max": 7.5
+  },
+  "internalMobs": [
+    {
+      "type": "VineMother",
+      "count": {
+        "min": 2,
+        "max": 2
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.6
+        },
+        {
+          "element": "Dirt",
+          "weight": 0.3
+        },
+        {
+          "element": "Shale",
+          "weight": 0.1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Peat",
+          "weight": 1
+        },
+        {
+          "element": "Dirt",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 1
+        },
+        {
+          "element": "Shale",
+          "weight": 3
+        }
+      ]
+    }
+  }
+}

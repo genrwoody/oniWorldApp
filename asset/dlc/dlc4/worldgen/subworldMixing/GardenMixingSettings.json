@@ -1,0 +1,14 @@
+{
+  "name": "STRINGS.SUBWORLDS.GARDEN.NAME",
+  "description": "STRINGS.SUBWORLDS.GARDEN.DESC",
+  "icon": "biomeIconGarden",
+  "mixingTags": [
+    "Prehistoric"
+  ],
+  "forbiddenClusterTags": [
+    "PrehistoricCluster"
+  ],
+  "subworld": {
+    "name": "dlc4::subworlds/garden/GardenMix"
+  }
+}

@@ -8,7 +8,6 @@
   },
   "avoidRadius": 20.0,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "ice",
   "biomes": [
     {
       "name": "expansion1::biomes/Radioactive/Frozen",

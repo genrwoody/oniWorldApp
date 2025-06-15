@@ -1,0 +1,48 @@
+{
+  "biomeNoise": "dlc4::noise/Garden",
+  "temperatureRange": "HumanWarm",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 5,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc4::biomes/Garden/Basic",
+      "weight": 2,
+      "tags": [
+        "GardenFoodPlant",
+        "GardenFoodPlantSeed",
+        "GardenForagePlantPlanted",
+        "GardenForagePlantBuried",
+        "GardenDecorPlant",
+        "GardenDecorPlantSeed",
+        "VineMother",
+        "VineMotherSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning",
+    "Mixing"
+  ],
+  "features": [
+    {
+      "type": "dlc4::features/garden/ButterflyHome"
+    },
+    {
+      "type": "dlc4::features/garden/Vines"
+    },
+    {
+      "type": "dlc4::features/garden/StegoHome"
+    },
+    {
+      "type": "dlc4::features/garden/StegoHome"
+    }
+  ],
+  "zoneType": "PrehistoricGarden"
+}

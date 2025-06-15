@@ -1,0 +1,42 @@
+{
+  "biomeNoise": "noise/OilPockets",
+  "temperatureRange": "Hot",
+  "minChildCount": 8,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 10.0,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "biomes/Oil/OilPocketsSandy",
+      "weight": 1,
+      "tags": [
+        "OilFloaterSparse",
+        "CactusPlantSparse",
+        "CactusPlantSeed",
+        "EvilFlowerSparse",
+        "EvilFlowerSeed"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "features/oilpockets/DiamondClump"
+    }
+  ],
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "poi/poi_oil_switchdoor",
+        "poi/poi_oil_six_switch_door"
+      ],
+      "listRule": "TryAll"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "OilField"
+}

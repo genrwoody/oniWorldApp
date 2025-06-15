@@ -1,0 +1,79 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "PreventAmbientMobsInFeature"
+  ],
+  "shape": "ShortWide",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 10.5,
+    "max": 14.5
+  },
+  "internalMobs": [
+    {
+      "type": "ButterflyPlant",
+      "count": {
+        "min": 2,
+        "max": 2
+      }
+    },
+    {
+      "type": "Butterfly",
+      "count": {
+        "min": 1,
+        "max": 2
+      }
+    },
+    {
+      "type": "GardenFoodPlant",
+      "count": {
+        "min": 2,
+        "max": 3
+      }
+    }
+  ],
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.7
+        },
+        {
+          "element": "Dirt",
+          "weight": 0.3
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Peat",
+          "weight": 2
+        },
+        {
+          "element": "dirt",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 1
+        },
+        {
+          "element": "Shale",
+          "weight": 3
+        }
+      ]
+    }
+  }
+}

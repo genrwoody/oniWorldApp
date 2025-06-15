@@ -1,0 +1,41 @@
+{
+  "biomeNoise": "dlc4::noise/WetLands",
+  "temperatureRange": "HumanWarm",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 5,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc4::biomes/Wetlands/Basic",
+      "weight": 2,
+      "tags": [
+        "AnyLiquidPacu",
+        "PrehistoricPacu",
+        "KelpPlant",
+        "Mosquito",
+        "FlyTrapPlant",
+        "PrehistoricFossilBitsSmall",
+        "PrehistoricFossilBitsLarge",
+        "KelpSeed"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "centralFeature": null,
+  "features": [
+    {
+      "type": "dlc4::features/wetlands/LargeCave"
+    },
+    {
+      "type": "dlc4::features/wetlands/MosquitoCave"
+    }
+  ],
+  "zoneType": "PrehistoricWetlands"
+}

@@ -1,0 +1,37 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 2,
+    "max": 3
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "NickelOre",
+          "weight": 0.5
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "NickelOre",
+          "weight": 1.5
+        },
+        {
+          "element": "Dirt",
+          "weight": 1.5
+        }
+      ]
+    }
+  }
+}

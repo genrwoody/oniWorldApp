@@ -42,7 +42,7 @@
           "max": 0.13
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "HardSkinBerryPlant": {
         "location": "Floor",
@@ -52,7 +52,7 @@
           "max": 0.4
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "HardSkinBerryPlantSeed": {
         "location": "Solid",
@@ -95,7 +95,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "BlueGrassSeed": {
         "prefabName": "BlueGrassSeed",
@@ -117,7 +117,7 @@
           "max": 0.1
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "IceBelly": {
         "prefabName": "IceBelly",
@@ -127,8 +127,8 @@
           "min": 0.05,
           "max": 0.05
         },
-        "width": 1,
-        "height": 1
+        "width": 2,
+        "height": 2
       },
       "CarrotPlant": {
         "prefabName": "CarrotPlant",
@@ -139,7 +139,7 @@
           "max": 0.2
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "CarrotPlantSeed": {
         "prefabName": "CarrotPlantSeed",
@@ -172,7 +172,7 @@
           "max": 0.2
         },
         "width": 1,
-        "height": 1
+        "height": 2
       }
     }
   }

@@ -1,0 +1,44 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Blob",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 1.5,
+    "max": 2
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Algae",
+          "weight": 0.5,
+          "overrides": {
+            "massOverride": 500
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Algae",
+          "weight": 1.5
+        },
+        {
+          "element": "Dirt",
+          "weight": 1.5
+        },
+        {
+          "element": "Shale",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

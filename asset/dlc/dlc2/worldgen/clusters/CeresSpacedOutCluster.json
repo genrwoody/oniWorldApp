@@ -8,7 +8,7 @@
     "DLC2_ID"
   ],
   "coordinatePrefix": "CER-C",
-  "menuOrder": 1,
+  "menuOrder": 9,
   "clusterCategory": "SpacedOutStyle",
   "difficulty": 3,
   "clusterTags": [
@@ -80,6 +80,9 @@
           "Mixing",
           "SmallWorld"
         ],
+        "forbiddenTags": [
+          "CeresWorld"
+        ],
         "additionalWorldTemplateRules": [
           {
             "names": [
@@ -145,7 +148,8 @@
           "SmallWorld"
         ],
         "forbiddenTags": [
-          "Challenge"
+          "Challenge",
+          "CeresWorld"
         ],
         "additionalWorldTemplateRules": [
           {
@@ -211,7 +215,8 @@
         "forbiddenTags": [
           "NoExtraSeasons",
           "ModifiedSurfaceHeight",
-          "SurfaceSubworldReserved"
+          "SurfaceSubworldReserved",
+          "CeresWorld"
         ],
         "additionalSubworldFiles": [
           {
@@ -275,7 +280,8 @@
           "SmallWorld"
         ],
         "forbiddenTags": [
-          "AboveCoreSubworldReserved"
+          "AboveCoreSubworldReserved",
+          "CeresWorld"
         ],
         "additionalSubworldFiles": [
           {
@@ -336,7 +342,8 @@
           "Challenge"
         ],
         "forbiddenTags": [
-          "AboveCoreSubworldReserved"
+          "AboveCoreSubworldReserved",
+          "CeresWorld"
         ],
         "additionalSubworldFiles": [
           {
@@ -414,7 +421,8 @@
         ],
         "forbiddenTags": [
           "SubsurfaceSubworldReserved",
-          "NoDamagingMeteorShowers"
+          "NoDamagingMeteorShowers",
+          "CeresWorld"
         ],
         "additionalSubworldFiles": [
           {

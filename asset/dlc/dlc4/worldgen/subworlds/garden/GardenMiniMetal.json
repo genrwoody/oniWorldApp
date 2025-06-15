@@ -1,0 +1,47 @@
+{
+  "biomeNoise": "dlc4::noise/Garden",
+  "temperatureRange": "HumanWarm",
+  "pdWeight": 0.5,
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 5,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "borderOverride": "rocky",
+  "biomes": [
+    {
+      "name": "dlc4::biomes/Garden/Metal_CO2",
+      "weight": 2,
+      "tags": [
+        "GardenFoodPlant",
+        "GardenFoodPlantSeed",
+        "GardenForagePlantPlanted",
+        "GardenForagePlantBuried",
+        "GardenDecorPlant",
+        "GardenDecorPlantSeed",
+        "ButterflyPlant",
+        "VineMother"
+      ]
+    }
+  ],
+  "tags": [
+    "StartWorld",
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning"
+  ],
+  "features": [
+    {
+      "type": "dlc4::features/garden/SmallLake"
+    },
+    {
+      "type": "dlc4::features/garden/NickelOreBall"
+    },
+    {
+      "type": "dlc4::features/garden/StegoHome"
+    }
+  ],
+  "zoneType": "PrehistoricGarden"
+}

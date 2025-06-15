@@ -1,0 +1,31 @@
+{
+  "name": "STRINGS.SUBWORLDS.RAPTOR.NAME",
+  "description": "STRINGS.SUBWORLDS.RAPTOR.DESC",
+  "icon": "biomeIconRaptor",
+  "mixingTags": [
+    "Prehistoric"
+  ],
+  "forbiddenClusterTags": [
+    "PrehistoricCluster"
+  ],
+  "subworld": {
+    "name": "dlc4::subworlds/raptor/RaptorMix"
+  },
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "dlc4::poi/raptor/cool_chlorine_vent_mix"
+      ],
+      "listRule": "TryOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "PrehistoricRaptor"
+          ]
+        }
+      ]
+    }
+  ]
+}

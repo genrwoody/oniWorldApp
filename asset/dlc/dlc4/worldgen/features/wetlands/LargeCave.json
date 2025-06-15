@@ -1,0 +1,132 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1,
+    2,
+    1
+  ],
+  "internalMobs": [
+    {
+      "type": "FlyTrapPlant",
+      "count": {
+        "min": 0,
+        "max": 2
+      }
+    },
+    {
+      "type": "Mosquito",
+      "count": {
+        "min": 2,
+        "max": 3
+      }
+    },
+    {
+      "type": "AnyLiquidPacu",
+      "count": {
+        "min": 0,
+        "max": 3
+      }
+    },
+    {
+      "type": "KelpPlant",
+      "count": {
+        "min": 1,
+        "max": 6
+      }
+    },
+    {
+      "type": "PrehistoricPacu",
+      "count": {
+        "min": 1,
+        "max": 1
+      }
+    }
+  ],
+  "blobSize": {
+    "min": 3,
+    "max": 6
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.5
+        },
+        {
+          "element": "Algae",
+          "weight": 0.1
+        },
+        {
+          "element": "DirtyWater",
+          "weight": 0.4,
+          "overrides": {
+            "massOverride": 850
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.6
+        },
+        {
+          "element": "DirtyWater",
+          "weight": 0.4,
+          "overrides": {
+            "massOverride": 850
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Sand",
+          "weight": 0.2
+        },
+        {
+          "element": "Obsidian",
+          "weight": 0.1
+        },
+        {
+          "element": "GoldAmalgam",
+          "weight": 0.25
+        },
+        {
+          "element": "Dirt",
+          "weight": 0.45
+        }
+      ]
+    },
+    "RoomBorderChoices2": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Dirt",
+          "weight": 0.3
+        },
+        {
+          "element": "Algae",
+          "weight": 0.2
+        },
+        {
+          "element": "GoldAmalgam",
+          "weight": 0.2
+        },
+        {
+          "element": "Obsidian",
+          "weight": 0.3
+        }
+      ]
+    }
+  }
+}

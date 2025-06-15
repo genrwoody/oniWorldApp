@@ -32,32 +32,23 @@
         "width": 1,
         "height": 1
       },
-      "Geyser": {
-        "location": "Air",
-        "selectMethod": "Centroid",
-        "density": {
-          "min": 0.01,
-          "max": 0.01
-        },
-        "width": 1,
-        "height": 1
-      },
-      "MethaneGeyser": {
-        "location": "Air",
-        "selectMethod": "Centroid",
-        "density": {
-          "min": 0.01,
-          "max": 0.01
-        },
-        "width": 1,
-        "height": 1
-      },
       "OilFloater": {
         "location": "Floor",
         "selectMethod": "Centroid",
         "density": {
           "min": 0.1,
           "max": 0.2
+        },
+        "width": 1,
+        "height": 1
+      },
+      "OilFloaterSparse": {
+        "prefabName": "OilFloater",
+        "location": "Floor",
+        "selectMethod": "Centroid",
+        "density": {
+          "min": 0.05,
+          "max": 0.08
         },
         "width": 1,
         "height": 1
@@ -80,7 +71,7 @@
           "max": 0.1
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "Drecko": {
         "location": "Air",
@@ -122,7 +113,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "BasicSingleHarvestPlantSeed": {
         "location": "Solid",
@@ -162,7 +153,7 @@
           "max": 0.13
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "BasicFabricPlant": {
         "location": "Floor",
@@ -172,7 +163,7 @@
           "max": 0.18
         },
         "width": 1,
-        "height": 1
+        "height": 3
       },
       "SwampLily": {
         "location": "Floor",
@@ -182,7 +173,7 @@
           "max": 0.5
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "BasicFabricMaterialPlantSeed": {
         "location": "Solid",
@@ -202,7 +193,7 @@
           "max": 0.14
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "ColdBreatherSparse": {
         "prefabName": "ColdBreather",
@@ -213,7 +204,7 @@
           "max": 0.05
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "ColdBreatherSeed": {
         "location": "Solid",
@@ -233,7 +224,7 @@
           "max": 0.4
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "BeanPlantSeed": {
         "location": "Solid",
@@ -253,7 +244,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 3
       },
       "SpiceVineSeed": {
         "location": "Solid",
@@ -293,7 +284,7 @@
           "max": 0.35
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "MushroomSeed": {
         "location": "Solid",
@@ -313,7 +304,7 @@
           "max": 0.32
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "PrickleFlowerSeed": {
         "location": "Solid",
@@ -373,7 +364,7 @@
           "max": 0.04
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "Squirrel": {
         "location": "Floor",
@@ -443,7 +434,7 @@
           "max": 0.5
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "SeaLettuceSeed": {
         "location": "Solid",
@@ -461,6 +452,17 @@
         "density": {
           "min": 0.13,
           "max": 0.16
+        },
+        "width": 1,
+        "height": 1
+      },
+      "CactusPlantSparse": {
+        "prefabName": "CactusPlant",
+        "location": "Floor",
+        "selectMethod": "Centroid",
+        "density": {
+          "min": 0.06,
+          "max": 0.08
         },
         "width": 1,
         "height": 1
@@ -513,7 +515,7 @@
           "max": 0.12
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "OxyfernSeed": {
         "location": "Solid",
@@ -531,6 +533,17 @@
         "density": {
           "min": 0.06,
           "max": 0.08
+        },
+        "width": 1,
+        "height": 1
+      },
+      "EvilFlowerSparse": {
+        "prefabName": "EvilFlower",
+        "location": "Floor",
+        "selectMethod": "Centroid",
+        "density": {
+          "min": 0.05,
+          "max": 0.07
         },
         "width": 1,
         "height": 1
@@ -564,7 +577,7 @@
           "max": 0.25
         },
         "width": 1,
-        "height": 1
+        "height": 2
       },
       "SaltPlantSeed": {
         "location": "Solid",
@@ -583,8 +596,8 @@
           "min": 0.005,
           "max": 0.009
         },
-        "width": 1,
-        "height": 1
+        "width": 4,
+        "height": 2
       },
       "PinkRock": {
         "location": "AnyFloor",
