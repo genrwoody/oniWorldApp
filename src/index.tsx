@@ -68,7 +68,7 @@ const MixingItem = (props: ConfigProps) => {
 };
 
 const Mixings = ({ type, onSetActive }: ConfigProps) => {
-    const [options, setOptions] = useState([1, 0, 0, 0, 0, 1]);
+    const [options, setOptions] = useState([0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1]);
     const translation = useTranslation();
     const handleActive = (index: number, value: number) => {
         const temp = options.map((n, i) => (index === i ? value : n));
@@ -96,7 +96,7 @@ const Mixings = ({ type, onSetActive }: ConfigProps) => {
                         name={item.name}
                         active={options[index]}
                         onSetActive={(active) => handleActive(index, active)}
-                        hidden={type === 0 && index === 1}
+                        hidden={type === 0 && (index === 0 || index === 6)}
                     />
                 ))}
             </Dropdown.Menu>
@@ -107,12 +107,12 @@ const Mixings = ({ type, onSetActive }: ConfigProps) => {
 const ToolBar = ({ onSetWorld }: { onSetWorld: () => void }) => {
     const [category, setCategory] = useState(0);
     const [cluster, setCluster] = useState(0);
-    const [mixings, setMixings] = useState(3126);
+    const [mixings, setMixings] = useState(9769375);
     const [seed, setSeed] = useState("");
     const translation = useTranslation();
     const onSetCategory = (value: number) => {
         setCategory(value);
-        setCluster(value === 0 ? 0 : value === 1 ? 11 : 23);
+        setCluster(value === 0 ? 0 : value === 1 ? 13 : 27);
     };
     const toBase36 = (num: number) => {
         if (num === 0) return "0";
@@ -366,7 +366,7 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
         Module.wasm = null;
         Module.worlds = [];
         Module.onRuntimeInitialized = () => {
-            Module.app_init(new Date().getTime() & 0x7FFFFFFF);
+            Module.app_init(new Date().getTime() & 0x7fffffff);
             setLoading(false);
         };
         setLoading(true);
@@ -394,7 +394,7 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
         });
         const image = new Image();
         image.onload = () => createZoneSprite(image);
-        image.src = "zones.png?1";
+        image.src = "zones.png?2";
         //if ("serviceWorker" in navigator) {
         //    navigator.serviceWorker.register("./serviceworker.js");
         //}
@@ -437,7 +437,7 @@ const App = ({ onSetLanguage }: { onSetLanguage: (lang: string) => void }) => {
                             className="header-github-link"
                             title={translation("Open on GitHub")}
                         />
-                        <span>v1.0.4</span>
+                        <span>v1.0.5</span>
                     </Stack>
                 </Container>
             </Navbar>

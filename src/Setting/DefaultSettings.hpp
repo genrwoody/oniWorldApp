@@ -53,6 +53,7 @@ struct Mob {
     std::string prefabName;
     int width{};
     int height{};
+    int paddingX{};
     Location location{};
 };
 

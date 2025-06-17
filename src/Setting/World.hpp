@@ -82,6 +82,7 @@ struct World {
     bool moduleInterior{};
     WorldCategory category{};
     Vector2f worldsize;
+    int hiddenY{};
     std::optional<DefaultSettings> defaultsOverrides;
     LayoutMethod layoutMethod{};
     std::vector<WeightedSubworldName> subworldFiles;

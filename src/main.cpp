@@ -284,20 +284,18 @@ extern "C" void EMSCRIPTEN_KEEPALIVE app_init(int seed)
 extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
 {
     const char *worlds[] = {
-        "SNDST-A-",   "OCAN-A-",    "S-FRZ-",     "LUSH-A-",   "FRST-A-",
-        "VOLCA-",     "BAD-A-",     "HTFST-A-",   "OASIS-A-",  "CER-A-",
-        "CERS-A-",    "V-SNDST-C-", "V-OCAN-C-",  "V-SWMP-C-", "V-SFRZ-C-",
-        "V-LUSH-C-",  "V-FRST-C-",  "V-VOLCA-C-", "V-BAD-C-",  "V-HTFST-C-",
-        "V-OASIS-C-", "V-CER-C-",   "V-CERS-C-",  "SNDST-C-",  "CER-C-",
-        "FRST-C-",    "SWMP-C-",    "M-SWMP-C-",  "M-BAD-C-",  "M-FRZ-C-",
-        "M-FLIP-C-",  "M-RAD-C-",   "M-CERS-C-"};
+        "SNDST-A-",  "OCAN-A-",    "S-FRZ-",     "LUSH-A-",    "FRST-A-",
+        "VOLCA-",    "BAD-A-",     "HTFST-A-",   "OASIS-A-",   "CER-A-",
+        "CERS-A-",   "PRE-A-",     "PRES-A-",    "V-SNDST-C-", "V-OCAN-C-",
+        "V-SWMP-C-", "V-SFRZ-C-",  "V-LUSH-C-",  "V-FRST-C-",  "V-VOLCA-C-",
+        "V-BAD-C-",  "V-HTFST-C-", "V-OASIS-C-", "V-CER-C-",   "V-CERS-C-",
+        "V-PRE-C-",  "V-PRES-C-",  "SNDST-C-",   "PRE-C-",     "CER-C-",
+        "FRST-C-",   "SWMP-C-",    "M-SWMP-C-",  "M-BAD-C-",   "M-FRZ-C-",
+        "M-FLIP-C-", "M-RAD-C-",   "M-CERS-C-"};
     if (type < 0 || (int)std::size(worlds) <= type) {
         return false;
     }
     std::string code = worlds[type];
-    if (code.find("CER") != code.npos) {
-        mix = mix % 5;
-    }
     int traits = 0;
     if (seed < 0) {
         traits = -seed;
@@ -337,9 +335,9 @@ void jsSetGeyserInfo(uint32_t type, uint32_t count, size_t data)
         "火山",         "二氧化碳泉",   "二氧化碳喷孔", "氢气喷孔",
         "高温污氧喷孔", "含菌污氧喷孔", "氯气喷孔",     "天然气喷孔",
         "铜火山",       "铁火山",       "金火山",       "铝火山",
-        "钴火山",       "渗油裂缝",     "液硫泉",       "钨火山",
-        "铌火山",       "打印舱",       "储油石",       "输出端",
-        "输入端",       "传送器",       "低温箱"};
+        "钴火山",       "渗油裂缝",     "液硫泉",       "冷氯喷孔",
+        "钨火山",       "铌火山",       "打印舱",       "储油石",
+        "输出端",       "输入端",       "传送器",       "低温箱"};
     const char *traits[] = {
         "坠毁的卫星群", "冰封之友",   "不规则的原油区",   "繁茂核心",
         "金属洞穴",     "放射性地壳", "地下海洋",         "火山活跃",

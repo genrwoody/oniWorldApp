@@ -13,6 +13,7 @@ struct WorldPlacement {
     int width{};
     int height{};
     bool startWorld{};
+    int hiddenY{};
 
     // ignore lines
 

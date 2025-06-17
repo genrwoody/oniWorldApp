@@ -633,15 +633,15 @@ void WorldGen::GenerateChildren(Site &site, KRandom &externRrandom, int seed,
 std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed)
 {
     const char *configs[] = {
-        "steam",          "hot_steam",       "hot_water",
-        "slush_water",    "filthy_water",    "slush_salt_water",
-        "salt_water",     "small_volcano",   "big_volcano",
-        "liquid_co2",     "hot_co2",         "hot_hydrogen",
-        "hot_po2",        "slimy_po2",       "chlorine_gas",
-        "methane",        "molten_copper",   "molten_iron",
-        "molten_gold",    "molten_aluminum", "molten_cobalt",
-        "oil_drip",       "liquid_sulfur",   "molten_tungsten",
-        "molten_niobium",
+        "steam",           "hot_steam",       "hot_water",
+        "slush_water",     "filthy_water",    "slush_salt_water",
+        "salt_water",      "small_volcano",   "big_volcano",
+        "liquid_co2",      "hot_co2",         "hot_hydrogen",
+        "hot_po2",         "slimy_po2",       "chlorine_gas",
+        "methane",         "molten_copper",   "molten_iron",
+        "molten_gold",     "molten_aluminum", "molten_cobalt",
+        "oil_drip",        "liquid_sulfur",   "chlorine_gas_cool",
+        "molten_tungsten", "molten_niobium",
     };
     std::vector<Vector3i> result;
     int count = m_settings.IsSpaceOutEnabled() ? 23 : 20;
@@ -656,15 +656,15 @@ std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed)
             }
             result.emplace_back(pos.x, pos.y, index);
         } else if (name.starts_with("poi/oil/")) {
-            result.emplace_back(pos.x, pos.y, 26);
+            result.emplace_back(pos.x, pos.y, std::size(configs) + 1);
         } else if (name.starts_with("expansion1::poi/warp/receiver")) {
-            result.emplace_back(pos.x, pos.y, 27);
+            result.emplace_back(pos.x, pos.y, std::size(configs) + 2);
         } else if (name.starts_with("expansion1::poi/warp/sender")) {
-            result.emplace_back(pos.x, pos.y, 28);
+            result.emplace_back(pos.x, pos.y, std::size(configs) + 3);
         } else if (name.starts_with("expansion1::poi/warp/teleporter")) {
-            result.emplace_back(pos.x, pos.y, 29);
+            result.emplace_back(pos.x, pos.y, std::size(configs) + 4);
         } else if (name.starts_with("expansion1::poi/traits/cryopod")) {
-            result.emplace_back(pos.x, pos.y, 30);
+            result.emplace_back(pos.x, pos.y, std::size(configs) + 5);
         } else if (!templt.container->otherEntities.empty()) {
             for (auto &item : templt.container->otherEntities) {
                 if (item.id.find("GeyserGeneric_") == item.id.npos) {

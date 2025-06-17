@@ -30,6 +30,8 @@ enum class SimHashes {
     TungstenGas = 431998133,
     EthanolGas = -756961258,
     Syngas = 1102028305,
+    NickelGas = 1320373807,
+    IridiumGas = 1859051228,
     Brine = -324547888,
     Chlorine = -878033482,
     CrudeOil = -1412059381,
@@ -62,6 +64,7 @@ enum class SimHashes {
     Naphtha = 1157157570,
     NuclearWaste = -232430636,
     Petroleum = -486269331,
+    NaturalResin = 1244532348,
     Resin = -746800379,
     SaltWater = 1911997537,
     SugarWater = 878488353,
@@ -71,7 +74,10 @@ enum class SimHashes {
     Ethanol = -87974045,
     MoltenSyngas = 660593444,
     PhytoOil = -20315850,
+    RefinedLipid = -1121662089,
     MoltenSucrose = 1318135165,
+    MoltenNickel = 2079148957,
+    MoltenIridium = -1214831670,
     Aerogel = -2070223827,
     Algae = -1870043872,
     Aluminum = 2108244480,
@@ -82,6 +88,7 @@ enum class SimHashes {
     BrineIce = -1561279013,
     MilkIce = -1767622480,
     Carbon = 947100397,
+    Peat = -1927771704,
     CarbonFibre = 118518245,
     Cement = 1627140480,
     CementMix = 1668719292,
@@ -138,6 +145,7 @@ enum class SimHashes {
     SandStone = 493438017,
     Sandstone = 493438017,
     SedimentaryRock = 183408504,
+    Shale = -1708952091,
     Slabs = 1412740729,
     SlimeMold = -1153056158,
     Snow = 489261827,
@@ -153,6 +161,8 @@ enum class SimHashes {
     SolidPetroleum = -473261502,
     SolidPropane = 166493482,
     SolidResin = 1376267226,
+    NaturalSolidResin = 1254083875,
+    Amber = -1130501789,
     SolidSuperCoolant = -389019570,
     SolidViscoGel = -1495120499,
     Steel = -899253461,
@@ -176,6 +186,9 @@ enum class SimHashes {
     WoodLog = 16214647,
     Tallow = -1624652107,
     Gunk = -230085045,
+    NickelOre = 1387581016,
+    Nickel = -1774383478,
+    Iridium = -198894563,
     Vacuum = 758759285,
     Void = -1456075980,
     COMPOSITION = -1021084918
@@ -239,7 +252,10 @@ enum class ZoneType {
     Moo,
     IceCaves,
     CarrotQuarry,
-    SugarWoods
+    SugarWoods,
+    PrehistoricGarden,
+    PrehistoricRaptor,
+    PrehistoricWetlands
 };
 
 enum class LocationType {
@@ -294,7 +310,10 @@ enum class Location {
     ShallowLiquid,
     Surface,
     LiquidFloor,
-    AnyFloor
+    AnyFloor,
+    LiquidCeiling,
+    Liquid,
+    EntombedFloorPeek
 };
 
 enum class Shape {

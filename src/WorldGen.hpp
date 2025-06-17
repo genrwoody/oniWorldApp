@@ -50,17 +50,20 @@ private:
     bool DetermineTemplates(std::vector<Site *> &sites, KRandom &random);
 };
 
+// clang-format off
 inline std::string ZoneTypeToString(ZoneType zone)
 {
-    const char *dict[] = {"FrozenWastes", "CrystalCaverns", "BoggyMarsh",
-                          "Sandstone",    "ToxicJungle",    "MagmaCore",
-                          "OilField",     "Space",          "Ocean",
-                          "Rust",         "Forest",         "Radioactive",
-                          "Swamp",        "Wasteland",      "RocketInterior",
-                          "Metallic",     "Barren",         "Moo",
-                          "IceCaves",     "CarrotQuarry",   "SugarWoods"};
+    const char *dict[] = {
+        "FrozenWastes", "CrystalCaverns",    "BoggyMarsh",     "Sandstone",
+        "ToxicJungle",  "MagmaCore",         "OilField",       "Space",
+        "Ocean",        "Rust",              "Forest",         "Radioactive",
+        "Swamp",        "Wasteland",         "RocketInterior", "Metallic",
+        "Barren",       "Moo",               "IceCaves",       "CarrotQuarry",
+        "SugarWoods",   "PrehistoricGarden", "PrehistoricRaptor",
+        "PrehistoricWetlands"};
     return dict[(int)zone];
 }
+// clang-format on
 
 inline std::string TempRangeToString(Range range)
 {

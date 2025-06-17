@@ -57,6 +57,9 @@ static std::string GenerateKey(const char *filename)
     } else if (strstr(filename, "dlc/dlc3") != nullptr) {
         key = "dlc3::";
         offset = 9;
+    } else if (strstr(filename, "dlc/dlc4") != nullptr) {
+        key = "dlc4::";
+        offset = 9;
     }
     if (strstr(filename, "templates/") != nullptr) {
         offset += 10;
@@ -135,6 +138,8 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
         if (strstr(stat.m_filename, "worldgen/mixing.json") != nullptr) {
             if (strstr(stat.m_filename, "dlc/dlc2") != nullptr) {
                 LoadJsonFile(zip, i, dlcMixings["dlc2"]);
+            } else if (strstr(stat.m_filename, "dlc/dlc4") != nullptr) {
+                LoadJsonFile(zip, i, dlcMixings["dlc4"]);
             } else {
                 LoadJsonFile(zip, i, dlcMixings["dlc3"]);
             }
@@ -228,6 +233,11 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
         {"dlc2::subworldMixing/SugarWoodsMixingSettings", 2},
         {"dlc2::worldMixing/CeresMixingSettings", 1},
         {"DLC3_ID", 0},
+        {"DLC4_ID", 0},
+        {"dlc4::subworldMixing/GardenMixingSettings", 2},
+        {"dlc4::subworldMixing/RaptorMixingSettings", 2},
+        {"dlc4::subworldMixing/WetlandsMixingSettings", 2},
+        {"dlc4::worldMixing/PrehistoricMixingSettings", 1},
     };
     return true;
 }
@@ -301,9 +311,18 @@ bool SettingsCache::CoordinateChanged(const std::string &text,
             m_dlcState |= 2;
         } else if (id == "DLC3_ID") {
             m_dlcState |= 4;
+        } else if (id == "DLC4_ID") {
+            m_dlcState |= 8;
         }
     }
     ParseAndApplyMixingSettingsCode(codes[5]);
+    if (codes[1].contains("CER")) {
+        mixConfigs[0].level = mixConfigs[1].level = mixConfigs[2].level =
+            mixConfigs[3].level = mixConfigs[4].level = MixingLevel::Disabled;
+    } else if (codes[1].contains("PRE")) {
+        mixConfigs[6].level = mixConfigs[7].level = mixConfigs[8].level =
+            mixConfigs[9].level = mixConfigs[10].level = MixingLevel::Disabled;
+    }
     return true;
 }
 
