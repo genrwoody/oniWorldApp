@@ -366,6 +366,12 @@ SettingsCache::GetRandomTraits(const World &world) const
         for (auto &specificTrait : rule.specificTraits) {
             if (traits.find(specificTrait) != traits.end()) {
                 names.emplace_back(specificTrait);
+                for (auto trait : total) {
+                    if (specificTrait == trait->filePath) {
+                        result.emplace_back(trait);
+                        break;
+                    }
+                }
             }
         }
         std::vector<const WorldTrait *> subtotal;

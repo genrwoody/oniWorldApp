@@ -105,8 +105,8 @@ struct WorldMixingSettings {
 };
 
 struct TraitRule {
-    int min = 2;
-    int max = 4;
+    int min = 0;
+    int max = 0;
     std::vector<std::string> requiredTags;
     std::vector<std::string> specificTraits;
     std::vector<std::string> forbiddenTags;
